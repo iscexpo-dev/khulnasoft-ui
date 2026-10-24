@@ -1,0 +1,796 @@
+{
+  "icons": [
+    {
+      "name": "add-user-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "amazon_eks",
+      "svg_size": 24
+    },
+    {
+      "name": "android",
+      "svg_size": 24
+    },
+    {
+      "name": "asklepian",
+      "svg_size": 24
+    },
+    {
+      "name": "astro",
+      "svg_size": 24
+    },
+    {
+      "name": "aws",
+      "svg_size": 24
+    },
+    {
+      "name": "bash",
+      "svg_size": 24
+    },
+    {
+      "name": "c_plus_plus",
+      "svg_size": 24
+    },
+    {
+      "name": "catalog-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "chart-bar-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "chat-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "chorus",
+      "svg_size": 24
+    },
+    {
+      "name": "civo",
+      "svg_size": 24
+    },
+    {
+      "name": "clojure",
+      "svg_size": 24
+    },
+    {
+      "name": "cloud-check-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "cloud-tanuki-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "cloud-user-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "commit-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "composer",
+      "svg_size": 24
+    },
+    {
+      "name": "crystal",
+      "svg_size": 24
+    },
+    {
+      "name": "dart",
+      "svg_size": 24
+    },
+    {
+      "name": "devops-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "django",
+      "svg_size": 24
+    },
+    {
+      "name": "docker",
+      "svg_size": 24
+    },
+    {
+      "name": "dotnet",
+      "svg_size": 24
+    },
+    {
+      "name": "ee_trial",
+      "svg_size": 24
+    },
+    {
+      "name": "elixir",
+      "svg_size": 24
+    },
+    {
+      "name": "email-verification-md",
+      "svg_size": 24
+    },
+    {
+      "name": "email-verification-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-access-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-access-token-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-activity-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-admin-apps-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-agent-sessions-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-ai-catalog-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-artifacts-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-artifacts-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-catalog-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-chart-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-cloud-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-commit-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-dashboard-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-devops-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-embed-panel-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-environment-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-epic-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-epic-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-feature-flag-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-friends-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-geo-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-groups-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-issues-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-issues-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-canceled-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-failed-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-manual-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-not-triggered-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-pending-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-scheduled-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-job-skipped-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-key-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-labels-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-labels-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-labels-starred-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-merge-requests-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-milestone-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-organizations-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-organizations-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-package-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-piechart-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-pipeline-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-private-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-projects-deleted-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-projects-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-projects-starred-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-radar-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-scan-alert-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-schedule-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-search-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-secrets-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-secure-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-secure-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-service-desk-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-session-inbox-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-snippets-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-subgroup-add-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-subgroup-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-todos-all-done-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-todos-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-train-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-user-alert-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-user-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-user-settings-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-variables-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-wiki-md",
+      "svg_size": 24
+    },
+    {
+      "name": "empty-workspaces-md",
+      "svg_size": 24
+    },
+    {
+      "name": "error-403-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-404-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-409-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-422-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-429-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-500-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-502-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "error-503-lg",
+      "svg_size": 24
+    },
+    {
+      "name": "express",
+      "svg_size": 24
+    },
+    {
+      "name": "fastlane",
+      "svg_size": 24
+    },
+    {
+      "name": "flutter",
+      "svg_size": 24
+    },
+    {
+      "name": "gatsby",
+      "svg_size": 24
+    },
+    {
+      "name": "gitbook",
+      "svg_size": 24
+    },
+    {
+      "name": "gitlab-lockup",
+      "svg_size": 24
+    },
+    {
+      "name": "gitlab-lockup-white",
+      "svg_size": 24
+    },
+    {
+      "name": "gitlab_logo",
+      "svg_size": 24
+    },
+    {
+      "name": "gitlab_title",
+      "svg_size": 24
+    },
+    {
+      "name": "gitpod",
+      "svg_size": 24
+    },
+    {
+      "name": "go_logo",
+      "svg_size": 24
+    },
+    {
+      "name": "gomicro",
+      "svg_size": 24
+    },
+    {
+      "name": "google_gke",
+      "svg_size": 24
+    },
+    {
+      "name": "gradle",
+      "svg_size": 24
+    },
+    {
+      "name": "grails",
+      "svg_size": 24
+    },
+    {
+      "name": "group-import",
+      "svg_size": 24
+    },
+    {
+      "name": "group-new",
+      "svg_size": 24
+    },
+    {
+      "name": "hexo",
+      "svg_size": 24
+    },
+    {
+      "name": "hotjar",
+      "svg_size": 24
+    },
+    {
+      "name": "hugo",
+      "svg_size": 24
+    },
+    {
+      "name": "image_comment_light_cursor",
+      "svg_size": 24
+    },
+    {
+      "name": "image_comment_light_cursor@2x",
+      "svg_size": 24
+    },
+    {
+      "name": "jekyll",
+      "svg_size": 24
+    },
+    {
+      "name": "jira",
+      "svg_size": 24
+    },
+    {
+      "name": "julia",
+      "svg_size": 24
+    },
+    {
+      "name": "knowbe4",
+      "svg_size": 24
+    },
+    {
+      "name": "kontra",
+      "svg_size": 24
+    },
+    {
+      "name": "kubernetes",
+      "svg_size": 24
+    },
+    {
+      "name": "laravel",
+      "svg_size": 24
+    },
+    {
+      "name": "latex",
+      "svg_size": 24
+    },
+    {
+      "name": "linux",
+      "svg_size": 24
+    },
+    {
+      "name": "mattermost_logo",
+      "svg_size": 24
+    },
+    {
+      "name": "maven",
+      "svg_size": 24
+    },
+    {
+      "name": "merge-requests-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "middleman",
+      "svg_size": 24
+    },
+    {
+      "name": "milestone-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "mono",
+      "svg_size": 24
+    },
+    {
+      "name": "netlify",
+      "svg_size": 24
+    },
+    {
+      "name": "node_js",
+      "svg_size": 24
+    },
+    {
+      "name": "npm",
+      "svg_size": 24
+    },
+    {
+      "name": "nuxt",
+      "svg_size": 24
+    },
+    {
+      "name": "openshift",
+      "svg_size": 24
+    },
+    {
+      "name": "package-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "packer",
+      "svg_size": 24
+    },
+    {
+      "name": "passkey",
+      "svg_size": 24
+    },
+    {
+      "name": "pelican",
+      "svg_size": 24
+    },
+    {
+      "name": "php",
+      "svg_size": 24
+    },
+    {
+      "name": "pipeline-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "project-create-from-template-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "project-create-new-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "project-import-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "purchase-success-md",
+      "svg_size": 24
+    },
+    {
+      "name": "python",
+      "svg_size": 24
+    },
+    {
+      "name": "rails",
+      "svg_size": 24
+    },
+    {
+      "name": "rocket-launch-md",
+      "svg_size": 24
+    },
+    {
+      "name": "ruby",
+      "svg_size": 24
+    },
+    {
+      "name": "rust",
+      "svg_size": 24
+    },
+    {
+      "name": "scala",
+      "svg_size": 24
+    },
+    {
+      "name": "scan-alert-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "schedule-md",
+      "svg_size": 24
+    },
+    {
+      "name": "search-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "secure-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "secure_code_warrior",
+      "svg_size": 24
+    },
+    {
+      "name": "serverless_framework",
+      "svg_size": 24
+    },
+    {
+      "name": "service-desk-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "siemens",
+      "svg_size": 24
+    },
+    {
+      "name": "slack_logo",
+      "svg_size": 24
+    },
+    {
+      "name": "spring",
+      "svg_size": 24
+    },
+    {
+      "name": "status-alert-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-alert-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "status-fail-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-fail-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "status-new-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-new-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "status-nothing-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-nothing-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "status-settings-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-settings-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "status-success-md",
+      "svg_size": 24
+    },
+    {
+      "name": "status-success-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "subgroup-create-new-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "success-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "swift",
+      "svg_size": 24
+    },
+    {
+      "name": "tanuki-ai-md",
+      "svg_size": 24
+    },
+    {
+      "name": "tanuki-ai-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "tencent_serverless_framework",
+      "svg_size": 24
+    },
+    {
+      "name": "terraform",
+      "svg_size": 24
+    },
+    {
+      "name": "train-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "typo3",
+      "svg_size": 24
+    },
+    {
+      "name": "unable_to_connect",
+      "svg_size": 24
+    },
+    {
+      "name": "user-not-logged-in",
+      "svg_size": 24
+    },
+    {
+      "name": "variables-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "wiki-sm",
+      "svg_size": 24
+    },
+    {
+      "name": "wish",
+      "svg_size": 24
+    }
+  ]
+}
