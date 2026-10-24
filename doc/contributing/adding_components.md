@@ -1,8 +1,8 @@
 # Adding a new component to KhulnaSoft UI
 
 The following provides guidance for engineers adding new components to KhulnaSoft
- UI. Before beginning, please review the [design system contribution
- process](https://design.khulnasoft.com/contribute/contributing).
+UI. Before beginning, please review the [design system contribution
+process](https://design.khulnasoft.com/contribute/contributing).
 
 ## Merge Request guidelines
 
@@ -12,10 +12,10 @@ released.
 
 Run the manual CI job (`update_screenshots`) to generate the baseline snapshots used by the visual
 tests. You can find it in last stage of
-[KhulnaSoft UI CI pipeline](https://github.com/khulnasoft/khulnasoft-ui/pipelines).
+[KhulnaSoft UI CI pipeline](https://github.com/khulnasoft/khulnasoft-ui/actions).
 This CI job commits the baseline snapshot images to the merge request branch.
 
-![Update screenshots CI job location](../images/update_screenshots.png 'Update screenshots CI job location')
+![Update screenshots CI job location](../images/update_screenshots.png "Update screenshots CI job location")
 
 ### How to keep merge requests small
 
