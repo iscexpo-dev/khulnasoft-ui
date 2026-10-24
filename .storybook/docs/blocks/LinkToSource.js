@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import { DocsContext } from '@storybook/addon-docs';
-import { Button } from '@storybook/components';
+import React, { useContext } from "react";
+import { DocsContext } from "@storybook/addon-docs";
+import { Button } from "@storybook/components";
 
 const BASE_URL =
-  'https://github.com/khulnasoft/khulnasoft-ui/-/tree/main/packages/khulnasoft-ui';
+  "https://github.com/khulnasoft/khulnasoft-ui/tree/main/packages/khulnasoft-ui";
 
 /**
  * Returns a source path given the current story path, if it exists. This works
@@ -21,7 +21,7 @@ const BASE_URL =
  *     the root of the repo.
  */
 const sourcePathFromStoryPath = (storyPath) => {
-  const sourcePathNormalized = storyPath.replace(/^\.\//, '');
+  const sourcePathNormalized = storyPath.replace(/^\.\//, "");
 
   return (STORY_TO_SOURCE_MAP || {})[sourcePathNormalized];
 };
