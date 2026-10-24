@@ -9,13 +9,13 @@ You can use the `GlMarkdown` component in two ways.
 
 ```html
 <script>
-import { GlMarkdown } from '@khulnasoft/ui';
+  import { GlMarkdown } from "@khulnasoft/ui";
 
-export default {
-  components: {
-    GlMarkdown,
-  }
-}
+  export default {
+    components: {
+      GlMarkdown,
+    },
+  };
 </script>
 <template>
   <gl-markdown>
@@ -26,7 +26,7 @@ export default {
 
 ### `gl-markdown` class selector
 
-Follow the [KhulnaSoft UI CSS guidelines](https://github.com/khulnasoft/khulnasoft-ui/-/blob/main/doc/css.md)
+Follow the [KhulnaSoft UI CSS guidelines](https://github.com/khulnasoft/khulnasoft-ui/blob/main/doc/css.md)
 to include KhulnaSoft UI CSS in your application. Afterwards, you can apply the `gl-markdown` class
 selector to the root element that contains the markdown-generated HTML.
 
@@ -48,8 +48,7 @@ You can also append the `gl-compact-markdown` class selector after `gl-markdown`
 HTML.
 
 ```html
-<body class="gl-markdown gl-compact-markdown">
-</body>
+<body class="gl-markdown gl-compact-markdown"></body>
 ```
 
 <!--
