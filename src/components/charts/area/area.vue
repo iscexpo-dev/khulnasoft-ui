@@ -15,7 +15,7 @@
  * we use a separate tooltip for data point and arrow.
  */
 
-import { merge } from 'lodash-es';
+import { merge } from "lodash-es";
 import {
   defaultChartOptions,
   grid,
@@ -26,7 +26,7 @@ import {
   mergeSeriesToOptions,
   mergeAnnotationAxisToOptions,
   lineStyle,
-} from '../../../utils/charts/config';
+} from "../../../utils/charts/config";
 import {
   LEGEND_LAYOUT_INLINE,
   LEGEND_LAYOUT_TABLE,
@@ -35,15 +35,18 @@ import {
   LEGEND_MIN_TEXT,
   LEGEND_MAX_TEXT,
   HEIGHT_AUTO_CLASSES,
-} from '../../../utils/charts/constants';
-import { colorFromDefaultPalette } from '../../../utils/charts/theme';
-import { seriesHasAnnotations, isDataPointAnnotation } from '../../../utils/charts/utils';
-import Chart from '../chart/chart.vue';
-import ChartLegend from '../legend/legend.vue';
-import ChartTooltip from '../shared/tooltip/tooltip.vue';
+} from "../../../utils/charts/constants";
+import { colorFromDefaultPalette } from "../../../utils/charts/theme";
+import {
+  seriesHasAnnotations,
+  isDataPointAnnotation,
+} from "../../../utils/charts/utils";
+import Chart from "../chart/chart.vue";
+import ChartLegend from "../legend/legend.vue";
+import ChartTooltip from "../shared/tooltip/tooltip.vue";
 
 export default {
-  name: 'GlAreaChart',
+  name: "GlAreaChart",
   components: {
     Chart,
     ChartLegend,
@@ -149,7 +152,9 @@ export default {
       required: false,
       default: LEGEND_LAYOUT_INLINE,
       validator(layout) {
-        return [LEGEND_LAYOUT_INLINE, LEGEND_LAYOUT_TABLE].indexOf(layout) !== -1;
+        return (
+          [LEGEND_LAYOUT_INLINE, LEGEND_LAYOUT_TABLE].indexOf(layout) !== -1
+        );
       },
     },
     /**
@@ -173,16 +178,16 @@ export default {
     // Part of the tooltip related data can be
     // moved into the tooltip component.
     // Tracking that progress in
-    // https://github.com/khulnasoft/khulnasoft-ui/-/issues/618
+    // https://github.com/khulnasoft/khulnasoft-ui/issues/618
     return {
       chart: null,
       compiledOptions: null,
       showAnnotationsTooltip: false,
-      annotationsTooltipTitle: '',
-      annotationsTooltipContent: '',
+      annotationsTooltipTitle: "",
+      annotationsTooltipContent: "",
       annotationsTooltipPosition: {
-        left: '0',
-        top: '0',
+        left: "0",
+        top: "0",
       },
     };
   },
@@ -191,24 +196,26 @@ export default {
       const dataSeries = this.data.map((series, index) => {
         const defaultColor = colorFromDefaultPalette(index);
         const getColor = (type) =>
-          series[type] && series[type].color ? series[type].color : defaultColor;
+          series[type] && series[type].color
+            ? series[type].color
+            : defaultColor;
         return merge(
           {
             areaStyle: {
               opacity: defaultAreaOpacity,
-              color: getColor('areaStyle'),
+              color: getColor("areaStyle"),
             },
             showSymbol: false,
             lineStyle: {
-              color: getColor('lineStyle'),
+              color: getColor("lineStyle"),
             },
             itemStyle: {
-              color: getColor('itemStyle'),
+              color: getColor("itemStyle"),
             },
           },
           lineStyle,
           series,
-          getThresholdConfig(this.thresholds),
+          getThresholdConfig(this.thresholds)
         );
       });
       // if annotation series exists, append it
@@ -249,24 +256,27 @@ export default {
         areaChartOptions,
         this.formatTooltipText ? deprecatedTooltipFormatterOptions : {},
         this.option,
-        dataZoomAdjustments(this.option.dataZoom),
+        dataZoomAdjustments(this.option.dataZoom)
       );
       // All chart options can be merged but series
       // needs to be handled specially.
       return mergeSeriesToOptions(
         mergeAnnotationAxisToOptions(mergedOptions, this.hasAnnotations),
-        this.series,
+        this.series
       );
     },
     /**
      * Annotations currently are passed as series options in monitoring dashboard.
-     * Once https://github.com/khulnasoft/khulnasoft/-/issues/213390 is closed,
+     * Once https://github.com/khulnasoft/khulnasoft/issues/213390 is closed
      * annotations will be passed as props and not as series options.
      *
      * For backward compatibility, we're having to check for both.
      */
     hasAnnotations() {
-      return this.annotations.length !== 0 || seriesHasAnnotations(this.option.series);
+      return (
+        this.annotations.length !== 0 ||
+        seriesHasAnnotations(this.option.series)
+      );
     },
     shouldShowAnnotationsTooltip() {
       return this.chart && this.hasAnnotations;
@@ -279,26 +289,28 @@ export default {
 
       const compiledSeries = this.compiledOptions?.series || [];
       return compiledSeries.reduce((acc, series, index) => {
-        if (series.type === 'line') {
+        if (series.type === "line") {
           acc.push({
             name: series.name,
             type: series.lineStyle.type,
             color: series.lineStyle.color || colorFromDefaultPalette(index),
-            data: this.includeLegendAvgMax ? series.data?.map((data) => data[1]) : undefined,
+            data: this.includeLegendAvgMax
+              ? series.data?.map((data) => data[1])
+              : undefined,
           });
         }
         return acc;
       }, []);
     },
     autoHeight() {
-      return this.height === 'auto';
+      return this.height === "auto";
     },
   },
   beforeDestroy() {
     if (!this.chart) return;
 
-    this.chart.off('mouseout', this.onChartDataPointMouseOut);
-    this.chart.off('mouseover', this.onChartDataPointMouseOver);
+    this.chart.off("mouseout", this.onChartDataPointMouseOut);
+    this.chart.off("mouseover", this.onChartDataPointMouseOver);
   },
   methods: {
     defaultAnnotationTooltipText(params) {
@@ -318,12 +330,12 @@ export default {
       // there shouldn't be an overlapping situation where both tooltips
       // are visible.
       if (this.hasAnnotations) {
-        chart.on('mouseout', this.onChartDataPointMouseOut);
-        chart.on('mouseover', this.onChartDataPointMouseOver);
+        chart.on("mouseout", this.onChartDataPointMouseOut);
+        chart.on("mouseover", this.onChartDataPointMouseOver);
       }
 
       this.chart = chart;
-      this.$emit('created', chart);
+      this.$emit("created", chart);
     },
     onUpdated() {
       this.compiledOptions = this.chart.getOption();
@@ -339,8 +351,9 @@ export default {
       if (isDataPointAnnotation(params)) {
         const { event } = params;
         const toolTipFormatter =
-          this.formatAnnotationsTooltipText || this.defaultAnnotationTooltipText;
-        const { title = '', content = '' } = toolTipFormatter(params);
+          this.formatAnnotationsTooltipText ||
+          this.defaultAnnotationTooltipText;
+        const { title = "", content = "" } = toolTipFormatter(params);
         this.showAnnotationsTooltip = true;
         this.annotationsTooltipTitle = title;
         this.annotationsTooltipContent = content;
@@ -356,7 +369,10 @@ export default {
 </script>
 
 <template>
-  <div class="gl-relative" :class="{ [$options.HEIGHT_AUTO_CLASSES]: autoHeight }">
+  <div
+    class="gl-relative"
+    :class="{ [$options.HEIGHT_AUTO_CLASSES]: autoHeight }"
+  >
     <chart
       v-bind="$attrs"
       :class="{ 'gl-grow': autoHeight }"
