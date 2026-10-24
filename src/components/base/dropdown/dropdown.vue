@@ -1,29 +1,29 @@
 <!-- eslint-disable vue/one-component-per-file -->
 <script>
-import Vue from 'vue';
-import { merge } from 'lodash-es';
-import { selectAll } from '../../../vendor/bootstrap-vue/src/utils/dom';
-import { BDropdown } from '../../../vendor/bootstrap-vue/src/components/dropdown/dropdown';
+import Vue from "vue";
+import { merge } from "lodash-es";
+import { selectAll } from "../../../vendor/bootstrap-vue/src/utils/dom";
+import { BDropdown } from "../../../vendor/bootstrap-vue/src/components/dropdown/dropdown";
 import {
   buttonCategoryOptions,
   buttonSizeOptions,
   dropdownVariantOptions,
-} from '../../../utils/constants';
-import { filterVisible } from '../../../utils/utils';
-import { ButtonMixin } from '../../mixins/button_mixin';
-import GlButton from '../button/button.vue';
-import GlIcon from '../icon/icon.vue';
-import GlLoadingIcon from '../loading_icon/loading_icon.vue';
-import GlDropdownDivider from './dropdown_divider.vue';
+} from "../../../utils/constants";
+import { filterVisible } from "../../../utils/utils";
+import { ButtonMixin } from "../../mixins/button_mixin";
+import GlButton from "../button/button.vue";
+import GlIcon from "../icon/icon.vue";
+import GlLoadingIcon from "../loading_icon/loading_icon.vue";
+import GlDropdownDivider from "./dropdown_divider.vue";
 
 const Selector = {
   ITEM_SELECTOR:
-    '.dropdown-item:not(.disabled):not([disabled]),.form-control:not(.disabled):not([disabled])',
+    ".dropdown-item:not(.disabled):not([disabled]),.form-control:not(.disabled):not([disabled])",
 };
 
-// see https://github.com/khulnasoft/khulnasoft-ui/merge_requests/130#note_126406721
+// see https://github.com/khulnasoft/khulnasoft-ui/pull/130#note_126406721
 const ExtendedBDropdown = Vue.extend(BDropdown, {
-  name: 'ExtendedBDropdown',
+  name: "ExtendedBDropdown",
   methods: {
     getItems() {
       return filterVisible(selectAll(Selector.ITEM_SELECTOR, this.$refs.menu));
@@ -41,7 +41,7 @@ export const DefaultPopperOptions = {
 };
 
 export default {
-  name: 'GlDropdown',
+  name: "GlDropdown",
   components: {
     BDropdown: ExtendedBDropdown,
     GlButton,
@@ -58,7 +58,7 @@ export default {
     headerText: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * When true, hides the border below the dropdown header.
@@ -82,7 +82,7 @@ export default {
     clearAllText: {
       type: String,
       required: false,
-      default: 'Clear all',
+      default: "Clear all",
     },
     /**
      * CSS class(es) to apply to the "Clear all" button text.
@@ -90,7 +90,7 @@ export default {
     clearAllTextClass: {
       type: String,
       required: false,
-      default: 'gl-px-5',
+      default: "gl-px-5",
     },
     /**
      * Text to display on the dropdown toggle button.
@@ -98,7 +98,7 @@ export default {
     text: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * When true, displays a title above highlighted items.
@@ -114,7 +114,7 @@ export default {
     highlightedItemsTitle: {
       type: String,
       required: false,
-      default: 'Selected',
+      default: "Selected",
     },
     /**
      * CSS class(es) to apply to the highlighted items title.
@@ -122,7 +122,7 @@ export default {
     highlightedItemsTitleClass: {
       type: String,
       required: false,
-      default: 'gl-px-5',
+      default: "gl-px-5",
     },
     /**
      * When true, visually hides the button text but keeps it accessible to screen readers.
@@ -164,7 +164,7 @@ export default {
     size: {
       type: String,
       required: false,
-      default: 'medium',
+      default: "medium",
       validator: (value) => Object.keys(buttonSizeOptions).includes(value),
     },
     /**
@@ -237,7 +237,7 @@ export default {
     splitHref: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
   },
   computed: {
@@ -247,8 +247,8 @@ export default {
     isIconOnly() {
       return Boolean(
         this.icon &&
-        (!this.text?.length || this.textSrOnly) &&
-        !this.hasSlotContents('button-text'),
+          (!this.text?.length || this.textSrOnly) &&
+          !this.hasSlotContents("button-text")
       );
     },
     isIconWithText() {
@@ -258,15 +258,15 @@ export default {
       return [
         this.toggleClass,
         {
-          'gl-button': true,
-          'gl-dropdown-toggle': true,
+          "gl-button": true,
+          "gl-dropdown-toggle": true,
           [`btn-${this.variant}-secondary`]:
             this.category === buttonCategoryOptions.secondary ||
             (this.category === buttonCategoryOptions.tertiary && this.split),
           [`btn-${this.variant}-tertiary`]:
             this.category === buttonCategoryOptions.tertiary && !this.split,
-          'dropdown-icon-only': this.isIconOnly,
-          'dropdown-icon-text': this.isIconWithText,
+          "dropdown-icon-only": this.isIconOnly,
+          "dropdown-icon-text": this.isIconWithText,
         },
       ];
     },
@@ -274,9 +274,9 @@ export default {
       return [
         this.toggleClass,
         {
-          'gl-button': true,
-          'split-content-button': Boolean(this.text),
-          'icon-split-content-button': Boolean(this.icon),
+          "gl-button": true,
+          "split-content-button": Boolean(this.text),
+          "icon-split-content-button": Boolean(this.icon),
           [`btn-${this.variant}-secondary`]:
             this.category === buttonCategoryOptions.secondary ||
             this.category === buttonCategoryOptions.tertiary,
@@ -287,11 +287,12 @@ export default {
       return this.split && this.icon ? null : this.text;
     },
     hasHighlightedItemsContent() {
-      return this.hasSlotContents('highlighted-items');
+      return this.hasSlotContents("highlighted-items");
     },
     hasHighlightedItemsOrClearAll() {
       return (
-        (this.hasHighlightedItemsContent && this.showHighlightedItemsTitle) || this.showClearAll
+        (this.hasHighlightedItemsContent && this.showHighlightedItemsTitle) ||
+        this.showClearAll
       );
     },
     popperOptions() {
@@ -350,11 +351,17 @@ export default {
           class="gl-justify-content-flex-start gl-flex gl-grow"
           :class="highlightedItemsTitleClass"
         >
-          <span class="gl-font-bold gl-text-strong" data-testid="highlighted-items-title">{{
-            highlightedItemsTitle
-          }}</span>
+          <span
+            class="gl-font-bold gl-text-strong"
+            data-testid="highlighted-items-title"
+            >{{ highlightedItemsTitle }}</span
+          >
         </div>
-        <div v-if="showClearAll" class="gl-flex gl-grow gl-justify-end" :class="clearAllTextClass">
+        <div
+          v-if="showClearAll"
+          class="gl-flex gl-grow gl-justify-end"
+          :class="clearAllTextClass"
+        >
           <gl-button
             size="small"
             category="tertiary"
@@ -383,11 +390,22 @@ export default {
     <template #button-content>
       <slot name="button-content">
         <gl-loading-icon v-if="loading" :class="{ 'gl-mr-2': !isIconOnly }" />
-        <gl-icon v-if="icon && !(isIconOnly && loading)" class="dropdown-icon" :name="icon" />
-        <span class="gl-dropdown-button-text" :class="{ 'gl-sr-only': textSrOnly }">
+        <gl-icon
+          v-if="icon && !(isIconOnly && loading)"
+          class="dropdown-icon"
+          :name="icon"
+        />
+        <span
+          class="gl-dropdown-button-text"
+          :class="{ 'gl-sr-only': textSrOnly }"
+        >
           <slot name="button-text">{{ buttonText }}</slot>
         </span>
-        <gl-icon v-if="renderCaret" class="gl-button-icon dropdown-chevron" name="chevron-down" />
+        <gl-icon
+          v-if="renderCaret"
+          class="gl-button-icon dropdown-chevron"
+          name="chevron-down"
+        />
       </slot>
     </template>
   </b-dropdown>
