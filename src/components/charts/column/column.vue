@@ -1,5 +1,5 @@
 <script>
-import { merge } from 'lodash-es';
+import { merge } from "lodash-es";
 import {
   defaultChartOptions,
   grid,
@@ -9,29 +9,29 @@ import {
   mergeSeriesToOptions,
   generateBarSeries,
   generateLineSeries,
-} from '../../../utils/charts/config';
+} from "../../../utils/charts/config";
 import {
   CHART_TYPE_BAR,
   CHART_TYPE_LINE,
   HEIGHT_AUTO_CLASSES,
   CHART_DEFAULT_SERIES_STACK,
   CHART_DEFAULT_SERIES_SECONDARY_STACK,
-} from '../../../utils/charts/constants';
-import { colorFromDefaultPalette } from '../../../utils/charts/theme';
-import Chart from '../chart/chart.vue';
-import ChartLegend from '../legend/legend.vue';
-import ChartTooltip from '../shared/tooltip/tooltip.vue';
+} from "../../../utils/charts/constants";
+import { colorFromDefaultPalette } from "../../../utils/charts/theme";
+import Chart from "../chart/chart.vue";
+import ChartLegend from "../legend/legend.vue";
+import ChartTooltip from "../shared/tooltip/tooltip.vue";
 
 const yAxisDefaults = {
   ...yAxis,
-  nameLocation: 'center',
+  nameLocation: "center",
   axisTick: {
     show: false,
   },
 };
 
 export default {
-  name: 'GlColumnChart',
+  name: "GlColumnChart",
   components: {
     Chart,
     ChartLegend,
@@ -84,7 +84,7 @@ export default {
     secondaryDataTitle: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * Title text for the X axis.
@@ -99,7 +99,8 @@ export default {
     xAxisType: {
       type: String,
       required: true,
-      validator: (value) => ['value', 'category', 'time', 'log'].indexOf(value) !== -1,
+      validator: (value) =>
+        ["value", "category", "time", "log"].indexOf(value) !== -1,
     },
     /**
      * Sets the chart's height in pixels. Set to `"auto"` to use the height of the container.
@@ -120,10 +121,12 @@ export default {
       return Boolean(this.secondaryData.length);
     },
     barSeries() {
-      return this.bars.map(({ name, data, stack = CHART_DEFAULT_SERIES_STACK }, index) => {
-        const color = colorFromDefaultPalette(index);
-        return generateBarSeries({ name, data, stack, color });
-      });
+      return this.bars.map(
+        ({ name, data, stack = CHART_DEFAULT_SERIES_STACK }, index) => {
+          const color = colorFromDefaultPalette(index);
+          return generateBarSeries({ name, data, stack, color });
+        }
+      );
     },
     lineSeries() {
       const offset = this.bars.length;
@@ -135,12 +138,15 @@ export default {
     secondarySeries() {
       const offset = this.bars.length + this.lines.length;
       return this.secondaryData.map(
-        ({ name, data, type, stack = CHART_DEFAULT_SERIES_SECONDARY_STACK }, index) => {
+        (
+          { name, data, type, stack = CHART_DEFAULT_SERIES_SECONDARY_STACK },
+          index
+        ) => {
           const color = colorFromDefaultPalette(offset + index);
           return type === CHART_TYPE_LINE
             ? generateLineSeries({ color, name, data, yAxisIndex: 1 })
             : generateBarSeries({ color, name, data, yAxisIndex: 1, stack });
-        },
+        }
       );
     },
     series() {
@@ -152,7 +158,7 @@ export default {
      * secondary axis. Axes are deliberately not colour-matched to their
      * series: the data palette doesn't meet text contrast, and colour alone
      * can't carry the axis-to-series mapping (WCAG 1.4.1). Axes keep the
-     * theme's axis text colour. See https://github.com/khulnasoft/khulnasoft-ui/-/work_items/3467
+     * theme's axis text colour. See https://github.com/khulnasoft/khulnasoft-ui/issues/3467
      */
     hasMultipleSeries() {
       return this.series.length > 1;
@@ -204,13 +210,13 @@ export default {
             boundaryGap: true,
             axisLabel: {
               margin: 20,
-              verticalAlign: 'bottom',
+              verticalAlign: "bottom",
             },
             axisLine: {
               show: false,
             },
             axisPointer: {
-              type: 'none',
+              type: "none",
             },
             name: this.xAxisTitle,
             type: this.xAxisType,
@@ -227,27 +233,30 @@ export default {
             : yAxisPrimary,
         },
         this.option,
-        dataZoomAdjustments(this.option.dataZoom),
+        dataZoomAdjustments(this.option.dataZoom)
       );
       // All chart options can be merged but series
       // needs to be handled specially
       return mergeSeriesToOptions(mergedOptions, this.series);
     },
     autoHeight() {
-      return this.height === 'auto';
+      return this.height === "auto";
     },
   },
   methods: {
     onCreated(chart) {
       this.chart = chart;
-      this.$emit('created', chart);
+      this.$emit("created", chart);
     },
   },
   HEIGHT_AUTO_CLASSES,
 };
 </script>
 <template>
-  <div class="gl-relative" :class="{ [$options.HEIGHT_AUTO_CLASSES]: autoHeight }">
+  <div
+    class="gl-relative"
+    :class="{ [$options.HEIGHT_AUTO_CLASSES]: autoHeight }"
+  >
     <chart
       v-bind="$attrs"
       :class="{ 'gl-grow': autoHeight }"
