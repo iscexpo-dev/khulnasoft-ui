@@ -1,13 +1,13 @@
-import { GlColumnChart } from '../../../charts';
+import { GlColumnChart } from "../../../charts";
 import {
   mockDefaultLineData,
   mockDefaultBarData,
   mockDefaultStackedBarData,
   mockSecondaryBarData,
   mockSecondaryTrendlineData,
-} from '../../../utils/charts/mock_data';
+} from "../../../utils/charts/mock_data";
 
-const template = (content = '') => `
+const template = (content = "") => `
   <gl-column-chart
     :bars="bars"
     :lines="lines"
@@ -27,11 +27,11 @@ const generateProps = ({
   bars = mockDefaultBarData,
   lines = [],
   option = {},
-  yAxisTitle = 'Pushes per day',
-  xAxisTitle = 'User',
-  xAxisType = 'category',
+  yAxisTitle = "Pushes per day",
+  xAxisTitle = "User",
+  xAxisType = "category",
   secondaryData = [],
-  secondaryDataTitle = '',
+  secondaryDataTitle = "",
   height = null,
 } = {}) => ({
   bars,
@@ -64,7 +64,7 @@ WithZoomAndScroll.args = generateProps({
   option: {
     dataZoom: [
       {
-        type: 'slider',
+        type: "slider",
         startValue: 1,
       },
     ],
@@ -84,7 +84,7 @@ MultipleBarSeries.parameters = {
   docs: {
     description: {
       story:
-        'When series share a unit, use a single axis rather than `secondary-data` — a legend renders automatically whenever there is more than one series.',
+        "When series share a unit, use a single axis rather than `secondary-data` — a legend renders automatically whenever there is more than one series.",
     },
   },
 };
@@ -92,13 +92,13 @@ MultipleBarSeries.parameters = {
 export const SecondaryYAxis = Template.bind({});
 SecondaryYAxis.args = generateProps({
   secondaryData: mockSecondaryBarData,
-  secondaryDataTitle: 'New bar data',
+  secondaryDataTitle: "New bar data",
 });
 SecondaryYAxis.parameters = {
   docs: {
     description: {
       story:
-        'Reserve the secondary axis for series at different magnitudes or units. A legend renders automatically to identify each series. See [work item 3467](https://github.com/khulnasoft/khulnasoft-ui/-/work_items/3467).',
+        "Reserve the secondary axis for series at different magnitudes or units. A legend renders automatically to identify each series. See [work item 3467](https://github.com/khulnasoft/khulnasoft-ui/issues/3467).",
     },
   },
 };
@@ -106,7 +106,7 @@ SecondaryYAxis.parameters = {
 export const SecondaryYAxisLine = Template.bind({});
 SecondaryYAxisLine.args = generateProps({
   secondaryData: mockSecondaryTrendlineData,
-  secondaryDataTitle: 'New line data',
+  secondaryDataTitle: "New line data",
 });
 
 export const WithCustomTooltip = (args, { argTypes }) => ({
@@ -120,16 +120,16 @@ export const WithCustomTooltip = (args, { argTypes }) => ({
   `),
 });
 WithCustomTooltip.args = generateProps();
-WithCustomTooltip.tags = ['skip-visual-test'];
+WithCustomTooltip.tags = ["skip-visual-test"];
 
 export default {
-  title: 'charts/column-chart',
+  title: "charts/column-chart",
   component: GlColumnChart,
   parameters: {
     docs: {
       description: {
         component:
-          'See [Pajamas Design System documentation](https://design.khulnasoft.com/data-visualization/charts) for usage and implementation details.',
+          "See [Pajamas Design System documentation](https://design.khulnasoft.com/data-visualization/charts) for usage and implementation details.",
       },
     },
   },
