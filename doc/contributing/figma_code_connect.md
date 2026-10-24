@@ -19,7 +19,7 @@ and magic numbers.
   bounds of the real component API rather than inventing markup.
 
 Tracking issue:
-[Map Figma components to khulnasoft-ui components through code connect](https://github.com/khulnasoft/khulnasoft-ui/-/work_items/3407).
+[Map Figma components to khulnasoft-ui components through code connect](https://github.com/khulnasoft/khulnasoft-ui/issues/3407).
 
 ## .figma.ts files
 
@@ -43,13 +43,13 @@ with `` figma.code`…` ``.
 
 ```ts
 // url=https://www.figma.com/design/qEddyqCrI7kPSBjGmwkZzQ/…?node-id=XXXXX-XXXXX
-import figma from 'figma';
+import figma from "figma";
 
 const instance = figma.selectedInstance;
-const label = instance.getString('Label');
+const label = instance.getString("Label");
 
 export default {
-  id: 'gl-component',
+  id: "gl-component",
   imports: ["import { GlComponent } from '@khulnasoft/ui'"],
   example: figma.code`<gl-component>${label}</gl-component>`,
   metadata: { nestable: true },
