@@ -1,16 +1,16 @@
 <script>
-import { last } from 'lodash-es';
-import { Portal } from 'portal-vue';
-import { LEFT_MOUSE_BUTTON } from '../../../utils/constants';
-import GlFilteredSearchSuggestion from './filtered_search_suggestion.vue';
-import GlFilteredSearchSuggestionList from './filtered_search_suggestion_list.vue';
+import { last } from "lodash-es";
+import { Portal } from "portal-vue";
+import { LEFT_MOUSE_BUTTON } from "../../../utils/constants";
+import GlFilteredSearchSuggestion from "./filtered_search_suggestion.vue";
+import GlFilteredSearchSuggestionList from "./filtered_search_suggestion_list.vue";
 import {
   splitOnQuotes,
   wrapTokenInQuotes,
   match,
   TERM_TOKEN_TYPE,
   FILTERED_SEARCH_SUGGESTIONS_CLASS,
-} from './filtered_search_utils';
+} from "./filtered_search_utils";
 
 // We need some helpers to ensure @vue/compat compatibility
 // @vue/compat will render comment nodes for v-if and comments in HTML
@@ -23,8 +23,10 @@ import {
 // fixing ASAP and because I don't want this helper to be reused
 // FIXME: replace with Symbols when we will switch to Vue3
 
-const isVue3Comment = (vnode) => vnode?.type?.toString?.() === 'Symbol(Comment)';
-const isVue3Fragment = (vnode) => vnode?.type?.toString?.() === 'Symbol(Fragment)';
+const isVue3Comment = (vnode) =>
+  vnode?.type?.toString?.() === "Symbol(Comment)";
+const isVue3Fragment = (vnode) =>
+  vnode?.type?.toString?.() === "Symbol(Fragment)";
 
 const isVNodeEmpty = (vnode) => {
   if (isVue3Fragment(vnode)) {
@@ -47,19 +49,21 @@ const isSlotNotEmpty = (slot) => {
     return false;
   }
 
-  const vnodes = typeof slot === 'function' ? slot() : slot;
+  const vnodes = typeof slot === "function" ? slot() : slot;
   // eslint-disable-next-line unicorn/no-array-callback-reference
-  return !(Array.isArray(vnodes) ? vnodes.every(isVNodeEmpty) : isVNodeEmpty(vnodes));
+  return !(Array.isArray(vnodes)
+    ? vnodes.every(isVNodeEmpty)
+    : isVNodeEmpty(vnodes));
 };
 
 export default {
-  name: 'GlFilteredSearchTokenSegment',
+  name: "GlFilteredSearchTokenSegment",
   components: {
     Portal,
     GlFilteredSearchSuggestionList,
     GlFilteredSearchSuggestion,
   },
-  inject: ['portalName', 'alignSuggestions', 'termsAsTokens'],
+  inject: ["portalName", "alignSuggestions", "termsAsTokens"],
   inheritAttrs: false,
   props: {
     /**
@@ -84,7 +88,7 @@ export default {
     label: {
       type: String,
       required: false,
-      default: 'Search',
+      default: "Search",
     },
     /**
      * When true, enables multi-select mode.
@@ -108,7 +112,7 @@ export default {
     optionTextField: {
       type: String,
       required: false,
-      default: 'title',
+      default: "title",
     },
     /**
      * Custom keydown event handler function.
@@ -155,8 +159,8 @@ export default {
     cursorPosition: {
       type: String,
       required: false,
-      default: 'end',
-      validator: (value) => ['start', 'end'].includes(value),
+      default: "end",
+      validator: (value) => ["start", "end"].includes(value),
     },
     /**
      * When true, renders in a non-interactive view-only mode.
@@ -207,7 +211,7 @@ export default {
          *
          * @type {object} option The current option.
          */
-        this.$emit('input', inputValue);
+        this.$emit("input", inputValue);
       },
     },
 
@@ -266,7 +270,7 @@ export default {
 
       /**
        * This is a temporary workaround to implement the same behaviour
-       * implemented in https://github.com/khulnasoft/khulnasoft-ui/-/issues/2381
+       * implemented in https://github.com/khulnasoft/khulnasoft-ui/issues/2381
        * for tokens with `terms-as-tokens=false` and `multi-select=false`.
        *
        * We're aiming to remove this temporary fix when
@@ -274,24 +278,24 @@ export default {
        * that refactoring will use the `@input` handler on the GlFilteredSearch
        * component to handle tokens instead of doing workarounds.
        */
-      if (typeof newValue !== 'string') return;
+      if (typeof newValue !== "string") return;
 
       const hasUnclosedQuote = newValue.split('"').length % 2 === 0;
-      if (newValue.indexOf(' ') === -1 || hasUnclosedQuote) {
+      if (newValue.indexOf(" ") === -1 || hasUnclosedQuote) {
         return;
       }
 
       const [firstWord, ...otherWords] = splitOnQuotes(newValue).filter(
-        (w, idx, arr) => Boolean(w) || idx === arr.length - 1,
+        (w, idx, arr) => Boolean(w) || idx === arr.length - 1
       );
-      this.$emit('input', firstWord);
+      this.$emit("input", firstWord);
 
       if (otherWords.length) {
         /**
          * Emitted when Space appears in token segment value
          * @property {array|string} newStrings New strings to be converted into term tokens
          */
-        this.$emit('split', otherWords);
+        this.$emit("split", otherWords);
       }
     },
   },
@@ -302,7 +306,7 @@ export default {
         /**
          * Emitted on mousedown event on the main component.
          */
-        this.$emit('activate');
+        this.$emit("activate");
         e.preventDefault();
       }
     },
@@ -311,7 +315,7 @@ export default {
       return this.options?.find((option) =>
         loose
           ? match(option[this.optionTextField], inputValue)
-          : option[this.optionTextField] === inputValue,
+          : option[this.optionTextField] === inputValue
       );
     },
 
@@ -322,9 +326,9 @@ export default {
       const { input } = this.$refs;
       if (input) {
         input.focus();
-        input.scrollIntoView({ block: 'nearest', inline: 'end' });
+        input.scrollIntoView({ block: "nearest", inline: "end" });
         this.alignSuggestions(input);
-        if (this.cursorPosition === 'start') {
+        if (this.cursorPosition === "start") {
           input?.setSelectionRange(0, 0);
         }
       }
@@ -336,7 +340,7 @@ export default {
       }
 
       if (this.matchingOption?.value !== this.value) {
-        this.$emit('input', this.fallbackValue);
+        this.$emit("input", this.fallbackValue);
       }
     },
 
@@ -350,19 +354,23 @@ export default {
        *
        * @type {string} value The selected value.
        */
-      this.$emit('select', formattedSuggestedValue);
+      this.$emit("select", formattedSuggestedValue);
 
       if (!this.multiSelect) {
         this.$emit(
-          'input',
-          formattedSuggestedValue === TERM_TOKEN_TYPE ? this.inputValue : formattedSuggestedValue,
+          "input",
+          formattedSuggestedValue === TERM_TOKEN_TYPE
+            ? this.inputValue
+            : formattedSuggestedValue
         );
-        this.$emit('complete', formattedSuggestedValue);
+        this.$emit("complete", formattedSuggestedValue);
       }
     },
 
     showHeader(option) {
-      return option.value?.toString().startsWith('gl-filtered-search-suggestion-group-');
+      return option.value
+        ?.toString()
+        .startsWith("gl-filtered-search-suggestion-group-");
     },
 
     handleInputKeydown(e) {
@@ -374,22 +382,22 @@ export default {
         ArrowLeft: () => {
           if (input.selectionStart === 0) {
             e.preventDefault();
-            this.$emit('previous');
+            this.$emit("previous");
           }
         },
         ArrowRight: () => {
           if (input.selectionEnd === this.inputValue.length) {
             e.preventDefault();
-            this.$emit('next');
+            this.$emit("next");
           }
         },
         Backspace: () => {
-          if (this.inputValue === '') {
+          if (this.inputValue === "") {
             e.preventDefault();
             /**
              * Emitted when Backspace is pressed and the value is empty
              */
-            this.$emit('backspace');
+            this.$emit("backspace");
           }
         },
         Enter: () => {
@@ -400,10 +408,10 @@ export default {
             /**
              * Emitted when Enter is pressed and no suggestion is selected
              */
-            this.$emit('submit');
+            this.$emit("submit");
           }
         },
-        ':': () => {
+        ":": () => {
           if (suggestedValue != null) {
             e.preventDefault();
             this.applySuggestion(suggestedValue);
@@ -414,7 +422,7 @@ export default {
           /**
            * Emitted when suggestion is selected from the suggestion list
            */
-          this.$emit('complete');
+          this.$emit("complete");
         },
       };
 
@@ -444,18 +452,20 @@ export default {
     handleBlur(e) {
       // Keep focus on input when blur event is on same element
       // (e.g. scrollbar in filtered search suggestions list)
-      if (e.relatedTarget?.classList?.contains(FILTERED_SEARCH_SUGGESTIONS_CLASS)) {
+      if (
+        e.relatedTarget?.classList?.contains(FILTERED_SEARCH_SUGGESTIONS_CLASS)
+      ) {
         this.$refs.input?.focus();
         return;
       }
 
       if (this.multiSelect) {
-        this.$emit('complete');
+        this.$emit("complete");
       } else if (this.active) {
         /**
          * Emitted when this term token will lose its focus.
          */
-        this.$emit('deactivate');
+        this.$emit("deactivate");
       }
     },
   },
@@ -474,14 +484,19 @@ export default {
     v-on="viewOnly ? {} : { mousedown: emitIfInactive }"
   >
     <template v-if="active">
-      <slot name="before-input" v-bind="{ submitValue: applySuggestion }"></slot>
+      <slot
+        name="before-input"
+        v-bind="{ submitValue: applySuggestion }"
+      ></slot>
       <slot name="input" v-bind="{ submitValue: applySuggestion }">
         <input
           ref="input"
           v-bind="searchInputAttributes"
           v-model="inputValue"
           class="gl-filtered-search-token-segment-input"
-          :class="{ 'gl-filtered-search-token-segment-input-disabled': viewOnly }"
+          :class="{
+            'gl-filtered-search-token-segment-input-disabled': viewOnly,
+          }"
           data-testid="filtered-search-token-segment-input"
           :aria-label="label"
           :disabled="viewOnly"
@@ -538,6 +553,8 @@ export default {
       </portal>
     </template>
 
-    <slot v-else name="view" v-bind="{ label, inputValue }">{{ inputValue }}</slot>
+    <slot v-else name="view" v-bind="{ label, inputValue }">{{
+      inputValue
+    }}</slot>
   </div>
 </template>
