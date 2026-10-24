@@ -1,12 +1,12 @@
 <script>
-import GridLayout from './grid_layout/grid_layout.vue';
-import { dashboardConfigValidator } from './validators';
+import GridLayout from "./grid_layout/grid_layout.vue";
+import { dashboardConfigValidator } from "./validators";
 
 /**
  * The `DashboardLayout` component provides an easy way to render dashboards using a configuration, aligning with our [Pajamas guidelines](https://design.khulnasoft.com/patterns/dashboards).
  */
 export default {
-  name: 'GlDashboardLayout',
+  name: "GlDashboardLayout",
   components: {
     GridLayout,
   },
@@ -39,7 +39,7 @@ export default {
      * Adjusts the cell height of the grid. Setting this too high can leave unwanted whitespace
      * between grid panels. Reduce the number to allow for a more compact grid.
      * For more information, see:
-     * https://github.com/khulnasoft/khulnasoft-ui/-/issues/3051
+     * https://github.com/khulnasoft/khulnasoft-ui/issues/3051
      */
     cellHeight: {
       type: Number,
@@ -68,7 +68,7 @@ export default {
     filtersClass: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
   },
   computed: {
@@ -92,7 +92,7 @@ export default {
   },
   methods: {
     emitChanges(newConfig) {
-      this.$emit('changed', newConfig);
+      this.$emit("changed", newConfig);
     },
   },
 };
