@@ -47,7 +47,7 @@
     + .text-muted,
     &.is-valid + .invalid-feedback + .text-muted,
     &.is-valid + .invalid-feedback + .gl-text-secondary {
-      // See https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/2806
+      // See https://github.com/khulnasoft/khulnasoft-ui/pull/2806
       // for the reasoning behind the "valid+invalid" selector above
       @apply gl-mt-3;
     }
