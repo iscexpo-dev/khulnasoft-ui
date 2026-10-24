@@ -1,5 +1,10 @@
-import { isVisible } from '../vendor/bootstrap-vue/src/utils/dom';
-import { COMMA, CONTRAST_LEVELS, labelColorOptions, focusableTags } from './constants';
+import { isVisible } from "../vendor/bootstrap-vue/src/utils/dom";
+import {
+  COMMA,
+  CONTRAST_LEVELS,
+  labelColorOptions,
+  focusableTags,
+} from "./constants";
 
 export { isVisible };
 
@@ -30,10 +35,10 @@ export function throttle(fn) {
 }
 
 export function rgbFromHex(hex) {
-  const cleanHex = hex.replace('#', '');
+  const cleanHex = hex.replace("#", "");
   const rgb =
     cleanHex.length === 3
-      ? cleanHex.split('').map((val) => val + val)
+      ? cleanHex.split("").map((val) => val + val)
       : cleanHex.match(/[\da-f]{2}/gi);
   const [r, g, b] = rgb.map((val) => parseInt(val, 16));
   return [r, g, b];
@@ -53,7 +58,9 @@ export function hexToRgba(hex, opacity = 1) {
 
 export function toSrgb(value) {
   const normalized = value / 255;
-  return normalized <= 0.03928 ? normalized / 12.92 : ((normalized + 0.055) / 1.055) ** 2.4;
+  return normalized <= 0.03928
+    ? normalized / 12.92
+    : ((normalized + 0.055) / 1.055) ** 2.4;
 }
 
 export function relativeLuminance(rgb) {
@@ -61,20 +68,22 @@ export function relativeLuminance(rgb) {
   // -
   // WCAG 3.0 will use APAC
   // Using APAC would be the ultimate goal, but was dismissed by engineering as of now
-  // See https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/3418#note_1370107090
-  return 0.2126 * toSrgb(rgb[0]) + 0.7152 * toSrgb(rgb[1]) + 0.0722 * toSrgb(rgb[2]);
+  // See https://github.com/khulnasoft/khulnasoft-ui/pull/3418#note_1370107090
+  return (
+    0.2126 * toSrgb(rgb[0]) + 0.7152 * toSrgb(rgb[1]) + 0.0722 * toSrgb(rgb[2])
+  );
 }
 
 export function colorFromBackground(backgroundColor, contrastRatio = 2.4) {
   let color;
-  const lightColor = rgbFromHex('#FFFFFF');
-  const darkColor = rgbFromHex('#18171d');
+  const lightColor = rgbFromHex("#FFFFFF");
+  const darkColor = rgbFromHex("#18171d");
 
-  if (backgroundColor.startsWith('#')) {
+  if (backgroundColor.startsWith("#")) {
     color = rgbFromHex(backgroundColor);
-  } else if (backgroundColor.startsWith('rgba(')) {
+  } else if (backgroundColor.startsWith("rgba(")) {
     color = rgbFromString(backgroundColor, 5);
-  } else if (backgroundColor.startsWith('rgb(')) {
+  } else if (backgroundColor.startsWith("rgb(")) {
     color = rgbFromString(backgroundColor, 4);
   }
 
@@ -128,12 +137,19 @@ export function isElementFocusable(elt) {
   const { tagName } = elt;
 
   const isValidTag = focusableTags.includes(tagName);
-  const hasValidType = elt.getAttribute('type') !== 'hidden';
-  const isDisabled = elt.getAttribute('disabled') === '' || elt.getAttribute('disabled');
-  const hasValidZIndex = elt.getAttribute('z-index') !== '-1';
-  const isInvalidAnchorTag = tagName === 'A' && !elt.getAttribute('href');
+  const hasValidType = elt.getAttribute("type") !== "hidden";
+  const isDisabled =
+    elt.getAttribute("disabled") === "" || elt.getAttribute("disabled");
+  const hasValidZIndex = elt.getAttribute("z-index") !== "-1";
+  const isInvalidAnchorTag = tagName === "A" && !elt.getAttribute("href");
 
-  return isValidTag && hasValidType && !isDisabled && hasValidZIndex && !isInvalidAnchorTag;
+  return (
+    isValidTag &&
+    hasValidType &&
+    !isDisabled &&
+    hasValidZIndex &&
+    !isInvalidAnchorTag
+  );
 }
 
 /**
@@ -145,7 +161,7 @@ export function isElementFocusable(elt) {
 export function isElementTabbable(el) {
   if (!el) return false;
 
-  const tabindex = parseInt(el.getAttribute('tabindex'), 10);
+  const tabindex = parseInt(el.getAttribute("tabindex"), 10);
   return tabindex > -1;
 }
 
@@ -168,7 +184,7 @@ export function focusFirstFocusableElement(elts) {
  * @returns {boolean}
  */
 export function isDev() {
-  return !['test', 'production'].includes(process.env.NODE_ENV);
+  return !["test", "production"].includes(process.env.NODE_ENV);
 }
 
 /**
@@ -192,7 +208,11 @@ export function logWarning(message, context = {}) {
  */
 export function stopEvent(
   event,
-  { preventDefault = true, stopPropagation = true, stopImmediatePropagation = false } = {},
+  {
+    preventDefault = true,
+    stopPropagation = true,
+    stopImmediatePropagation = false,
+  } = {}
 ) {
   if (preventDefault) {
     event.preventDefault();
