@@ -47,20 +47,20 @@ Naming follows from the flag: choose a snake_case feature flag name
 choice; the example drops words the component name already implies (`accessibleDisabled` on
 `GlButton`).
 
-| # | Repository | File | Change |
-| --- | --- | --- | --- |
-| 1 | this repository | `packages/khulnasoft-ui/src/config.js` | Add a boolean option to `setConfigs`, default `false` |
-| 2 | this repository | the component, e.g. `packages/khulnasoft-ui/src/components/base/button/button.vue` | Add a prop whose default reads the config value |
-| 3 | KhulnaSoft repository | `config/feature_flags/<type>/<flag_name>.yml` | Feature flag definition |
-| 4 | KhulnaSoft repository | `lib/khulnasoft/gon_helper.rb` | Push the flag state to the frontend via `gon` |
-| 5 | KhulnaSoft repository | `app/assets/javascripts/commons/khulnasoft_ui.js` | Read `gon.features` and pass the value to `setConfigs` |
+| #   | Repository            | File                                                                               | Change                                                 |
+| --- | --------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| 1   | this repository       | `packages/khulnasoft-ui/src/config.js`                                             | Add a boolean option to `setConfigs`, default `false`  |
+| 2   | this repository       | the component, e.g. `packages/khulnasoft-ui/src/components/base/button/button.vue` | Add a prop whose default reads the config value        |
+| 3   | KhulnaSoft repository | `config/feature_flags/<type>/<flag_name>.yml`                                      | Feature flag definition                                |
+| 4   | KhulnaSoft repository | `lib/khulnasoft/gon_helper.rb`                                                     | Push the flag state to the frontend via `gon`          |
+| 5   | KhulnaSoft repository | `app/assets/javascripts/commons/khulnasoft_ui.js`                                  | Read `gon.features` and pass the value to `setConfigs` |
 
 The worked example, end to end:
-[design.khulnasoft.com!5912](https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/5912)
+[design.khulnasoft.com!5912](https://github.com/khulnasoft/khulnasoft-ui/pull/5912)
 implements steps 1 and 2,
-[khulnasoft-org/khulnasoft!236906](https://github.com/khulnasoft/khulnasoft/-/merge_requests/236906) wires
+[khulnasoft-org/khulnasoft!236906](https://github.com/khulnasoft/khulnasoft/pull/236906) wires
 steps 3 to 5, and
-[khulnasoft-org/khulnasoft#600158](https://github.com/khulnasoft/khulnasoft/-/work_items/600158) is the
+[khulnasoft-org/khulnasoft#600158](https://github.com/khulnasoft/khulnasoft/issues/600158) is the
 rollout issue that tracks the flag from there.
 
 ## Step 1: Add an opt-in config flag in KhulnaSoft UI
@@ -71,9 +71,13 @@ behavior) and stored on the affected component's config object:
 
 ```js
 // packages/khulnasoft-ui/src/config.js
-const setConfigs = ({ translations, firstDayOfWeek, accessibleDisabledButton = false } = {}) => {
+const setConfigs = ({
+  translations,
+  firstDayOfWeek,
+  accessibleDisabledButton = false,
+} = {}) => {
   // ...
-  if (typeof accessibleDisabledButton === 'boolean') {
+  if (typeof accessibleDisabledButton === "boolean") {
     Object.assign(glButtonConfig, {
       accessibleDisabledButton,
     });
@@ -176,7 +180,7 @@ default, so a markup-changing flag flips backend feature specs the moment the fl
 merges, before any rollout. If the new markup breaks test matchers (Capybara's `disabled:`
 matcher did here), stub the flag off suite-wide in `spec/spec_helper.rb` with
 `stub_feature_flags(accessible_disabled_button: false)` and a comment linking the rollout issue,
-as [khulnasoft-org/khulnasoft!236906](https://github.com/khulnasoft/khulnasoft/-/merge_requests/236906) does.
+as [khulnasoft-org/khulnasoft!236906](https://github.com/khulnasoft/khulnasoft/pull/236906) does.
 
 ## Verifying the flag is active
 
@@ -200,7 +204,7 @@ Also plan for:
 - **QA/E2E breakage.** If the change alters attributes test helpers rely on (Capybara's
   `disabled?` only checks the native `disabled` attribute), update the QA page objects before
   enabling the flag broadly. See
-  [khulnasoft-org/khulnasoft!241899](https://github.com/khulnasoft/khulnasoft/-/merge_requests/241899).
+  [khulnasoft-org/khulnasoft!241899](https://github.com/khulnasoft/khulnasoft/pull/241899).
 - **Compound components.** Components built on the changed one (here: button groups, segmented
   controls) inherit the behavior automatically; include them in the test plan.
 
