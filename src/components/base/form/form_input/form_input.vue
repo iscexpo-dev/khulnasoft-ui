@@ -1,34 +1,34 @@
 <script>
-import { isObject, uniqueId, isBoolean, toInteger, toString } from 'lodash-es';
+import { isObject, uniqueId, isBoolean, toInteger, toString } from "lodash-es";
 
-import { toFloat } from '../../../../utils/number_utils';
-import { isVisible, stopEvent } from '../../../../utils/utils';
-import { formInputWidths } from '../../../../utils/constants';
+import { toFloat } from "../../../../utils/number_utils";
+import { isVisible, stopEvent } from "../../../../utils/utils";
+import { formInputWidths } from "../../../../utils/constants";
 
 // Valid supported input types
 const TYPES = [
-  'text',
-  'password',
-  'email',
-  'number',
-  'url',
-  'tel',
-  'search',
-  'range',
-  'color',
-  'date',
-  'time',
-  'datetime',
-  'datetime-local',
-  'month',
-  'week',
+  "text",
+  "password",
+  "email",
+  "number",
+  "url",
+  "tel",
+  "search",
+  "range",
+  "color",
+  "date",
+  "time",
+  "datetime",
+  "datetime-local",
+  "month",
+  "week",
 ];
 
-const MODEL_PROP = 'value';
-const MODEL_EVENT = 'input';
+const MODEL_PROP = "value";
+const MODEL_EVENT = "input";
 
 export default {
-  name: 'GlFormInput',
+  name: "GlFormInput",
   model: {
     prop: MODEL_PROP,
     event: MODEL_EVENT,
@@ -40,7 +40,7 @@ export default {
     value: {
       type: [Number, String],
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * The type of input to render.
@@ -48,7 +48,7 @@ export default {
     type: {
       type: String,
       required: false,
-      default: 'text',
+      default: "text",
       validator: (value) => TYPES.includes(value),
     },
     /**
@@ -61,7 +61,9 @@ export default {
       validator: (value) => {
         const widths = isObject(value) ? Object.values(value) : [value];
 
-        return widths.every((width) => Object.values(formInputWidths).includes(width));
+        return widths.every((width) =>
+          Object.values(formInputWidths).includes(width)
+        );
       },
     },
     /**
@@ -255,17 +257,31 @@ export default {
     localType() {
       // We only allow certain types
       const { type } = this;
-      return TYPES.includes(type) ? type : 'text';
+      return TYPES.includes(type) ? type : "text";
     },
     computedAriaInvalid() {
       const { ariaInvalid } = this;
-      if (ariaInvalid === true || ariaInvalid === 'true' || ariaInvalid === '') {
-        return 'true';
+      if (
+        ariaInvalid === true ||
+        ariaInvalid === "true" ||
+        ariaInvalid === ""
+      ) {
+        return "true";
       }
-      return this.computedState === false ? 'true' : ariaInvalid;
+      return this.computedState === false ? "true" : ariaInvalid;
     },
     computedAttrs() {
-      const { localType: type, name, form, disabled, placeholder, required, min, max, step } = this;
+      const {
+        localType: type,
+        name,
+        form,
+        disabled,
+        placeholder,
+        required,
+        min,
+        max,
+        step,
+      } = this;
 
       return {
         id: this.computedId,
@@ -280,9 +296,9 @@ export default {
         min,
         max,
         step,
-        list: type !== 'password' ? this.list : null,
-        'aria-required': required ? 'true' : null,
-        'aria-invalid': this.computedAriaInvalid,
+        list: type !== "password" ? this.list : null,
+        "aria-required": required ? "true" : null,
+        "aria-invalid": this.computedAriaInvalid,
       };
     },
     computedState() {
@@ -290,8 +306,8 @@ export default {
       return isBoolean(this.state) ? this.state : null;
     },
     stateClass() {
-      if (this.computedState === true) return 'is-valid';
-      if (this.computedState === false) return 'is-invalid';
+      if (this.computedState === true) return "is-valid";
+      if (this.computedState === false) return "is-invalid";
       return null;
     },
     widthClasses() {
@@ -307,7 +323,7 @@ export default {
           ...(defaultWidth ? [`gl-form-input-${defaultWidth}`] : []),
           ...Object.entries(nonDefaultWidths).map(
             // eslint-disable-next-line @khulnasoft/tailwind-no-interpolation -- Not a CSS utility
-            ([breakpoint, width]) => `gl-${breakpoint}-form-input-${width}`,
+            ([breakpoint, width]) => `gl-${breakpoint}-form-input-${width}`
           ),
         ];
       }
@@ -317,19 +333,19 @@ export default {
     },
     computedClass() {
       const { plaintext, type } = this;
-      const isRange = type === 'range';
-      const isColor = type === 'color';
+      const isRange = type === "range";
+      const isColor = type === "color";
 
       return [
         ...this.widthClasses,
         {
           // Range input needs class `custom-range`
-          'custom-range': isRange,
+          "custom-range": isRange,
           // `plaintext` not supported by `type="range"` or `type="color"`
-          'form-control-plaintext': plaintext && !isRange && !isColor,
+          "form-control-plaintext": plaintext && !isRange && !isColor,
           // `form-control` not used by `type="range"` or `plaintext`
           // Always used by `type="color"`
-          'form-control': isColor || (!plaintext && !isRange),
+          "form-control": isColor || (!plaintext && !isRange),
         },
         this.stateClass,
       ];
@@ -347,17 +363,20 @@ export default {
       return Math.max(toInteger(this.debounce), 0);
     },
     hasFormatter() {
-      return typeof this.formatter === 'function';
+      return typeof this.formatter === "function";
     },
     noWheel() {
-      return this.type === 'number';
+      return this.type === "number";
     },
   },
   watch: {
     value(newValue) {
       const stringifyValue = toString(newValue);
       const modifiedValue = this.modifyValue(newValue);
-      if (stringifyValue !== this.localValue || modifiedValue !== this.vModelValue) {
+      if (
+        stringifyValue !== this.localValue ||
+        modifiedValue !== this.vModelValue
+      ) {
         // Clear any pending debounce timeout, as we are overwriting the user input
         this.clearDebounce();
         // Update the local values
@@ -379,7 +398,7 @@ export default {
     await this.$nextTick();
     // Update DOM with auto-generated ID after mount
     // to prevent SSR hydration errors
-    this.localId = uniqueId('gl-form-input-');
+    this.localId = uniqueId("gl-form-input-");
   },
   deactivated() {
     // Turn off listeners when keep-alive component deactivated
@@ -478,9 +497,9 @@ export default {
       this.updateValue(formattedValue);
       /**
        * The `input` and `update` events are swapped
-       * see https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/1628
+       * see https://github.com/khulnasoft/khulnasoft-ui/pull/1628
        */
-      this.$emit('update', formattedValue);
+      this.$emit("update", formattedValue);
     },
     onChange(event) {
       const { value } = event.target;
@@ -493,7 +512,7 @@ export default {
       }
       this.localValue = formattedValue;
       this.updateValue(formattedValue, true);
-      this.$emit('change', formattedValue);
+      this.$emit("change", formattedValue);
     },
     onBlur(event) {
       // Apply the `localValue` on blur to prevent cursor jumps
@@ -509,25 +528,25 @@ export default {
         this.updateValue(formattedValue, true);
       }
       // Emit native blur event
-      this.$emit('blur', event);
+      this.$emit("blur", event);
     },
     setWheelStopper(on) {
       const { input } = this.$refs;
       // We use native events, so that we don't interfere with propagation
       if (on) {
-        input.addEventListener('focus', this.onWheelFocus);
-        input.addEventListener('blur', this.onWheelBlur);
+        input.addEventListener("focus", this.onWheelFocus);
+        input.addEventListener("blur", this.onWheelBlur);
       } else {
-        input.removeEventListener('focus', this.onWheelFocus);
-        input.removeEventListener('blur', this.onWheelBlur);
-        document.removeEventListener('wheel', this.stopWheel);
+        input.removeEventListener("focus", this.onWheelFocus);
+        input.removeEventListener("blur", this.onWheelBlur);
+        document.removeEventListener("wheel", this.stopWheel);
       }
     },
     onWheelFocus() {
-      document.addEventListener('wheel', this.stopWheel);
+      document.addEventListener("wheel", this.stopWheel);
     },
     onWheelBlur() {
-      document.removeEventListener('wheel', this.stopWheel);
+      document.removeEventListener("wheel", this.stopWheel);
     },
     stopWheel(event) {
       stopEvent(event, { propagation: false });
