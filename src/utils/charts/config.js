@@ -1,22 +1,27 @@
-import { castArray, merge } from 'lodash-es';
-import { BLUE_500 } from '../../tokens/build/js/tokens';
-import { GlBreakpointInstance } from '../breakpoints';
-import { areDatesEqual } from '../datetime_utility';
-import { engineeringNotation } from '../number_utils';
-import { hexToRgba } from '../utils';
-import { ANNOTATIONS_SERIES_NAME, arrowSymbol, CHART_TYPE_BAR, CHART_TYPE_LINE } from './constants';
+import { castArray, merge } from "lodash-es";
+import { BLUE_500 } from "../../tokens/build/js/tokens";
+import { GlBreakpointInstance } from "../breakpoints";
+import { areDatesEqual } from "../datetime_utility";
+import { engineeringNotation } from "../number_utils";
+import { hexToRgba } from "../utils";
+import {
+  ANNOTATIONS_SERIES_NAME,
+  arrowSymbol,
+  CHART_TYPE_BAR,
+  CHART_TYPE_LINE,
+} from "./constants";
 
 export const defaultAreaOpacity = 0.2;
 export const defaultFontSize = 12;
 export const defaultHeight = 400;
 export const defaultWidth = 300;
-export const validRenderers = ['canvas', 'svg'];
+export const validRenderers = ["canvas", "svg"];
 export const toolboxHeight = 14;
 
 export const axes = {
-  name: 'Value',
-  type: 'value',
-  nameLocation: 'center',
+  name: "Value",
+  type: "value",
+  nameLocation: "center",
 };
 
 export const xAxis = merge({}, axes, {
@@ -58,8 +63,8 @@ export const gridWithSecondaryYAxis = {
 };
 
 export const lineStyle = {
-  symbol: 'circle',
-  type: 'line',
+  symbol: "circle",
+  type: "line",
   width: 2,
 };
 
@@ -84,7 +89,7 @@ export const symbolSize = 6;
  *
  * {Array} Possible values for greater than
  */
-const GREATER_THAN = ['>', '&gt;'];
+const GREATER_THAN = [">", "&gt;"];
 
 /**
  * These comparison operators are currently in monitoring
@@ -92,19 +97,21 @@ const GREATER_THAN = ['>', '&gt;'];
  *
  * {Array} Possible values for less than
  */
-const LESS_THAN = ['<', '&lt;'];
+const LESS_THAN = ["<", "&lt;"];
 
 /**
  * All default dataZoom configs will have slider & inside
- * (for reference, see https://github.com/khulnasoft/khulnasoft-ui/issues/240)
+ * (for reference, see https://github.com/khulnasoft/khulnasoft-ui/issues/240
  * Inside is disabled for larger viewports (lg and xl)
  * and is specifically to enable touch zoom for mobile devices
  * @param {Object} options
  */
-export const getDataZoomConfig = ({ filterMode = 'none' } = {}) => {
-  const disabledBreakpoints = ['lg', 'xl'];
-  const disabled = disabledBreakpoints.includes(GlBreakpointInstance.getBreakpointSize());
-  const minSpan = filterMode === 'none' ? 0.01 : null;
+export const getDataZoomConfig = ({ filterMode = "none" } = {}) => {
+  const disabledBreakpoints = ["lg", "xl"];
+  const disabled = disabledBreakpoints.includes(
+    GlBreakpointInstance.getBreakpointSize()
+  );
+  const minSpan = filterMode === "none" ? 0.01 : null;
 
   return {
     grid: {
@@ -115,13 +122,13 @@ export const getDataZoomConfig = ({ filterMode = 'none' } = {}) => {
     },
     dataZoom: [
       {
-        type: 'slider',
+        type: "slider",
         bottom: 22,
         filterMode,
         minSpan,
       },
       {
-        type: 'inside',
+        type: "inside",
         filterMode,
         minSpan,
         disabled,
@@ -151,16 +158,20 @@ export const mergeSeriesToOptions = (options, series = []) => {
  * @param {Boolean} hasAnnotations if annotation series yAxis should be merged
  * @returns {Object} options
  */
-export const mergeAnnotationAxisToOptions = (options, hasAnnotations = false) => ({
+export const mergeAnnotationAxisToOptions = (
+  options,
+  hasAnnotations = false
+) => ({
   ...options,
   ...(hasAnnotations && { yAxis: [options.yAxis, annotationsYAxisCoords] }),
 });
 
 export const dataZoomAdjustments = (dataZoom) => {
   // handle cases where dataZoom is array and object.
-  const useSlider = dataZoom && Array.isArray(dataZoom) ? dataZoom.length : Boolean(dataZoom);
+  const useSlider =
+    dataZoom && Array.isArray(dataZoom) ? dataZoom.length : Boolean(dataZoom);
 
-  return useSlider ? getDataZoomConfig({ filterMode: 'weakFilter' }) : [];
+  return useSlider ? getDataZoomConfig({ filterMode: "weakFilter" }) : [];
 };
 
 /**
@@ -181,7 +192,10 @@ export const dataZoomAdjustments = (dataZoom) => {
  * @param {String} axis markArea is generated against this axis
  * @returns {Array}
  */
-const generateMarkArea = ({ min, max }, axis = 'yAxis') => [{ [axis]: min }, { [axis]: max }];
+const generateMarkArea = ({ min, max }, axis = "yAxis") => [
+  { [axis]: min },
+  { [axis]: max },
+];
 
 /**
  * Generate eCharts markLine objects for thresholds and annotations.
@@ -205,7 +219,7 @@ const generateMarkArea = ({ min, max }, axis = 'yAxis') => [{ [axis]: min }, { [
  * @param {String} axis markLine is generated against this axis
  * @returns {Object}
  */
-const generateMarkLines = ({ min, max }, axis = 'yAxis') => {
+const generateMarkLines = ({ min, max }, axis = "yAxis") => {
   if (min) {
     return { [axis]: min };
   }
@@ -224,7 +238,7 @@ const generateMarkLines = ({ min, max }, axis = 'yAxis') => {
  */
 const generateMarkPoints = ({ min, tooltipData }) => {
   return {
-    name: 'annotations',
+    name: "annotations",
     xAxis: min,
     yAxis: 0,
     tooltipData,
@@ -254,26 +268,26 @@ export function getThresholdConfig(thresholds) {
           generateMarkArea({
             min: threshold,
             max: Infinity,
-          }),
+          })
         );
       } else if (LESS_THAN.includes(operator)) {
         acc.areas.push(
           generateMarkArea({
             min: Number.NEGATIVE_INFINITY,
             max: threshold,
-          }),
+          })
         );
       }
 
       acc.lines.push(
         generateMarkLines({
           max: threshold,
-        }),
+        })
       );
 
       return acc;
     },
-    { lines: [], areas: [] },
+    { lines: [], areas: [] }
   );
 
   return {
@@ -303,17 +317,17 @@ export const parseAnnotations = (annotations) =>
       // because only markLines are supported all cases will
       // satisfy this condition. This is more of a sanity check
       // until markAreas are supported.
-      // https://github.com/khulnasoft/khulnasoft/-/issues/212910
+      // https://github.com/khulnasoft/khulnasoft/issues/212910
       if (areDatesEqual(annotation.min, annotation.max)) {
-        acc.lines.push(generateMarkLines(annotation, 'xAxis'));
-        acc.points.push(generateMarkPoints(annotation, 'xAxis'));
+        acc.lines.push(generateMarkLines(annotation, "xAxis"));
+        acc.points.push(generateMarkPoints(annotation, "xAxis"));
         return acc;
       }
 
-      acc.areas.push(generateMarkArea(annotation, 'xAxis'));
+      acc.areas.push(generateMarkArea(annotation, "xAxis"));
       return acc;
     },
-    { areas: [], lines: [], points: [] },
+    { areas: [], lines: [], points: [] }
   );
 
 /**
@@ -349,8 +363,8 @@ export const getAnnotationsConfig = (annotations) => {
         color: BLUE_500,
       },
       symbol: arrowSymbol,
-      symbolSize: '8',
-      symbolOffset: [0, ' 60%'],
+      symbolSize: "8",
+      symbolOffset: [0, " 60%"],
       data: points,
     },
   };
@@ -375,10 +389,10 @@ export const generateAnnotationSeries = (annotations, yAxisIndex = 1) => {
     {
       name: ANNOTATIONS_SERIES_NAME,
       yAxisIndex,
-      type: 'scatter',
+      type: "scatter",
       data: [],
     },
-    getAnnotationsConfig(annotations),
+    getAnnotationsConfig(annotations)
   );
 };
 
@@ -393,12 +407,18 @@ export const generateAnnotationSeries = (annotations, yAxisIndex = 1) => {
  * @param {number} [options.yAxisIndex] - specifies the yAxis to use (if there are multiple)
  * @returns {Object} Bar chart series
  */
-export const generateBarSeries = ({ name, color, stack, data = [], yAxisIndex = 0 }) => ({
+export const generateBarSeries = ({
+  name,
+  color,
+  stack,
+  data = [],
+  yAxisIndex = 0,
+}) => ({
   type: CHART_TYPE_BAR,
   name,
   data,
   stack,
-  barMaxWidth: '50%',
+  barMaxWidth: "50%",
   yAxisIndex,
   itemStyle: {
     color: hexToRgba(color, 0.2),
@@ -422,7 +442,12 @@ export const generateBarSeries = ({ name, color, stack, data = [], yAxisIndex = 
  * @param {number} [options.yAxisIndex] - specifies the yAxis to use (if there are multiple)
  * @returns {Object} Line chart series
  */
-export const generateLineSeries = ({ name, color, data = [], yAxisIndex = 0 }) => ({
+export const generateLineSeries = ({
+  name,
+  color,
+  data = [],
+  yAxisIndex = 0,
+}) => ({
   name,
   data,
   type: CHART_TYPE_LINE,
@@ -432,19 +457,25 @@ export const generateLineSeries = ({ name, color, data = [], yAxisIndex = 0 }) =
 });
 
 export const getTooltipAxisConfig = (dimensionAxis) => {
-  if (!['xAxis', 'yAxis'].includes(dimensionAxis)) {
-    throw new Error(`\`dimensionAxis\` must be "xAxis" or "yAxis", received ${dimensionAxis}`);
+  if (!["xAxis", "yAxis"].includes(dimensionAxis)) {
+    throw new Error(
+      `\`dimensionAxis\` must be "xAxis" or "yAxis", received ${dimensionAxis}`
+    );
   }
 
-  if (dimensionAxis === 'xAxis') {
-    return { dimensionIndex: 0, metricIndex: 1, valueAxis: 'yAxis' };
+  if (dimensionAxis === "xAxis") {
+    return { dimensionIndex: 0, metricIndex: 1, valueAxis: "yAxis" };
   }
 
-  return { dimensionIndex: 1, metricIndex: 0, valueAxis: 'xAxis' };
+  return { dimensionIndex: 1, metricIndex: 0, valueAxis: "xAxis" };
 };
 
-export const getTooltipTitle = (params = null, titleAxisName = null, dimensionIndex = 0) => {
-  if (!params) return '';
+export const getTooltipTitle = (
+  params = null,
+  titleAxisName = null,
+  dimensionIndex = 0
+) => {
+  if (!params) return "";
 
   const title = params.seriesData
     .reduce((acc, { value }) => {
@@ -455,12 +486,16 @@ export const getTooltipTitle = (params = null, titleAxisName = null, dimensionIn
       }
       return [...acc, dimension];
     }, [])
-    .join(', ');
+    .join(", ");
 
   return titleAxisName ? `${title} (${titleAxisName})` : title;
 };
 
-export const getTooltipContent = (params = null, valueAxisName = null, metricIndex = 1) => {
+export const getTooltipContent = (
+  params = null,
+  valueAxisName = null,
+  metricIndex = 1
+) => {
   if (!params) {
     return {};
   }
@@ -473,7 +508,7 @@ export const getTooltipContent = (params = null, valueAxisName = null, metricInd
     return {
       [valueAxisName || seriesName]: {
         value: value[metricIndex],
-        color: '', // ignore color when showing a single series
+        color: "", // ignore color when showing a single series
       },
     };
   }
@@ -502,7 +537,9 @@ export const getTooltipParams = (params = null, options) => {
 
   const { series: optionsSeries = [] } = options ?? {};
 
-  const seriesStacks = Object.fromEntries(optionsSeries.map(({ name, stack }) => [name, stack]));
+  const seriesStacks = Object.fromEntries(
+    optionsSeries.map(({ name, stack }) => [name, stack])
+  );
 
   return {
     ...params,
@@ -517,7 +554,7 @@ export const getTooltipParams = (params = null, options) => {
  * The method works well if tooltip content should be against y-axis values.
  * However, for bar charts, the tooltip should be against x-axis values.
  * This method should be updated to work with all types of visualizations.
- * https://github.com/khulnasoft/khulnasoft-ui/-/issues/674
+ * https://github.com/khulnasoft/khulnasoft-ui/issues/674
  *
  * @param {Object} params series data
  * @param {String} yAxisTitle y-axis title
@@ -531,8 +568,11 @@ export const getDefaultTooltipContent = (params, yAxisTitle = null) => {
       const [title, value] = chartItem.value || [];
       // Let's use the y axis title as series name when only one series exists
       // This way, TooltipDefaultFormat will display the y axis title as label
-      const seriesName = seriesDataLength === 1 && yAxisTitle ? yAxisTitle : chartItem.seriesName;
-      const color = seriesDataLength === 1 ? '' : chartItem.color;
+      const seriesName =
+        seriesDataLength === 1 && yAxisTitle
+          ? yAxisTitle
+          : chartItem.seriesName;
+      const color = seriesDataLength === 1 ? "" : chartItem.color;
       acc.tooltipContent[seriesName] = {
         value,
         color,
@@ -545,7 +585,7 @@ export const getDefaultTooltipContent = (params, yAxisTitle = null) => {
     {
       xLabels: [],
       tooltipContent: {},
-    },
+    }
   );
 
   return { xLabels, tooltipContent };
