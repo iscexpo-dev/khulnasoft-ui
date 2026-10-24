@@ -1,11 +1,11 @@
 <script>
-import { toRaw } from 'vue';
-import { isEqual, cloneDeep } from 'lodash-es';
-import { PortalTarget } from 'portal-vue';
-import { GlTooltipDirective } from '../../../directives/tooltip/tooltip';
-import GlIcon from '../icon/icon.vue';
-import GlSearchBoxByClick from '../search_box_by_click/search_box_by_click.vue';
-import GlFilteredSearchTerm from './filtered_search_term.vue';
+import { toRaw } from "vue";
+import { isEqual, cloneDeep } from "lodash-es";
+import { PortalTarget } from "portal-vue";
+import { GlTooltipDirective } from "../../../directives/tooltip/tooltip";
+import GlIcon from "../icon/icon.vue";
+import GlSearchBoxByClick from "../search_box_by_click/search_box_by_click.vue";
+import GlFilteredSearchTerm from "./filtered_search_term.vue";
 import {
   isEmptyTerm,
   INTENT_ACTIVATE_PREVIOUS,
@@ -15,7 +15,7 @@ import {
   denormalizeTokens,
   needDenormalization,
   termTokenDefinition,
-} from './filtered_search_utils';
+} from "./filtered_search_utils";
 
 let portalUuid = 0;
 
@@ -25,11 +25,13 @@ function initialState() {
 
 function computeTokens(value, termsAsTokens) {
   const resolved = value?.length ? cloneDeep(value) : initialState();
-  return needDenormalization(resolved) ? denormalizeTokens(resolved, termsAsTokens) : resolved;
+  return needDenormalization(resolved)
+    ? denormalizeTokens(resolved, termsAsTokens)
+    : resolved;
 }
 
 export default {
-  name: 'GlFilteredSearch',
+  name: "GlFilteredSearch",
   components: {
     GlSearchBoxByClick,
     GlIcon,
@@ -74,7 +76,7 @@ export default {
     placeholder: {
       type: String,
       required: false,
-      default: 'Search',
+      default: "Search",
     },
     /**
      * Title text for the clear button.
@@ -82,7 +84,7 @@ export default {
     clearButtonTitle: {
       type: String,
       required: false,
-      default: 'Clear',
+      default: "Clear",
     },
     /**
      * Array of history items to display in the search.
@@ -140,7 +142,7 @@ export default {
      *
      * This prop is *not* reactive.
      *
-     * See https://github.com/khulnasoft/khulnasoft-ui/-/issues/2159.
+     * See https://github.com/khulnasoft/khulnasoft-ui/issues/2159
      */
     termsAsTokens: {
       type: Boolean,
@@ -172,7 +174,7 @@ export default {
       tokens: computeTokens(this.value, this.termsAsTokens),
       activeTokenIdx: null,
       suggestionsStyle: {},
-      intendedCursorPosition: 'end',
+      intendedCursorPosition: "end",
     };
   },
   computed: {
@@ -189,7 +191,7 @@ export default {
       return this.activeTokenIdx === this.lastTokenIdx;
     },
     hasValue() {
-      return this.tokens.length > 1 || this.tokens[0].value.data !== '';
+      return this.tokens.length > 1 || this.tokens[0].value.data !== "";
     },
     termPlaceholder() {
       return this.hasValue ? null : this.placeholder;
@@ -211,14 +213,19 @@ export default {
   watch: {
     tokens: {
       handler() {
-        if (process.env.NODE_ENV !== 'production') {
+        if (process.env.NODE_ENV !== "production") {
           const invalidToken = this.tokens.find((token) => !token.id);
           if (invalidToken) {
-            throw new Error(`Token does not have an id:\n${JSON.stringify(invalidToken)}`);
+            throw new Error(
+              `Token does not have an id:\n${JSON.stringify(invalidToken)}`
+            );
           }
         }
 
-        if ((this.tokens.length === 0 || !this.isLastTokenEmpty()) && !this.viewOnly) {
+        if (
+          (this.tokens.length === 0 || !this.isLastTokenEmpty()) &&
+          !this.viewOnly
+        ) {
           this.tokens.push(createTerm());
         }
 
@@ -226,7 +233,7 @@ export default {
          * Emitted when the tokens (value) changes
          * @property {array} tokens
          */
-        this.$emit('input', this.tokens);
+        this.$emit("input", this.tokens);
       },
       deep: true,
       immediate: true,
@@ -269,8 +276,8 @@ export default {
 
     getTokenClassList(idx) {
       return {
-        'gl-filtered-search-item': true,
-        'gl-filtered-search-last-item': this.isLastToken(idx) && !this.viewOnly,
+        "gl-filtered-search-item": true,
+        "gl-filtered-search-last-item": this.isLastToken(idx) && !this.viewOnly,
       };
     },
 
@@ -283,14 +290,14 @@ export default {
     activatePreviousToken() {
       if (this.activeTokenIdx > 0) {
         this.activeTokenIdx -= 1;
-        this.intendedCursorPosition = 'end';
+        this.intendedCursorPosition = "end";
       }
     },
 
     activateNextToken() {
       if (this.activeTokenIdx < this.value.length) {
         this.activeTokenIdx += 1;
-        this.intendedCursorPosition = 'start';
+        this.intendedCursorPosition = "start";
       }
     },
 
@@ -302,7 +309,7 @@ export default {
     },
 
     deactivate(token) {
-      this.intendedCursorPosition = 'end';
+      this.intendedCursorPosition = "end";
       const tokenIdx = this.tokens.indexOf(token);
       if (tokenIdx === -1 || this.activeTokenIdx !== tokenIdx) {
         return;
@@ -328,7 +335,7 @@ export default {
       /**
        * Emitted when a token is destroyed, with the token as the payload.
        */
-      this.$emit('token-destroy', destroyedToken);
+      this.$emit("token-destroy", destroyedToken);
 
       // First, attempt to honor the user's activation intent behind the
       // destruction of the token, if any. Otherwise, try to maintain the
@@ -354,13 +361,21 @@ export default {
     },
 
     replaceToken(idx, token) {
-      this.$set(this.tokens, idx, ensureTokenId({ ...token, value: { data: '', ...token.value } }));
+      this.$set(
+        this.tokens,
+        idx,
+        ensureTokenId({ ...token, value: { data: "", ...token.value } })
+      );
       this.activeTokenIdx = idx;
     },
 
     // This method can be deleted once termsAsTokens behavior is the default.
-    createTokens(idx, newStrings = ['']) {
-      if (!this.isLastTokenActive && newStrings.length === 1 && newStrings[0] === '') {
+    createTokens(idx, newStrings = [""]) {
+      if (
+        !this.isLastTokenActive &&
+        newStrings.length === 1 &&
+        newStrings[0] === ""
+      ) {
         this.activeTokenIdx = this.lastTokenIdx;
         return;
       }
@@ -376,7 +391,7 @@ export default {
       /**
        * Emitted when a token is completed, with the token as the payload.
        */
-      this.$emit('token-complete', this.activeToken);
+      this.$emit("token-complete", this.activeToken);
 
       if (this.activeTokenIdx === this.lastTokenIdx - 1) {
         this.activeTokenIdx = this.lastTokenIdx;
@@ -388,7 +403,7 @@ export default {
     async onClear() {
       await this.$nextTick();
       this.activeTokenIdx = this.lastTokenIdx;
-      this.$emit('clear');
+      this.$emit("clear");
     },
 
     submit() {
@@ -396,7 +411,7 @@ export default {
        * Emitted when search is submitted
        * @property {array} tokens
        */
-      this.$emit('submit', normalizeTokens(cloneDeep(this.tokens)));
+      this.$emit("submit", normalizeTokens(cloneDeep(this.tokens)));
     },
   },
 };
@@ -426,7 +441,8 @@ export default {
       <div
         class="gl-filtered-search-scrollable-container"
         :class="{
-          'gl-filtered-search-scrollable-container-with-search-button': showSearchButton,
+          'gl-filtered-search-scrollable-container-with-search-button':
+            showSearchButton,
           'gl-filtered-search-view-only': viewOnly,
         }"
       >
