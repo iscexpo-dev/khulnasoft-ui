@@ -1,0 +1,63 @@
+.gl-filtered-search-token {
+  &.gl-filtered-search-token-active {
+    @apply gl-cursor-default;
+  }
+
+  @apply gl-h-6;
+  @apply gl-inline-flex;
+  @apply gl-whitespace-nowrap;
+  @apply gl-cursor-pointer;
+
+  &.gl-filtered-search-token-hover {
+    &:hover {
+      .gl-filtered-search-token-type {
+        background-color: var(--gl-filtered-search-token-type-background-color-hover);
+      }
+
+      .gl-filtered-search-token-data {
+        background-color: var(--gl-filtered-search-token-data-background-color-hover);
+      }
+
+      .gl-filtered-search-token-operator {
+        background-color: var(--gl-filtered-search-token-operator-background-color-hover);
+      }
+    }
+  }
+}
+
+.gl-token {
+  @apply gl-rounded-none;
+
+  &.gl-filtered-search-token-type {
+    @apply gl-h-6;
+    @apply gl-rounded-tr-none;
+    @apply gl-rounded-br-none;
+    @apply gl-py-2;
+    @apply gl-px-3;
+    @apply gl-mr-1;
+    background-color: var(--gl-filtered-search-token-type-background-color-default);
+  }
+
+  &.gl-filtered-search-token-operator {
+    @apply gl-h-6;
+    @apply gl-mr-1;
+    @apply gl-rounded-none;
+    background-color: var(--gl-filtered-search-token-operator-background-color-default);
+  }
+
+  &.gl-filtered-search-token-data {
+    @apply gl-h-6;
+    background-color: var(--gl-filtered-search-token-data-background-color-default);
+    border-top-right-radius: var(--gl-token-border-radius);
+    border-bottom-right-radius: var(--gl-token-border-radius);
+
+    .gl-filtered-search-token-data-content {
+      @apply gl-inline-flex;
+    }
+  }
+}
+
+.gl-filtered-search-token-operator-description {
+  @apply gl-text-subtle;
+  @apply gl-ml-auto;
+}

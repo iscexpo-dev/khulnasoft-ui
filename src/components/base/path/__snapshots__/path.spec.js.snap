@@ -1,0 +1,596 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Path matches the snapshot 1`] = `
+<div
+  class="gl-path-nav"
+  data-testid="gl-path-nav"
+  style="--path-bg-color: rgba(0,0,0,0);"
+>
+  <span
+    class="gl-path-fade gl-path-fade-left"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll left"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-left"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+  <ul
+    class="gl-path-nav-list"
+  >
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        aria-current="true"
+        class="gl-path-button gl-path-active-item"
+        id="path-1-item-0"
+      >
+        First
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          1d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-1"
+      >
+        Second
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          2d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-2"
+      >
+        Third
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          3d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-3"
+      >
+        Fourth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          4d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-4"
+      >
+        Fifth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          5d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-5"
+      >
+        Sixth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          6d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-6"
+      >
+        Seventh
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          7d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        category="tertiary"
+        class="gl-path-button"
+        disabled=""
+        id="path-1-item-7"
+      >
+        Eighth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          8d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-8"
+      >
+        Ninth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          9d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-1-item-9"
+      >
+        Tenth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          10d
+        </span>
+      </button>
+    </li>
+  </ul>
+  <span
+    class="gl-path-fade gl-path-fade-right"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll right"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-right"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+</div>
+`;
+
+exports[`Path renders the list of items with icons matches the snapshot 1`] = `
+<div
+  class="gl-path-nav"
+  data-testid="gl-path-nav"
+  style="--path-bg-color: rgba(0,0,0,0);"
+>
+  <span
+    class="gl-path-fade gl-path-fade-left"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll left"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-left"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+  <ul
+    class="gl-path-nav-list"
+  >
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        aria-current="true"
+        class="gl-path-button gl-path-active-item"
+        id="path-2-item-0"
+      >
+        <gl-icon-stub
+          class="gl-mr-2"
+          data-testid="gl-path-item-icon"
+          name="home"
+          size="16"
+          variant="current"
+        />
+        First
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          1d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-1"
+      >
+        Second
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          2d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-2"
+      >
+        Third
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          3d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-3"
+      >
+        Fourth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          4d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-4"
+      >
+        Fifth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          5d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-5"
+      >
+        Sixth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          6d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-6"
+      >
+        Seventh
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          7d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        category="tertiary"
+        class="gl-path-button"
+        disabled=""
+        id="path-2-item-7"
+      >
+        Eighth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          8d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-8"
+      >
+        Ninth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          9d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-9"
+      >
+        Tenth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          10d
+        </span>
+      </button>
+    </li>
+  </ul>
+  <span
+    class="gl-path-fade gl-path-fade-right"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll right"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-right"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+</div>
+`;
+
+exports[`Path renders the list of items with metrics matches the snapshot 1`] = `
+<div
+  class="gl-path-nav"
+  data-testid="gl-path-nav"
+  style="--path-bg-color: rgba(0,0,0,0);"
+>
+  <span
+    class="gl-path-fade gl-path-fade-left"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll left"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-left"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+  <ul
+    class="gl-path-nav-list"
+  >
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        aria-current="true"
+        class="gl-path-button gl-path-active-item"
+        id="path-2-item-0"
+      >
+        First
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          12d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-1"
+      >
+        Second
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          2d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-2"
+      >
+        Third
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          3d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-3"
+      >
+        Fourth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          4d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-4"
+      >
+        Fifth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          5d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-5"
+      >
+        Sixth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          6d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-6"
+      >
+        Seventh
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          7d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        category="tertiary"
+        class="gl-path-button"
+        disabled=""
+        id="path-2-item-7"
+      >
+        Eighth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          8d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-8"
+      >
+        Ninth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          9d
+        </span>
+      </button>
+    </li>
+    <li
+      class="gl-path-nav-list-item"
+    >
+      <button
+        class="gl-path-button"
+        id="path-2-item-9"
+      >
+        Tenth
+        <span
+          class="gl-pl-2 gl-font-normal"
+        >
+          10d
+        </span>
+      </button>
+    </li>
+  </ul>
+  <span
+    class="gl-path-fade gl-path-fade-right"
+    style="display: none;"
+  >
+    <button
+      aria-label="Scroll right"
+      class="gl-clear-icon-button"
+    >
+      <gl-icon-stub
+        name="chevron-right"
+        size="32"
+        variant="current"
+      />
+    </button>
+  </span>
+</div>
+`;

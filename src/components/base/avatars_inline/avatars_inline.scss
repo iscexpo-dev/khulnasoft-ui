@@ -1,0 +1,72 @@
+.gl-avatars-inline {
+  // Set a default and get the radius
+  --avatar-size: 24px;
+  --avatar-radius: calc(var(--avatar-size) * 0.5);
+  // Position the mask
+  --mask-offset: calc(var(--avatar-size) * -0.25);
+  // Mask size plus border cutout effect
+  --mask-cutout: calc(var(--avatar-radius) + 1.5px);
+
+  @apply gl-inline-flex;
+}
+
+.gl-avatars-inline-sm {
+  --avatar-size: 16px;
+}
+
+.gl-avatars-inline-md {
+  --avatar-size: 24px;
+}
+
+.gl-avatars-inline-lg {
+  --avatar-size: 32px;
+}
+
+.gl-avatars-inline-child {
+  @apply gl-inline-flex;
+
+  // Don't include the badge
+  &:not(:last-child) {
+    margin-right: var(--mask-offset);
+    mask: radial-gradient(
+      circle at calc(var(--avatar-size) * 1.25) center,
+      transparent var(--mask-cutout),
+      white 0
+    );
+
+    &:hover + .gl-avatars-inline-child > .gl-avatar-link,
+    &:hover + .gl-avatars-inline-child > .gl-avatars-inline-badge {
+      mask: radial-gradient(
+        circle at var(--mask-offset) center,
+        transparent var(--mask-cutout),
+        white 0
+      );
+    }
+  }
+
+  // Remove mask on hovered or focused avatar and bring it forward
+  &:not(:last-child):hover,
+  &:not(:last-child):focus-within {
+    @apply gl-z-1;
+    mask: none;
+  }
+}
+
+.gl-avatars-inline-badge {
+  @apply gl-inline-flex;
+  @apply gl-items-center;
+  @apply gl-justify-center;
+  @apply gl-text-sm;
+  @apply gl-px-2;
+  @apply gl-leading-normal;
+  @apply gl-rounded-pill;
+  background-color: var(--gl-status-neutral-background-color);
+  color: var(--gl-status-neutral-text-color);
+  height: var(--avatar-size);
+  min-width: var(--avatar-size);
+
+  &.lg {
+    @apply gl-text-base;
+    @apply gl-rounded-3xl;
+  }
+}

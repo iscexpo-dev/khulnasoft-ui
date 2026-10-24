@@ -1,0 +1,16 @@
+.gl-accordion-item {
+  @apply gl-mb-5;
+
+  .gl-accordion-item-header {
+    @apply gl-m-0;
+    @apply gl-leading-normal;
+  }
+
+  &:last-child {
+    @apply gl-mb-0;
+  }
+
+  .collapse {
+    margin-left: $gl-spacing-scale-5 + $gl-spacing-scale-2;
+  }
+}

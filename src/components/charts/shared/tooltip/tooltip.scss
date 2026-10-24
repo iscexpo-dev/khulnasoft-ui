@@ -1,0 +1,9 @@
+.gl-chart-tooltip {
+  position: absolute;
+
+  .popover {
+    @apply gl-min-w-0;
+    @apply gl-w-max;
+    max-width: $chart-tooltip-max-width;
+  }
+}

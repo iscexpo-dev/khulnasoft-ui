@@ -1,0 +1,156 @@
+$label-max-width: 100%;
+$label-close-button: ".gl-label-close.gl-button";
+$label-padding-horizontal: 0.75 * $grid-size;
+$label-padding-horizontal-half: 0.375 * $grid-size;
+
+.gl-label {
+  @apply gl-items-center;
+  @apply gl-bg-default;
+  @apply gl-overflow-hidden;
+  @apply gl-inline-flex;
+  @apply gl-rounded-pill;
+  position: relative;
+  @apply gl-max-w-full;
+  @apply gl-text-sm;
+  @apply gl-leading-normal;
+  box-shadow: var(--label-inset-border) !important;
+
+  @media (forced-colors: active) {
+    border: 1px solid; // stylelint-disable-line declaration-property-value-disallowed-list
+  }
+
+  &:not(.gl-label-scoped) {
+    background-color: var(--label-background-color);
+  }
+
+  &:has(*:first-child:focus-visible) {
+    @include gl-focus(
+      $color: var(--label-background-color, var(--gl-background-color-default)),
+      $important: true
+    );
+  }
+
+  .gl-label-link {
+    @apply gl-flex;
+    @apply gl-font-normal;
+    @apply gl-overflow-hidden;
+    @apply gl-text-inherit;
+    @apply gl-max-w-full;
+
+    &:hover,
+    &:focus-visible,
+    &:focus-visible:active {
+      @apply gl-text-inherit;
+      @apply gl-shadow-none;
+      @apply gl-outline-none;
+    }
+  }
+
+  .gl-label-link-underline {
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible,
+    &:focus-visible:active {
+      .gl-label-text,
+      .gl-label-text-scoped {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .gl-label-text,
+  .gl-label-text-scoped {
+    @apply gl-block;
+    padding: $gl-spacing-scale-1 $label-padding-horizontal;
+    @include str-truncated($label-max-width);
+  }
+
+  > #{$label-close-button} {
+    @apply gl-border-0;
+    @apply gl-flex;
+    width: px-to-rem(14px);
+    height: px-to-rem(14px);
+    min-height: auto !important;
+    min-width: auto !important;
+    margin-left: -$label-padding-horizontal-half;
+    margin-right: $label-padding-horizontal-half;
+    @apply gl-p-0;
+    @apply gl-rounded-full;
+    @apply gl-shadow-none;
+
+    &:focus-visible,
+    &:active {
+      @apply gl-focus;
+    }
+
+    .gl-icon {
+      vertical-align: -1px;
+    }
+  }
+}
+
+// styles for the the light label variant (which uses dark text)
+.gl-label-text-dark {
+  color: var(--gl-label-light-text-color);
+
+  #{$label-close-button} {
+    color: var(--gl-label-light-button-icon-color-default);
+    background-color: var(--gl-label-light-button-background-color-default);
+
+    &:focus-visible,
+    &:hover {
+      color: var(--label-background-color);
+      background-color: var(--gl-label-light-button-background-color-hover);
+    }
+  }
+}
+
+// styles for the the dark label variant (which uses light text)
+.gl-label-text-light {
+  color: var(--gl-label-dark-text-color);
+
+  #{$label-close-button} {
+    color: var(--gl-label-dark-button-icon-color-default);
+    background-color: var(--gl-label-dark-button-background-color-default);
+
+    &:focus-visible,
+    &:hover {
+      color: var(--label-background-color);
+      background-color: var(--gl-label-dark-button-background-color-hover);
+    }
+  }
+}
+
+.gl-label-scoped {
+  #{$label-close-button} {
+    margin-left: #{-$label-padding-horizontal};
+    color: var(--gl-label-scoped-button-icon-color-default);
+
+    &:focus-visible,
+    &:hover {
+      color: var(--gl-label-scoped-button-icon-color-hover);
+      background-color: var(--gl-label-scoped-button-background-color-hover);
+    }
+  }
+
+  .gl-label-text {
+    background-color: var(--label-background-color);
+
+    @media (forced-colors: active) {
+      border-right: 1px solid;
+    }
+  }
+
+  .gl-label-text-scoped {
+    color: var(--gl-label-scoped-text-color);
+    padding-left: $gl-spacing-scale-2;
+    padding-right: $gl-spacing-scale-3;
+  }
+}
+
+.gl-label-tooltip-title {
+  @apply gl-block;
+  @apply gl-text-feedback-strong;
+  @apply gl-font-bold;
+}

@@ -1,0 +1,319 @@
+@use "sass:map";
+@import "functions";
+@import "../tokens/build/scss/tokens";
+
+// Layout
+$grid-size: px-to-rem(8px);
+
+// Responsive breakpoints
+
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+
+$breakpoints: (
+  xs: 0,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+);
+
+// Max widths
+$limited-layout-width: 990px !default;
+$container-xl: 1280px !default;
+
+// Color schema
+/* stylelint-disable @khulnasoft/no-gl-deprecated-design-tokens */
+$black-normal: #333 !default;
+
+$white-contrast: #fff !default;
+$white-normal: #f0f0f0 !default;
+$white-dark: #eaeaea !default;
+$white-transparent: rgba(255, 255, 255, 0.8) !default;
+$transparent-rgba: rgba($white, 0);
+/* stylelint-enable @khulnasoft/no-gl-deprecated-design-tokens */
+
+// Text
+$gl-text-color: $gl-text-color-default !default;
+$gl-text-color-secondary: $gl-text-color-subtle !default;
+
+$gl-font-weight-light: 300;
+$gl-font-weight-normal: 400;
+$gl-font-weight-semibold: 500;
+$gl-font-weight-bold: 600;
+
+$gl-font-weights: (
+  "normal": $gl-font-weight-normal,
+  "bold": $gl-font-weight-bold,
+);
+
+// Fonts
+$gl-monospace-font:
+  "KhulnaSoft Mono", "JetBrains Mono", "Menlo", "DejaVu Sans Mono", "Liberation Mono", "Consolas",
+  "Ubuntu Mono", "Courier New", "andale mono", "lucida console", monospace !default;
+$gl-regular-font:
+  "KhulnaSoft Sans",
+  -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  "Noto Sans",
+  Ubuntu,
+  Cantarell,
+  "Helvetica Neue",
+  sans-serif,
+  "Apple Color Emoji",
+  "Segoe UI Emoji",
+  "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+
+$gl-fonts: (
+  "monospace": $gl-monospace-font,
+  "regular": $gl-regular-font,
+);
+
+// New UI type scale
+// Implements the type scale from https://khulnasoft.com/groups/khulnasoft-org/khulnasoft-services/-/epics/15
+// Old variables and styles need to be removed after intergration
+
+// Font size scale
+
+// fixed scale (compact markdown)
+$gl-font-sizes-fixed: (
+  100: px-to-rem(12px),
+  200: px-to-rem(13px),
+  300: px-to-rem(14px),
+  400: px-to-rem(16px),
+  500: px-to-rem(18px),
+  600: px-to-rem(21px),
+  700: px-to-rem(24px),
+  800: px-to-rem(28px),
+);
+
+// dynamic scale (default) resizes based on viewport width
+$gl-font-sizes: (
+  100: map.get($gl-font-sizes-fixed, 100),
+  200: map.get($gl-font-sizes-fixed, 200),
+  300: map.get($gl-font-sizes-fixed, 300),
+  400: map.get($gl-font-sizes-fixed, 400),
+  500: clamp-between(map.get($gl-font-sizes-fixed, 500), px-to-rem(20px)),
+  600: clamp-between(map.get($gl-font-sizes-fixed, 600), px-to-rem(25px)),
+  700: clamp-between(map.get($gl-font-sizes-fixed, 700), px-to-rem(30px)),
+  800: clamp-between(map.get($gl-font-sizes-fixed, 800), px-to-rem(36px)),
+);
+
+// Heading variables
+// Not all are currently used, but documented here to capture intent
+$gl-font-heading: $gl-regular-font;
+$gl-font-weight-heading: 600;
+$gl-letter-spacing-heading: inherit;
+$gl-letter-spacing-heading-reduced: -0.01em;
+$gl-line-height-heading: 1.25;
+$gl-line-height-heading-display: 1.125;
+$gl-mb-heading: $gl-spacing-scale-5;
+$gl-mb-heading-display: $gl-spacing-scale-6;
+$gl-text-color-heading: $gl-text-color;
+// Not yet supported, but we'll be ready
+$gl-text-wrap-heading: pretty;
+
+// END New UI type scale
+
+// UI typescale
+
+// default (min-width: 0)
+$gl-font-size: px-to-rem(14px);
+
+$gl-font-size-h-display: px-to-rem(28px);
+$gl-font-size-h1: px-to-rem(23px);
+$gl-font-size-h2: px-to-rem(19px);
+
+// breakpoint (min-width: 768px)
+$gl-font-size-h-display-md: px-to-rem(31px);
+$gl-font-size-h1-md: px-to-rem(25px);
+$gl-font-size-h2-md: px-to-rem(20px);
+
+// breakpoint (min-width: 1200px)
+$gl-font-size-h-display-xl: px-to-rem(45px);
+$gl-font-size-h1-xl: px-to-rem(32px);
+$gl-font-size-h2-xl: px-to-rem(23px);
+
+// Markdown typescale
+
+// default (min-width: 0)
+$gl-font-size-markdown: px-to-rem(16px);
+$gl-font-size-markdown-sm: px-to-rem(14px);
+
+$gl-font-size-markdown-h1: px-to-rem(28px);
+$gl-font-size-markdown-h2: px-to-rem(23px);
+$gl-font-size-markdown-h3: px-to-rem(19px);
+
+// breakpoint (min-width: 768px)
+$gl-font-size-markdown-h1-md: px-to-rem(31px);
+$gl-font-size-markdown-h2-md: px-to-rem(25px);
+$gl-font-size-markdown-h3-md: px-to-rem(20px);
+
+// breakpoint (min-width: 1200px)
+$gl-font-size-markdown-h1-xl: px-to-rem(45px);
+$gl-font-size-markdown-h2-xl: px-to-rem(32px);
+$gl-font-size-markdown-h3-xl: px-to-rem(23px);
+
+// Compact markdown typescale
+
+// default (min-width: 0)
+$gl-font-size-compact-markdown-h1: px-to-rem(19px);
+
+// media-md: min-width: 768px
+$gl-font-size-compact-markdown-h1-md: px-to-rem(20px);
+
+// media xl (min-width: 1200px)
+$gl-font-size-compact-markdown-h1-xl: px-to-rem(23px);
+
+$border-color: $gl-border-color-default !default;
+
+// use px for borders rather than rem
+// we don't want borders to scale with font size
+// 1px can end up being rounded to 0 after
+// conversion to/from rem
+$gl-border-size-1: 1px;
+$gl-border-size-2: 2px;
+$gl-border-size-3: 3px;
+$gl-border-size-4: 4px;
+$gl-border-size-5: 5px;
+$gl-border-size-8: 8px;
+
+// border roundness
+$gl-border-radius-small: $gl-spacing-scale-1;
+$gl-border-radius-base: $gl-spacing-scale-2;
+$gl-border-radius-large: $gl-spacing-scale-3;
+$gl-border-radius-6: $gl-spacing-scale-6;
+$gl-border-radius-7: $gl-spacing-scale-7;
+
+// component height
+$gl-button-small-size: px-to-rem(24px);
+$gl-button-medium-size: px-to-rem(32px);
+
+// transition parameters
+$gl-transition-duration-slow: 0.4s;
+$gl-transition-duration-medium: 0.2s;
+$gl-transition-duration-fast: 0.1s;
+
+// Animation easings
+$gl-easing-linear: linear;
+$gl-easing-default: ease;
+$gl-easing-out-cubic: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+// Focus ring
+$outline-offset: 1px;
+$outline-width: 2px;
+$outline: #{$outline-offset + $outline-width};
+$focus-ring:
+  0 0 0 $outline-offset var(--gl-focus-ring-inner-color),
+  0 0 0 #{$outline-offset + $outline-width} var(--gl-focus-ring-outer-color);
+$focus-ring-inset:
+  inset 0 0 0 #{$outline-width + $outline-offset} var(--gl-focus-ring-inner-color),
+  inset 0 0 0 $outline-offset var(--gl-focus-ring-inner-color);
+$focus-ring-outline: $outline-width solid var(--gl-focus-ring-outer-color);
+
+// Toasts
+$toast-max-width: px-to-rem(586px);
+$toast-padding-right: px-to-rem(42px);
+
+// Chart tooltip
+$chart-tooltip-max-width: px-to-rem(512px);
+
+$gl-icon-chevron-left: 'data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 0 0 0 1.414l3 3a1 1 0 0 0 1.414-1.414L7.414 8l2.293-2.293a1 1 0 0 0-1.414-1.414l-3 3z"/></svg>';
+$gl-icon-chevron-right: 'data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M10.707 7.293a1 1 0 0 1 0 1.414l-3 3a1 1 0 0 1-1.414-1.414L8.586 8 6.293 5.707a1 1 0 0 1 1.414-1.414l3 3z"/></svg>';
+$gl-icon-chevron-down: 'data:image/svg+xml;utf8,<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path fill-rule="evenodd" d="M7.293 10.707a1 1 0 0 0 1.414 0l3-3a1 1 0 0 0-1.414-1.414L8 8.586 5.707 6.293a1 1 0 0 0-1.414 1.414l3 3z"/></svg>';
+$gl-icon-select-chevron-down: 'data:image/svg+xml,%3Csvg width="8" height="5" viewBox="0 0 8 5" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.21967C0.512563 -0.0732232 0.987437 -0.0732232 1.28033 0.21967L4 2.93934L6.71967 0.21967C7.01256 -0.073223 7.48744 -0.0732229 7.78033 0.21967C8.07322 0.512563 8.07322 0.987437 7.78033 1.28033L4.53033 4.53033C4.23744 4.82322 3.76256 4.82322 3.46967 4.53033L0.21967 1.28033C-0.0732233 0.987437 -0.0732233 0.512563 0.21967 0.21967Z" fill="%23666666"/%3E%3C/svg%3E%0A';
+$gl-icon-check: 'data:image/svg+xml,%3Csvg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M0.75 4.76289L3.15312 7.24678L9.25 1.1499" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A';
+$gl-icon-indeterminate: 'data:image/svg+xml,%3Csvg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M1.75 1H8.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/%3E%3C/svg%3E%0A';
+$gl-icon-radio: 'data:image/svg+xml,%3Csvg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="3" cy="3" r="3" fill="white"/%3E%3C/svg%3E%0A';
+
+// Icons
+$default-icon-size: px-to-rem(16px);
+$gl-icon-sizes: 8 12 14 16 24 32 48 72;
+
+// Dropdowns
+$gl-dropdown-width: px-to-rem(240px);
+$gl-new-dropdown-min-width: px-to-rem(248px);
+$gl-new-dropdown-max-width: px-to-rem(456px);
+$gl-dropdown-width-narrow: px-to-rem(160px);
+$gl-dropdown-width-wide: px-to-rem(400px);
+$gl-max-dropdown-max-height: px-to-rem(312px);
+
+// Broadcast messages
+$gl-broadcast-message-notification-max-width: px-to-rem(300px);
+
+// Modal Widths
+$gl-modal-small-width: px-to-rem(512px);
+$gl-modal-medium-width: px-to-rem(768px);
+$gl-modal-large-width: px-to-rem(990px);
+
+// Modal bootstrap variables
+$modal-header-border-color: $gl-border-color-strong;
+$modal-footer-border-color: $gl-border-color-strong;
+$modal-title-line-height: $gl-line-height-20;
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: 0.64;
+
+// Bootstrap overrides
+// these should ideally be moved further up in the file to the compoent-relevant sections
+// but they can wait here for now
+$body-color: $gl-text-color !default;
+$enable-validation-icons: false;
+
+// Not moved to a design token as it's a vague Bootstrap variable that might have far-reaching, unintended consequences.
+// Ideally, this variable would just be removed once we know it is not used anywhere.
+/* stylelint-disable-next-line @khulnasoft/no-gl-deprecated-design-tokens */
+$secondary: $gray-50;
+$success: $gl-text-color-success;
+/* stylelint-disable-next-line @khulnasoft/no-gl-deprecated-design-tokens */
+$info: $blue-500;
+$warning: $gl-text-color-warning;
+$danger: $gl-text-color-danger;
+
+$font-weight-bold: $gl-font-weight-bold;
+
+$font-family-sans-serif: $gl-regular-font !default;
+$font-family-monospace: $gl-monospace-font !default;
+
+$h1-font-size: $gl-font-size * 2.5;
+$h2-font-size: $gl-font-size * 2;
+$h3-font-size: $gl-font-size * 1.75;
+$h4-font-size: $gl-font-size * 1.5;
+$h5-font-size: $gl-font-size * 1.25;
+$h6-font-size: $gl-font-size;
+
+$spacer: $grid-size;
+$spacers: (
+  1: $gl-spacing-scale-2,
+  2: $gl-spacing-scale-3,
+  3: $gl-spacing-scale-5,
+  4: $gl-spacing-scale-6,
+  5: $gl-spacing-scale-7,
+  6: $gl-spacing-scale-8,
+  7: $gl-spacing-scale-9,
+  8: $gl-spacing-scale-10,
+  9: $gl-spacing-scale-11,
+);
+
+$table-accent-bg: var(--gl-background-color-subtle);
+$card-border-color: $gl-border-color-default;
+$card-cap-bg: $gl-background-color-subtle !default;
+
+// Form input sizes
+$gl-form-input-sizes: (
+  xs: $grid-size * 10,
+  sm: $grid-size * 20,
+  md: $grid-size * 30,
+  lg: $grid-size * 40,
+  xl: $grid-size * 70,
+);
+
+$popover-arrow-width: 0.5rem;
+$popover-arrow-height: 0.25rem;
+$popover-arrow-outer-color: $gl-border-color-default;
+
+$tooltip-opacity: 1;

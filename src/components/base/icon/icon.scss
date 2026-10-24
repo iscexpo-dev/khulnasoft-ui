@@ -1,0 +1,8 @@
+.gl-icon {
+  @each $size in $gl-icon-sizes {
+    &.s#{$size} {
+      width: #{$size}px;
+      height: #{$size}px;
+    }
+  }
+}

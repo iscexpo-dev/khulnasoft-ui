@@ -1,0 +1,185 @@
+.gl-dropdown {
+  .dropdown-menu {
+    @apply gl-border-1 gl-border-dropdown;
+    @apply gl-bg-dropdown;
+    @apply gl-mt-2;
+    @apply gl-mb-2;
+    @apply gl-p-0;
+    @apply gl-shadow-x0-y2-b4-s0;
+    border-radius: var(--gl-dropdown-border-radius);
+    width: $gl-dropdown-width;
+
+    .gl-search-box-by-type {
+      @apply gl-m-3;
+    }
+  }
+
+  .dropdown-menu li {
+    @apply gl-p-0;
+  }
+
+  .gl-dropdown-inner {
+    @apply gl-flex;
+    @apply gl-flex-col;
+    max-height: $gl-max-dropdown-max-height;
+
+    > :first-child {
+      @apply gl-pt-3;
+    }
+
+    > :last-child {
+      @apply gl-pb-3;
+    }
+  }
+
+  .gl-dropdown-contents {
+    @apply gl-grow;
+    overflow-y: auto;
+  }
+
+  .gl-dropdown-header-top {
+    @apply gl-border-1 gl-border-dropdown-divider gl-border-b-solid;
+    @apply gl-flex;
+    @apply gl-text-base;
+    @apply gl-text-strong;
+    @apply gl-font-bold;
+    @apply gl-justify-center;
+    @apply gl-leading-normal;
+    @apply gl-m-0;
+    @apply gl-mb-3;
+    @apply gl-pb-3;
+    @apply gl-px-5;
+  }
+
+  .gl-dropdown-header {
+    @apply gl-border-b-1 gl-border-b-dropdown-divider gl-border-b-solid;
+  }
+
+  .gl-dropdown-footer {
+    @apply gl-border-t-1 gl-border-t-dropdown-divider gl-border-t-solid;
+    @apply gl-py-3;
+  }
+
+  .dropdown-toggle {
+    // Remove bootstrap's dropdown caret
+    &::after {
+      @apply gl-hidden;
+    }
+
+    &.gl-button,
+    &.gl-button.btn-block {
+      @apply gl-pr-3;
+
+      &.btn-sm {
+        @apply gl-pr-2;
+      }
+    }
+
+    &.dropdown-toggle-no-caret,
+    &.dropdown-toggle-no-caret.btn-sm {
+      @apply gl-p-3;
+
+      .dropdown-chevron {
+        display: none;
+      }
+    }
+  }
+
+  .dropdown-toggle-split {
+    &::after {
+      @apply gl-border-0;
+      content: "";
+      @apply gl-block;
+      @apply gl-w-5;
+      @apply gl-h-5;
+      @apply gl-bg-current;
+      @include mask-chevron-down;
+    }
+
+    &.gl-button {
+      @apply gl-px-0;
+
+      &.btn-sm {
+        @apply gl-px-0;
+      }
+    }
+  }
+
+  .gl-dropdown-toggle {
+    &.btn-block {
+      @apply gl-justify-between;
+    }
+
+    .gl-button-text {
+      @apply gl-inline-flex;
+    }
+  }
+
+  .gl-dropdown-button-text {
+    @apply gl-mr-auto;
+    @apply gl-overflow-hidden;
+    @apply gl-text-ellipsis;
+  }
+
+  // Fix rounded split dropdown button: https://github.com/khulnasoft/khulnasoft-ui/issues/626
+  &.dropdown.show .dropdown-toggle-split {
+    @apply gl-rounded-tl-none;
+    @apply gl-rounded-bl-none;
+  }
+
+  // The `&.dropdown` is necessary to strengthen the specificity of these selectors
+  &.dropdown {
+    &.btn-sm .gl-icon {
+      @apply gl-mt-0;
+      @apply gl-mb-0;
+
+      &.dropdown-chevron {
+        @apply gl-h-5;
+        @apply gl-w-5;
+      }
+    }
+
+    .gl-button .dropdown-chevron,
+    .gl-button.btn-block .dropdown-chevron,
+    .dropdown-chevron {
+      @apply gl-ml-2;
+      @apply gl-mr-0;
+    }
+  }
+
+  .dropdown-icon {
+    @apply gl-mr-2;
+  }
+
+  .dropdown-icon-text,
+  .dropdown-icon-only {
+    @apply gl-pl-3;
+  }
+
+  .dropdown-icon-only {
+    &.dropdown-toggle-no-caret {
+      padding: 0 !important;
+    }
+
+    .dropdown-icon,
+    .gl-button-icon.gl-button-icon {
+      @apply gl-mr-0;
+    }
+
+    &.btn-sm .dropdown-chevron {
+      @apply gl-mx-0;
+    }
+  }
+
+  .split-content-button {
+    @apply gl-px-4;
+  }
+
+  .icon-split-content-button {
+    @apply gl-pl-3;
+
+    .dropdown-icon {
+      @apply gl-mr-0;
+    }
+  }
+}

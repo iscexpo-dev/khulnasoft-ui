@@ -1,0 +1,733 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`stacked column chart component color palette custom palette matches the snapshot 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        58,
+        49,
+        38,
+        23,
+        27,
+        68,
+        38,
+        35,
+        7,
+        64,
+        65,
+        31,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(255, undefined, undefined, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#FFFHHH",
+        "borderWidth": 1,
+        "color": "rgba(255, undefined, undefined, 0.2)",
+      },
+      "name": "Fun 1",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        6,
+        34,
+        19,
+        9,
+        7,
+        17,
+        25,
+        14,
+        7,
+        10,
+        32,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(255, undefined, undefined, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#FFFJJJ",
+        "borderWidth": 1,
+        "color": "rgba(255, undefined, undefined, 0.2)",
+      },
+      "name": "Fun 2",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        67,
+        60,
+        66,
+        32,
+        61,
+        54,
+        13,
+        50,
+        16,
+        11,
+        47,
+        28,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(255, undefined, undefined, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#FFFIII",
+        "borderWidth": 1,
+        "color": "rgba(255, undefined, undefined, 0.2)",
+      },
+      "name": "Fun 3",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        9,
+        5,
+        40,
+        13,
+        19,
+        58,
+        21,
+        47,
+        59,
+        23,
+        46,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(255, undefined, undefined, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#FFFKKK",
+        "borderWidth": 1,
+        "color": "rgba(255, undefined, undefined, 0.2)",
+      },
+      "name": "Fun 4",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "data": Array [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    "name": "January - December 2018",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Array [
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "Commits",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "type": "value",
+    },
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "show": false,
+      "type": "value",
+    },
+  ],
+}
+`;
+
+exports[`stacked column chart component should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        58,
+        49,
+        38,
+        23,
+        27,
+        68,
+        38,
+        35,
+        7,
+        64,
+        65,
+        31,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Fun 1",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        6,
+        34,
+        19,
+        9,
+        7,
+        17,
+        25,
+        14,
+        7,
+        10,
+        32,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(177, 79, 24, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#b14f18",
+        "borderWidth": 1,
+        "color": "rgba(177, 79, 24, 0.2)",
+      },
+      "name": "Fun 2",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        67,
+        60,
+        66,
+        32,
+        61,
+        54,
+        13,
+        50,
+        16,
+        11,
+        47,
+        28,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(0, 144, 177, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#0090b1",
+        "borderWidth": 1,
+        "color": "rgba(0, 144, 177, 0.2)",
+      },
+      "name": "Fun 3",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        9,
+        5,
+        40,
+        13,
+        19,
+        58,
+        21,
+        47,
+        59,
+        23,
+        46,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(78, 127, 14, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#4e7f0e",
+        "borderWidth": 1,
+        "color": "rgba(78, 127, 14, 0.2)",
+      },
+      "name": "Fun 4",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "data": Array [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    "name": "January - December 2018",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Array [
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "Commits",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "type": "value",
+    },
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "show": false,
+      "type": "value",
+    },
+  ],
+}
+`;
+
+exports[`stacked column chart component with line data provided should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "data": Array [
+        67,
+        60,
+        66,
+        32,
+        61,
+        54,
+        13,
+        50,
+        16,
+        11,
+        47,
+        28,
+      ],
+      "itemStyle": Object {
+        "color": "#617ae2",
+      },
+      "lineStyle": Object {
+        "color": "#617ae2",
+      },
+      "name": "Stacked median line",
+      "type": "line",
+      "yAxisIndex": 0,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "data": Array [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    "name": "January - December 2018",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Array [
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "Commits",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "type": "value",
+    },
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "show": false,
+      "type": "value",
+    },
+  ],
+}
+`;
+
+exports[`stacked column chart component with secondary axis data provided should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 64,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        58,
+        49,
+        38,
+        23,
+        27,
+        68,
+        38,
+        35,
+        7,
+        64,
+        65,
+        31,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Fun 1",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        6,
+        34,
+        19,
+        9,
+        7,
+        17,
+        25,
+        14,
+        7,
+        10,
+        32,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(177, 79, 24, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#b14f18",
+        "borderWidth": 1,
+        "color": "rgba(177, 79, 24, 0.2)",
+      },
+      "name": "Fun 2",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        67,
+        60,
+        66,
+        32,
+        61,
+        54,
+        13,
+        50,
+        16,
+        11,
+        47,
+        28,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(0, 144, 177, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#0090b1",
+        "borderWidth": 1,
+        "color": "rgba(0, 144, 177, 0.2)",
+      },
+      "name": "Fun 3",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        8,
+        9,
+        5,
+        40,
+        13,
+        19,
+        58,
+        21,
+        47,
+        59,
+        23,
+        46,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(78, 127, 14, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#4e7f0e",
+        "borderWidth": 1,
+        "color": "rgba(78, 127, 14, 0.2)",
+      },
+      "name": "Fun 4",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        13,
+        25,
+        38,
+        23,
+        27,
+        28,
+        29,
+        27,
+        1,
+        15,
+        65,
+        31,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(207, 77, 129, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#cf4d81",
+        "borderWidth": 1,
+        "color": "rgba(207, 77, 129, 0.2)",
+      },
+      "name": "Secondary 1",
+      "stack": "default-series-secondary-stack",
+      "type": "bar",
+      "yAxisIndex": 1,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "data": Array [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ],
+    "name": "January - December 2018",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Array [
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "Commits",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "type": "value",
+    },
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "test secondary",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "show": true,
+      "type": "value",
+    },
+  ],
+}
+`;

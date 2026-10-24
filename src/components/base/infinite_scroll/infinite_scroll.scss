@@ -1,0 +1,12 @@
+.gl-infinite-scroll-container {
+  @apply gl-overflow-x-hidden;
+  @apply gl-overflow-y-auto;
+  @apply gl-text-base;
+}
+
+.gl-infinite-scroll-legend {
+  @apply gl-text-center;
+  @apply gl-text-sm;
+  @apply gl-text-subtle;
+  @apply gl-mt-3;
+}

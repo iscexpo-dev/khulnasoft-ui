@@ -1,0 +1,283 @@
+@use "sass:map";
+
+@mixin str-truncated($max-width: 82%) {
+  display: inline-block;
+  min-width: 0;
+  overflow-x: clip;
+  overflow-y: visible;
+  text-overflow: ellipsis;
+  vertical-align: top;
+  white-space: nowrap;
+  max-width: $max-width;
+}
+
+@mixin mask-chevron-down {
+  mask-image: url("#{$gl-icon-chevron-down}");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
+
+@mixin gl-fluid-font-size($min, $max) {
+  @include gl-responsive-property("font-size", $min, $max);
+}
+
+@mixin gl-fluid-line-height($min, $max) {
+  @include gl-responsive-property("line-height", $min, $max);
+}
+
+/**
+* Declares a property with a fluid value that decreases or
+* rises depending on the viewport’s size. The property type
+* should be numeric.
+*
+* Values are expected in rem units.
+* Fluid range: between 48rem (768px) – 75rem (1200px).
+*
+* @param $property Property name, i.e. line-height, font-size, width, height, etc.
+* @param $min Property value lower bound.
+* @param $max Property value upper bound.
+*/
+@mixin gl-responsive-property($property, $min, $max) {
+  #{$property}: clamp-between($min, $max);
+}
+
+/**
+* Helper function for :focus
+*
+* @param $size is deprecated and should not be used anymore
+*/
+@mixin gl-focus(
+  $size: null,
+  $color: false,
+  $important: false,
+  $inset: false,
+  $focus-ring: $focus-ring,
+  $outline: false,
+  $outline-offset: $outline-offset
+) {
+  @if $inset == true {
+    @if $color {
+      box-shadow:
+        inset 0 0 0 $outline-width var(--gl-focus-ring-outer-color),
+        inset 0 0 0 #{$outline-width + $outline-offset} var(--gl-focus-ring-inner-color),
+        inset 0 0 0 #{$outline-width + $outline-offset + 1px} $color,
+        $focus-ring-inset if-important($important);
+      outline: none if-important($important);
+      @media (forced-colors: active) {
+        outline: 2px solid LinkText if-important($important);
+      }
+    } @else if $outline == true {
+      outline: $focus-ring-outline if-important($important);
+      outline-offset: $outline-offset;
+    } @else {
+      box-shadow:
+        inset 0 0 0 $outline-width var(--gl-focus-ring-outer-color),
+        $focus-ring-inset if-important($important);
+      outline: none if-important($important);
+      @media (forced-colors: active) {
+        outline: 2px solid LinkText if-important($important);
+      }
+    }
+  } @else if $color {
+    box-shadow:
+      inset 0 0 0 $gl-border-size-1 $color,
+      $focus-ring if-important($important);
+    outline: none if-important($important);
+    @media (forced-colors: active) {
+      outline: 2px solid LinkText if-important($important);
+    }
+  } @else if $outline == true {
+    outline: $focus-ring-outline if-important($important);
+    outline-offset: $outline-offset;
+  } @else {
+    box-shadow: $focus-ring if-important($important);
+    outline: none if-important($important);
+    @media (forced-colors: active) {
+      outline: 2px solid LinkText if-important($important);
+    }
+  }
+}
+
+@mixin gl-bg-gradient-blur($direction, $color) {
+  background-image: linear-gradient(to $direction, $transparent-rgba, $color 33%);
+}
+
+/**
+* Helper function for @media of at least the minimum
+* breakpoint width.
+*
+* @param $name Breakpoint name, such as `sm` or `md`.
+*/
+@mixin gl-media-breakpoint-up($name) {
+  $min: map.get($breakpoints, $name);
+  @if $min == null {
+    @error "#{$name} is not a valid breakpoint for this @media query.";
+  }
+  @if $min != 0 {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+/**
+* Helper function for @media of at most the maximum
+* breakpoint width.
+*
+* Note: Before using, consider using a mobile-first
+* approach, and define @media for larger breakpoints
+* using `gl-media-breakpoint-up` while using this rule as
+* the starting point instead.
+*
+* @param $name Breakpoint, such as `sm` or `md`. `xs` is not valid
+*/
+@mixin gl-media-breakpoint-down($name) {
+  $max: map.get($breakpoints, $name);
+  @if ($max == null or $max == 0) {
+    @error "#{$name} is not a valid breakpoint for this @media query.";
+  }
+  // The maximum value is reduced by 0.02px to work around the limitations of
+  // `min-` and `max-` prefixes and with fractional viewport sizes.
+  // See: https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+  // Use 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+  // See https://bugs.webkit.org/show_bug.cgi?id=178261
+  $breakpoint-max-range-precision: 0.02px;
+
+  @media (max-width: $max - $breakpoint-max-range-precision) {
+    @content;
+  }
+}
+
+@mixin gl-container-width-up($name, $containerName: "", $includeMQFallback: true) {
+  $min: map.get($breakpoints, $name);
+  @if $min == null {
+    @error "#{$name} is not a valid breakpoint for this @container query.";
+  }
+  @if $min != 0 {
+    @container #{$containerName} (width >= #{$min}) {
+      @if & {
+        :where(html.with-gl-container-queries) & {
+          @content;
+        }
+      } @else {
+        :where(html.with-gl-container-queries) {
+          @content;
+        }
+      }
+    }
+    @if $includeMQFallback {
+      @media (width >= $min) {
+        @if & {
+          :where(html:not(.with-gl-container-queries)) & {
+            @content;
+          }
+        } @else {
+          :where(html:not(.with-gl-container-queries)) {
+            @content;
+          }
+        }
+      }
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin gl-container-width-down($name, $containerName: "", $includeMQFallback: true) {
+  $max: map.get($breakpoints, $name);
+  @if ($max == null or $max == 0) {
+    @error "#{$name} is not a valid breakpoint for this @container query.";
+  }
+
+  @container #{$containerName} (width < #{$max}) {
+    @if & {
+      :where(html.with-gl-container-queries) & {
+        @content;
+      }
+    } @else {
+      :where(html.with-gl-container-queries) {
+        @content;
+      }
+    }
+  }
+  @if $includeMQFallback {
+    @media (width < $max) {
+      @if & {
+        :where(html:not(.with-gl-container-queries)) & {
+          @content;
+        }
+      } @else {
+        :where(html:not(.with-gl-container-queries)) {
+          @content;
+        }
+      }
+    }
+  }
+}
+
+/**
+* Helper function to resolve font-size value from $gl-font-sizes and
+* $gl-font-sizes-fixed maps.
+*
+* @param $size Number font-size scale
+* @param $fixed Boolean toggle default and fixed font size scales
+*/
+@function get-font-size-variable($size, $fixed) {
+  @if $fixed == true {
+    @if map-has-key($gl-font-sizes-fixed, $size) {
+      @return map.get($gl-font-sizes-fixed, $size);
+    } @else {
+      @error "#{$size} is not a valid fixed font size property";
+      @return null;
+    }
+  } @else {
+    @if map-has-key($gl-font-sizes, $size) {
+      @return map.get($gl-font-sizes, $size);
+    } @else {
+      @error "#{$size} is not a valid font size property";
+      @return null;
+    }
+  }
+}
+
+@mixin gl-prefers-reduced-motion-transition {
+  @media (prefers-reduced-motion) {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0ms !important;
+  }
+}
+
+@mixin gl-prefers-reduced-motion-animation {
+  @media (prefers-reduced-motion) {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
+  }
+}
+
+@mixin gl-action-selected-colors {
+  color: var(--gl-action-selected-foreground-color-default);
+  background-color: var(--gl-action-selected-background-color-default);
+  border-color: var(--gl-action-selected-border-color-default);
+
+  &:hover {
+    color: var(--gl-action-selected-foreground-color-hover);
+    background-color: var(--gl-action-selected-background-color-hover);
+    border-color: var(--gl-action-selected-border-color-hover);
+  }
+
+  &:focus-visible {
+    color: var(--gl-action-selected-foreground-color-focus);
+    background-color: var(--gl-action-selected-background-color-focus);
+    border-color: var(--gl-action-selected-border-color-focus);
+  }
+
+  &:active {
+    color: var(--gl-action-selected-foreground-color-active);
+    background-color: var(--gl-action-selected-background-color-active);
+    border-color: var(--gl-action-selected-border-color-active);
+  }
+}

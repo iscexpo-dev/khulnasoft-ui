@@ -1,0 +1,22 @@
+@mixin gl-tmp-dropdown-section-header-style {
+  @apply gl-text-base;
+  @apply gl-text-strong;
+  @apply gl-leading-normal;
+  @apply gl-text-left;
+  @apply gl-font-bold;
+  @apply gl-py-3;
+  @apply gl-px-4;
+  @apply gl-whitespace-normal;
+}
+
+/* Styling when the component is used on its own */
+.gl-dropdown-section-header .dropdown-header {
+  @include gl-tmp-dropdown-section-header-style;
+}
+
+/* Styling to override the vue-bootstrap CSS included in KhulnaSoft CSS */
+.gl-dropdown {
+  .gl-dropdown-section-header .dropdown-header {
+    @include gl-tmp-dropdown-section-header-style;
+  }
+}

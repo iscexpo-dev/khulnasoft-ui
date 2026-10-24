@@ -1,0 +1,53 @@
+.gl-tooltip {
+  @apply gl-text-sm;
+  @apply gl-p-2;
+
+  .tooltip-inner {
+    @apply gl-drop-shadow-md;
+    @apply gl-leading-normal;
+    @apply gl-font-normal;
+    @apply gl-py-3;
+    @apply gl-px-4;
+    @apply gl-rounded-feedback;
+    background: var(--gl-feedback-strong-background-color);
+    color: var(--gl-feedback-strong-text-color);
+    --gl-text-color-subtle: var(--gl-tooltip-text-color-subtle);
+  }
+
+  .arrow {
+    @apply gl-h-3;
+    @apply gl-w-2;
+
+    &::before {
+      @apply gl-border-4;
+    }
+  }
+}
+
+.gl-tooltip.bs-tooltip-top,
+.gl-tooltip.bs-tooltip-bottom {
+  .arrow {
+    @apply gl-w-3;
+    @apply gl-h-2;
+  }
+}
+
+.gl-tooltip.bs-tooltip-top .arrow::before {
+  @apply gl-border-b-0;
+  border-top-color: var(--gl-feedback-strong-background-color);
+}
+
+.gl-tooltip.bs-tooltip-right .arrow::before {
+  @apply gl-border-l-0;
+  border-right-color: var(--gl-feedback-strong-background-color);
+}
+
+.gl-tooltip.bs-tooltip-bottom .arrow::before {
+  @apply gl-border-t-0;
+  border-bottom-color: var(--gl-feedback-strong-background-color);
+}
+
+.gl-tooltip.bs-tooltip-left .arrow::before {
+  @apply gl-border-r-0;
+  border-left-color: var(--gl-feedback-strong-background-color);
+}

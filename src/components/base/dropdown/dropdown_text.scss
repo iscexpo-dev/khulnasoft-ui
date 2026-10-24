@@ -1,0 +1,6 @@
+.gl-dropdown-text {
+  .b-dropdown-text {
+    @include gl-tmp-dropdown-item-style;
+    @apply gl-py-3;
+  }
+}

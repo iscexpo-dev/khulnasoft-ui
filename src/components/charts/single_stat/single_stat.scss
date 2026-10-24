@@ -1,0 +1,19 @@
+@use "sass:map";
+
+.gl-single-stat {
+  @apply gl-leading-1;
+
+  &:hover[tabindex="0"] {
+    @apply gl-bg-strong;
+    @apply gl-rounded-default;
+  }
+
+  .gl-single-stat-number {
+    font-size: map.get($gl-font-sizes, 700);
+  }
+
+  .gl-single-stat-content .gl-badge {
+    position: relative;
+    top: -0.125em;
+  }
+}

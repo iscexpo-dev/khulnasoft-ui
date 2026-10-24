@@ -1,0 +1,36 @@
+// This selector is used to override boostrap styles when using the component in
+// KhulnaSoft
+
+.gl-filtered-search-suggestion-list.dropdown-menu {
+  @apply gl-block;
+  width: $gl-dropdown-width;
+  @apply gl-p-2;
+  @apply gl-bg-dropdown;
+  @apply gl-border-dropdown;
+  @apply gl-rounded-lg;
+  @apply gl-shadow-md;
+}
+
+.gl-filtered-search-suggestion-list {
+  position: absolute;
+  @apply gl-overflow-y-auto;
+  max-height: $gl-max-dropdown-max-height;
+
+  .gl-filtered-search-suggestion,
+  .gl-filtered-search-suggestion > a,
+  .gl-filtered-search-suggestion > button {
+    @apply gl-rounded-default #{!important};
+  }
+
+  .gl-dropdown-divider {
+    @apply -gl-mx-2;
+  }
+
+  .gl-spinner-container {
+    @apply gl-my-2;
+  }
+
+  .gl-filtered-search-suggestion {
+    @apply gl-p-0;
+  }
+}

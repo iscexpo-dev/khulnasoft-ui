@@ -1,0 +1,55 @@
+$search-icon-size: 12px;
+$clear-button-size: 24px;
+
+.gl-listbox-search {
+  position: relative;
+
+  .gl-listbox-search-input {
+    @apply gl-w-full;
+    @apply gl-leading-normal;
+    @apply gl-h-auto;
+    @apply gl-border-none;
+    @apply gl-rounded-none;
+    padding-left: calc(#{$gl-spacing-scale-7} + #{$gl-spacing-scale-2});
+    padding-right: calc(#{$gl-spacing-scale-6} + #{$gl-spacing-scale-2});
+    @apply gl-py-4;
+    @apply gl-text-base;
+    @apply gl-text-default;
+    background-color: var(--gl-dropdown-search-background-color);
+
+    &:focus-visible {
+      @include gl-focus($inset: true);
+    }
+
+    &::placeholder {
+      color: var(--gl-control-placeholder-color);
+    }
+
+    &::-webkit-search-cancel-button {
+      @apply gl-hidden;
+    }
+  }
+
+  // top container radius minus its border size to avoid the small gap between the focus ring and container
+  $input-focus-ring-border-radius: calc($gl-border-radius-large - $gl-border-size-1);
+
+  &.gl-listbox-topmost {
+    .gl-listbox-search-input {
+      border-top-left-radius: $input-focus-ring-border-radius;
+      border-top-right-radius: $input-focus-ring-border-radius;
+    }
+  }
+
+  .gl-listbox-search-icon {
+    position: absolute;
+    top: calc(50% - #{$search-icon-size} / 2);
+    left: $gl-spacing-scale-4;
+    color: var(--gl-icon-color-subtle);
+  }
+
+  .gl-listbox-search-clear-button {
+    position: absolute;
+    top: calc(50% - #{$clear-button-size} / 2);
+    right: $gl-spacing-scale-3;
+  }
+}

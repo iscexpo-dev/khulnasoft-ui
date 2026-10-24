@@ -1,0 +1,14 @@
+/**
+  Note: although vendor-prefixes are used here, these properties are supported by all browsers.
+  See https://caniuse.com/css-line-clamp
+**/
+.gl-truncate-text {
+  // stylelint-disable-next-line value-no-vendor-prefix
+  display: -webkit-box;
+  -webkit-line-clamp: var(--mobile-lines);
+  -webkit-box-orient: vertical;
+
+  @include gl-container-width-up(sm) {
+    -webkit-line-clamp: var(--lines);
+  }
+}

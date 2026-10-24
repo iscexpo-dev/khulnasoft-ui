@@ -1,0 +1,103 @@
+@mixin gl-typescale-ui($selector: "body") {
+  #{$selector} {
+    @apply gl-text-base;
+    @apply gl-text-default;
+    @apply gl-font-regular;
+    @apply gl-font-normal;
+    @apply gl-leading-normal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h-display,
+  .gl-h1,
+  .gl-h2,
+  .gl-h3,
+  .gl-h4,
+  .gl-h5,
+  .gl-h6 {
+    @apply gl-font-bold;
+    @apply gl-mt-0;
+    @apply gl-mb-0;
+  }
+
+  .h-display {
+    @include gl-fluid-font-size($min: $gl-font-size-h-display, $max: $gl-font-size-h-display-xl);
+    @include gl-fluid-line-height($min: $gl-line-height-32, $max: $gl-line-height-52);
+  }
+
+  h1,
+  .gl-h1 {
+    @include gl-fluid-font-size($min: $gl-font-size-h1, $max: $gl-font-size-h1-xl);
+    @include gl-fluid-line-height($min: $gl-line-height-28, $max: $gl-line-height-36);
+  }
+
+  h2,
+  .gl-h2 {
+    @include gl-fluid-font-size($min: $gl-font-size-h2, $max: $gl-font-size-h2-xl);
+    @include gl-fluid-line-height($min: $gl-line-height-24, $max: $gl-line-height-28);
+  }
+
+  h3,
+  .gl-h3 {
+    @apply gl-text-lg;
+    @apply gl-leading-20;
+  }
+
+  h4,
+  .gl-h4 {
+    @apply gl-text-base;
+    @apply gl-leading-20;
+  }
+
+  h5,
+  .gl-h5,
+  h6,
+  .gl-h6 {
+    @apply gl-text-base;
+    @apply gl-leading-20;
+    @apply gl-text-subtle;
+  }
+
+  p,
+  .gl-paragraph {
+    @apply gl-text-base;
+    @apply gl-leading-20;
+    @apply gl-mt-0;
+    @apply gl-mb-0;
+
+    + p,
+    + .gl-paragraph {
+      @apply gl-mt-5;
+    }
+
+    &.lg {
+      @apply gl-leading-24;
+    }
+  }
+
+  .sm {
+    @apply gl-text-sm;
+  }
+
+  .lg {
+    @apply gl-text-lg;
+  }
+
+  .monospace {
+    @apply gl-font-monospace;
+  }
+
+  blockquote {
+    @apply gl-text-subtle;
+    @apply gl-py-3;
+    @apply gl-pl-6;
+    @apply gl-my-3;
+    @apply gl-mx-0;
+    @apply gl-shadow-inner-l-4-gray-100;
+  }
+}

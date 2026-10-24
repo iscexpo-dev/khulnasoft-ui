@@ -1,0 +1,64 @@
+@use "sass:math";
+@use "sass:meta";
+
+/*
+* SASS preserves units in arithmetic operations. For example:
+* 12em * 0 = 0em. This function return the unit of a numeric value.
+*
+* For more examples, see: https://codepen.io/paulgv/pen/XWrqMgQ
+*/
+@function extract-unit($number) {
+  @return $number * 0 + 1;
+}
+
+@function strip-unit($number) {
+  @if meta.type-of($number) == "number" and not math.is-unitless($number) {
+    @return math.div($number, extract-unit($number));
+  }
+
+  @return $number;
+}
+
+@function single-unit-rem($value, $font-size-base) {
+  @if (extract-unit($value) != 1px) {
+    @return $value;
+  }
+
+  $converted: math.div($value, $font-size-base);
+
+  @return strip-unit($converted) * 1rem;
+}
+
+@function multiple-units-rem($values, $font-size-base) {
+  $rem-values: ();
+
+  @each $value in $values {
+    $rem-values: append($rem-values, single-unit-rem($value, $font-size-base));
+  }
+
+  @return $rem-values;
+}
+
+@function px-to-rem($px, $font-size-base: 16px) {
+  @if meta.type-of($px) == "number" {
+    @return single-unit-rem($px, $font-size-base);
+  } @else if meta.type-of($px) == "list" {
+    @return multiple-units-rem($px, $font-size-base);
+  } @else {
+    @return $px;
+  }
+}
+
+@function if-important($important) {
+  @return #{if($important, "!important", "")};
+}
+
+@function clamp-between($min, $max, $min-width: $breakpoint-md, $max-width: $breakpoint-xl) {
+  $min-width: px-to-rem($min-width);
+  $max-width: px-to-rem($max-width);
+
+  $slope: math.div($max - $min, $max-width - $min-width);
+  $intersection: (-$min-width * $slope) + $min;
+
+  @return clamp(#{$min}, #{$intersection} + #{$slope * 100vw}, #{$max});
+}

@@ -1,0 +1,636 @@
+.gl-animated-icon {
+  display: flex;
+  fill: none !important;
+  stroke: currentColor !important;
+
+  * {
+    transition: all $gl-transition-duration-medium $gl-easing-out-cubic;
+    // 'all' will also animate the visibility property, which makes the icon disappear later than it should
+    transition-property:
+      color, fill, opacity, transform, rotate, translate, scale, stroke-dasharray, stroke-dashoffset;
+    animation-duration: $gl-transition-duration-slow;
+    animation-timing-function: $gl-easing-out-cubic;
+    animation-fill-mode: both;
+    @include gl-prefers-reduced-motion-transition;
+    @include gl-prefers-reduced-motion-animation;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * Color variants.
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-icon-default {
+  color: var(--gl-icon-color-default);
+}
+
+.gl-animated-icon-subtle {
+  color: var(--gl-icon-color-subtle);
+}
+
+.gl-animated-icon-strong {
+  color: var(--gl-icon-color-strong);
+}
+
+.gl-animated-icon-disabled {
+  color: var(--gl-icon-color-disabled);
+}
+
+.gl-animated-icon-link {
+  color: var(--gl-icon-color-link);
+}
+
+.gl-animated-icon-info {
+  color: var(--gl-icon-color-info);
+}
+
+.gl-animated-icon-warning {
+  color: var(--gl-icon-color-warning);
+}
+
+.gl-animated-icon-danger {
+  color: var(--gl-icon-color-danger);
+}
+
+.gl-animated-icon-success {
+  color: var(--gl-icon-color-success);
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_chevron_lg_right_down_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-chevron-lg-right-down-arrow {
+  transform-origin: center center;
+}
+
+/* on state */
+.gl-animated-icon-on {
+  .gl-animated-chevron-lg-right-down-arrow {
+    rotate: 90deg;
+  }
+}
+
+/* off state */
+.gl-animated-icon-off {
+  .gl-animated-chevron-lg-right-down-arrow {
+    rotate: 0deg;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_chevron_right_down_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-chevron-right-down-arrow {
+  transform-origin: center center;
+}
+
+/* on state */
+.gl-animated-icon-on {
+  .gl-animated-chevron-right-down-arrow {
+    rotate: 90deg;
+  }
+}
+
+/* off state */
+.gl-animated-icon-off {
+  .gl-animated-chevron-right-down-arrow {
+    rotate: 0deg;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_chevron_lg_down_up_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+/* on state */
+.gl-animated-icon-on {
+  .gl-animated-chevron-lg-down-up-arrow-left-line,
+  .gl-animated-chevron-lg-down-up-arrow-right-line {
+    translate: 50% 31.2%;
+    scale: 1 1.01;
+    transition:
+      all $gl-transition-duration-medium $gl-easing-out-cubic,
+      scale $gl-transition-duration-medium linear(1 0%, -29 16%, 1 100%);
+  }
+
+  .gl-animated-chevron-lg-down-up-arrow-left-line {
+    rotate: 45deg;
+  }
+
+  .gl-animated-chevron-lg-down-up-arrow-right-line {
+    rotate: -45deg;
+  }
+}
+
+/* off state */
+.gl-animated-icon-off {
+  .gl-animated-chevron-lg-down-up-arrow-left-line,
+  .gl-animated-chevron-lg-down-up-arrow-right-line {
+    translate: 50% 68.8%;
+    scale: 1 1;
+    transition:
+      all $gl-transition-duration-medium $gl-easing-out-cubic,
+      scale $gl-transition-duration-medium linear(1 0%, 29 16%, 1 100%);
+  }
+
+  .gl-animated-chevron-lg-down-up-arrow-left-line {
+    rotate: 135deg;
+  }
+
+  .gl-animated-chevron-lg-down-up-arrow-right-line {
+    rotate: -135deg;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_chevron_down_up_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+/* on state */
+.gl-animated-icon-on {
+  .gl-animated-chevron-down-up-arrow-left-line,
+  .gl-animated-chevron-down-up-arrow-right-line {
+    translate: 50% 37.6%;
+    scale: 1 1.01;
+    transition:
+      all $gl-transition-duration-medium $gl-easing-out-cubic,
+      scale $gl-transition-duration-medium linear(1 0%, -27 16%, 1 100%);
+  }
+
+  .gl-animated-chevron-down-up-arrow-left-line {
+    rotate: 45deg;
+  }
+
+  .gl-animated-chevron-down-up-arrow-right-line {
+    rotate: -45deg;
+  }
+}
+
+/* off state */
+.gl-animated-icon-off {
+  .gl-animated-chevron-down-up-arrow-left-line,
+  .gl-animated-chevron-down-up-arrow-right-line {
+    translate: 50% 62.6%;
+    scale: 1 1;
+    transition:
+      all $gl-transition-duration-medium $gl-easing-out-cubic,
+      scale $gl-transition-duration-medium linear(1 0%, 27 16%, 1 100%);
+  }
+
+  .gl-animated-chevron-down-up-arrow-left-line {
+    rotate: 135deg;
+  }
+
+  .gl-animated-chevron-down-up-arrow-right-line {
+    rotate: -135deg;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_duo_chat_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-duo-chat-small-sparkle,
+.gl-animated-duo-chat-big-sparkle {
+  transform-origin: 50% 50%;
+}
+
+/* on state */
+.gl-animated-icon-on .gl-animated-duo-chat-small-sparkle,
+.gl-animated-icon-on .gl-animated-duo-chat-big-sparkle {
+  animation-name: gl-animated-duo-chat-sparkle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.gl-animated-icon-on .gl-animated-duo-chat-small-sparkle {
+  animation-delay: -0.5s;
+}
+
+.gl-animated-icon-on .gl-animated-duo-chat-big-sparkle {
+  animation-delay: -1.5s;
+}
+
+@keyframes gl-animated-duo-chat-sparkle {
+  0% {
+    translate: -45% -45%;
+    scale: 0;
+  }
+
+  20%,
+  45% {
+    translate: -31% -31%;
+    scale: 1;
+  }
+
+  50%,
+  80% {
+    translate: 0 -6%;
+    scale: 0.8;
+  }
+
+  100% {
+    translate: 0 -6%;
+    scale: 0;
+  }
+}
+
+/* off state */
+.gl-animated-duo-chat-small-sparkle {
+  translate: 0 -6%;
+  scale: 0.8;
+}
+
+.gl-animated-duo-chat-big-sparkle {
+  translate: -31% -31%;
+  scale: 1;
+}
+
+@media (prefers-reduced-motion) {
+  .gl-animated-icon-on .gl-animated-duo-chat-small-sparkle,
+  .gl-animated-icon-on .gl-animated-duo-chat-big-sparkle {
+    animation-name: none;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_loader_icon.vue
+ * * * * * * * * * * * * * * * * */
+.gl-animated-icon-on .gl-animated-loader-shape {
+  animation: gl-animated-loader-on 1.8s $gl-easing-default infinite;
+}
+
+.gl-animated-icon-on .gl-animated-loader-shape-1 {
+  animation-delay: 0.15s;
+}
+
+.gl-animated-icon-on .gl-animated-loader-shape-2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes gl-animated-loader-on {
+  30% {
+    translate: 0 -30%;
+  }
+
+  60% {
+    translate: 0 2%;
+  }
+
+  65% {
+    translate: 0 0;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_notifications_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+/* on state */
+.gl-animated-icon-on .gl-animated-notifications-bottom-part {
+  stroke-dasharray: 80% 100%;
+  stroke-dashoffset: -43%;
+}
+
+.gl-animated-icon-on .gl-animated-notifications-top-part {
+  stroke-dashoffset: 0;
+}
+
+.gl-animated-icon-on .gl-animated-notifications-line {
+  stroke-dasharray: 115% 120%;
+  stroke-dashoffset: 0;
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated-notifications-bottom-part {
+  stroke-dasharray: 145% 100%;
+  stroke-dashoffset: 0;
+}
+
+.gl-animated-icon-off .gl-animated-notifications-top-part {
+  stroke-dasharray: 100% 100%;
+  stroke-dashoffset: 0;
+}
+
+.gl-animated-icon-off .gl-animated-notifications-line {
+  stroke-dasharray: 115% 120%;
+  stroke-dashoffset: -111%;
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_sidebar_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+/* on state */
+.gl-animated-icon-on .gl-animated-sidebar-line {
+  translate: 1% 0;
+  transition-timing-function: linear(0 0%, 5 60%, 1 100%);
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated-sidebar-line {
+  translate: -1% 0;
+  transition-timing-function: linear(0 0%, 5 60%, 1 100%);
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_smile_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-smile-big-smile {
+  transform-origin: 50% 70%;
+}
+
+.gl-animated-smile-eyes circle {
+  fill: currentColor !important;
+}
+
+/* on state */
+.gl-animated-icon-on .gl-animated-smile-eyes {
+  transition-timing-function: linear(0 0%, -1 20%, 1 100%);
+  translate: 0 -6%;
+}
+
+.gl-animated-icon-on .gl-animated-smile-big-smile {
+  scale: 1;
+  transition-delay: 0.1s;
+}
+
+.gl-animated-icon-on .gl-animated-smile-slight-smile {
+  stroke-dasharray: 10% 100%;
+  stroke-dashoffset: -8%;
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated-smile-eyes {
+  translate: 0 0;
+}
+
+.gl-animated-icon-off .gl-animated-smile-big-smile {
+  scale: 0.1;
+}
+
+.gl-animated-icon-off .gl-animated-smile-slight-smile {
+  stroke-dasharray: 30% 100%;
+  stroke-dashoffset: 0;
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_sort_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-sort-icon {
+  overflow: visible;
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated {
+  animation-name: gl-animated-star-off;
+}
+
+.gl-animated-sort-arrow-left,
+.gl-animated-sort-arrow-right {
+  transform-origin: 18.7% 6.7%;
+}
+
+.gl-animated-icon-off .gl-animated-sort-arrow-left,
+.gl-animated-icon-off .gl-animated-sort-arrow-right {
+  rotate: 0deg;
+  translate: 0 10%;
+}
+
+.gl-animated-icon-off .gl-animated-sort-long-line-off,
+.gl-animated-icon-off .gl-animated-sort-medium-line-off,
+.gl-animated-icon-off .gl-animated-sort-short-line-off {
+  opacity: 0;
+  transition-delay: -1s;
+}
+
+.gl-animated-icon-off .gl-animated-sort-long-line-on {
+  transition-delay: 0.05s;
+}
+
+.gl-animated-icon-off .gl-animated-sort-medium-line-on {
+  transition-delay: 0.1s;
+}
+
+.gl-animated-icon-off .gl-animated-sort-short-line-on {
+  transition-delay: 0.15s;
+}
+
+.gl-animated-icon-off .gl-animated-sort-line {
+  translate: 0 -7%;
+}
+
+/* on state */
+.gl-animated-icon-on .gl-animated-sort-arrow-left {
+  rotate: 90deg;
+  translate: 0 77%;
+}
+
+.gl-animated-icon-on .gl-animated-sort-arrow-right {
+  rotate: -90deg;
+  translate: 0 77%;
+}
+
+.gl-animated-icon-on .gl-animated-sort-long-line-on,
+.gl-animated-icon-on .gl-animated-sort-medium-line-on,
+.gl-animated-icon-on .gl-animated-sort-short-line-on {
+  opacity: 0;
+  transition-delay: -1s;
+}
+
+.gl-animated-icon-on .gl-animated-sort-long-line-off {
+  transition-delay: 0.15s;
+}
+
+.gl-animated-icon-on .gl-animated-sort-medium-line-off {
+  transition-delay: 0.1s;
+}
+
+.gl-animated-icon-on .gl-animated-sort-short-line-off {
+  transition-delay: 0.05s;
+}
+
+.gl-animated-icon-on .gl-animated-sort-line {
+  translate: 0 0;
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_star_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-star-shape {
+  transform-origin: center center;
+}
+
+/* on state */
+.gl-animated-icon-on .gl-animated-star-shape {
+  animation-name: gl-animated-star-on;
+}
+
+@keyframes gl-animated-star-on {
+  0%,
+  25% {
+    fill: transparent;
+  }
+
+  50% {
+    fill: currentColor;
+  }
+
+  100% {
+    fill: currentColor;
+  }
+
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  25% {
+    scale: 0.7;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated-star-shape {
+  animation-name: gl-animated-star-off;
+}
+
+@keyframes gl-animated-star-off {
+  0%,
+  25% {
+    fill: currentColor;
+  }
+
+  50% {
+    fill: transparent;
+  }
+
+  100% {
+    fill: transparent;
+  }
+
+  0%,
+  100% {
+    scale: 1;
+  }
+
+  25% {
+    scale: 0.7;
+  }
+
+  50% {
+    scale: 1.1;
+  }
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_todo_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+/* on state */
+.gl-animated-icon-on .gl-animated-todo-box {
+  stroke-dasharray: 240% 100%;
+  stroke-dashoffset: -19%;
+}
+
+.gl-animated-icon-on .gl-animated-todo-plus-line {
+  stroke-dasharray: 0% 100%;
+  stroke-dashoffset: -14%;
+  translate: 14% 7%;
+}
+
+.gl-animated-icon-on .gl-animated-todo-check {
+  stroke-dasharray: 76% 100%;
+  stroke-dashoffset: 0;
+}
+
+/* off state */
+.gl-animated-icon-off .gl-animated-todo-box {
+  stroke-dasharray: 215% 100%;
+  stroke-dashoffset: -12%;
+}
+
+.gl-animated-icon-off .gl-animated-todo-plus-line {
+  stroke-dasharray: 30% 100%;
+  stroke-dashoffset: 0;
+  translate: 0 0;
+}
+
+.gl-animated-icon-off .gl-animated-todo-check {
+  stroke-dasharray: 76% 100%;
+  stroke-dashoffset: -76%;
+}
+
+/* * * * * * * * * * * * * * * * *
+ * animated_upload_icon.vue
+ * * * * * * * * * * * * * * * * */
+
+.gl-animated-upload-line {
+  stroke-dasharray: 70% 100%;
+}
+
+/* on state */
+.gl-animated-icon-on .gl-animated-upload-line {
+  animation-name: gl-animated-upload-line;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gl-animated-upload-line {
+  0%,
+  60%,
+  100% {
+    translate: 0 0;
+    stroke-dashoffset: 0;
+  }
+
+  10% {
+    translate: 0% 20%;
+    stroke-dashoffset: -20%;
+  }
+
+  40% {
+    translate: 0 -10%;
+    stroke-dashoffset: 0;
+  }
+
+  55% {
+    translate: 0 5%;
+    stroke-dashoffset: -5%;
+  }
+}
+
+.gl-animated-icon-on .gl-animated-upload-arrow {
+  animation-name: gl-animated-upload-arrow;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes gl-animated-upload-arrow {
+  0%,
+  60%,
+  100% {
+    translate: 0 0;
+  }
+
+  10% {
+    translate: 0 20%;
+  }
+
+  40% {
+    translate: 0 -8%;
+  }
+
+  55% {
+    translate: 0 8%;
+  }
+}

@@ -1,0 +1,171 @@
+.gl-tabs-wrapper {
+  @apply gl-border-b gl-relative gl-flex gl-flex-wrap;
+}
+
+.gl-tabs-nav {
+  @apply gl-grow;
+}
+
+.gl-tab-nav-item {
+  position: relative;
+  @apply gl-px-4;
+  @apply gl-py-5;
+  @apply gl-leading-normal;
+  @apply gl-text-base;
+  @apply gl-flex;
+  @apply gl-justify-center;
+  @apply gl-border;
+  @apply gl-h-full;
+  @apply gl-action-neutral-colors;
+  transition:
+    box-shadow $gl-transition-duration-medium $gl-easing-out-cubic,
+    background-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    border-radius $gl-transition-duration-fast $gl-easing-out-cubic;
+
+  &::before {
+    content: "";
+    position: absolute;
+    border-bottom: $gl-border-size-2 solid transparent;
+    translate: 0 $gl-border-size-2;
+    transition:
+      border-bottom $gl-transition-duration-medium $gl-easing-out-cubic,
+      translate $gl-transition-duration-medium $gl-easing-out-cubic;
+    //offsets the bottom border from the parent border
+    bottom: -$gl-border-size-1;
+    left: -$gl-border-size-1;
+    right: -$gl-border-size-1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    &,
+    &::before {
+      transition-duration: 0.01ms;
+    }
+  }
+
+  &:hover:not(.gl-tab-nav-item-active)::before {
+    border-bottom-color: var(--gl-border-color-strong);
+    translate: 0;
+  }
+
+  &:focus-visible {
+    @apply gl-rounded-default;
+  }
+
+  &.disabled {
+    @apply gl-pointer-events-auto;
+    @apply gl-cursor-not-allowed;
+    color: var(--gl-action-disabled-foreground-color);
+
+    &:hover {
+      @apply gl-shadow-none;
+    }
+  }
+
+  > .gl-tab-counter-badge {
+    font-weight: inherit;
+    @apply gl-ml-2;
+  }
+}
+
+.gl-tab-content {
+  @apply gl-py-3;
+  @apply gl-text-base;
+  @apply gl-leading-normal;
+  @apply gl-text-default;
+}
+
+.gl-tab-nav-item-active {
+  @apply gl-font-bold;
+  z-index: 1;
+
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    @include gl-focus($color: var(--gl-action-neutral-border-color-active));
+
+    .gl-scrollable-tabs-nav & {
+      @include gl-focus($inset: true);
+
+      &::before {
+        border-radius: 0 0 $gl-border-size-1 $gl-border-size-1;
+        left: $gl-border-size-3;
+        right: $gl-border-size-3;
+        bottom: $gl-border-size-3;
+      }
+    }
+
+    &::before {
+      border-radius: 0 0 $gl-border-size-2 $gl-border-size-2;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &::before {
+    border-bottom-color: var(--gl-tab-selected-indicator-color-default);
+    translate: 0;
+  }
+}
+
+.gl-actions-tabs-start {
+  @apply gl-w-full;
+  @apply gl-flex;
+  @apply gl-flex-col;
+  @apply gl-grow-0;
+  @apply gl-mt-3;
+  @apply @md:gl-hidden;
+}
+
+.gl-actions-tabs-end {
+  @apply gl-hidden;
+  @apply gl-grow-0;
+  @apply gl-justify-end;
+  @apply gl-items-center;
+  @apply gl-flex-row;
+  @apply gl-mt-0;
+  @apply @md:gl-flex;
+}
+
+.gl-actions-tabs-start,
+.gl-actions-tabs-end {
+  button {
+    @apply gl-mb-3;
+    @apply @md:gl-mr-3;
+    @apply @md:gl-mb-0;
+  }
+
+  button:last-child {
+    @apply gl-m-0;
+  }
+}
+
+.gl-tabs-fade {
+  @apply gl-absolute gl-bottom-0 gl-top-0 gl-z-2;
+  @apply gl-w-8;
+  @apply gl-p-2;
+  @apply gl-flex;
+}
+
+.gl-tabs-fade-left {
+  @apply gl-left-0;
+  @include gl-bg-gradient-blur(left, var(--gl-background-color-default));
+}
+
+.gl-tabs-fade-right {
+  @apply gl-right-0 gl-justify-end;
+  @include gl-bg-gradient-blur(right, var(--gl-background-color-default));
+}
+
+.gl-tabs-fade-icon-button {
+  @apply gl-border;
+  @apply gl-action-neutral-colors;
+  @apply gl-p-0;
+  @apply gl-h-full;
+}
+
+.gl-scrollable-tabs-nav {
+  @apply gl-overflow-hidden;
+  position: relative;
+  @apply gl-flex-nowrap;
+}

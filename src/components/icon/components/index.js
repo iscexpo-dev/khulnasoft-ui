@@ -1,1 +1,0 @@
-export { LoaderIcon } from "./loader"

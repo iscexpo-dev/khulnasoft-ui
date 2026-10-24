@@ -1,0 +1,291 @@
+@use "sass:color";
+
+// Bootstrap v4.x does not have special styling for color input
+// So we define some basic styles to compensate
+input[type="color"].form-control {
+  height: $input-height;
+  // We use the smaller padding to make the color block larger
+  padding: ($input-padding-y-sm * 0.5) ($input-padding-x-sm * 0.5);
+}
+
+input[type="color"].form-control.form-control-sm,
+.input-group-sm input[type="color"].form-control {
+  height: $input-height-sm;
+  // We use the smaller padding to make the color block larger
+  padding: ($input-padding-y-sm * 0.5) ($input-padding-x-sm * 0.5);
+}
+
+input[type="color"].form-control.form-control-lg,
+.input-group-lg input[type="color"].form-control {
+  height: $input-height-lg;
+  padding: ($input-padding-y-sm * 0.5) ($input-padding-x-sm * 0.5);
+}
+
+input[type="color"].form-control:disabled {
+  // Disabled styling needs to be a bit different than regular inputs
+  background-color: $gl-color-neutral-500;
+  opacity: $btn-disabled-opacity;
+}
+
+// --- Base `.input-group > .custom-range` styling (no PR yet on Bootstrap v4) ---
+.input-group {
+  > .custom-range {
+    position: relative;
+    flex: 1 1 auto;
+    width: 1%;
+    margin-bottom: 0;
+
+    + .form-control,
+    + .form-control-plaintext,
+    + .custom-select,
+    + .custom-range,
+    + .custom-file {
+      margin-left: -$input-border-width;
+    }
+  }
+
+  > .form-control,
+  > .form-control-plaintext,
+  > .custom-select,
+  > .custom-range,
+  > .custom-file {
+    + .custom-range {
+      margin-left: -$input-border-width;
+    }
+  }
+
+  > .custom-range:focus {
+    z-index: 3;
+  }
+
+  > .custom-range {
+    &:not(:last-child) {
+      @include border-right-radius(0);
+    }
+
+    &:not(:first-child) {
+      @include border-left-radius(0);
+    }
+  }
+
+  > .custom-range {
+    padding: 0 $input-padding-x;
+    background-color: $input-bg;
+    background-clip: padding-box;
+    border: $input-border-width solid $input-border-color;
+    height: $input-height;
+
+    @if $enable-rounded {
+      border-radius: $input-border-radius;
+    } @else {
+      border-radius: 0;
+    }
+
+    @include box-shadow($input-box-shadow);
+    @include transition($input-transition);
+    // Bootstrap v4.3.2 has deprecated this mixin
+    // @include form-control-focus();
+    // So we manually add its content here
+    &:focus {
+      color: $input-focus-color; // only needed for fallback to text input
+      background-color: $input-focus-bg;
+      border-color: $input-focus-border-color;
+      outline: 0;
+      @if $enable-shadows {
+        box-shadow: $input-box-shadow, $input-focus-box-shadow;
+      } @else {
+        box-shadow: $input-focus-box-shadow;
+      }
+    }
+
+    &:disabled,
+    &[readonly] {
+      background-color: $input-disabled-bg;
+    }
+  }
+}
+
+.input-group-lg > .custom-range {
+  height: $input-height-lg;
+  padding: 0 $input-padding-x-lg;
+  @include border-radius($input-border-radius-lg);
+}
+
+.input-group-sm > .custom-range {
+  height: $input-height-sm;
+  padding: 0 $input-padding-x-sm;
+  @include border-radius($input-border-radius-sm);
+}
+
+// <gl-form-input> custom-range validation styling
+// Mixin for generating `.input-group .custom-range` validation styling
+@mixin custom-range-validation-state($state, $color) {
+  .input-group .custom-range {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      border-color: $color;
+
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
+      }
+    }
+  }
+
+  .custom-range {
+    .was-validated &:#{$state},
+    &.is-#{$state} {
+      // Pseudo-elements must be split across multiple rulesets to have an affect
+      &:focus {
+        &::-webkit-slider-thumb {
+          box-shadow:
+            0 0 0 1px $body-bg,
+            0 0 0 $input-btn-focus-width color.adjust($color, $lightness: 35%);
+        }
+
+        &::-moz-range-thumb {
+          box-shadow:
+            0 0 0 1px $body-bg,
+            0 0 0 $input-btn-focus-width color.adjust($color, $lightness: 35%);
+        }
+
+        &::-ms-thumb {
+          box-shadow:
+            0 0 0 1px $body-bg,
+            0 0 0 $input-btn-focus-width color.adjust($color, $lightness: 35%);
+        }
+      }
+
+      &::-webkit-slider-thumb {
+        background-color: $color;
+        background-image: none;
+
+        &:active {
+          background-color: color.adjust($color, $lightness: 35%);
+          background-image: none;
+        }
+      }
+
+      &::-webkit-slider-runnable-track {
+        background-color: rgba($color, 0.35);
+      }
+
+      &::-moz-range-thumb {
+        background-color: $color;
+        background-image: none;
+
+        &:active {
+          background-color: color.adjust($color, $lightness: 35%);
+          background-image: none;
+        }
+      }
+
+      &::-moz-range-track {
+        background: rgba($color, 0.35);
+      }
+
+      ~ .#{$state}-feedback,
+      ~ .#{$state}-tooltip {
+        display: block;
+      }
+
+      &::-ms-thumb {
+        background-color: $color;
+        background-image: none;
+
+        &:active {
+          background-color: color.adjust($color, $lightness: 35%);
+          background-image: none;
+        }
+      }
+
+      &::-ms-track-lower {
+        background: rgba($color, 0.35);
+      }
+
+      &::-ms-track-upper {
+        background: rgba($color, 0.35);
+      }
+    }
+  }
+}
+
+@include custom-range-validation-state("valid", $form-feedback-valid-color);
+@include custom-range-validation-state("invalid", $form-feedback-invalid-color);
+
+.gl-form-input,
+.gl-form-input.form-control {
+  appearance: none;
+  box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-default);
+  background: var(--gl-control-background-color-default);
+  @apply gl-rounded-control;
+  @apply gl-font-regular;
+  @apply gl-text-base;
+  @apply gl-leading-normal;
+  @apply gl-py-3;
+  @apply gl-px-4;
+  @apply gl-h-auto;
+  @apply gl-border-none;
+  @include form-control-focus($ignore-warning: true);
+  @apply gl-text-default;
+
+  @media (forced-colors: active) {
+    border: 1px solid;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-hover);
+  }
+
+  &:not(.gl-form-input-not-readonly):not(:disabled):not(.form-control-plaintext):not(
+      [type="color"]
+    ):read-only {
+    background: var(--gl-control-background-color-readonly);
+    box-shadow: none;
+  }
+
+  &:disabled {
+    @apply gl-cursor-not-allowed;
+    background: var(--gl-control-background-color-disabled);
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-disabled);
+    @apply gl-text-disabled;
+  }
+
+  &:not(.form-control-plaintext):focus-visible {
+    background: var(--gl-control-background-color-default);
+    @apply gl-text-default;
+    @include gl-focus($color: var(--gl-control-border-color-focus));
+  }
+
+  &.is-invalid {
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-error);
+
+    &:focus-visible {
+      @include gl-focus($color: var(--gl-control-border-color-error));
+    }
+  }
+
+  &::placeholder {
+    color: var(--gl-control-placeholder-color);
+  }
+
+  &.form-control-plaintext {
+    @apply gl-shadow-none;
+  }
+}
+
+@each $name, $size in $gl-form-input-sizes {
+  .gl-form-input-#{$name} {
+    max-width: $size;
+  }
+
+  @each $breakpointName, $breakpointSize in $gl-form-input-sizes {
+    @if $breakpointName != xs {
+      .gl-#{$breakpointName}-form-input-#{$name} {
+        @include gl-container-width-up($breakpointName) {
+          max-width: $size;
+        }
+      }
+    }
+  }
+}

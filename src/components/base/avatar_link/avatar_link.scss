@@ -1,0 +1,39 @@
+.gl-avatar-link {
+  @apply gl-inline-flex;
+
+  .gl-avatar {
+    @apply gl-transition-border-color;
+    @apply gl-duration-slow;
+    @apply gl-ease-ease;
+  }
+
+  &:hover {
+    @apply gl-no-underline;
+
+    .gl-avatar {
+      outline: 1px solid var(--gl-avatar-border-color-hover);
+    }
+
+    .gl-avatar-labeled {
+      &-label {
+        @apply gl-underline;
+      }
+
+      &-sublabel {
+        @apply gl-underline;
+      }
+    }
+  }
+
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    // allow the focus ring to be placed on the avatar image instead of parent anchor so that the focus ring takes the rounded shapes of the avatars
+    box-shadow: none !important;
+    outline: none !important;
+
+    .gl-avatar {
+      @apply gl-focus;
+    }
+  }
+}

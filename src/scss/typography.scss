@@ -1,0 +1,62 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  @apply gl-text-heading;
+}
+
+a {
+  @apply gl-text-link gl-no-underline hover:gl-text-link hover:gl-underline;
+}
+
+// Copied from https://github.com/khulnasoft/khulnasoft-ui/-/blob/5db1e111501c9e252a388a780e2789dce11dedf4/src/vendor/bootstrap/scss/_reboot.scss#L194.
+// And undo these styles for placeholder links/named anchors (without href).
+// It would be more straightforward to just use a[href] in previous block, but that
+// causes specificity issues in many other styles that are too complex to fix.
+// See https://github.com/twbs/bootstrap/issues/19402
+a:not([href]):not([class]) {
+  @apply gl-text-inherit gl-no-underline hover:gl-text-inherit hover:gl-no-underline;
+}
+
+caption {
+  @apply gl-text-subtle;
+}
+
+pre {
+  @apply gl-text-strong;
+}
+
+kbd {
+  @apply gl-border gl-inline-block gl-border-b-strong gl-bg-subtle gl-leading-1 gl-text-default;
+  font-size: 87.5%;
+  padding: 3px 5px;
+  vertical-align: unset;
+  border-image: none;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 var(--gl-border-color-strong);
+}
+
+.table {
+  @apply gl-mb-3 gl-w-full gl-bg-transparent gl-text-default;
+
+  th,
+  td {
+    @apply gl-border-t gl-p-4 gl-align-top;
+  }
+
+  thead th {
+    @apply gl-border-b gl-border-b-2 gl-align-bottom;
+  }
+
+  tbody + tbody {
+    @apply gl-border-t gl-border-t-2;
+  }
+}

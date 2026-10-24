@@ -1,0 +1,198 @@
+.gl-new-dropdown-item {
+  @apply gl-cursor-pointer;
+  @apply gl-px-2;
+  @apply gl-my-1;
+
+  /* when there is a scrim `li` items inside the list, the first and last real items
+  do not match the selector `:first-child` and `:last-child`,
+  that's why we have to target them with a different selector */
+  &:first-child,
+  .gl-new-dropdown-contents-with-scrim-overlay > &:nth-child(3):not(:last-child) {
+    @apply gl-mt-0;
+  }
+
+  &:last-child,
+  .gl-new-dropdown-contents-with-scrim-overlay > &:nth-last-child(3):not(:first-child) {
+    @apply gl-mb-0;
+  }
+
+  &:not(.disabled):hover {
+    .gl-new-dropdown-item-content {
+      color: var(--gl-dropdown-option-text-color-hover);
+      background-color: var(--gl-dropdown-option-background-color-unselected-hover);
+    }
+  }
+
+  &:not(.disabled):focus-visible {
+    .gl-new-dropdown-item-content {
+      color: var(--gl-dropdown-option-text-color-focus);
+      background-color: var(--gl-dropdown-option-background-color-unselected-focus);
+    }
+  }
+
+  &:not(.disabled):active,
+  &:not(.disabled):focus-visible:active {
+    .gl-new-dropdown-item-content {
+      color: var(--gl-dropdown-option-text-color-active);
+      background-color: var(--gl-dropdown-option-background-color-unselected-active);
+    }
+  }
+
+  &[aria-selected="true"] {
+    .gl-new-dropdown-item-content {
+      background-color: var(--gl-dropdown-option-background-color-selected-default);
+    }
+
+    &.disabled {
+      .gl-new-dropdown-item-content {
+        background-color: var(--gl-background-color-disabled);
+      }
+    }
+
+    &:not(.disabled):hover {
+      .gl-new-dropdown-item-content {
+        background-color: var(--gl-dropdown-option-background-color-selected-hover);
+      }
+
+      .gl-new-dropdown-item-check-icon {
+        color: var(--gl-dropdown-option-indicator-color-selected-hover);
+      }
+    }
+
+    &:not(.disabled):focus-visible {
+      .gl-new-dropdown-item-content {
+        background-color: var(--gl-dropdown-option-background-color-selected-focus);
+      }
+
+      .gl-new-dropdown-item-check-icon {
+        color: var(--gl-dropdown-option-indicator-color-selected-focus);
+      }
+    }
+
+    &:not(.disabled):active,
+    &:not(.disabled):focus-visible:active {
+      .gl-new-dropdown-item-content {
+        background-color: var(--gl-dropdown-option-background-color-selected-active);
+      }
+
+      .gl-new-dropdown-item-check-icon {
+        color: var(--gl-dropdown-option-indicator-color-selected-active);
+      }
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:not(.disabled):active,
+  &:not(.disabled):focus-visible,
+  &:not(.disabled):focus-visible:active {
+    .gl-new-dropdown-item-content {
+      @include gl-focus($inset: true);
+    }
+  }
+
+  &:focus-visible {
+    .gl-new-dropdown-item-content {
+      z-index: 1;
+    }
+  }
+
+  // Used in Listbox to visually highlight the first item after search
+  &.gl-new-dropdown-item-highlighted .gl-new-dropdown-item-content {
+    color: var(--gl-dropdown-option-text-color-focus);
+    background-color: var(--gl-dropdown-option-background-color-unselected-focus);
+    @include gl-focus($inset: true);
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    user-select: none;
+
+    .gl-new-dropdown-item-content {
+      color: var(--gl-text-color-disabled);
+      pointer-events: none;
+
+      .gl-new-dropdown-item-check-icon {
+        color: var(--gl-icon-color-disabled);
+      }
+    }
+  }
+
+  .gl-new-dropdown-item-content {
+    transition:
+      background-color $gl-transition-duration-fast $gl-easing-out-cubic,
+      box-shadow $gl-transition-duration-medium $gl-easing-out-cubic;
+    @apply gl-rounded-default;
+    @apply gl-border-0;
+    @apply gl-w-full;
+    background-color: var(--gl-dropdown-option-background-color-unselected-default);
+    @apply gl-items-center;
+    @apply gl-flex;
+    @apply gl-text-base;
+    @apply gl-font-normal;
+    @apply gl-leading-normal;
+    @apply gl-px-3;
+    @apply gl-py-0;
+    position: relative;
+    @apply gl-no-underline;
+    color: var(--gl-dropdown-option-text-color-default);
+    @apply gl-text-left;
+    @apply gl-whitespace-normal;
+    @include gl-prefers-reduced-motion-transition;
+
+    .gl-new-dropdown-item-check-icon {
+      @apply gl-shrink-0;
+      @apply gl-mr-3;
+      color: var(--gl-dropdown-option-indicator-color-selected-default);
+    }
+
+    .gl-new-dropdown-item-icon {
+      @apply gl-shrink-0;
+      @apply gl-mr-2;
+      @apply gl-inline-block;
+      @apply gl-h-5;
+      @apply gl-w-5;
+
+      .gl-icon {
+        vertical-align: -3px;
+      }
+    }
+
+    .gl-new-dropdown-item-text-wrapper {
+      @apply gl-min-w-0;
+      @apply gl-grow;
+      @apply gl-py-3;
+    }
+  }
+
+  &.gl-new-dropdown-item-danger {
+    .gl-new-dropdown-item-content {
+      color: var(--gl-action-danger-foreground-color-default);
+      background-color: var(--gl-action-danger-background-color-default);
+    }
+
+    &:hover {
+      .gl-new-dropdown-item-content:not(:disabled):not(.disabled) {
+        color: var(--gl-action-danger-foreground-color-hover);
+        background-color: var(--gl-action-danger-background-color-hover);
+      }
+    }
+
+    &:focus-visible {
+      .gl-new-dropdown-item-content {
+        color: var(--gl-action-danger-foreground-color-focus);
+        background-color: var(--gl-action-danger-background-color-focus);
+      }
+    }
+
+    &:active,
+    &:focus-visible:active {
+      .gl-new-dropdown-item-content {
+        color: var(--gl-action-danger-foreground-color-active);
+        background-color: var(--gl-action-danger-background-color-active);
+      }
+    }
+  }
+}

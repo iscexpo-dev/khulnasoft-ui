@@ -1,0 +1,232 @@
+@import "./mixins";
+@import "./variables";
+@import "true";
+
+@include describe("gl-fluid-font-size") {
+  @include it("returns fluid font-size") {
+    @include assert {
+      @include output {
+        @include gl-fluid-font-size(2rem, 3.5rem);
+      }
+      @include expect {
+        // prettier-ignore
+        font-size: clamp(2rem, -0.6666666667rem + 5.5555555556vw, 3.5rem);
+      }
+    }
+  }
+}
+
+@include describe("gl-fluid-line-height") {
+  @include it("returns fluid line-height") {
+    @include assert {
+      @include output {
+        @include gl-fluid-line-height(2rem, 3.5rem);
+      }
+      @include expect {
+        // prettier-ignore
+        line-height: clamp(2rem, -0.6666666667rem + 5.5555555556vw, 3.5rem);
+      }
+    }
+  }
+}
+
+@include describe("gl-media-breakpoint-up") {
+  @include it("returns no media query for xs") {
+    @include assert {
+      @include output {
+        @include gl-media-breakpoint-up(xs) {
+          color: $gl-color-green-100;
+        }
+      }
+      @include expect {
+        color: $gl-color-green-100;
+      }
+    }
+  }
+  @include it("returns min-width media query for sm") {
+    @include assert {
+      @include output {
+        @include gl-media-breakpoint-up(sm) {
+          color: $gl-color-blue-100;
+        }
+      }
+      @include expect {
+        @media (min-width: "576px") {
+          color: $gl-color-blue-100;
+        }
+      }
+    }
+  }
+}
+
+@include describe("gl-media-breakpoint-down") {
+  @include it("returns max-width media query for lg") {
+    @include assert {
+      @include output {
+        // stylelint-disable-next-line @khulnasoft/no-gl-media-breakpoint-down
+        @include gl-media-breakpoint-down(lg) {
+          color: $gl-color-red-100;
+        }
+      }
+      @include expect {
+        @media (max-width: "991.98px") {
+          color: $gl-color-red-100;
+        }
+      }
+    }
+  }
+  @include it("returns max-width media query for md") {
+    @include assert {
+      @include output {
+        // stylelint-disable-next-line @khulnasoft/no-gl-media-breakpoint-down
+        @include gl-media-breakpoint-down(md) {
+          color: $gl-color-orange-100;
+        }
+      }
+      @include expect {
+        @media (max-width: "767.98px") {
+          color: $gl-color-orange-100;
+        }
+      }
+    }
+  }
+
+  @include describe("gl-container-width-up") {
+    @include it("returns min width container query with a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-up(sm) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container (width >= 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+          @media (width >= 576px) {
+            :where(html:not(.with-gl-container-queries)) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+
+    @include it("returns min width named container query with a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-up(sm, myContainer) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container myContainer (width >= 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+          @media (width >= 576px) {
+            :where(html:not(.with-gl-container-queries)) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+
+    @include it("returns min width container query without a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-up(sm, $includeMQFallback: false) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container (width >= 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+
+    @include it("returns the content as is for xs") {
+      @include assert {
+        @include output {
+          @include gl-container-width-up(xs) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          color: $gl-color-red-100;
+        }
+      }
+    }
+  }
+
+  @include describe("gl-container-width-down") {
+    @include it("returns max width container query with a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-down(sm) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container (width < 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+          @media (width < 576px) {
+            :where(html:not(.with-gl-container-queries)) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+
+    @include it("returns max width named container query with a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-down(sm, myContainer) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container myContainer (width < 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+          @media (width < 576px) {
+            :where(html:not(.with-gl-container-queries)) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+
+    @include it("returns max width container query without a media query fallback for sm") {
+      @include assert {
+        @include output {
+          @include gl-container-width-down(sm, $includeMQFallback: false) {
+            color: $gl-color-red-100;
+          }
+        }
+        @include expect {
+          @container (width < 576px) {
+            :where(html.with-gl-container-queries) & {
+              color: $gl-color-red-100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+#
+# This list is copied from https://github.com/khulnasoft/khulnasoft/-/blob/master/.browserslistrc
+# Have a look there for more details
+#
+chrome >= 84
+edge >= 84
+firefox >= 78
+safari >= 13.1

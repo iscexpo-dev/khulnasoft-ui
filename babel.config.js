@@ -1,28 +1,27 @@
-const isES6 = process.env.BABEL_ENV === "es6"
-const isTest = process.env.NODE_ENV === "test"
-
-module.exports = {
-  presets: [
-    ["@babel/env", { loose: true, modules: isES6 ? false : "commonjs" }],
-    "@babel/preset-react",
-  ],
-  plugins: [
-    ["styled-components", { ssr: !isTest, displayName: !isTest }],
-    "@babel/plugin-transform-spread",
-    "@babel/plugin-proposal-object-rest-spread",
-    [
-      "module-resolver",
-      {
-        alias: {
-          "@": "./src",
-        },
-      },
+module.exports = (api) => {
+  // base config for rollup
+  const babelPresetEnv = ['@babel/preset-env', { modules: false }];
+  const config = {
+    presets: [babelPresetEnv],
+    plugins: [
+      // See: https://github.com/khulnasoft/khulnasoft/-/issues/336216
+      '@babel/plugin-proposal-optional-chaining',
+      // See: https://github.com/khulnasoft/khulnasoft/-/issues/336216
+      '@babel/plugin-proposal-nullish-coalescing-operator',
     ],
-  ].filter(Boolean),
-  env: {
-    test: {
-      presets: ["@babel/env"],
-      plugins: ["@babel/transform-runtime"],
-    },
-  },
-}
+  };
+
+  // storybook and visual regression tests
+  if (api.env('storybook')) {
+    babelPresetEnv[1] = { targets: { esmodules: true } };
+    config.presets.push('@babel/preset-react');
+  }
+
+  // jest tests
+  if (api.env('test')) {
+    // tests are run in a node environment, not a browser
+    babelPresetEnv[1] = { targets: { node: 'current' } };
+  }
+
+  return config;
+};

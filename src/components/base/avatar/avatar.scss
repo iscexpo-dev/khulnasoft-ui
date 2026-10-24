@@ -1,0 +1,230 @@
+@use "sass:map";
+@use "sass:list";
+
+// Available background colors for the identicon fallback for avatars
+//
+// Purple is duplicated on purpose. We have replaced indigo with it.
+// If we had simply removed it, the total number of colors would have
+// changed, resulting in changing the color of all identicons, because
+// we do a modulo division with the total number of colors on the
+// object's id to always give it the same "random" color.
+$gl-avatar-identicon-bgs:
+  var(--gl-avatar-fallback-background-color-red), var(--gl-avatar-fallback-background-color-purple),
+  var(--gl-avatar-fallback-background-color-purple),
+  var(--gl-avatar-fallback-background-color-blue), var(--gl-avatar-fallback-background-color-green),
+  var(--gl-avatar-fallback-background-color-orange),
+  var(--gl-avatar-fallback-background-color-neutral);
+
+$gl-avatar-identicon-texts:
+  var(--gl-avatar-fallback-text-color-red), var(--gl-avatar-fallback-text-color-purple),
+  var(--gl-avatar-fallback-text-color-purple), var(--gl-avatar-fallback-text-color-blue),
+  var(--gl-avatar-fallback-text-color-green), var(--gl-avatar-fallback-text-color-orange),
+  var(--gl-avatar-fallback-text-color-neutral);
+
+@mixin gl-avatar {
+  @apply gl-inline-flex;
+  @apply gl-overflow-hidden;
+  @apply gl-shrink-0;
+  @apply gl-leading-1;
+  @apply gl-object-contain;
+  outline: 1px solid var(--gl-avatar-border-color-default);
+  outline-offset: -1px;
+}
+
+@mixin gl-avatar-s16 {
+  @apply gl-w-5;
+  @apply gl-h-5;
+  font-size: map.get($gl-font-sizes, 100);
+  border-radius: var(--gl-avatar-square-border-radius-default);
+}
+
+@mixin gl-avatar-s24 {
+  @apply gl-w-6;
+  @apply gl-h-6;
+  font-size: map.get($gl-font-sizes, 400);
+  border-radius: var(--gl-avatar-square-border-radius-default);
+}
+
+@mixin gl-avatar-s32 {
+  @apply gl-w-7;
+  @apply gl-h-7;
+  font-size: map.get($gl-font-sizes, 500);
+  border-radius: var(--gl-avatar-square-border-radius-default);
+}
+
+@mixin gl-avatar-s48 {
+  @apply gl-w-9;
+  @apply gl-h-9;
+  font-size: map.get($gl-font-sizes, 600);
+  border-radius: var(--gl-avatar-square-border-radius-lg);
+}
+
+@mixin gl-avatar-s64 {
+  @apply gl-w-11;
+  @apply gl-h-11;
+  font-size: map.get($gl-font-sizes, 700);
+  border-radius: var(--gl-avatar-square-border-radius-lg);
+}
+
+@mixin gl-avatar-s96 {
+  @apply gl-w-13;
+  @apply gl-h-13;
+  font-size: map.get($gl-font-sizes, 800);
+  border-radius: var(--gl-avatar-square-border-radius-lg);
+}
+
+.gl-avatar {
+  @include gl-avatar;
+}
+
+.gl-avatar-s16 {
+  @include gl-avatar-s16;
+}
+
+.gl-avatar-s24 {
+  @include gl-avatar-s24;
+}
+
+.gl-avatar-s32 {
+  @include gl-avatar-s32;
+}
+
+.gl-avatar-s48 {
+  @include gl-avatar-s48;
+}
+
+.gl-avatar-s64 {
+  @include gl-avatar-s64;
+}
+
+.gl-avatar-s96 {
+  @include gl-avatar-s96;
+}
+
+.gl-sm-avatar-s16 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s16;
+  }
+}
+
+.gl-md-avatar-s16 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s16;
+  }
+}
+
+.gl-lg-avatar-s16 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s16;
+  }
+}
+
+.gl-sm-avatar-s24 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s24;
+  }
+}
+
+.gl-md-avatar-s24 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s24;
+  }
+}
+
+.gl-lg-avatar-s24 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s24;
+  }
+}
+
+.gl-sm-avatar-s32 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s32;
+  }
+}
+
+.gl-md-avatar-s32 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s32;
+  }
+}
+
+.gl-lg-avatar-s32 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s32;
+  }
+}
+
+.gl-sm-avatar-s48 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s48;
+  }
+}
+
+.gl-md-avatar-s48 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s48;
+  }
+}
+
+.gl-lg-avatar-s48 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s48;
+  }
+}
+
+.gl-sm-avatar-s64 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s64;
+  }
+}
+
+.gl-md-avatar-s64 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s64;
+  }
+}
+
+.gl-lg-avatar-s64 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s64;
+  }
+}
+
+.gl-sm-avatar-s96 {
+  @include gl-container-width-up(sm) {
+    @include gl-avatar-s96;
+  }
+}
+
+.gl-md-avatar-s96 {
+  @include gl-container-width-up(md) {
+    @include gl-avatar-s96;
+  }
+}
+
+.gl-lg-avatar-s96 {
+  @include gl-container-width-up(lg) {
+    @include gl-avatar-s96;
+  }
+}
+
+.gl-avatar-circle {
+  border-radius: var(--gl-avatar-circle-border-radius-default);
+}
+
+.gl-avatar-identicon {
+  @apply gl-text-center;
+  @apply gl-align-top;
+  @apply gl-justify-center;
+  @apply gl-items-center;
+  @apply gl-text-strong;
+}
+
+// Background colors
+@for $i from 1 through list.length($gl-avatar-identicon-bgs) {
+  .gl-avatar-identicon-bg#{$i} {
+    color: list.nth($gl-avatar-identicon-texts, $i);
+    background-color: list.nth($gl-avatar-identicon-bgs, $i);
+  }
+}

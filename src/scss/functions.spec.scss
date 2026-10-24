@@ -1,0 +1,54 @@
+@import "./functions";
+@import "true";
+
+@include describe("extract-unit") {
+  @include it("returns unit of measure for a given number") {
+    $result: extract-unit(10em);
+
+    @include assert-equal(extract-unit(10em), 1em);
+    @include assert-equal(unit($result), "em");
+  }
+}
+
+@include describe("strip-unit") {
+  @include it("returns number with no unit of measure") {
+    $stripped: strip-unit(10em);
+
+    @include assert-equal($stripped, 10);
+    @include assert-true(unitless($stripped));
+  }
+}
+
+@include describe("px-to-rem") {
+  @include it("converts single px value to rem") {
+    $result: px-to-rem(16px);
+
+    @include assert-equal($result, 1rem);
+  }
+
+  @include it("converts multiple px values to rem") {
+    $result: px-to-rem(16px 12px 16px 12px);
+
+    @include assert-equal($result, 1rem 0.75rem 1rem 0.75rem);
+  }
+
+  @include it("does not convert non-px values") {
+    $result: px-to-rem(16em 12px 16px 12px);
+
+    @include assert-equal($result, 16em 0.75rem 1rem 0.75rem);
+  }
+}
+
+@include describe("if-important") {
+  @include it("returns `!important` if `$important` is `true`") {
+    $result: if-important(true);
+
+    @include assert-equal($result, "!important");
+  }
+
+  @include it("returns an empty string if `$important` is `false`") {
+    $result: if-important(false);
+
+    @include assert-equal($result, "");
+  }
+}

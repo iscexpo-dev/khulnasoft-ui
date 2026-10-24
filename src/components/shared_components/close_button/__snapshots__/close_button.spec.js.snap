@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Clear Icon Button renders successfully 1`] = `
+<gl-button-stub
+  aria-label="Dismiss"
+  buttontextclasses=""
+  category="tertiary"
+  icon="close"
+  size="small"
+  tag="button"
+  type="button"
+  variant="default"
+/>
+`;

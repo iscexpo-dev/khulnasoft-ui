@@ -1,0 +1,90 @@
+.gl-link {
+  text-underline-offset: var(--gl-spacing-scale-1);
+
+  &:hover {
+    @apply gl-cursor-pointer;
+  }
+
+  &,
+  &:hover,
+  &:active,
+  &:focus-visible {
+    @apply gl-text-link;
+  }
+
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    @apply gl-underline;
+    @include gl-focus($outline: true, $outline-offset: $outline-width);
+  }
+}
+
+.gl-link-inline {
+  @apply gl-underline;
+
+  &:hover {
+    @apply gl-underline;
+  }
+}
+
+.gl-link-external::after {
+  content: " ↗" / attr(data-alt);
+  font-size: 1em;
+}
+
+.gl-link-meta {
+  @apply gl-no-underline;
+
+  &:hover {
+    @apply gl-underline;
+  }
+
+  &,
+  &:hover,
+  &:focus-visible,
+  &:focus-visible:hover {
+    @apply gl-text-inherit;
+  }
+}
+
+.gl-link-mention,
+.gl-link-mention-current {
+  @apply gl-px-1;
+  @apply gl-rounded-default;
+  @apply gl-no-underline;
+
+  &:hover {
+    @apply gl-underline;
+  }
+
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    @apply gl-no-underline;
+  }
+}
+
+.gl-link-mention {
+  background-color: var(--gl-link-mention-background-color-default);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    color: var(--gl-link-mention-text-color-default);
+  }
+}
+
+.gl-link-mention-current {
+  background-color: var(--gl-link-mention-background-color-current);
+
+  &,
+  &:hover,
+  &:active,
+  &:focus-visible,
+  &:focus-visible:active {
+    color: var(--gl-link-mention-text-color-current);
+  }
+}

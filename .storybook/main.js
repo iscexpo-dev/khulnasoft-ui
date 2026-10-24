@@ -1,67 +1,48 @@
-const path = require("path")
+const { USE_VUE_3, USE_VUE_3_COMPILER, STORYBOOK_VUE_FRAMEWORK } = require('../use_vue3');
 
-const config = {
-  stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"],
-  addons: [
-    "@storybook/addon-links",
-    "@storybook/addon-essentials",
-    "@storybook/addon-interactions",
-    "@storybook/addon-webpack5-compiler-babel"
-  ],
-  framework: {
-    name: "@storybook/react-webpack5",
-    options: {},
-  },
-  docs: {},
-  webpackFinal: async config => {
-    config.module.rules.push(
-      ...[
-        {
-          test: /\.(m?js)$/,
-          type: "javascript/auto",
-          resolve: {
-            fullySpecified: false,
-          },
-        },
-        {
-          test: /\.(png\?.*|jpg\?.*|jpg|png)$/,
-          loader: "url-loader",
-        },
-        {
-          test: /\.md$/,
-          use: [
-            {
-              loader: "html-loader",
-            },
-            {
-              loader: "markdown-loader",
-            },
-          ],
-        },
-        {
-          test: /\.svg$/,
-          use: [
-            {
-              loader: "svg-sprite-loader",
-            },
-            "svgo-loader",
-          ],
-        },
-      ]
-    )
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      src: path.resolve(__dirname, "../src/"),
-      utils: path.resolve(__dirname, "../utils/"),
-    }
+const { STORIES } = process.env;
 
-    // Workaround to make storybook serve raw svg, not static path
-    config.module.rules = config.module.rules.map(data => {
-      if (/svg\|/.test(String(data.test)))
-        data.test = /\.(ico|jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|cur|ani)(\?.*)?$/
-      return data
-    })
-    return config
-  },
+if (USE_VUE_3 && USE_VUE_3_COMPILER) {
+  // eslint-disable-next-line no-console
+  console.log('[!!!] Using Vue.js 3');
+  // eslint-disable-next-line global-require
+  const moduleAlias = require('module-alias');
+  moduleAlias.addAlias('vue/dist/vue.esm-bundler.js', '@vue/compat/dist/vue.esm-bundler.js');
+  moduleAlias.addAlias('vue/compiler-sfc', '@vue/compiler-sfc');
+} else if (USE_VUE_3 && !USE_VUE_3_COMPILER) {
+  // eslint-disable-next-line no-console
+  console.log('[!!!] Using Vue.js 3 in hybrid mode');
+  // eslint-disable-next-line global-require
+  const moduleAlias = require('module-alias');
+  moduleAlias.addAlias('vue/dist/vue.esm.js', '@khulnasoft/hybrid-vue/dist/vue.esm-bundler.js');
 }
-export default config
+
+module.exports = {
+  framework: {
+    name: STORYBOOK_VUE_FRAMEWORK,
+    options: {
+      builder: {
+        disableTelemetry: Boolean(process.env.CI),
+        useSWC: true,
+      },
+    },
+  },
+  stories: STORIES ? STORIES.split(',') : ['../src/**/*.stories.js'],
+  addons: [
+    '@storybook/addon-docs',
+    '@storybook/addon-a11y',
+    '@storybook/addon-viewport',
+    '@storybook/addon-interactions',
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        actions: false,
+      },
+    },
+    'storybook-dark-mode',
+  ],
+  staticDirs: ['../static'],
+  docs: {
+    autodocs: true,
+  },
+};

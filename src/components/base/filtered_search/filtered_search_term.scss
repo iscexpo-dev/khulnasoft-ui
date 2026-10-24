@@ -1,0 +1,19 @@
+.gl-filtered-search-term {
+  .gl-filtered-search-term-token {
+    @apply gl-cursor-text;
+  }
+}
+
+.gl-filtered-search-term-input {
+  @apply gl-p-0;
+  @apply gl-bg-transparent;
+  @apply gl-border-none;
+  @apply gl-outline-none;
+  @apply gl-h-6;
+  @apply gl-w-full;
+  min-width: $gl-dropdown-width;
+}
+
+.gl-filtered-search-term-icon {
+  @apply gl-mr-2;
+}

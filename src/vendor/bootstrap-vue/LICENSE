@@ -1,0 +1,11 @@
+This project includes modified code from the following open source project:
+
+Bootstrap Vue
+
+Original work Copyright © 2016-2020 BootstrapVue
+Source: https://github.com/bootstrap-vue/bootstrap-vue
+License: MIT License
+
+Modifications to the original BootstrapVue code have been made by KhulnaSoft B.V.
+
+The full text of the MIT License can be found in the LICENSE file in the root directory of this project.

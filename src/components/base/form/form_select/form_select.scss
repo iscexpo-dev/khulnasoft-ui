@@ -1,0 +1,118 @@
+/*
+This is a temporary measure to ensure custom select styles are not affected by our
+lack of an autoprefixer tool for compiling bootstrap.
+
+TODO: Remove once bootstrap is included in KhulnaSoft UI or we include an autoprefixer
+on khulnasoft
+See: https://github.com/khulnasoft/khulnasoft/issues/30055
+*/
+
+/* stylelint-disable property-no-vendor-prefix */
+.gl-form-select {
+  @apply gl-text-base;
+  @apply gl-font-regular;
+  @apply gl-opacity-10;
+  @apply gl-leading-normal;
+  @apply gl-py-3;
+  @apply gl-pl-4;
+  @apply gl-h-auto;
+  @apply gl-truncate;
+  @apply gl-bg-no-repeat;
+  @apply gl-border-none;
+  @apply gl-rounded-control;
+  appearance: none;
+  background-color: var(--gl-control-background-color-default);
+  background-image: none;
+  box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-default);
+  @apply gl-text-default;
+  padding-right: $gl-spacing-scale-2 + $gl-spacing-scale-6;
+  position: relative;
+
+  @media (forced-colors: active) {
+    box-shadow: none;
+    border: 1px solid;
+  }
+
+  &:hover {
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-hover);
+  }
+
+  &:focus-visible,
+  &:focus-visible:active {
+    @include gl-focus($color: var(--gl-control-border-color-focus), $important: true);
+  }
+
+  &:disabled {
+    @apply gl-cursor-not-allowed;
+    @apply gl-text-disabled;
+    background-color: var(--gl-control-background-color-disabled);
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-disabled);
+  }
+
+  &.is-invalid:not(:disabled) {
+    box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-error);
+
+    &:hover {
+      box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-control-border-color-error);
+    }
+
+    &:focus-visible {
+      @include gl-focus($color: var(--gl-control-border-color-error), $important: true);
+    }
+  }
+}
+
+// Chevron dropdown icon
+// References wrapping div because select can't have pseudo elements reliably
+.gl-form-select-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+
+  &::after {
+    content: "";
+    background-color: var(--gl-icon-color-default);
+    mask-image: url("#{$gl-icon-select-chevron-down}");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    right: $gl-spacing-scale-4;
+    transform: translateY(-50%);
+    height: 5px;
+    width: 8px;
+
+    @media (forced-colors: active) {
+      background-color: CanvasText; // stylelint-disable-line scale-unlimited/declaration-strict-value
+    }
+  }
+
+  &:has(> .gl-form-select:disabled) {
+    &::after {
+      background-color: var(--gl-icon-color-disabled);
+
+      @media (forced-colors: active) {
+        background-color: GrayText; // stylelint-disable-line scale-unlimited/declaration-strict-value
+      }
+    }
+  }
+}
+
+@each $name, $size in $gl-form-input-sizes {
+  .gl-form-select-#{$name} {
+    max-width: $size;
+  }
+
+  @each $breakpointName, $breakpointSize in $gl-form-input-sizes {
+    @if $breakpointName != xs {
+      .gl-#{$breakpointName}-form-select-#{$name} {
+        @include gl-container-width-up($breakpointName) {
+          max-width: $size;
+        }
+      }
+    }
+  }
+}
+
+/* stylelint-enable property-no-vendor-prefix */

@@ -1,0 +1,48 @@
+export const tableFullSlots = [
+  'bottom-row',
+  'empty',
+  'emptyfiltered',
+  'table-busy',
+  'thead-top',
+  'top-row',
+];
+
+export const tableFullProps = [
+  'api-url',
+  'busy',
+  'current-page',
+  'empty-filtered-html',
+  'empty-filtered-text',
+  'empty-html',
+  'empty-text',
+  'filter',
+  'filter-debounce',
+  'filter-function',
+  'filter-ignored-fields',
+  'filter-included-fields',
+  'label-sort-asc',
+  'label-sort-clear',
+  'label-sort-desc',
+  'no-footer-sorting',
+  'no-local-sorting',
+  'no-provider-filtering',
+  'no-provider-paging',
+  'no-provider-sorting',
+  'no-select-on-click',
+  'per-page',
+  'select-mode',
+  'selectable',
+  'selected-variant',
+  'show-empty',
+  'sort-by',
+  'sort-compare',
+  'sort-compare-locale',
+  'sort-compare-options',
+  'sort-desc',
+  'sort-direction',
+  'sort-icon-left',
+  'sort-null-last',
+];
+
+export const glTableLiteWarning =
+  'This GlTable could be a GlTableLite component, please consider using GlTableLite instead of GlTable to reduce the page bundlesize more about this here: https://design.khulnasoft.com/storybook?path=/docs/base-table-table-lite--default';

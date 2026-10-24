@@ -1,0 +1,140 @@
+/*
+ * --gl-alert-padding-x
+ *
+ * Way to hook into spacing of gl-alert.
+ * This is used e.g. for page wide containers
+ * in KhulnaSoft.
+ */
+// stylelint-disable length-zero-no-unit
+$gl-alert-padding-x: var(--gl-alert-padding-x, 0px);
+
+@mixin gl-alert-variant($variant, $background-color, $title-color, $border-color, $icon-color) {
+  .gl-alert-#{$variant} {
+    background-color: $background-color;
+    border-color: $border-color;
+
+    .gl-alert-title {
+      color: $title-color;
+    }
+
+    @media (forced-colors: none) {
+      .gl-alert-icon {
+        color: $icon-color;
+      }
+    }
+  }
+}
+
+.gl-alert {
+  @apply gl-py-3;
+  @apply gl-text-base;
+  border-radius: var(--gl-alert-border-radius);
+  padding-inline: calc(#{$gl-spacing-scale-7} + #{$gl-alert-padding-x});
+  position: relative;
+  border: 1px solid;
+
+  &-not-dismissible {
+    padding-right: calc(#{$gl-spacing-scale-4} + #{$gl-alert-padding-x});
+  }
+
+  .gl-link:not(.gl-label-link) {
+    @apply gl-underline;
+  }
+
+  &.gl-alert-has-actions {
+    @apply gl-pb-4;
+  }
+}
+
+.gl-alert-sticky {
+  position: sticky;
+  top: 0;
+}
+
+.gl-alert-title {
+  @apply gl-heading-scale-300;
+  @apply gl-mb-2;
+  @apply gl-leading-20;
+}
+
+.gl-alert-icon-container {
+  @apply gl-absolute;
+  @apply gl-top-3;
+  left: calc(#{$gl-spacing-scale-3} + #{$gl-alert-padding-x});
+  @apply gl-flex;
+  @apply gl-items-center;
+  // Match line-height on first line of title or slot text content
+  height: $gl-line-height-20;
+}
+
+.gl-alert-body {
+  @apply gl-leading-20;
+  @apply gl-text-default;
+}
+
+.gl-alert-actions {
+  @apply gl-flex gl-flex-col gl-flex-wrap gl-gap-y-3;
+  @apply gl-mt-3;
+  @include gl-container-width-up(sm) {
+    @apply gl-flex-row;
+  }
+}
+
+.gl-alert-action {
+  @apply gl-mr-0 gl-w-full;
+  @apply gl-text-base;
+  @apply gl-leading-normal;
+  @include gl-container-width-up(sm) {
+    @apply gl-mr-3 gl-w-auto;
+  }
+}
+
+// This is the replacement for .gl-alert-dismiss
+.gl-dismiss-btn {
+  position: absolute;
+  // Pull the button up by half its overhang so it aligns with first line title or slot text content
+  top: calc(#{$gl-spacing-scale-3} - (#{$gl-button-small-size} - #{$gl-line-height-20}) / 2);
+  right: calc(#{$gl-spacing-scale-2} + #{$gl-alert-padding-x});
+}
+
+/* Variants */
+
+@include gl-alert-variant(
+  $variant: danger,
+  $background-color: var(--gl-alert-danger-background-color),
+  $title-color: var(--gl-alert-danger-title-color),
+  $border-color: var(--gl-alert-danger-border-color),
+  $icon-color: var(--gl-feedback-danger-icon-color)
+);
+
+@include gl-alert-variant(
+  $variant: warning,
+  $background-color: var(--gl-alert-warning-background-color),
+  $title-color: var(--gl-alert-warning-title-color),
+  $border-color: var(--gl-alert-warning-border-color),
+  $icon-color: var(--gl-feedback-warning-icon-color)
+);
+
+@include gl-alert-variant(
+  $variant: tip,
+  $background-color: var(--gl-alert-neutral-background-color),
+  $title-color: var(--gl-alert-neutral-title-color),
+  $border-color: var(--gl-alert-neutral-border-color),
+  $icon-color: var(--gl-feedback-neutral-icon-color)
+);
+
+@include gl-alert-variant(
+  $variant: info,
+  $background-color: var(--gl-alert-info-background-color),
+  $title-color: var(--gl-alert-info-title-color),
+  $border-color: var(--gl-alert-info-border-color),
+  $icon-color: var(--gl-feedback-info-icon-color)
+);
+
+@include gl-alert-variant(
+  $variant: success,
+  $background-color: var(--gl-alert-success-background-color),
+  $title-color: var(--gl-alert-success-title-color),
+  $border-color: var(--gl-alert-success-border-color),
+  $icon-color: var(--gl-feedback-success-icon-color)
+);

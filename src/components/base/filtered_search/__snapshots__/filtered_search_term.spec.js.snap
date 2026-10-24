@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Filtered search term renders nothing with value in active mode (delegates to segment) 1`] = `
+<div
+  class="gl-filtered-search-term gl-h-auto"
+  data-testid="filtered-search-term"
+>
+  <div
+    class="gl-filtered-search-term-token"
+    cursor-position="end"
+    is-term=""
+    value="test-value"
+  />
+</div>
+`;
+
+exports[`Filtered search term renders value in inactive mode 1`] = `
+<div
+  class="gl-filtered-search-term gl-h-auto"
+  data-testid="filtered-search-term"
+>
+  <div
+    class="gl-filtered-search-term-token"
+    cursor-position="end"
+    is-term=""
+    value="test-value"
+  >
+    test-value
+  </div>
+</div>
+`;

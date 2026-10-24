@@ -1,0 +1,13 @@
+// --- BootstrapVue utility / helper classes ---
+
+$bv-utility-classes-defined: false !default;
+
+// Make sure to include these style definitions only once
+@if $bv-utility-classes-defined == false {
+  $bv-utility-classes-defined: true;
+
+  // No focus outline helper (use sparingly)
+  .bv-no-focus-ring:focus-visible {
+    outline: none;
+  }
+}

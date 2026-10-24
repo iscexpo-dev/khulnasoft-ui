@@ -1,0 +1,126 @@
+.gl-form-combobox {
+  .gl-form-combobox-inner {
+    max-height: $gl-max-dropdown-max-height;
+    position: relative;
+    @apply gl-grow;
+    @apply gl-overflow-y-auto;
+    @apply gl-pl-0;
+    @apply gl-mb-0;
+    @apply gl-py-2;
+    @apply gl-list-none;
+    border-radius: var(--gl-dropdown-border-radius);
+
+    &:focus-visible {
+      @apply gl-focus;
+    }
+
+    ul {
+      @apply gl-list-none;
+    }
+
+    // Update dropdown items to match new listbox styling exactly
+    .gl-dropdown-item {
+      @apply gl-cursor-pointer;
+      @apply gl-px-2;
+      @apply gl-my-1;
+
+      &:first-child {
+        @apply gl-mt-0;
+      }
+
+      &:last-child {
+        @apply gl-mb-0;
+      }
+
+      // Target the actual Bootstrap dropdown item element
+      .dropdown-item {
+        transition:
+          background-color $gl-transition-duration-fast $gl-easing-out-cubic,
+          box-shadow $gl-transition-duration-medium $gl-easing-out-cubic;
+        @apply gl-rounded-default;
+        @apply gl-border-0;
+        @apply gl-w-full;
+        background-color: var(--gl-dropdown-option-background-color-unselected-default);
+        @apply gl-items-center;
+        @apply gl-flex;
+        @apply gl-text-base;
+        @apply gl-font-normal;
+        @apply gl-leading-normal;
+        @apply gl-px-3;
+        @apply gl-py-0;
+        position: relative;
+        @apply gl-no-underline;
+        color: var(--gl-dropdown-option-text-color-default);
+        @apply gl-text-left;
+        @apply gl-whitespace-normal;
+        @include gl-prefers-reduced-motion-transition;
+
+        .gl-dropdown-item-text-wrapper {
+          @apply gl-min-w-0;
+          @apply gl-grow;
+          @apply gl-py-3;
+        }
+
+        // Hover state
+        &:not(.disable-hover):hover {
+          color: var(--gl-dropdown-option-text-color-hover);
+          background-color: var(--gl-dropdown-option-background-color-unselected-hover);
+        }
+
+        // Focus state (when item receives actual focus)
+        &:focus-visible {
+          color: var(--gl-dropdown-option-text-color-focus);
+          background-color: var(--gl-dropdown-option-background-color-unselected-focus);
+          @include gl-focus($inset: true);
+          z-index: 1;
+        }
+
+        // Active state (when item is clicked)
+        &:active,
+        &:focus-visible:active {
+          color: var(--gl-dropdown-option-text-color-active);
+          background-color: var(--gl-dropdown-option-background-color-unselected-active);
+          @include gl-focus($inset: true);
+        }
+
+        // Keyboard navigation highlight (Bootstrap active class when :active prop is true)
+        &.active {
+          color: var(--gl-dropdown-option-text-color-focus) !important;
+          background-color: var(--gl-dropdown-option-background-color-unselected-focus) !important;
+          @include gl-focus($inset: true);
+          z-index: 1;
+        }
+
+        // Also handle the is-focused class for compatibility
+        &.is-focused {
+          color: var(--gl-dropdown-option-text-color-focus) !important;
+          background-color: var(--gl-dropdown-option-background-color-unselected-focus) !important;
+          @include gl-focus($inset: true);
+          z-index: 1;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+      }
+
+      // Selected state (if needed for multi-select scenarios)
+      &[aria-selected="true"] .dropdown-item {
+        background-color: var(--gl-dropdown-option-background-color-selected-default);
+
+        &:hover {
+          background-color: var(--gl-dropdown-option-background-color-selected-hover);
+        }
+
+        &:focus-visible {
+          background-color: var(--gl-dropdown-option-background-color-selected-focus);
+        }
+
+        &:active,
+        &:focus-visible:active {
+          background-color: var(--gl-dropdown-option-background-color-selected-active);
+        }
+      }
+    }
+  }
+}

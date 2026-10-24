@@ -1,0 +1,262 @@
+.gl-new-dropdown {
+  @apply gl-inline-flex;
+  @apply gl-align-middle;
+
+  .gl-new-dropdown-custom-toggle {
+    > *:first-child {
+      &:not(:disabled) {
+        @apply gl-cursor-pointer;
+      }
+
+      &:focus-visible {
+        @apply gl-focus;
+      }
+    }
+  }
+
+  .gl-new-dropdown-toggle {
+    // optically align the caret
+    &.gl-button:not(.gl-new-dropdown-toggle-no-caret, .btn-icon) {
+      @apply gl-pr-3;
+
+      &.btn-sm {
+        @apply gl-pr-2;
+      }
+    }
+
+    &.gl-new-dropdown-toggle-no-caret .gl-new-dropdown-chevron {
+      @apply gl-hidden;
+    }
+  }
+
+  .gl-new-dropdown-toggle {
+    .gl-button-text {
+      @apply gl-inline-flex;
+
+      &:has(.gl-sr-only) {
+        width: auto;
+      }
+    }
+
+    &.is-invalid {
+      @apply gl-border-control-error;
+
+      &:focus {
+        @apply gl-border-control-error;
+      }
+    }
+  }
+
+  .gl-new-dropdown-button-text {
+    @apply gl-mr-auto;
+    @apply gl-overflow-hidden;
+    @apply gl-text-ellipsis;
+  }
+
+  &.btn-sm .gl-icon {
+    @apply gl-my-0;
+
+    &.gl-new-dropdown-chevron {
+      @apply gl-h-5;
+      @apply gl-w-5;
+    }
+  }
+
+  .gl-button:not(.gl-new-dropdown-caret-only) .gl-button-icon.gl-new-dropdown-chevron {
+    @apply gl-ml-2;
+    @apply gl-mr-0;
+  }
+
+  .gl-new-dropdown-icon-only {
+    // optically align the caret
+    &.gl-button:not(.gl-new-dropdown-toggle-no-caret) {
+      @apply gl-pr-2;
+      @apply gl-pl-3;
+
+      &.btn-sm {
+        @apply gl-pr-0;
+      }
+    }
+
+    .gl-button-icon.gl-button-icon {
+      @apply gl-mr-0;
+
+      &.gl-button-loading-indicator {
+        @apply gl-mr-2;
+      }
+    }
+
+    &.btn-sm .gl-new-dropdown-chevron {
+      @apply gl-mx-0;
+    }
+  }
+
+  .gl-new-dropdown-caret-only {
+    // optically center the caret
+    @apply gl-pl-2;
+
+    &.btn-sm {
+      @apply gl-pl-0;
+    }
+  }
+}
+
+.gl-new-dropdown-container {
+  .gl-new-dropdown-arrow {
+    width: 8px;
+    height: 8px;
+
+    // blend in with the dropdown background
+    background: var(--gl-dropdown-background-color);
+    // these create the 45deg cutoff angle at the base of the caret
+    border-bottom: 1px solid var(--gl-dropdown-background-color);
+    border-right: 1px solid var(--gl-dropdown-background-color);
+
+    position: absolute;
+  }
+
+  .gl-new-dropdown-panel {
+    @apply gl-hidden;
+    @apply gl-bg-dropdown;
+    border-radius: var(--gl-dropdown-border-radius);
+    @apply gl-drop-shadow-md;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+
+  .gl-new-dropdown-panel-fluid-width {
+    min-width: $gl-new-dropdown-min-width;
+    max-width: $gl-new-dropdown-max-width;
+  }
+
+  .gl-new-dropdown-inner {
+    @apply gl-flex;
+    @apply gl-flex-col;
+    max-height: $gl-max-dropdown-max-height;
+  }
+
+  .gl-new-dropdown-contents {
+    position: relative;
+    @apply gl-grow;
+    @apply gl-overflow-y-auto;
+    @apply gl-pl-0;
+    @apply gl-mb-0;
+    @apply gl-py-2;
+    @apply gl-list-none;
+
+    &:focus-visible {
+      @apply gl-focus;
+    }
+
+    ul {
+      @apply gl-list-none;
+    }
+  }
+
+  $dropdown-content-padding: 0.25rem;
+
+  // Scrim overlay related styles (the shadow that appears above and below the content) indicating that the content is scrollable
+  .gl-new-dropdown-contents-with-scrim-overlay {
+    padding: 0;
+  }
+
+  .gl-new-dropdown-contents {
+    .top-scrim-wrapper,
+    .bottom-scrim-wrapper {
+      height: $dropdown-content-padding;
+      opacity: 0;
+      position: sticky;
+      z-index: 1;
+      display: block;
+      overflow: visible;
+      left: 1px;
+      right: 1px;
+      pointer-events: none;
+      transition: opacity 0.1s;
+    }
+
+    .top-scrim-wrapper {
+      top: 0;
+
+      .top-scrim {
+        left: 0;
+        right: 0;
+
+        &.top-scrim-light {
+          height: 2.25rem;
+          border-radius: 0.375rem 0.375rem 0 0;
+          background: linear-gradient(
+            180deg,
+            var(--gl-dropdown-background-color) 0%,
+            var(--gl-color-alpha-0)
+          );
+        }
+
+        &.top-scrim-dark {
+          height: 0.25rem;
+          background: linear-gradient(
+            180deg,
+            var(--gl-shadow-color-default) 0%,
+            var(--gl-color-alpha-0) 100%
+          );
+        }
+      }
+    }
+
+    .bottom-scrim-wrapper {
+      bottom: 0;
+      height: $dropdown-content-padding;
+
+      .bottom-scrim {
+        height: 0;
+        position: relative;
+        top: calc(-2.25rem + #{$dropdown-content-padding});
+        border-radius: 0 0 0.375rem 0.375rem;
+        background: linear-gradient(
+          180deg,
+          var(--gl-color-alpha-0) 0%,
+          var(--gl-dropdown-background-color)
+        );
+      }
+    }
+
+    &.top-scrim-visible .top-scrim-wrapper,
+    &.bottom-scrim-visible .bottom-scrim-wrapper {
+      opacity: 1;
+    }
+
+    &.bottom-scrim-visible .bottom-scrim {
+      height: 2.25rem;
+    }
+  }
+}
+
+.btn-group {
+  .gl-new-dropdown:not(:last-child) {
+    .gl-new-dropdown-toggle {
+      @apply gl-rounded-tr-none;
+      @apply gl-rounded-br-none;
+    }
+  }
+
+  .gl-new-dropdown:not(:first-child) {
+    .gl-new-dropdown-toggle {
+      @apply gl-rounded-tl-none;
+      @apply gl-rounded-bl-none;
+    }
+  }
+
+  .gl-new-dropdown:hover {
+    .gl-new-dropdown-toggle {
+      @apply gl-z-1;
+    }
+  }
+
+  .gl-new-dropdown {
+    .gl-new-dropdown-toggle:focus-visible,
+    .gl-new-dropdown-toggle:active {
+      @apply gl-z-1;
+    }
+  }
+}

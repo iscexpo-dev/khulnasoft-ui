@@ -1,0 +1,113 @@
+/*
+ * These styles are specific to the gl-toast component.
+ * Documentation: https://design.khulnasoft.com/components/toast
+ */
+.b-toaster {
+  z-index: 1100;
+
+  &.b-toaster-bottom-left {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    height: 0;
+    overflow: visible;
+
+    .b-toaster-slot {
+      position: absolute;
+      max-width: $toast-max-width;
+      padding: 0;
+      margin: 0;
+      @apply gl-w-auto;
+      @apply gl-flex;
+      @apply gl-flex-col;
+      @apply gl-gap-4;
+      bottom: $gl-spacing-scale-6;
+      left: $gl-spacing-scale-6;
+      right: auto;
+      view-transition-name: gl-toast;
+
+      // Fallback for Firefox
+      // Fixes a bug where the view transition
+      // doesn't work properly
+      @supports (-moz-appearance: none) {
+        view-transition-name: unset;
+      }
+
+      @include media-breakpoint-down(xs) {
+        @apply gl-w-full;
+        @apply gl-px-3;
+        left: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .b-toast {
+    display: block;
+    position: relative;
+    max-width: $toast-max-width;
+
+    // Fallback for Firefox
+    // Fixes a bug where the view transition
+    // doesn't work properly
+    @supports (-moz-appearance: none) {
+      transition: all $gl-transition-duration-medium $gl-easing-out-cubic;
+    }
+  }
+
+  .gl-toast {
+    opacity: 1;
+    @apply gl-text-base;
+    @apply gl-py-5;
+    @apply gl-px-6;
+    @apply gl-leading-normal;
+    @apply gl-flex;
+    @apply gl-items-center;
+    @apply gl-justify-between;
+    @apply gl-shadow-md;
+    @apply gl-rounded-feedback;
+    background-color: var(--gl-feedback-strong-background-color);
+    color: var(--gl-feedback-strong-text-color);
+
+    &.fade:not(.show) {
+      opacity: 0;
+    }
+  }
+
+  .toast-body {
+    display: block;
+    @apply gl-font-300;
+    @apply gl-pr-3;
+    order: 1;
+  }
+
+  .toast-header {
+    @apply gl-flex;
+    order: 2;
+  }
+
+  .gl-toast-action {
+    @apply gl-p-3;
+    @apply gl-m-0;
+    @apply gl-ml-5;
+    @apply gl-normal-case;
+    @apply gl-text-base;
+    @apply gl-whitespace-nowrap;
+    @apply gl-font-bold;
+    @apply gl-cursor-pointer;
+    color: var(--gl-feedback-strong-link-color);
+  }
+
+  .gl-toast-close-button {
+    @apply gl-ml-5;
+    color: inherit !important;
+  }
+}
+
+::view-transition-group(gl-toast) {
+  animation-duration: $gl-transition-duration-medium;
+  animation-timing-function: $gl-easing-out-cubic;
+}

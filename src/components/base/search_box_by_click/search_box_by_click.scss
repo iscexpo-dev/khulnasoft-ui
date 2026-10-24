@@ -1,0 +1,45 @@
+.gl-search-box-by-click {
+  @apply gl-text-base;
+
+  .gl-search-box-by-click-history > .gl-button {
+    padding-left: $gl-spacing-scale-4 !important;
+    padding-right: $gl-spacing-scale-3 !important;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .gl-search-box-by-click-history > .gl-button,
+  .gl-search-box-by-click-search-button.gl-button {
+    background-color: var(--gl-control-background-color-default);
+    border-color: var(--gl-control-border-color-default) !important;
+
+    &:disabled {
+      background: var(--gl-control-background-color-disabled);
+      border-color: var(--gl-control-border-color-disabled) !important;
+    }
+  }
+
+  .gl-search-box-by-click-input {
+    &::-webkit-search-cancel-button {
+      @apply gl-hidden;
+    }
+  }
+
+  .gl-search-box-by-click-clear-button {
+    position: absolute;
+    top: $gl-spacing-scale-2;
+    right: $gl-spacing-scale-2;
+    @apply gl-mr-2;
+    @apply gl-z-3;
+  }
+}
+
+.gl-search-box-by-click-with-search-button {
+  .gl-search-box-by-click-input {
+    @apply gl-pr-7;
+  }
+
+  .gl-search-box-by-click-clear-button {
+    right: $gl-spacing-scale-7;
+  }
+}

@@ -1,0 +1,35 @@
+.gl-banner {
+  @apply gl-rounded-feedback;
+  background-color: var(--gl-banner-promo-background-color);
+  border-color: var(--gl-banner-promo-border-color);
+}
+
+.gl-banner-illustration {
+  @apply gl-shrink-0;
+  @apply gl-mr-6;
+
+  img {
+    max-width: $grid-size * 15;
+  }
+
+  @include gl-container-width-down(md) {
+    display: none;
+  }
+}
+
+.gl-banner-title {
+  @apply gl-heading-scale-500;
+  @apply gl-mb-3;
+}
+
+.gl-banner-close {
+  position: absolute;
+  top: $gl-spacing-scale-3;
+  right: $gl-spacing-scale-3;
+}
+
+// Introduction variant
+.gl-banner-introduction {
+  background-color: var(--gl-feedback-info-background-color);
+  border-color: var(--gl-banner-intro-border-color);
+}

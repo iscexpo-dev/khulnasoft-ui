@@ -1,0 +1,2403 @@
+{
+  "templateFile": "./icon.figma.batch.ts",
+  "components": [
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1052",
+      "id": "icon-abuse",
+      "name": "abuse"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-952",
+      "id": "icon-account",
+      "name": "account"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1202",
+      "id": "icon-admin",
+      "name": "admin"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=9950-419",
+      "id": "icon-agent-ai",
+      "name": "agent-ai"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-917",
+      "id": "icon-alert-management",
+      "name": "alert-management"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-862",
+      "id": "icon-api",
+      "name": "api"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1054",
+      "id": "icon-appearance",
+      "name": "appearance"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1056",
+      "id": "icon-applications",
+      "name": "applications"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-956",
+      "id": "icon-approval-solid",
+      "name": "approval-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-954",
+      "id": "icon-approval",
+      "name": "approval"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=456-728",
+      "id": "icon-archive",
+      "name": "archive"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1037",
+      "id": "icon-arrow-down",
+      "name": "arrow-down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1042",
+      "id": "icon-arrow-left",
+      "name": "arrow-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1032",
+      "id": "icon-arrow-right",
+      "name": "arrow-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1027",
+      "id": "icon-arrow-up",
+      "name": "arrow-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-960",
+      "id": "icon-assignee",
+      "name": "assignee"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1127",
+      "id": "icon-at",
+      "name": "at"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=834-1043",
+      "id": "icon-attention-solid-sm",
+      "name": "attention-solid-sm"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=834-1037",
+      "id": "icon-attention-solid",
+      "name": "attention-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=834-1036",
+      "id": "icon-attention",
+      "name": "attention"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-896",
+      "id": "icon-audit-events",
+      "name": "audit-events"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=456-727",
+      "id": "icon-autoplay",
+      "name": "autoplay"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1262",
+      "id": "icon-bitbucket",
+      "name": "bitbucket"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-855",
+      "id": "icon-bold",
+      "name": "bold"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13695-451",
+      "id": "icon-bolt",
+      "name": "bolt"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1058",
+      "id": "icon-book",
+      "name": "book"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1061",
+      "id": "icon-bookmark",
+      "name": "bookmark"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=504-802",
+      "id": "icon-branch-deleted",
+      "name": "branch-deleted"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=504-784",
+      "id": "icon-branch",
+      "name": "branch"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-938",
+      "id": "icon-bug",
+      "name": "bug"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2703-425",
+      "id": "icon-building",
+      "name": "building"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1063",
+      "id": "icon-bulb",
+      "name": "bulb"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1065",
+      "id": "icon-bullhorn",
+      "name": "bullhorn"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11837-485",
+      "id": "icon-calendar-due",
+      "name": "calendar-due"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7998-445",
+      "id": "icon-calendar-overdue",
+      "name": "calendar-overdue"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1013",
+      "id": "icon-calendar",
+      "name": "calendar"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=456-731",
+      "id": "icon-cancel",
+      "name": "cancel"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1097",
+      "id": "icon-canceled-circle",
+      "name": "canceled-circle"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1067",
+      "id": "icon-car",
+      "name": "car"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4882-2578",
+      "id": "icon-catalog-checkmark",
+      "name": "catalog-checkmark"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1069",
+      "id": "icon-chart",
+      "name": "chart"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=713-910",
+      "id": "icon-check-circle-dashed",
+      "name": "check-circle-dashed"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1125",
+      "id": "icon-check-circle-filled",
+      "name": "check-circle-filled"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1111",
+      "id": "icon-check-circle",
+      "name": "check-circle"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=842-1064",
+      "id": "icon-cherry-pick-commit",
+      "name": "cherry-pick-commit"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1135",
+      "id": "icon-chevron-double-lg-left",
+      "name": "chevron-double-lg-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1143",
+      "id": "icon-chevron-double-lg-right",
+      "name": "chevron-double-lg-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1019",
+      "id": "icon-chevron-down",
+      "name": "chevron-down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1022",
+      "id": "icon-chevron-left",
+      "name": "chevron-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1005",
+      "id": "icon-chevron-lg-down",
+      "name": "chevron-lg-down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1008",
+      "id": "icon-chevron-lg-left",
+      "name": "chevron-lg-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1153",
+      "id": "icon-chevron-lg-right",
+      "name": "chevron-lg-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1149",
+      "id": "icon-chevron-lg-up",
+      "name": "chevron-lg-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1016",
+      "id": "icon-chevron-right",
+      "name": "chevron-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1013",
+      "id": "icon-chevron-up",
+      "name": "chevron-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12478-883",
+      "id": "icon-ci-cd",
+      "name": "ci-cd"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-922",
+      "id": "icon-cicd-analytics",
+      "name": "cicd-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=456-737",
+      "id": "icon-clear-all",
+      "name": "clear-all"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=456-736",
+      "id": "icon-clear",
+      "name": "clear"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1018",
+      "id": "icon-clock",
+      "name": "clock"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1071",
+      "id": "icon-cloud-gear",
+      "name": "cloud-gear"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4478-426",
+      "id": "icon-cloud-pod",
+      "name": "cloud-pod"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3810-431",
+      "id": "icon-cloud-terminal",
+      "name": "cloud-terminal"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-930",
+      "id": "icon-code-review-analytics",
+      "name": "code-review-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4134-4474",
+      "id": "icon-code",
+      "name": "code"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-729",
+      "id": "icon-collapse-left",
+      "name": "collapse-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-730",
+      "id": "icon-collapse-right",
+      "name": "collapse-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2808-432",
+      "id": "icon-collapse-solid",
+      "name": "collapse-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-728",
+      "id": "icon-collapse",
+      "name": "collapse"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13668-463",
+      "id": "icon-columns",
+      "name": "columns"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-944",
+      "id": "icon-comment-dots",
+      "name": "comment-dots"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4243-445",
+      "id": "icon-comment-lines",
+      "name": "comment-lines"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-946",
+      "id": "icon-comment-next",
+      "name": "comment-next"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-942",
+      "id": "icon-comment",
+      "name": "comment"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-948",
+      "id": "icon-comments",
+      "name": "comments"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=504-808",
+      "id": "icon-commit",
+      "name": "commit"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=504-828",
+      "id": "icon-comparison",
+      "name": "comparison"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2703-423",
+      "id": "icon-compass",
+      "name": "compass"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7097-436",
+      "id": "icon-compliance",
+      "name": "compliance"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1078",
+      "id": "icon-connected",
+      "name": "connected"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-931",
+      "id": "icon-container-image",
+      "name": "container-image"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-923",
+      "id": "icon-contributor-analytics",
+      "name": "contributor-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-727",
+      "id": "icon-copy-to-clipboard",
+      "name": "copy-to-clipboard"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-899",
+      "id": "icon-credentials",
+      "name": "credentials"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1080",
+      "id": "icon-credit-card",
+      "name": "credit-card"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12484-885",
+      "id": "icon-customer-relations",
+      "name": "customer-relations"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=6051-468",
+      "id": "icon-dash-circle",
+      "name": "dash-circle"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1088",
+      "id": "icon-dash",
+      "name": "dash"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-929",
+      "id": "icon-dashboard-analytics",
+      "name": "dashboard-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1084",
+      "id": "icon-dashboard",
+      "name": "dashboard"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-895",
+      "id": "icon-dependency-list",
+      "name": "dependency-list"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-906",
+      "id": "icon-dependency-proxy",
+      "name": "dependency-proxy"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-923",
+      "id": "icon-deployments",
+      "name": "deployments"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-866",
+      "id": "icon-details-block",
+      "name": "details-block"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-924",
+      "id": "icon-devops-adoption",
+      "name": "devops-adoption"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3156-463",
+      "id": "icon-diagram",
+      "name": "diagram"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1007",
+      "id": "icon-disk",
+      "name": "disk"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-958",
+      "id": "icon-doc-changes",
+      "name": "doc-changes"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-960",
+      "id": "icon-doc-chart",
+      "name": "doc-chart"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-962",
+      "id": "icon-doc-code",
+      "name": "doc-code"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-964",
+      "id": "icon-doc-compressed",
+      "name": "doc-compressed"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-966",
+      "id": "icon-doc-expand",
+      "name": "doc-expand"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-928",
+      "id": "icon-doc-explorer",
+      "name": "doc-explorer"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-968",
+      "id": "icon-doc-image",
+      "name": "doc-image"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12485-891",
+      "id": "icon-doc-locked",
+      "name": "doc-locked"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-970",
+      "id": "icon-doc-new",
+      "name": "doc-new"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-973",
+      "id": "icon-doc-symlink",
+      "name": "doc-symlink"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-975",
+      "id": "icon-doc-text",
+      "name": "doc-text"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-977",
+      "id": "icon-doc-versions",
+      "name": "doc-versions"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-954",
+      "id": "icon-document",
+      "name": "document"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-956",
+      "id": "icon-documents",
+      "name": "documents"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=137-511",
+      "id": "icon-dot-grid",
+      "name": "dot-grid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-731",
+      "id": "icon-download",
+      "name": "download"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1086",
+      "id": "icon-dumbbell",
+      "name": "dumbbell"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8702-424",
+      "id": "icon-duo-chat-new",
+      "name": "duo-chat-new"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7518-406",
+      "id": "icon-duo-chat-off",
+      "name": "duo-chat-off"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7518-405",
+      "id": "icon-duo-chat",
+      "name": "duo-chat"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=457-746",
+      "id": "icon-duplicate",
+      "name": "duplicate"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=832-1091",
+      "id": "icon-earth",
+      "name": "earth"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1218",
+      "id": "icon-ellipsis_h",
+      "name": "ellipsis_h"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1221",
+      "id": "icon-ellipsis_v",
+      "name": "ellipsis_v"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2115-414",
+      "id": "icon-entity-blocked",
+      "name": "entity-blocked"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7653-440",
+      "id": "icon-entity-blocking",
+      "name": "entity-blocking"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=833-977",
+      "id": "icon-environment",
+      "name": "environment"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-866",
+      "id": "icon-epic-closed",
+      "name": "epic-closed"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1102",
+      "id": "icon-error",
+      "name": "error"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-920",
+      "id": "icon-escalation-policy",
+      "name": "escalation-policy"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-910",
+      "id": "icon-exception",
+      "name": "exception"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-761",
+      "id": "icon-expand-down",
+      "name": "expand-down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-784",
+      "id": "icon-expand-left",
+      "name": "expand-left"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-773",
+      "id": "icon-expand-right",
+      "name": "expand-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-760",
+      "id": "icon-expand-up",
+      "name": "expand-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-754",
+      "id": "icon-expand",
+      "name": "expand"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=831-1042",
+      "id": "icon-expire",
+      "name": "expire"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-790",
+      "id": "icon-export",
+      "name": "export"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=833-992",
+      "id": "icon-external-link",
+      "name": "external-link"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1030",
+      "id": "icon-eye-slash",
+      "name": "eye-slash"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1028",
+      "id": "icon-eye",
+      "name": "eye"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1669-399",
+      "id": "icon-face-neutral",
+      "name": "face-neutral"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1669-404",
+      "id": "icon-face-unhappy",
+      "name": "face-unhappy"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=833-1006",
+      "id": "icon-false-positive",
+      "name": "false-positive"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13239-439",
+      "id": "icon-feature-addition",
+      "name": "feature-addition"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=842-1081",
+      "id": "icon-feature-flag-disabled",
+      "name": "feature-flag-disabled"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=842-1077",
+      "id": "icon-feature-flag",
+      "name": "feature-flag"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1101",
+      "id": "icon-file-addition-solid",
+      "name": "file-addition-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1100",
+      "id": "icon-file-addition",
+      "name": "file-addition"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=829-916",
+      "id": "icon-file-deletion-solid",
+      "name": "file-deletion-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=829-914",
+      "id": "icon-file-deletion",
+      "name": "file-deletion"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-923",
+      "id": "icon-file-modified-solid",
+      "name": "file-modified-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-921",
+      "id": "icon-file-modified",
+      "name": "file-modified"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-925",
+      "id": "icon-file-tree",
+      "name": "file-tree"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-791",
+      "id": "icon-filter",
+      "name": "filter"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-983",
+      "id": "icon-fire",
+      "name": "fire"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-989",
+      "id": "icon-first-contribution",
+      "name": "first-contribution"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-991",
+      "id": "icon-flag",
+      "name": "flag"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=10031-403",
+      "id": "icon-flow-ai",
+      "name": "flow-ai"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-950",
+      "id": "icon-folder-new",
+      "name": "folder-new"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-948",
+      "id": "icon-folder-o",
+      "name": "folder-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-952",
+      "id": "icon-folder-open",
+      "name": "folder-open"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-943",
+      "id": "icon-folder",
+      "name": "folder"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-993",
+      "id": "icon-food",
+      "name": "food"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=504-826",
+      "id": "icon-fork",
+      "name": "fork"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1799-408",
+      "id": "icon-formula",
+      "name": "formula"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-855",
+      "id": "icon-git-merge",
+      "name": "git-merge"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1272",
+      "id": "icon-git",
+      "name": "git"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2543-407",
+      "id": "icon-gitea",
+      "name": "gitea"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1266",
+      "id": "icon-github",
+      "name": "github"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11001-393",
+      "id": "icon-khulnasoft-credits",
+      "name": "khulnasoft-credits"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-806",
+      "id": "icon-go-back",
+      "name": "go-back"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1264",
+      "id": "icon-google",
+      "name": "google"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2967-478",
+      "id": "icon-grip",
+      "name": "grip"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=831-1030",
+      "id": "icon-group",
+      "name": "group"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1223",
+      "id": "icon-hamburger",
+      "name": "hamburger"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8367-435",
+      "id": "icon-hash",
+      "name": "hash"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-868",
+      "id": "icon-heading",
+      "name": "heading"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-996",
+      "id": "icon-heart",
+      "name": "heart"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2421-474",
+      "id": "icon-highlight",
+      "name": "highlight"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-810",
+      "id": "icon-history",
+      "name": "history"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-998",
+      "id": "icon-home",
+      "name": "home"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1216-2833",
+      "id": "icon-hook",
+      "name": "hook"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1020",
+      "id": "icon-hourglass",
+      "name": "hourglass"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-910",
+      "id": "icon-image-comment-dark",
+      "name": "image-comment-dark"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-909",
+      "id": "icon-image-comment-light",
+      "name": "image-comment-light"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-819",
+      "id": "icon-import",
+      "name": "import"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=831-1050",
+      "id": "icon-incognito",
+      "name": "incognito"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1215",
+      "id": "icon-information-o",
+      "name": "information-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1208",
+      "id": "icon-information",
+      "name": "information"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=831-1044",
+      "id": "icon-infrastructure-registry",
+      "name": "infrastructure-registry"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-914",
+      "id": "icon-infrastructure",
+      "name": "infrastructure"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7275-442",
+      "id": "icon-insert",
+      "name": "insert"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-919",
+      "id": "icon-issue-close",
+      "name": "issue-close"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-870",
+      "id": "icon-issue-closed",
+      "name": "issue-closed"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-922",
+      "id": "icon-issue-open-m",
+      "name": "issue-open-m"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-876",
+      "id": "icon-issue-update",
+      "name": "issue-update"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-868",
+      "id": "icon-issues",
+      "name": "issues"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1216-2860",
+      "id": "icon-italic",
+      "name": "italic"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-934",
+      "id": "icon-iteration",
+      "name": "iteration"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-932",
+      "id": "icon-job",
+      "name": "job"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13481-487",
+      "id": "icon-joystick",
+      "name": "joystick"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1032",
+      "id": "icon-key",
+      "name": "key"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2966-441",
+      "id": "icon-keyboard",
+      "name": "keyboard"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=9870-409",
+      "id": "icon-kind",
+      "name": "kind"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1039",
+      "id": "icon-kubernetes-agent",
+      "name": "kubernetes-agent"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1270",
+      "id": "icon-kubernetes",
+      "name": "kubernetes"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-963",
+      "id": "icon-label",
+      "name": "label"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-966",
+      "id": "icon-labels",
+      "name": "labels"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-824",
+      "id": "icon-leave",
+      "name": "leave"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-828",
+      "id": "icon-level-up",
+      "name": "level-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-872",
+      "id": "icon-link",
+      "name": "link"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1258",
+      "id": "icon-linkedin",
+      "name": "linkedin"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-876",
+      "id": "icon-list-bulleted",
+      "name": "list-bulleted"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-897",
+      "id": "icon-list-indent",
+      "name": "list-indent"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-878",
+      "id": "icon-list-numbered",
+      "name": "list-numbered"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-898",
+      "id": "icon-list-outdent",
+      "name": "list-outdent"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-892",
+      "id": "icon-list-task",
+      "name": "list-task"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1005",
+      "id": "icon-live-preview",
+      "name": "live-preview"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1931-404",
+      "id": "icon-live-stream",
+      "name": "live-stream"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-907",
+      "id": "icon-location-dot",
+      "name": "location-dot"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-905",
+      "id": "icon-location",
+      "name": "location"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-911",
+      "id": "icon-lock-open",
+      "name": "lock-open"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-909",
+      "id": "icon-lock",
+      "name": "lock"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-979",
+      "id": "icon-log",
+      "name": "log"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=836-1076",
+      "id": "icon-long-arrow",
+      "name": "long-arrow"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3091-429",
+      "id": "icon-machine-learning",
+      "name": "machine-learning"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1002",
+      "id": "icon-mail",
+      "name": "mail"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4593-443",
+      "id": "icon-markdown-mark-solid",
+      "name": "markdown-mark-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4580-444",
+      "id": "icon-markdown-mark",
+      "name": "markdown-mark"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-830",
+      "id": "icon-marquee-selection",
+      "name": "marquee-selection"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-910",
+      "id": "icon-maximize",
+      "name": "maximize"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1001",
+      "id": "icon-media-broken",
+      "name": "media-broken"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=580-999",
+      "id": "icon-media",
+      "name": "media"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=842-1102",
+      "id": "icon-merge-request-close-m",
+      "name": "merge-request-close-m"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-865",
+      "id": "icon-merge-request-close",
+      "name": "merge-request-close"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-841",
+      "id": "icon-merge-request-open",
+      "name": "merge-request-open"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-827",
+      "id": "icon-merge-request",
+      "name": "merge-request"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-814",
+      "id": "icon-merge",
+      "name": "merge"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1008",
+      "id": "icon-messages",
+      "name": "messages"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-915",
+      "id": "icon-messaging-queues",
+      "name": "messaging-queues"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-909",
+      "id": "icon-metrics",
+      "name": "metrics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=6302-439",
+      "id": "icon-milestone",
+      "name": "milestone"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-919",
+      "id": "icon-minimize",
+      "name": "minimize"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-883",
+      "id": "icon-mobile-issue-close",
+      "name": "mobile-issue-close"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1009",
+      "id": "icon-mobile",
+      "name": "mobile"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-905",
+      "id": "icon-model-registry",
+      "name": "model-registry"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=580-982",
+      "id": "icon-monitor-lines",
+      "name": "monitor-lines"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=580-997",
+      "id": "icon-monitor-o",
+      "name": "monitor-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=580-990",
+      "id": "icon-monitor",
+      "name": "monitor"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11229-531",
+      "id": "icon-moon",
+      "name": "moon"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8367-441",
+      "id": "icon-multiple-choice",
+      "name": "multiple-choice"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-925",
+      "id": "icon-namespace",
+      "name": "namespace"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1010",
+      "id": "icon-nature",
+      "name": "nature"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-912",
+      "id": "icon-notification-channels",
+      "name": "notification-channels"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-915",
+      "id": "icon-notifications-off",
+      "name": "notifications-off"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=601-913",
+      "id": "icon-notifications",
+      "name": "notifications"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1012",
+      "id": "icon-object",
+      "name": "object"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-913",
+      "id": "icon-observability-settings",
+      "name": "observability-settings"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-919",
+      "id": "icon-on-call-schedules",
+      "name": "on-call-schedules"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-902",
+      "id": "icon-on-demand-scan",
+      "name": "on-demand-scan"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12054-391",
+      "id": "icon-orbit",
+      "name": "orbit"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4339-515",
+      "id": "icon-organization",
+      "name": "organization"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1014",
+      "id": "icon-overview",
+      "name": "overview"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1016",
+      "id": "icon-package",
+      "name": "package"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1018",
+      "id": "icon-paper-airplane",
+      "name": "paper-airplane"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-941",
+      "id": "icon-paperclip",
+      "name": "paperclip"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=6083-476",
+      "id": "icon-partner-verified",
+      "name": "partner-verified"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=10670-395",
+      "id": "icon-passkey",
+      "name": "passkey"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-836",
+      "id": "icon-pause",
+      "name": "pause"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1022",
+      "id": "icon-pencil-square",
+      "name": "pencil-square"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1020",
+      "id": "icon-pencil",
+      "name": "pencil"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-931",
+      "id": "icon-pipeline-editor",
+      "name": "pipeline-editor"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-894",
+      "id": "icon-pipeline-schedule",
+      "name": "pipeline-schedule"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1027",
+      "id": "icon-pipeline",
+      "name": "pipeline"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1022",
+      "id": "icon-planning",
+      "name": "planning"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-840",
+      "id": "icon-play",
+      "name": "play"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=827-981",
+      "id": "icon-plus-square-o",
+      "name": "plus-square-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=829-912",
+      "id": "icon-plus-square",
+      "name": "plus-square"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1085",
+      "id": "icon-plus",
+      "name": "plus"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-927",
+      "id": "icon-pod",
+      "name": "pod"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1032",
+      "id": "icon-podcast",
+      "name": "podcast"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-897",
+      "id": "icon-policy",
+      "name": "policy"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-936",
+      "id": "icon-power",
+      "name": "power"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1229",
+      "id": "icon-preferences",
+      "name": "preferences"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-926",
+      "id": "icon-productivity-analytics",
+      "name": "productivity-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-966",
+      "id": "icon-profile",
+      "name": "profile"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1026",
+      "id": "icon-progress",
+      "name": "progress"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-980",
+      "id": "icon-project",
+      "name": "project"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-869",
+      "id": "icon-push-rules",
+      "name": "push-rules"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1239",
+      "id": "icon-question-o",
+      "name": "question-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1234",
+      "id": "icon-question",
+      "name": "question"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4531-427",
+      "id": "icon-quick-actions",
+      "name": "quick-actions"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2610-441",
+      "id": "icon-quota",
+      "name": "quota"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-904",
+      "id": "icon-quote",
+      "name": "quote"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=9668-411",
+      "id": "icon-recipe",
+      "name": "recipe"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-844",
+      "id": "icon-redo",
+      "name": "redo"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=6525-479",
+      "id": "icon-regular-expression",
+      "name": "regular-expression"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-903",
+      "id": "icon-release",
+      "name": "release"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-882",
+      "id": "icon-remove-all",
+      "name": "remove-all"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=510-871",
+      "id": "icon-remove",
+      "name": "remove"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-848",
+      "id": "icon-repeat",
+      "name": "repeat"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11544-505",
+      "id": "icon-replace-all",
+      "name": "replace-all"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11544-504",
+      "id": "icon-replace",
+      "name": "replace"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4252-453",
+      "id": "icon-reply",
+      "name": "reply"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-927",
+      "id": "icon-repository-analytics",
+      "name": "repository-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12485-890",
+      "id": "icon-repository-graph",
+      "name": "repository-graph"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-1019",
+      "id": "icon-repository",
+      "name": "repository"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=826-928",
+      "id": "icon-requirements",
+      "name": "requirements"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8115-404",
+      "id": "icon-resize",
+      "name": "resize"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-854",
+      "id": "icon-retry",
+      "name": "retry"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-927",
+      "id": "icon-review-checkmark",
+      "name": "review-checkmark"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-935",
+      "id": "icon-review-list",
+      "name": "review-list"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-940",
+      "id": "icon-review-warning",
+      "name": "review-warning"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12484-888",
+      "id": "icon-roadmap",
+      "name": "roadmap"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3052-477",
+      "id": "icon-rocket-launch",
+      "name": "rocket-launch"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1036",
+      "id": "icon-rocket",
+      "name": "rocket"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13668-464",
+      "id": "icon-rows",
+      "name": "rows"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1034",
+      "id": "icon-rss",
+      "name": "rss"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-893",
+      "id": "icon-runners",
+      "name": "runners"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1038",
+      "id": "icon-scale",
+      "name": "scale"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-864",
+      "id": "icon-scroll_down",
+      "name": "scroll_down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-874",
+      "id": "icon-scroll_up",
+      "name": "scroll_up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1255",
+      "id": "icon-scroll-handle",
+      "name": "scroll-handle"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-877",
+      "id": "icon-search-dot",
+      "name": "search-dot"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-888",
+      "id": "icon-search-minus",
+      "name": "search-minus"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-879",
+      "id": "icon-search-plus",
+      "name": "search-plus"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2967-429",
+      "id": "icon-search-results",
+      "name": "search-results"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-900",
+      "id": "icon-secrets-manager",
+      "name": "secrets-manager"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-901",
+      "id": "icon-security-configuration",
+      "name": "security-configuration"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12488-892",
+      "id": "icon-security-inventory",
+      "name": "security-inventory"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12485-889",
+      "id": "icon-service-desk",
+      "name": "service-desk"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-911",
+      "id": "icon-service-map",
+      "name": "service-map"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-907",
+      "id": "icon-services",
+      "name": "services"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=10205-406",
+      "id": "icon-session-ai",
+      "name": "session-ai"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1256",
+      "id": "icon-settings",
+      "name": "settings"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12490-916",
+      "id": "icon-setup",
+      "name": "setup"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1186",
+      "id": "icon-severity-critical",
+      "name": "severity-critical",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1188",
+      "id": "icon-severity-high",
+      "name": "severity-high",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1194",
+      "id": "icon-severity-info",
+      "name": "severity-info",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1192",
+      "id": "icon-severity-low",
+      "name": "severity-low",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1190",
+      "id": "icon-severity-medium",
+      "name": "severity-medium",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1196",
+      "id": "icon-severity-unknown",
+      "name": "severity-unknown",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-896",
+      "id": "icon-share",
+      "name": "share"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1040",
+      "id": "icon-shield",
+      "name": "shield"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3623-467",
+      "id": "icon-sidebar-right",
+      "name": "sidebar-right"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1616-404",
+      "id": "icon-sidebar",
+      "name": "sidebar"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1260",
+      "id": "icon-skype",
+      "name": "skype"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-968",
+      "id": "icon-slight-frown",
+      "name": "slight-frown"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-970",
+      "id": "icon-slight-smile",
+      "name": "slight-smile"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1042",
+      "id": "icon-smart-card",
+      "name": "smart-card"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-972",
+      "id": "icon-smile",
+      "name": "smile"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-974",
+      "id": "icon-smiley",
+      "name": "smiley"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1048",
+      "id": "icon-snippet",
+      "name": "snippet"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-926",
+      "id": "icon-soft-unwrap",
+      "name": "soft-unwrap"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-931",
+      "id": "icon-soft-wrap",
+      "name": "soft-wrap"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-913",
+      "id": "icon-sort-highest",
+      "name": "sort-highest"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-914",
+      "id": "icon-sort-lowest",
+      "name": "sort-lowest"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1050",
+      "id": "icon-spam",
+      "name": "spam"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-848",
+      "id": "icon-stage-all",
+      "name": "stage-all"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1108",
+      "id": "icon-star-o",
+      "name": "star-o"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1105",
+      "id": "icon-star",
+      "name": "star"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1149",
+      "id": "icon-status_canceled_borderless",
+      "name": "status_canceled_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1075",
+      "id": "icon-status_canceled",
+      "name": "status_canceled",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1151",
+      "id": "icon-status_created_borderless",
+      "name": "status_created_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1080",
+      "id": "icon-status_created",
+      "name": "status_created",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1153",
+      "id": "icon-status_failed_borderless",
+      "name": "status_failed_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1084",
+      "id": "icon-status_failed",
+      "name": "status_failed",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1157",
+      "id": "icon-status_manual_borderless",
+      "name": "status_manual_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1088",
+      "id": "icon-status_manual",
+      "name": "status_manual",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1155",
+      "id": "icon-status_notfound_borderless",
+      "name": "status_notfound_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1092",
+      "id": "icon-status_notfound",
+      "name": "status_notfound",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1097",
+      "id": "icon-status_open",
+      "name": "status_open",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1159",
+      "id": "icon-status_pending_borderless",
+      "name": "status_pending_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1101",
+      "id": "icon-status_pending",
+      "name": "status_pending",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1169",
+      "id": "icon-status_preparing_borderless",
+      "name": "status_preparing_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1105",
+      "id": "icon-status_preparing",
+      "name": "status_preparing",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1161",
+      "id": "icon-status_running_borderless",
+      "name": "status_running_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1111",
+      "id": "icon-status_running",
+      "name": "status_running",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1115",
+      "id": "icon-status_scheduled",
+      "name": "status_scheduled",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1163",
+      "id": "icon-status_skipped_borderless",
+      "name": "status_skipped_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1121",
+      "id": "icon-status_skipped",
+      "name": "status_skipped",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1165",
+      "id": "icon-status_success_borderless",
+      "name": "status_success_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1125",
+      "id": "icon-status_success",
+      "name": "status_success",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1167",
+      "id": "icon-status_warning_borderless",
+      "name": "status_warning_borderless"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1129",
+      "id": "icon-status_warning",
+      "name": "status_warning",
+      "size": 14
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1219",
+      "id": "icon-status-active",
+      "name": "status-active",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1233",
+      "id": "icon-status-alert",
+      "name": "status-alert",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1237",
+      "id": "icon-status-cancelled",
+      "name": "status-cancelled",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1227",
+      "id": "icon-status-failed",
+      "name": "status-failed",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1125",
+      "id": "icon-status-health",
+      "name": "status-health"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1239",
+      "id": "icon-status-neutral",
+      "name": "status-neutral",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1221",
+      "id": "icon-status-paused",
+      "name": "status-paused",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1223",
+      "id": "icon-status-running",
+      "name": "status-running",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1231",
+      "id": "icon-status-scheduled",
+      "name": "status-scheduled",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1225",
+      "id": "icon-status-stopped",
+      "name": "status-stopped",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1229",
+      "id": "icon-status-success",
+      "name": "status-success",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1235",
+      "id": "icon-status-waiting",
+      "name": "status-waiting",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1110",
+      "id": "icon-status",
+      "name": "status"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-919",
+      "id": "icon-stop",
+      "name": "stop"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-933",
+      "id": "icon-strikethrough",
+      "name": "strikethrough"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=831-1040",
+      "id": "icon-subgroup",
+      "name": "subgroup"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1732-486",
+      "id": "icon-subscript",
+      "name": "subscript"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-936",
+      "id": "icon-substitute",
+      "name": "substitute"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=10205-407",
+      "id": "icon-suggestion-ai",
+      "name": "suggestion-ai"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11229-530",
+      "id": "icon-sun",
+      "name": "sun"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1732-487",
+      "id": "icon-superscript",
+      "name": "superscript"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=838-1259",
+      "id": "icon-symlink",
+      "name": "symlink"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-935",
+      "id": "icon-table",
+      "name": "table"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1011",
+      "id": "icon-tablet",
+      "name": "tablet"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1054",
+      "id": "icon-tachometer",
+      "name": "tachometer"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=580-968",
+      "id": "icon-tag",
+      "name": "tag"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=7748-396",
+      "id": "icon-tanuki-ai-off",
+      "name": "tanuki-ai-off"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=4401-423",
+      "id": "icon-tanuki-ai",
+      "name": "tanuki-ai"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1068",
+      "id": "icon-tanuki-verified",
+      "name": "tanuki-verified"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1057",
+      "id": "icon-tanuki",
+      "name": "tanuki"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-961",
+      "id": "icon-task-done",
+      "name": "task-done"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1070",
+      "id": "icon-template",
+      "name": "template"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1076",
+      "id": "icon-terminal",
+      "name": "terminal"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1268",
+      "id": "icon-terraform",
+      "name": "terraform"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1078",
+      "id": "icon-text-description",
+      "name": "text-description"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8159-442",
+      "id": "icon-thumb-down",
+      "name": "thumb-down"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-978",
+      "id": "icon-thumb-up",
+      "name": "thumb-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=3593-454",
+      "id": "icon-thumbtack-solid",
+      "name": "thumbtack-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1080",
+      "id": "icon-thumbtack",
+      "name": "thumbtack"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1116",
+      "id": "icon-time-out",
+      "name": "time-out"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=581-1024",
+      "id": "icon-timer",
+      "name": "timer"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=13668-465",
+      "id": "icon-timeline",
+      "name": "timeline"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1474-408",
+      "id": "icon-title",
+      "name": "title"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-954",
+      "id": "icon-todo-add",
+      "name": "todo-add"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-942",
+      "id": "icon-todo-done",
+      "name": "todo-done"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11581-429",
+      "id": "icon-token-permissions",
+      "name": "token-permissions"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1082",
+      "id": "icon-token",
+      "name": "token"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12489-908",
+      "id": "icon-traces",
+      "name": "traces"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-918",
+      "id": "icon-tracing",
+      "name": "tracing"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1209",
+      "id": "icon-trend-down",
+      "name": "trend-down",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1211",
+      "id": "icon-trend-static",
+      "name": "trend-static",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1207",
+      "id": "icon-trend-up",
+      "name": "trend-up",
+      "size": 12
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1084",
+      "id": "icon-trigger-source",
+      "name": "trigger-source"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-958",
+      "id": "icon-unapproval",
+      "name": "unapproval"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-962",
+      "id": "icon-unassignee",
+      "name": "unassignee"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-937",
+      "id": "icon-underline",
+      "name": "underline"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-874",
+      "id": "icon-unlink",
+      "name": "unlink"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=520-853",
+      "id": "icon-unstage-all",
+      "name": "unstage-all"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1697-408",
+      "id": "icon-upgrade",
+      "name": "upgrade"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=458-926",
+      "id": "icon-upload",
+      "name": "upload"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=11581-420",
+      "id": "icon-user-permissions",
+      "name": "user-permissions"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-950",
+      "id": "icon-user",
+      "name": "user"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=830-964",
+      "id": "icon-users",
+      "name": "users"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-921",
+      "id": "icon-value-stream-analytics",
+      "name": "value-stream-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1086",
+      "id": "icon-volume-up",
+      "name": "volume-up"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1122",
+      "id": "icon-warning-solid",
+      "name": "warning-solid"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1118",
+      "id": "icon-warning",
+      "name": "warning"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1088",
+      "id": "icon-weight",
+      "name": "weight"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=9688-401",
+      "id": "icon-work-item-child",
+      "name": "work-item-child"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1294",
+      "id": "icon-work-item-enhancement",
+      "name": "work-item-enhancement"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12484-886",
+      "id": "icon-work-item-epic-board",
+      "name": "work-item-epic-board"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-864",
+      "id": "icon-work-item-epic",
+      "name": "work-item-epic"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1288",
+      "id": "icon-work-item-feature-flag",
+      "name": "work-item-feature-flag"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1292",
+      "id": "icon-work-item-feature",
+      "name": "work-item-feature"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1290",
+      "id": "icon-work-item-incident",
+      "name": "work-item-incident"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12491-925",
+      "id": "icon-work-item-issue-analytics",
+      "name": "work-item-issue-analytics"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=12484-884",
+      "id": "icon-work-item-issue-board",
+      "name": "work-item-issue-board"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1286",
+      "id": "icon-work-item-issue",
+      "name": "work-item-issue"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2603-407",
+      "id": "icon-work-item-keyresult",
+      "name": "work-item-keyresult"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1296",
+      "id": "icon-work-item-maintenance",
+      "name": "work-item-maintenance"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=579-872",
+      "id": "icon-work-item-new",
+      "name": "work-item-new"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=2599-405",
+      "id": "icon-work-item-objective",
+      "name": "work-item-objective"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=9688-394",
+      "id": "icon-work-item-parent",
+      "name": "work-item-parent"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1298",
+      "id": "icon-work-item-requirement",
+      "name": "work-item-requirement"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=1922-418",
+      "id": "icon-work-item-task",
+      "name": "work-item-task"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=930-1300",
+      "id": "icon-work-item-test-case",
+      "name": "work-item-test-case"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=5042-444",
+      "id": "icon-work-item-ticket",
+      "name": "work-item-ticket"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=8890-393",
+      "id": "icon-work-items",
+      "name": "work-items"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=835-1090",
+      "id": "icon-work",
+      "name": "work"
+    },
+    {
+      "url": "https://www.figma.com/design/h4YjjttHL5YI0mXZfQ4uuU/KhulnaSoft-Product-Icons?node-id=5441-445",
+      "id": "icon-x",
+      "name": "x"
+    }
+  ]
+}

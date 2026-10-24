@@ -1,0 +1,323 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`column chart component mounted should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        Array [
+          "Joe",
+          1220,
+        ],
+        Array [
+          "Sarah",
+          932,
+        ],
+        Array [
+          "Tom",
+          901,
+        ],
+        Array [
+          "Mary",
+          934,
+        ],
+        Array [
+          "Mike",
+          1290,
+        ],
+        Array [
+          "Ben",
+          1330,
+        ],
+        Array [
+          "Jane",
+          1320,
+        ],
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Full",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "name": "x axis",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+    },
+    "axisTick": Object {
+      "show": false,
+    },
+    "name": "y axis",
+    "nameGap": 50,
+    "nameLocation": "center",
+    "type": "value",
+  },
+}
+`;
+
+exports[`column chart component with line data provided should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "data": Array [
+        Array [
+          "Joe",
+          1120,
+        ],
+        Array [
+          "Sarah",
+          732,
+        ],
+        Array [
+          "Tom",
+          501,
+        ],
+        Array [
+          "Mary",
+          634,
+        ],
+        Array [
+          "Mike",
+          290,
+        ],
+        Array [
+          "Ben",
+          130,
+        ],
+        Array [
+          "Jane",
+          120,
+        ],
+      ],
+      "itemStyle": Object {
+        "color": "#617ae2",
+      },
+      "lineStyle": Object {
+        "color": "#617ae2",
+      },
+      "name": "Median line",
+      "type": "line",
+      "yAxisIndex": 0,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "name": "x axis",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+    },
+    "axisTick": Object {
+      "show": false,
+    },
+    "name": "y axis",
+    "nameGap": 50,
+    "nameLocation": "center",
+    "type": "value",
+  },
+}
+`;
+
+exports[`column chart component with secondary axis data provided should correctly render the chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 64,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        Array [
+          "Joe",
+          1220,
+        ],
+        Array [
+          "Sarah",
+          932,
+        ],
+        Array [
+          "Tom",
+          901,
+        ],
+        Array [
+          "Mary",
+          934,
+        ],
+        Array [
+          "Mike",
+          1290,
+        ],
+        Array [
+          "Ben",
+          1330,
+        ],
+        Array [
+          "Jane",
+          1320,
+        ],
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Full",
+      "stack": "default-series-stack",
+      "type": "bar",
+      "yAxisIndex": 0,
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        13,
+        25,
+        38,
+        23,
+        27,
+        28,
+        29,
+        27,
+        1,
+        15,
+        65,
+        31,
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(177, 79, 24, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#b14f18",
+        "borderWidth": 1,
+        "color": "rgba(177, 79, 24, 0.2)",
+      },
+      "name": "Secondary 1",
+      "stack": "default-series-secondary-stack",
+      "type": "bar",
+      "yAxisIndex": 1,
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "margin": 20,
+      "verticalAlign": "bottom",
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "axisPointer": Object {
+      "type": "none",
+    },
+    "boundaryGap": true,
+    "name": "x axis",
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+  "yAxis": Array [
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "y axis",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "type": "value",
+    },
+    Object {
+      "axisLabel": Object {
+        "formatter": [Function],
+      },
+      "axisTick": Object {
+        "show": false,
+      },
+      "name": "Column test secondary",
+      "nameGap": 50,
+      "nameLocation": "center",
+      "show": true,
+      "type": "value",
+    },
+  ],
+}
+`;

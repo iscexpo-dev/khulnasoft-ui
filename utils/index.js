@@ -1,1 +1,0 @@
-export { readmeCleanup } from "./readme"

@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`Bar chart component when mounted and chart has created long Y axis labels are ellipsized 1`] = `"Scra..."`;
+
+exports[`Bar chart component when mounted and chart has created long Y axis labels are ellipsized 2`] = `"Dwight"`;
+
+exports[`Bar chart component when mounted should render chart with axis and series 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        Array [
+          100,
+          "Scranton Strangler",
+        ],
+        Array [
+          300,
+          "Dwight",
+        ],
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Office",
+      "stack": "default-series-stack",
+      "type": "bar",
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "name": "Pushes per day",
+    "nameLocation": "center",
+    "type": "value",
+  },
+  "yAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+      "interval": 0,
+    },
+    "axisTick": Object {
+      "show": true,
+    },
+    "boundaryGap": true,
+    "name": "User",
+    "nameGap": 50,
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+}
+`;
+
+exports[`Bar chart component when multiple series data provided should correctly render chart 1`] = `
+Object {
+  "grid": Object {
+    "bottom": 44,
+    "left": 64,
+    "right": 32,
+    "top": 16,
+  },
+  "legend": Object {
+    "show": false,
+  },
+  "series": Array [
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        Array [
+          100,
+          "Scranton Strangler",
+        ],
+        Array [
+          300,
+          "Dwight",
+        ],
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(97, 122, 226, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#617ae2",
+        "borderWidth": 1,
+        "color": "rgba(97, 122, 226, 0.2)",
+      },
+      "name": "Office",
+      "stack": "default-series-stack",
+      "type": "bar",
+    },
+    Object {
+      "barMaxWidth": "50%",
+      "data": Array [
+        Array [
+          200,
+          "Scranton Strangler",
+        ],
+        Array [
+          500,
+          "Dwight",
+        ],
+      ],
+      "emphasis": Object {
+        "itemStyle": Object {
+          "color": "rgba(177, 79, 24, 0.4)",
+        },
+      },
+      "itemStyle": Object {
+        "borderColor": "#b14f18",
+        "borderWidth": 1,
+        "color": "rgba(177, 79, 24, 0.2)",
+      },
+      "name": "DunderMifflin",
+      "stack": "default-series-stack",
+      "type": "bar",
+    },
+  ],
+  "xAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+    },
+    "axisLine": Object {
+      "show": false,
+    },
+    "name": "Pushes per day",
+    "nameLocation": "center",
+    "type": "value",
+  },
+  "yAxis": Object {
+    "axisLabel": Object {
+      "formatter": [Function],
+      "interval": 0,
+    },
+    "axisTick": Object {
+      "show": true,
+    },
+    "boundaryGap": true,
+    "name": "User",
+    "nameGap": 50,
+    "nameLocation": "center",
+    "splitLine": Object {
+      "show": false,
+    },
+    "type": "category",
+  },
+}
+`;

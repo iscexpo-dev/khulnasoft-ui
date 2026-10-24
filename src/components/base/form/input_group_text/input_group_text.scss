@@ -1,0 +1,8 @@
+.input-group-text {
+  background-color: var(--gl-control-background-color-concatenation);
+  border-color: var(--gl-control-border-color-default);
+  @apply gl-text-default;
+  @apply gl-text-base;
+  @apply gl-leading-normal;
+  @apply gl-rounded-control;
+}

@@ -1,0 +1,13 @@
+// stylelint-disable scss/at-import-partial-extension-blacklist
+@import "../vendor/bootstrap-vue/src/variables.scss";
+// Disabe Tooltip and Popover colored variants which we do not use / support.
+$bv-enable-tooltip-variants: false;
+$bv-enable-popover-variants: false;
+
+@import "../vendor/bootstrap-vue/src/utilities.scss";
+
+@import "../vendor/bootstrap-vue/src/components/dropdown/index.scss";
+@import "../vendor/bootstrap-vue/src/components/modal/index.scss";
+@import "../vendor/bootstrap-vue/src/components/popover/index.scss";
+@import "../vendor/bootstrap-vue/src/components/table/index.scss";
+@import "../vendor/bootstrap-vue/src/components/tooltip/index.scss";

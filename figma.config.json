@@ -1,0 +1,15 @@
+{
+  "codeConnect": {
+    "parser": "html",
+    "label": "Vue",
+    "language": "javascript",
+    "include": [
+      "src/components/**/*.vue",
+      "src/components/**/*.figma.ts",
+      "src/components/**/*.figma.batch.json"
+    ],
+    "exclude": ["src/vendor/**", "**/*.spec.js", "**/*.stories.js"],
+    "interactiveSetupFigmaFileUrl": "https://www.figma.com/design/qEddyqCrI7kPSBjGmwkZzQ/%F0%9F%93%99-Component-library",
+    "defaultBranch": "main"
+  }
+}

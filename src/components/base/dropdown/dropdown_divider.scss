@@ -1,0 +1,20 @@
+@mixin gl-tmp-dropdown-divider-style {
+  @apply gl-overflow-hidden;
+  @apply gl-h-0;
+  @apply gl-my-2;
+  @apply gl-mx-0;
+  @apply gl-p-0;
+  @apply gl-border-t-1 gl-border-t-dropdown-divider gl-border-t-solid;
+}
+
+/* Styling when the component is used on its own */
+.gl-dropdown-divider {
+  @include gl-tmp-dropdown-divider-style;
+}
+
+/* Styling to override the vue-bootstrap CSS included in KhulnaSoft CSS */
+.gl-dropdown {
+  .gl-dropdown-divider {
+    @include gl-tmp-dropdown-divider-style;
+  }
+}

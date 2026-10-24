@@ -1,0 +1,235 @@
+$badge-padding-horizontal: 0.75 * $grid-size;
+$badge-min-width: $gl-spacing-scale-3;
+
+@mixin gl-badge-variant(
+  $variant,
+  $color,
+  $icon-color,
+  $background-color,
+  $hover-color,
+  $hover-icon-color,
+  $hover-background-color,
+  $hover-border-color,
+  $focus-color,
+  $focus-icon-color,
+  $focus-background-color,
+  $active-color,
+  $active-icon-color,
+  $active-background-color
+) {
+  .gl-badge.badge-#{$variant} {
+    background-color: $background-color;
+    color: $color;
+
+    .gl-badge-icon {
+      color: $icon-color;
+      transition: inherit;
+    }
+  }
+
+  a.gl-badge.badge-#{$variant}:not(.disabled) {
+    &:hover {
+      color: $hover-color;
+      // Needed to override bootstrap's badge variant background
+      background-color: $hover-background-color;
+      box-shadow: inset 0 0 0 $gl-border-size-1 $hover-border-color;
+      @apply gl-no-underline;
+
+      .gl-badge-icon {
+        color: $hover-icon-color;
+      }
+    }
+
+    &:focus-visible {
+      color: $focus-color;
+      background-color: $focus-background-color;
+
+      .gl-badge-icon {
+        color: $focus-icon-color;
+      }
+    }
+
+    &.active,
+    &:active {
+      color: $active-color;
+      background-color: $active-background-color;
+
+      .gl-badge-icon {
+        color: $active-icon-color;
+      }
+    }
+
+    &:active,
+    &:focus-visible,
+    &:focus-visible:active {
+      @apply gl-focus;
+    }
+  }
+}
+
+/* Basic badge styles */
+
+.gl-badge {
+  @apply gl-text-sm;
+  @apply gl-font-normal;
+  @apply gl-leading-normal;
+
+  /*
+    CSS Grid is used here to deal with 3 cases:
+      * Badge shouldn't shrink inside flex containers by default
+      * Content inside the badge should shrink when gl-text-truncate class is used on the contents
+      * Badge should have a minimal width of 20 pixels (for example when `1` is passed inside the slot)
+   */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $gl-spacing-scale-2;
+  padding: $gl-spacing-scale-1 $badge-padding-horizontal;
+  transition:
+    color $gl-transition-duration-medium $gl-easing-out-cubic,
+    background-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    border-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    box-shadow $gl-transition-duration-medium $gl-easing-out-cubic;
+  @include gl-prefers-reduced-motion-transition;
+
+  &:has(.gl-truncate, .gl-text-truncate) {
+    max-width: 100%;
+  }
+
+  @media (forced-colors: active) {
+    border: 1px solid;
+  }
+
+  .gl-badge-icon {
+    @apply gl-h-5;
+    @apply gl-w-5;
+    @apply gl-shrink-0;
+    top: auto;
+  }
+
+  .gl-badge-content {
+    display: flex;
+    justify-content: center;
+    min-width: $badge-min-width;
+  }
+}
+
+a.gl-badge.disabled {
+  cursor: not-allowed;
+}
+
+/* Variants */
+
+@include gl-badge-variant(
+  $variant: neutral,
+  $color: var(--gl-badge-neutral-text-color-default),
+  $icon-color: var(--gl-badge-neutral-icon-color-default),
+  $background-color: var(--gl-badge-neutral-background-color-default),
+  $hover-color: var(--gl-badge-neutral-text-color-hover),
+  $hover-icon-color: var(--gl-badge-neutral-icon-color-hover),
+  $hover-background-color: var(--gl-badge-neutral-background-color-hover),
+  $hover-border-color: var(--gl-badge-neutral-border-color-hover),
+  $focus-color: var(--gl-badge-neutral-text-color-focus),
+  $focus-icon-color: var(--gl-badge-neutral-icon-color-focus),
+  $focus-background-color: var(--gl-badge-neutral-background-color-focus),
+  $active-color: var(--gl-badge-neutral-text-color-active),
+  $active-icon-color: var(--gl-badge-neutral-icon-color-active),
+  $active-background-color: var(--gl-badge-neutral-background-color-active)
+);
+
+@include gl-badge-variant(
+  $variant: info,
+  $color: var(--gl-badge-info-text-color-default),
+  $icon-color: var(--gl-badge-info-icon-color-default),
+  $background-color: var(--gl-badge-info-background-color-default),
+  $hover-color: var(--gl-badge-info-text-color-hover),
+  $hover-icon-color: var(--gl-badge-info-icon-color-hover),
+  $hover-background-color: var(--gl-badge-info-background-color-hover),
+  $hover-border-color: var(--gl-badge-info-border-color-hover),
+  $focus-color: var(--gl-badge-info-text-color-focus),
+  $focus-icon-color: var(--gl-badge-info-icon-color-focus),
+  $focus-background-color: var(--gl-badge-info-background-color-focus),
+  $active-color: var(--gl-badge-info-text-color-active),
+  $active-icon-color: var(--gl-badge-info-icon-color-active),
+  $active-background-color: var(--gl-badge-info-background-color-active)
+);
+
+@include gl-badge-variant(
+  $variant: success,
+  $color: var(--gl-badge-success-text-color-default),
+  $icon-color: var(--gl-badge-success-icon-color-default),
+  $background-color: var(--gl-badge-success-background-color-default),
+  $hover-color: var(--gl-badge-success-text-color-hover),
+  $hover-icon-color: var(--gl-badge-success-icon-color-hover),
+  $hover-background-color: var(--gl-badge-success-background-color-hover),
+  $hover-border-color: var(--gl-badge-success-border-color-hover),
+  $focus-color: var(--gl-badge-success-text-color-focus),
+  $focus-icon-color: var(--gl-badge-success-icon-color-focus),
+  $focus-background-color: var(--gl-badge-success-background-color-focus),
+  $active-color: var(--gl-badge-success-text-color-active),
+  $active-icon-color: var(--gl-badge-success-icon-color-active),
+  $active-background-color: var(--gl-badge-success-background-color-active)
+);
+
+@include gl-badge-variant(
+  $variant: warning,
+  $color: var(--gl-badge-warning-text-color-default),
+  $icon-color: var(--gl-badge-warning-icon-color-default),
+  $background-color: var(--gl-badge-warning-background-color-default),
+  $hover-color: var(--gl-badge-warning-text-color-hover),
+  $hover-icon-color: var(--gl-badge-warning-icon-color-hover),
+  $hover-background-color: var(--gl-badge-warning-background-color-hover),
+  $hover-border-color: var(--gl-badge-warning-border-color-hover),
+  $focus-color: var(--gl-badge-warning-text-color-focus),
+  $focus-icon-color: var(--gl-badge-warning-icon-color-focus),
+  $focus-background-color: var(--gl-badge-warning-background-color-focus),
+  $active-color: var(--gl-badge-warning-text-color-active),
+  $active-icon-color: var(--gl-badge-warning-icon-color-active),
+  $active-background-color: var(--gl-badge-warning-background-color-active)
+);
+
+@include gl-badge-variant(
+  $variant: danger,
+  $color: var(--gl-badge-danger-text-color-default),
+  $icon-color: var(--gl-badge-danger-icon-color-default),
+  $background-color: var(--gl-badge-danger-background-color-default),
+  $hover-color: var(--gl-badge-danger-text-color-hover),
+  $hover-icon-color: var(--gl-badge-danger-icon-color-hover),
+  $hover-background-color: var(--gl-badge-danger-background-color-hover),
+  $hover-border-color: var(--gl-badge-danger-border-color-hover),
+  $focus-color: var(--gl-badge-danger-text-color-focus),
+  $focus-icon-color: var(--gl-badge-danger-icon-color-focus),
+  $focus-background-color: var(--gl-badge-danger-background-color-focus),
+  $active-color: var(--gl-badge-danger-text-color-active),
+  $active-icon-color: var(--gl-badge-danger-icon-color-active),
+  $active-background-color: var(--gl-badge-danger-background-color-active)
+);
+
+@include gl-badge-variant(
+  $variant: tier,
+  $color: var(--gl-badge-tier-text-color-default),
+  $icon-color: var(--gl-badge-tier-icon-color-default),
+  $background-color: var(--gl-badge-tier-background-color-default),
+  $hover-color: var(--gl-badge-tier-text-color-hover),
+  $hover-icon-color: var(--gl-badge-tier-icon-color-hover),
+  $hover-background-color: var(--gl-badge-tier-background-color-hover),
+  $hover-border-color: var(--gl-badge-tier-border-color-hover),
+  $focus-color: var(--gl-badge-tier-text-color-focus),
+  $focus-icon-color: var(--gl-badge-tier-icon-color-focus),
+  $focus-background-color: var(--gl-badge-tier-background-color-focus),
+  $active-color: var(--gl-badge-tier-text-color-active),
+  $active-icon-color: var(--gl-badge-tier-icon-color-active),
+  $active-background-color: var(--gl-badge-tier-background-color-active)
+);
+
+// overriding Bootstap's `.btn .badge {top: -1px}` as the badge is not vertically centered otherwise
+.gl-button .gl-badge {
+  top: 0;
+  @apply gl-py-0;
+  @apply gl-px-2;
+}
+
+.gl-new-dropdown-contents .gl-badge,
+.gl-tab-nav-item .gl-badge {
+  @apply -gl-my-1;
+}

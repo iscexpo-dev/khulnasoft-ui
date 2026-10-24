@@ -1,0 +1,31 @@
+.gl-progress-bar {
+  background-color: var(--gl-progress-bar-track-color);
+  @apply gl-rounded-full;
+}
+
+.gl-progress {
+  @apply gl-flex-col;
+  @apply gl-justify-center;
+  @apply gl-w-full;
+  @apply gl-overflow-hidden;
+  @apply gl-text-center;
+  @apply gl-whitespace-nowrap;
+  transition: transform 0.6s $gl-easing-out-cubic;
+  transform-origin: left;
+}
+
+.gl-progress-bar-primary {
+  background-color: var(--gl-progress-bar-indicator-color-default);
+}
+
+.gl-progress-bar-success {
+  background-color: var(--gl-progress-bar-indicator-color-success);
+}
+
+.gl-progress-bar-warning {
+  background-color: var(--gl-progress-bar-indicator-color-warning);
+}
+
+.gl-progress-bar-danger {
+  background-color: var(--gl-progress-bar-indicator-color-danger);
+}

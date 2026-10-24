@@ -1,0 +1,1448 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+export const GL_BORDER_COLOR_TRANSPARENT = "rgba(0, 0, 0, 0)";
+export const GL_BORDER_COLOR_DEFAULT = "#4d4b4e";
+export const GL_BORDER_COLOR_SUBTLE = "#3a383d";
+export const GL_BORDER_COLOR_STRONG = "#646163";
+export const GL_BORDER_COLOR_SECTION = "#18171d";
+export const GL_BORDER_RADIUS_NONE = "0px";
+export const GL_BORDER_RADIUS_XS = "1px";
+export const GL_BORDER_RADIUS_SM = "0.125rem";
+export const GL_BORDER_RADIUS_MD = "0.25rem";
+export const GL_BORDER_RADIUS_LG = "0.5rem";
+export const GL_BORDER_RADIUS_XL = "0.75rem";
+export const GL_BORDER_RADIUS_2XL = "1rem";
+export const GL_BORDER_RADIUS_3XL = "1.5rem";
+export const GL_BORDER_RADIUS_FULL = "9999px";
+export const GL_BORDER_RADIUS_DEFAULT = "0.25rem";
+export const GL_COLOR_ALPHA_0 = "rgba(0, 0, 0, 0)";
+export const GL_COLOR_ALPHA_DARK_2 = "rgba(5, 5, 6, 0.02)";
+export const GL_COLOR_ALPHA_DARK_4 = "rgba(5, 5, 6, 0.04)";
+export const GL_COLOR_ALPHA_DARK_6 = "rgba(5, 5, 6, 0.06)";
+export const GL_COLOR_ALPHA_DARK_8 = "rgba(5, 5, 6, 0.08)";
+export const GL_COLOR_ALPHA_DARK_16 = "rgba(5, 5, 6, 0.16)";
+export const GL_COLOR_ALPHA_DARK_24 = "rgba(5, 5, 6, 0.24)";
+export const GL_COLOR_ALPHA_DARK_40 = "rgba(5, 5, 6, 0.4)";
+export const GL_COLOR_ALPHA_LIGHT_2 = "rgba(255, 255, 255, 0.02)";
+export const GL_COLOR_ALPHA_LIGHT_4 = "rgba(255, 255, 255, 0.04)";
+export const GL_COLOR_ALPHA_LIGHT_6 = "rgba(255, 255, 255, 0.06)";
+export const GL_COLOR_ALPHA_LIGHT_8 = "rgba(255, 255, 255, 0.08)";
+export const GL_COLOR_ALPHA_LIGHT_16 = "rgba(255, 255, 255, 0.16)";
+export const GL_COLOR_ALPHA_LIGHT_24 = "rgba(255, 255, 255, 0.24)";
+export const GL_COLOR_ALPHA_LIGHT_36 = "rgba(255, 255, 255, 0.36)";
+export const GL_COLOR_ALPHA_LIGHT_40 = "rgba(255, 255, 255, 0.4)";
+export const GL_COLOR_BLUE_50 = "#e8f2fd";
+export const GL_COLOR_BLUE_100 = "#c8e0f9";
+export const GL_COLOR_BLUE_200 = "#9dc8f2";
+export const GL_COLOR_BLUE_300 = "#64a7e9";
+export const GL_COLOR_BLUE_400 = "#3f8edd";
+export const GL_COLOR_BLUE_500 = "#1f73ca";
+export const GL_COLOR_BLUE_600 = "#2566b5";
+export const GL_COLOR_BLUE_700 = "#27599f";
+export const GL_COLOR_BLUE_800 = "#254581";
+export const GL_COLOR_BLUE_900 = "#1f3166";
+export const GL_COLOR_BLUE_950 = "#1d2153";
+export const GL_COLOR_BRAND_WHITE = "#fff";
+export const GL_COLOR_BRAND_CHARCOAL = "#171321";
+export const GL_COLOR_BRAND_ORANGE_01G = "#ffd1bf";
+export const GL_COLOR_BRAND_ORANGE_01P = "#fca326";
+export const GL_COLOR_BRAND_ORANGE_02P = "#fc6d26";
+export const GL_COLOR_BRAND_ORANGE_03P = "#e24329";
+export const GL_COLOR_BRAND_PURPLE_01G = "#ceb3ef";
+export const GL_COLOR_BRAND_PURPLE_01P = "#a989f5";
+export const GL_COLOR_BRAND_PURPLE_02P = "#7759c2";
+export const GL_COLOR_BRAND_GRAY_01 = "#d1d0d3";
+export const GL_COLOR_BRAND_GRAY_02 = "#a2a1a6";
+export const GL_COLOR_BRAND_GRAY_03 = "#74717a";
+export const GL_COLOR_BRAND_GRAY_04 = "#45424d";
+export const GL_COLOR_BRAND_GRAY_05 = "#2b2838";
+export const GL_COLOR_BRAND_PINK_01G = "#ffb9c9";
+export const GL_COLOR_DATA_GREEN_50 = "#ddfab7";
+export const GL_COLOR_DATA_GREEN_100 = "#c6ed94";
+export const GL_COLOR_DATA_GREEN_200 = "#b0d97b";
+export const GL_COLOR_DATA_GREEN_300 = "#94c25e";
+export const GL_COLOR_DATA_GREEN_400 = "#81ac41";
+export const GL_COLOR_DATA_GREEN_500 = "#619025";
+export const GL_COLOR_DATA_GREEN_600 = "#4e7f0e";
+export const GL_COLOR_DATA_GREEN_700 = "#366800";
+export const GL_COLOR_DATA_GREEN_800 = "#275600";
+export const GL_COLOR_DATA_GREEN_900 = "#1a4500";
+export const GL_COLOR_DATA_GREEN_950 = "#133a03";
+export const GL_COLOR_DATA_AQUA_50 = "#b5fefd";
+export const GL_COLOR_DATA_AQUA_100 = "#93f2ef";
+export const GL_COLOR_DATA_AQUA_200 = "#5edee3";
+export const GL_COLOR_DATA_AQUA_300 = "#32c5d2";
+export const GL_COLOR_DATA_AQUA_400 = "#00acc4";
+export const GL_COLOR_DATA_AQUA_500 = "#0090b1";
+export const GL_COLOR_DATA_AQUA_600 = "#007b9b";
+export const GL_COLOR_DATA_AQUA_700 = "#006381";
+export const GL_COLOR_DATA_AQUA_800 = "#00516c";
+export const GL_COLOR_DATA_AQUA_900 = "#004059";
+export const GL_COLOR_DATA_AQUA_950 = "#00344b";
+export const GL_COLOR_DATA_BLUE_50 = "#e9ebff";
+export const GL_COLOR_DATA_BLUE_100 = "#d2dcff";
+export const GL_COLOR_DATA_BLUE_200 = "#b7c6ff";
+export const GL_COLOR_DATA_BLUE_300 = "#97acff";
+export const GL_COLOR_DATA_BLUE_400 = "#7992f5";
+export const GL_COLOR_DATA_BLUE_500 = "#617ae2";
+export const GL_COLOR_DATA_BLUE_600 = "#4e65cd";
+export const GL_COLOR_DATA_BLUE_700 = "#3f51ae";
+export const GL_COLOR_DATA_BLUE_800 = "#374291";
+export const GL_COLOR_DATA_BLUE_900 = "#303470";
+export const GL_COLOR_DATA_BLUE_950 = "#2a2b59";
+export const GL_COLOR_DATA_MAGENTA_50 = "#ffe3eb";
+export const GL_COLOR_DATA_MAGENTA_100 = "#ffccdb";
+export const GL_COLOR_DATA_MAGENTA_200 = "#fcacc5";
+export const GL_COLOR_DATA_MAGENTA_300 = "#f88aaf";
+export const GL_COLOR_DATA_MAGENTA_400 = "#e86e9a";
+export const GL_COLOR_DATA_MAGENTA_500 = "#cf4d81";
+export const GL_COLOR_DATA_MAGENTA_600 = "#b93d71";
+export const GL_COLOR_DATA_MAGENTA_700 = "#9a2e5d";
+export const GL_COLOR_DATA_MAGENTA_800 = "#7c214f";
+export const GL_COLOR_DATA_MAGENTA_900 = "#661e3a";
+export const GL_COLOR_DATA_MAGENTA_950 = "#541d31";
+export const GL_COLOR_DATA_ORANGE_50 = "#fae8d1";
+export const GL_COLOR_DATA_ORANGE_100 = "#f5d6b3";
+export const GL_COLOR_DATA_ORANGE_200 = "#eebd8c";
+export const GL_COLOR_DATA_ORANGE_300 = "#e99b60";
+export const GL_COLOR_DATA_ORANGE_400 = "#e07e41";
+export const GL_COLOR_DATA_ORANGE_500 = "#c95d2e";
+export const GL_COLOR_DATA_ORANGE_600 = "#b14f18";
+export const GL_COLOR_DATA_ORANGE_700 = "#92430a";
+export const GL_COLOR_DATA_ORANGE_800 = "#6f3500";
+export const GL_COLOR_DATA_ORANGE_900 = "#5e2f05";
+export const GL_COLOR_DATA_ORANGE_950 = "#4b2707";
+export const GL_COLOR_GREEN_50 = "#e6f5ea";
+export const GL_COLOR_GREEN_100 = "#bee6d0";
+export const GL_COLOR_GREEN_200 = "#84d4b6";
+export const GL_COLOR_GREEN_300 = "#35b597";
+export const GL_COLOR_GREEN_400 = "#129c84";
+export const GL_COLOR_GREEN_500 = "#0d8070";
+export const GL_COLOR_GREEN_600 = "#0c7265";
+export const GL_COLOR_GREEN_700 = "#0b645a";
+export const GL_COLOR_GREEN_800 = "#075048";
+export const GL_COLOR_GREEN_900 = "#003c36";
+export const GL_COLOR_GREEN_950 = "#002c26";
+export const GL_COLOR_NEUTRAL_0 = "#fff";
+export const GL_COLOR_NEUTRAL_10 = "#f7f7f5";
+export const GL_COLOR_NEUTRAL_50 = "#ecebea";
+export const GL_COLOR_NEUTRAL_100 = "#dcdbd9";
+export const GL_COLOR_NEUTRAL_200 = "#c1bfbe";
+export const GL_COLOR_NEUTRAL_300 = "#a5a3a3";
+export const GL_COLOR_NEUTRAL_400 = "#8a8888";
+export const GL_COLOR_NEUTRAL_500 = "#747273";
+export const GL_COLOR_NEUTRAL_600 = "#646163";
+export const GL_COLOR_NEUTRAL_700 = "#4d4b4e";
+export const GL_COLOR_NEUTRAL_800 = "#3a383d";
+export const GL_COLOR_NEUTRAL_900 = "#28272d";
+export const GL_COLOR_NEUTRAL_950 = "#18171d";
+export const GL_COLOR_NEUTRAL_1000 = "#050408";
+export const GL_COLOR_ORANGE_50 = "#fdf0d5";
+export const GL_COLOR_ORANGE_100 = "#fada9c";
+export const GL_COLOR_ORANGE_200 = "#f7b951";
+export const GL_COLOR_ORANGE_300 = "#fb8017";
+export const GL_COLOR_ORANGE_400 = "#e95f21";
+export const GL_COLOR_ORANGE_500 = "#c74816";
+export const GL_COLOR_ORANGE_600 = "#b34013";
+export const GL_COLOR_ORANGE_700 = "#9e3811";
+export const GL_COLOR_ORANGE_800 = "#7d2d0e";
+export const GL_COLOR_ORANGE_900 = "#5d220d";
+export const GL_COLOR_ORANGE_950 = "#461807";
+export const GL_COLOR_PURPLE_50 = "#f4f0fc";
+export const GL_COLOR_PURPLE_100 = "#e1daf7";
+export const GL_COLOR_PURPLE_200 = "#c9beef";
+export const GL_COLOR_PURPLE_300 = "#a997e1";
+export const GL_COLOR_PURPLE_400 = "#927cd7";
+export const GL_COLOR_PURPLE_500 = "#7862c8";
+export const GL_COLOR_PURPLE_600 = "#6a54c0";
+export const GL_COLOR_PURPLE_700 = "#5b46b8";
+export const GL_COLOR_PURPLE_800 = "#483698";
+export const GL_COLOR_PURPLE_900 = "#362676";
+export const GL_COLOR_PURPLE_950 = "#291a5c";
+export const GL_COLOR_RED_50 = "#feeef0";
+export const GL_COLOR_RED_100 = "#ffd3d7";
+export const GL_COLOR_RED_200 = "#ffafb8";
+export const GL_COLOR_RED_300 = "#fc7988";
+export const GL_COLOR_RED_400 = "#f15168";
+export const GL_COLOR_RED_500 = "#de1d4b";
+export const GL_COLOR_RED_600 = "#c52042";
+export const GL_COLOR_RED_700 = "#ac203a";
+export const GL_COLOR_RED_800 = "#891c2f";
+export const GL_COLOR_RED_900 = "#641925";
+export const GL_COLOR_RED_950 = "#48151d";
+export const GL_FONT_FAMILY_REGULAR = [
+  "var(--default-regular-font, 'KhulnaSoft Sans')",
+  "'KhulnaSoft Sans'",
+  "-apple-system",
+  "BlinkMacSystemFont",
+  "'Segoe UI'",
+  "Roboto",
+  "'Noto Sans'",
+  "Ubuntu",
+  "Cantarell",
+  "'Helvetica Neue'",
+  "sans-serif",
+  "'Apple Color Emoji'",
+  "'Segoe UI Emoji'",
+  "'Segoe UI Symbol'",
+  "'Noto Color Emoji'",
+];
+export const GL_FONT_FAMILY_MONOSPACE = [
+  "var(--default-mono-font, 'KhulnaSoft Mono')",
+  "'KhulnaSoft Mono'",
+  "'JetBrains Mono'",
+  "Menlo",
+  "'DejaVu Sans Mono'",
+  "'Liberation Mono'",
+  "Consolas",
+  "'Ubuntu Mono'",
+  "'Courier New'",
+  "'andale mono'",
+  "'lucida console'",
+  "monospace",
+];
+export const GL_FONT_SIZE_100 = "0.75rem";
+export const GL_FONT_SIZE_200 = "0.8125rem";
+export const GL_FONT_SIZE_300 = "0.875rem";
+export const GL_FONT_SIZE_400 = "1rem";
+export const GL_FONT_SIZE_500 =
+  "clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem)";
+export const GL_FONT_SIZE_600 =
+  "clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem)";
+export const GL_FONT_SIZE_700 =
+  "clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem)";
+export const GL_FONT_SIZE_800 =
+  "clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem)";
+export const GL_FONT_SIZE_XS = "0.625rem";
+export const GL_FONT_SIZE_SM = "0.75rem";
+export const GL_FONT_SIZE_MD = "0.875rem";
+export const GL_FONT_SIZE_LG = "1rem";
+export const GL_FONT_SIZE_100_FIXED = "0.75rem";
+export const GL_FONT_SIZE_200_FIXED = "0.8125rem";
+export const GL_FONT_SIZE_300_FIXED = "0.875rem";
+export const GL_FONT_SIZE_400_FIXED = "1rem";
+export const GL_FONT_SIZE_500_FIXED = "1.125rem";
+export const GL_FONT_SIZE_600_FIXED = "1.3125rem";
+export const GL_FONT_SIZE_700_FIXED = "1.5rem";
+export const GL_FONT_SIZE_800_FIXED = "1.75rem";
+export const GL_FONT_SIZE_BASE = "0.875rem";
+export const GL_FONT_WEIGHT_100 = 100;
+export const GL_FONT_WEIGHT_300 = 300;
+export const GL_FONT_WEIGHT_NORMAL = 400;
+export const GL_FONT_WEIGHT_SEMIBOLD = 500;
+export const GL_FONT_WEIGHT_BOLD = 600;
+export const GL_FONT_WEIGHT_HEADING = 600;
+export const GL_HEADING_DEFAULT_MARGIN_TOP = "0px";
+export const GL_HEADING_DEFAULT_MARGIN_BOTTOM = "1rem";
+export const GL_LINE_HEIGHT_12 = "0.75rem";
+export const GL_LINE_HEIGHT_16 = "1rem";
+export const GL_LINE_HEIGHT_20 = "1.25rem";
+export const GL_LINE_HEIGHT_24 = "1.5rem";
+export const GL_LINE_HEIGHT_28 = "1.75rem";
+export const GL_LINE_HEIGHT_32 = "2rem";
+export const GL_LINE_HEIGHT_36 = "2.25rem";
+export const GL_LINE_HEIGHT_42 = "2.625rem";
+export const GL_LINE_HEIGHT_44 = "2.75rem";
+export const GL_LINE_HEIGHT_52 = "3.25rem";
+export const GL_LINE_HEIGHT_HEADING = 1.25;
+export const GL_OPACITY_0 = "0";
+export const GL_OPACITY_1 = ".1";
+export const GL_OPACITY_2 = ".2";
+export const GL_OPACITY_3 = ".3";
+export const GL_OPACITY_4 = ".4";
+export const GL_OPACITY_5 = ".5";
+export const GL_OPACITY_6 = ".6";
+export const GL_OPACITY_7 = ".7";
+export const GL_OPACITY_8 = ".8";
+export const GL_OPACITY_9 = ".9";
+export const GL_OPACITY_10 = "1";
+export const GL_SHADOW_SM = [
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: 0,
+    blur: "2px",
+    spread: 0,
+  },
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: "1px",
+    blur: "4px",
+    spread: 0,
+  },
+];
+export const GL_SHADOW_MD = [
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: 0,
+    blur: "1px",
+    spread: 0,
+  },
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: 0,
+    blur: "2px",
+    spread: 0,
+  },
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: "2px",
+    blur: "8px",
+    spread: 0,
+  },
+];
+export const GL_SHADOW_LG = [
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: 0,
+    blur: "2px",
+    spread: 0,
+  },
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: 0,
+    blur: "2px",
+    spread: 0,
+  },
+  {
+    color: "rgba(5, 5, 6, 0.4)",
+    offsetX: 0,
+    offsetY: "4px",
+    blur: "12px",
+    spread: 0,
+  },
+];
+export const GL_SHADOW_COLOR_DEFAULT = "rgba(5, 5, 6, 0.4)";
+export const GL_SPACING_SCALE_0 = "0px";
+export const GL_SPACING_SCALE_1 = "0.125rem";
+export const GL_SPACING_SCALE_2 = "0.25rem";
+export const GL_SPACING_SCALE_3 = "0.5rem";
+export const GL_SPACING_SCALE_4 = "0.75rem";
+export const GL_SPACING_SCALE_5 = "1rem";
+export const GL_SPACING_SCALE_6 = "1.5rem";
+export const GL_SPACING_SCALE_7 = "2rem";
+export const GL_SPACING_SCALE_8 = "2.5rem";
+export const GL_SPACING_SCALE_9 = "3rem";
+export const GL_SPACING_SCALE_10 = "3.5rem";
+export const GL_SPACING_SCALE_11 = "4rem";
+export const GL_SPACING_SCALE_12 = "5rem";
+export const GL_SPACING_SCALE_13 = "6rem";
+export const GL_SPACING_SCALE_15 = "7.5rem";
+export const GL_SPACING_SCALE_18 = "9rem";
+export const GL_SPACING_SCALE_20 = "10rem";
+export const GL_SPACING_SCALE_26 = "13rem";
+export const GL_SPACING_SCALE_28 = "14rem";
+export const GL_SPACING_SCALE_30 = "15rem";
+export const GL_SPACING_SCALE_31 = "15.5rem";
+export const GL_SPACING_SCALE_33 = "16.5rem";
+export const GL_SPACING_SCALE_34 = "17rem";
+export const GL_SPACING_SCALE_37 = "18.5rem";
+export const GL_SPACING_SCALE_48 = "24rem";
+export const GL_SPACING_SCALE_62 = "31rem";
+export const GL_SPACING_SCALE_75 = "37.5rem";
+export const GL_SPACING_SCALE_80 = "40rem";
+export const GL_SPACING_SCALE_88 = "44rem";
+export const GL_SPACING_SCALE_PX = "1px";
+export const GL_SPACING_SCALE_2_5 = "0.375rem";
+export const GL_SPACING_SCALE_11_5 = "4.5rem";
+export const GL_ZINDEX_0 = "0";
+export const GL_ZINDEX_1 = "1";
+export const GL_ZINDEX_2 = "2";
+export const GL_ZINDEX_3 = "3";
+export const GL_ZINDEX_4 = "4";
+export const GL_ZINDEX_200 = "200";
+export const GL_ZINDEX_9999 = "9999";
+export const GL_ALERT_BORDER_RADIUS = "0.5rem";
+export const GL_ALERT_NEUTRAL_TITLE_COLOR = "#fff";
+export const GL_ALERT_NEUTRAL_BACKGROUND_COLOR = "#28272d";
+export const GL_ALERT_NEUTRAL_BORDER_COLOR = "#646163";
+export const GL_ALERT_NEUTRAL_BORDER_TOP_COLOR = "#8a8888";
+export const GL_ALERT_NEUTRAL_BORDER_BOTTOM_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_ALERT_INFO_TITLE_COLOR = "#9dc8f2";
+export const GL_ALERT_INFO_BACKGROUND_COLOR = "#1d2153";
+export const GL_ALERT_INFO_BORDER_COLOR = "#2566b5";
+export const GL_ALERT_INFO_BORDER_TOP_COLOR = "#3f8edd";
+export const GL_ALERT_INFO_BORDER_BOTTOM_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_ALERT_SUCCESS_TITLE_COLOR = "#84d4b6";
+export const GL_ALERT_SUCCESS_BACKGROUND_COLOR = "#003c36";
+export const GL_ALERT_SUCCESS_BORDER_COLOR = "#0c7265";
+export const GL_ALERT_SUCCESS_BORDER_TOP_COLOR = "#129c84";
+export const GL_ALERT_SUCCESS_BORDER_BOTTOM_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_ALERT_WARNING_TITLE_COLOR = "#f7b951";
+export const GL_ALERT_WARNING_BACKGROUND_COLOR = "#5d220d";
+export const GL_ALERT_WARNING_BORDER_COLOR = "#b34013";
+export const GL_ALERT_WARNING_BORDER_TOP_COLOR = "#e95f21";
+export const GL_ALERT_WARNING_BORDER_BOTTOM_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_ALERT_DANGER_TITLE_COLOR = "#ffafb8";
+export const GL_ALERT_DANGER_BACKGROUND_COLOR = "#641925";
+export const GL_ALERT_DANGER_BORDER_COLOR = "#fc7988";
+export const GL_ALERT_DANGER_BORDER_TOP_COLOR = "#f15168";
+export const GL_ALERT_DANGER_BORDER_BOTTOM_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_APPLICATION_CHROME_BACKGROUND_COLOR = "#050408";
+export const GL_AVATAR_BORDER_COLOR_DEFAULT = "rgba(255, 255, 255, 0.08)";
+export const GL_AVATAR_BORDER_COLOR_HOVER = "rgba(255, 255, 255, 0.24)";
+export const GL_AVATAR_CIRCLE_BORDER_RADIUS_DEFAULT = "9999px";
+export const GL_AVATAR_SQUARE_BORDER_RADIUS_DEFAULT = "0.25rem";
+export const GL_AVATAR_SQUARE_BORDER_RADIUS_LG = "0.5rem";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_RED = "#ffafb8";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_PURPLE = "#c9beef";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_BLUE = "#9dc8f2";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_GREEN = "#84d4b6";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_ORANGE = "#f7b951";
+export const GL_AVATAR_FALLBACK_TEXT_COLOR_NEUTRAL = "#c1bfbe";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_RED =
+  "rgba(255, 175, 184, 0.23921568627450981)";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_PURPLE =
+  "rgba(201, 190, 239, 0.23921568627450981)";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_BLUE =
+  "rgba(157, 200, 242, 0.23921568627450981)";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_GREEN =
+  "rgba(132, 212, 182, 0.23921568627450981)";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_ORANGE =
+  "rgba(247, 185, 81, 0.23921568627450981)";
+export const GL_AVATAR_FALLBACK_BACKGROUND_COLOR_NEUTRAL =
+  "rgba(191, 191, 195, 0.23921568627450981)";
+export const GL_BADGE_MUTED_BACKGROUND_COLOR_DEFAULT = "#8a8888";
+export const GL_BADGE_MUTED_BACKGROUND_COLOR_HOVER = "#8a8888";
+export const GL_BADGE_MUTED_BACKGROUND_COLOR_FOCUS = "#8a8888";
+export const GL_BADGE_MUTED_BACKGROUND_COLOR_ACTIVE = "#a5a3a3";
+export const GL_BADGE_MUTED_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_MUTED_BORDER_COLOR_HOVER = "#a5a3a3";
+export const GL_BADGE_MUTED_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_MUTED_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_MUTED_TEXT_COLOR_DEFAULT = "#18171d";
+export const GL_BADGE_MUTED_TEXT_COLOR_HOVER = "#18171d";
+export const GL_BADGE_MUTED_TEXT_COLOR_FOCUS = "#18171d";
+export const GL_BADGE_MUTED_TEXT_COLOR_ACTIVE = "#18171d";
+export const GL_BADGE_MUTED_ICON_COLOR_DEFAULT = "#18171d";
+export const GL_BADGE_MUTED_ICON_COLOR_HOVER = "#18171d";
+export const GL_BADGE_MUTED_ICON_COLOR_FOCUS = "#18171d";
+export const GL_BADGE_MUTED_ICON_COLOR_ACTIVE = "#18171d";
+export const GL_BADGE_NEUTRAL_BACKGROUND_COLOR_DEFAULT = "#a5a3a3";
+export const GL_BADGE_NEUTRAL_BACKGROUND_COLOR_HOVER = "#a5a3a3";
+export const GL_BADGE_NEUTRAL_BACKGROUND_COLOR_FOCUS = "#a5a3a3";
+export const GL_BADGE_NEUTRAL_BACKGROUND_COLOR_ACTIVE = "#c1bfbe";
+export const GL_BADGE_NEUTRAL_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_NEUTRAL_BORDER_COLOR_HOVER = "#c1bfbe";
+export const GL_BADGE_NEUTRAL_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_NEUTRAL_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_NEUTRAL_TEXT_COLOR_DEFAULT = "#18171d";
+export const GL_BADGE_NEUTRAL_TEXT_COLOR_HOVER = "#18171d";
+export const GL_BADGE_NEUTRAL_TEXT_COLOR_FOCUS = "#18171d";
+export const GL_BADGE_NEUTRAL_TEXT_COLOR_ACTIVE = "#18171d";
+export const GL_BADGE_NEUTRAL_ICON_COLOR_DEFAULT = "#18171d";
+export const GL_BADGE_NEUTRAL_ICON_COLOR_HOVER = "#18171d";
+export const GL_BADGE_NEUTRAL_ICON_COLOR_FOCUS = "#18171d";
+export const GL_BADGE_NEUTRAL_ICON_COLOR_ACTIVE = "#18171d";
+export const GL_BADGE_INFO_BACKGROUND_COLOR_DEFAULT = "#64a7e9";
+export const GL_BADGE_INFO_BACKGROUND_COLOR_HOVER = "#64a7e9";
+export const GL_BADGE_INFO_BACKGROUND_COLOR_FOCUS = "#64a7e9";
+export const GL_BADGE_INFO_BACKGROUND_COLOR_ACTIVE = "#9dc8f2";
+export const GL_BADGE_INFO_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_INFO_BORDER_COLOR_HOVER = "#9dc8f2";
+export const GL_BADGE_INFO_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_INFO_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_INFO_TEXT_COLOR_DEFAULT = "#1d2153";
+export const GL_BADGE_INFO_TEXT_COLOR_HOVER = "#1d2153";
+export const GL_BADGE_INFO_TEXT_COLOR_FOCUS = "#1d2153";
+export const GL_BADGE_INFO_TEXT_COLOR_ACTIVE = "#1d2153";
+export const GL_BADGE_INFO_ICON_COLOR_DEFAULT = "#1d2153";
+export const GL_BADGE_INFO_ICON_COLOR_HOVER = "#1d2153";
+export const GL_BADGE_INFO_ICON_COLOR_FOCUS = "#1d2153";
+export const GL_BADGE_INFO_ICON_COLOR_ACTIVE = "#1d2153";
+export const GL_BADGE_SUCCESS_BACKGROUND_COLOR_DEFAULT = "#35b597";
+export const GL_BADGE_SUCCESS_BACKGROUND_COLOR_HOVER = "#35b597";
+export const GL_BADGE_SUCCESS_BACKGROUND_COLOR_FOCUS = "#35b597";
+export const GL_BADGE_SUCCESS_BACKGROUND_COLOR_ACTIVE = "#84d4b6";
+export const GL_BADGE_SUCCESS_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_SUCCESS_BORDER_COLOR_HOVER = "#84d4b6";
+export const GL_BADGE_SUCCESS_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_SUCCESS_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_SUCCESS_TEXT_COLOR_DEFAULT = "#002c26";
+export const GL_BADGE_SUCCESS_TEXT_COLOR_HOVER = "#002c26";
+export const GL_BADGE_SUCCESS_TEXT_COLOR_FOCUS = "#002c26";
+export const GL_BADGE_SUCCESS_TEXT_COLOR_ACTIVE = "#002c26";
+export const GL_BADGE_SUCCESS_ICON_COLOR_DEFAULT = "#002c26";
+export const GL_BADGE_SUCCESS_ICON_COLOR_HOVER = "#002c26";
+export const GL_BADGE_SUCCESS_ICON_COLOR_FOCUS = "#002c26";
+export const GL_BADGE_SUCCESS_ICON_COLOR_ACTIVE = "#002c26";
+export const GL_BADGE_WARNING_BACKGROUND_COLOR_DEFAULT = "#fb8017";
+export const GL_BADGE_WARNING_BACKGROUND_COLOR_HOVER = "#fb8017";
+export const GL_BADGE_WARNING_BACKGROUND_COLOR_FOCUS = "#fb8017";
+export const GL_BADGE_WARNING_BACKGROUND_COLOR_ACTIVE = "#f7b951";
+export const GL_BADGE_WARNING_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_WARNING_BORDER_COLOR_HOVER = "#f7b951";
+export const GL_BADGE_WARNING_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_WARNING_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_WARNING_TEXT_COLOR_DEFAULT = "#461807";
+export const GL_BADGE_WARNING_TEXT_COLOR_HOVER = "#461807";
+export const GL_BADGE_WARNING_TEXT_COLOR_FOCUS = "#461807";
+export const GL_BADGE_WARNING_TEXT_COLOR_ACTIVE = "#461807";
+export const GL_BADGE_WARNING_ICON_COLOR_DEFAULT = "#461807";
+export const GL_BADGE_WARNING_ICON_COLOR_HOVER = "#461807";
+export const GL_BADGE_WARNING_ICON_COLOR_FOCUS = "#461807";
+export const GL_BADGE_WARNING_ICON_COLOR_ACTIVE = "#461807";
+export const GL_BADGE_DANGER_BACKGROUND_COLOR_DEFAULT = "#fc7988";
+export const GL_BADGE_DANGER_BACKGROUND_COLOR_HOVER = "#fc7988";
+export const GL_BADGE_DANGER_BACKGROUND_COLOR_FOCUS = "#fc7988";
+export const GL_BADGE_DANGER_BACKGROUND_COLOR_ACTIVE = "#ffafb8";
+export const GL_BADGE_DANGER_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_DANGER_BORDER_COLOR_HOVER = "#ffafb8";
+export const GL_BADGE_DANGER_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_DANGER_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_DANGER_TEXT_COLOR_DEFAULT = "#48151d";
+export const GL_BADGE_DANGER_TEXT_COLOR_HOVER = "#48151d";
+export const GL_BADGE_DANGER_TEXT_COLOR_FOCUS = "#48151d";
+export const GL_BADGE_DANGER_TEXT_COLOR_ACTIVE = "#48151d";
+export const GL_BADGE_DANGER_ICON_COLOR_DEFAULT = "#48151d";
+export const GL_BADGE_DANGER_ICON_COLOR_HOVER = "#48151d";
+export const GL_BADGE_DANGER_ICON_COLOR_FOCUS = "#48151d";
+export const GL_BADGE_DANGER_ICON_COLOR_ACTIVE = "#48151d";
+export const GL_BADGE_TIER_BACKGROUND_COLOR_DEFAULT = "#a997e1";
+export const GL_BADGE_TIER_BACKGROUND_COLOR_HOVER = "#a997e1";
+export const GL_BADGE_TIER_BACKGROUND_COLOR_FOCUS = "#a997e1";
+export const GL_BADGE_TIER_BACKGROUND_COLOR_ACTIVE = "#c9beef";
+export const GL_BADGE_TIER_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_TIER_BORDER_COLOR_HOVER = "#c9beef";
+export const GL_BADGE_TIER_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_TIER_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BADGE_TIER_TEXT_COLOR_DEFAULT = "#291a5c";
+export const GL_BADGE_TIER_TEXT_COLOR_HOVER = "#291a5c";
+export const GL_BADGE_TIER_TEXT_COLOR_FOCUS = "#291a5c";
+export const GL_BADGE_TIER_TEXT_COLOR_ACTIVE = "#291a5c";
+export const GL_BADGE_TIER_ICON_COLOR_DEFAULT = "#291a5c";
+export const GL_BADGE_TIER_ICON_COLOR_HOVER = "#291a5c";
+export const GL_BADGE_TIER_ICON_COLOR_FOCUS = "#291a5c";
+export const GL_BADGE_TIER_ICON_COLOR_ACTIVE = "#291a5c";
+export const GL_BANNER_INTRO_BORDER_COLOR = "#27599f";
+export const GL_BANNER_PROMO_BACKGROUND_COLOR = "#291a5c";
+export const GL_BANNER_PROMO_BORDER_COLOR = "#5b46b8";
+export const GL_BREADCRUMB_SEPARATOR_COLOR = "#8a8888";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_BLUE = "#235180";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_DARK = "#747273";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_GREEN = "#1b653f";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_INDIGO = "#41419f";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_LIGHT = "#ecebea";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_LIGHTBLUE = "#4977a5";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_LIGHTGREEN = "#308258";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_LIGHTINDIGO = "#6666c4";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_LIGHTRED = "#ad4a3b";
+export const GL_BROADCAST_BANNER_BACKGROUND_COLOR_RED = "#8f2110";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_BLUE = "#0b2640";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_DARK = "#4d4b4e";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_GREEN = "#0e4328";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_INDIGO = "#222261";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_LIGHT = "#dcdbd9";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_LIGHTBLUE = "#235180";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_LIGHTGREEN = "#1b653f";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_LIGHTINDIGO = "#41419f";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_LIGHTRED = "#8f2110";
+export const GL_BROADCAST_BANNER_BORDER_COLOR_RED = "#580d02";
+export const GL_BROADCAST_BANNER_BORDER_RADIUS = "0.25rem";
+export const GL_BROADCAST_BANNER_ICON_COLOR_BLUE = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_DARK = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_GREEN = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_INDIGO = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_LIGHT = "#28272d";
+export const GL_BROADCAST_BANNER_ICON_COLOR_LIGHTBLUE = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_LIGHTGREEN = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_LIGHTINDIGO = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_LIGHTRED = "#fff";
+export const GL_BROADCAST_BANNER_ICON_COLOR_RED = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_BLUE = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_DARK = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_GREEN = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_INDIGO = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_LIGHT = "#28272d";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_LIGHTBLUE = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_LIGHTGREEN = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_LIGHTINDIGO = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_LIGHTRED = "#fff";
+export const GL_BROADCAST_BANNER_TEXT_COLOR_RED = "#fff";
+export const GL_BUTTON_BORDER_RADIUS = "0.5rem";
+export const GL_BUTTON_DEFAULT_PRIMARY_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_BUTTON_DEFAULT_PRIMARY_FOREGROUND_COLOR_HOVER = "#ecebea";
+export const GL_BUTTON_DEFAULT_PRIMARY_FOREGROUND_COLOR_FOCUS = "#ecebea";
+export const GL_BUTTON_DEFAULT_PRIMARY_FOREGROUND_COLOR_ACTIVE = "#ecebea";
+export const GL_BUTTON_DEFAULT_PRIMARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(137, 136, 141, 0.4)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BACKGROUND_COLOR_HOVER =
+  "rgba(137, 136, 141, 0.64)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(137, 136, 141, 0.64)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(137, 136, 141, 0.32)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_PRIMARY_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_TERTIARY_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_BUTTON_DEFAULT_TERTIARY_FOREGROUND_COLOR_HOVER = "#ecebea";
+export const GL_BUTTON_DEFAULT_TERTIARY_FOREGROUND_COLOR_FOCUS = "#ecebea";
+export const GL_BUTTON_DEFAULT_TERTIARY_FOREGROUND_COLOR_ACTIVE = "#ecebea";
+export const GL_BUTTON_DEFAULT_TERTIARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BACKGROUND_COLOR_HOVER =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DEFAULT_TERTIARY_BORDER_COLOR_ACTIVE =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_PRIMARY_FOREGROUND_COLOR_DEFAULT = "#18171d";
+export const GL_BUTTON_CONFIRM_PRIMARY_FOREGROUND_COLOR_HOVER = "#18171d";
+export const GL_BUTTON_CONFIRM_PRIMARY_FOREGROUND_COLOR_FOCUS = "#18171d";
+export const GL_BUTTON_CONFIRM_PRIMARY_FOREGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_BUTTON_CONFIRM_PRIMARY_BACKGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_BUTTON_CONFIRM_PRIMARY_BACKGROUND_COLOR_HOVER = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_PRIMARY_BACKGROUND_COLOR_FOCUS = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_PRIMARY_BACKGROUND_COLOR_ACTIVE = "#dcdbd9";
+export const GL_BUTTON_CONFIRM_PRIMARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_PRIMARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_PRIMARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_PRIMARY_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_SECONDARY_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_BUTTON_CONFIRM_SECONDARY_FOREGROUND_COLOR_HOVER = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_SECONDARY_FOREGROUND_COLOR_FOCUS = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_SECONDARY_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_BUTTON_CONFIRM_SECONDARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(255, 255, 255, 0.24)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BACKGROUND_COLOR_HOVER =
+  "rgba(255, 255, 255, 0.4)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(255, 255, 255, 0.4)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BORDER_COLOR_HOVER =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BORDER_COLOR_FOCUS =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_SECONDARY_BORDER_COLOR_ACTIVE =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_TERTIARY_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_BUTTON_CONFIRM_TERTIARY_FOREGROUND_COLOR_HOVER = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_TERTIARY_FOREGROUND_COLOR_FOCUS = "#f7f7f5";
+export const GL_BUTTON_CONFIRM_TERTIARY_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_BUTTON_CONFIRM_TERTIARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BACKGROUND_COLOR_HOVER =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_CONFIRM_TERTIARY_BORDER_COLOR_ACTIVE =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_PRIMARY_FOREGROUND_COLOR_DEFAULT = "#18171d";
+export const GL_BUTTON_DANGER_PRIMARY_FOREGROUND_COLOR_HOVER = "#18171d";
+export const GL_BUTTON_DANGER_PRIMARY_FOREGROUND_COLOR_FOCUS = "#18171d";
+export const GL_BUTTON_DANGER_PRIMARY_FOREGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_BUTTON_DANGER_PRIMARY_BACKGROUND_COLOR_DEFAULT = "#f15168";
+export const GL_BUTTON_DANGER_PRIMARY_BACKGROUND_COLOR_HOVER = "#fc7988";
+export const GL_BUTTON_DANGER_PRIMARY_BACKGROUND_COLOR_FOCUS = "#fc7988";
+export const GL_BUTTON_DANGER_PRIMARY_BACKGROUND_COLOR_ACTIVE = "#ffafb8";
+export const GL_BUTTON_DANGER_PRIMARY_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_PRIMARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_PRIMARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_PRIMARY_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_SECONDARY_FOREGROUND_COLOR_DEFAULT = "#ffd3d7";
+export const GL_BUTTON_DANGER_SECONDARY_FOREGROUND_COLOR_HOVER = "#feeef0";
+export const GL_BUTTON_DANGER_SECONDARY_FOREGROUND_COLOR_FOCUS = "#feeef0";
+export const GL_BUTTON_DANGER_SECONDARY_FOREGROUND_COLOR_ACTIVE = "#feeef0";
+export const GL_BUTTON_DANGER_SECONDARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(241, 81, 104, 0.4)";
+export const GL_BUTTON_DANGER_SECONDARY_BACKGROUND_COLOR_HOVER =
+  "rgba(241, 81, 104, 0.64)";
+export const GL_BUTTON_DANGER_SECONDARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(241, 81, 104, 0.64)";
+export const GL_BUTTON_DANGER_SECONDARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(241, 81, 104, 0.32)";
+export const GL_BUTTON_DANGER_SECONDARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_SECONDARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_SECONDARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_SECONDARY_BORDER_COLOR_ACTIVE =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_TERTIARY_FOREGROUND_COLOR_DEFAULT = "#ffafb8";
+export const GL_BUTTON_DANGER_TERTIARY_FOREGROUND_COLOR_HOVER = "#ffd3d7";
+export const GL_BUTTON_DANGER_TERTIARY_FOREGROUND_COLOR_FOCUS = "#ffd3d7";
+export const GL_BUTTON_DANGER_TERTIARY_FOREGROUND_COLOR_ACTIVE = "#ffd3d7";
+export const GL_BUTTON_DANGER_TERTIARY_BACKGROUND_COLOR_DEFAULT =
+  "rgba(241, 81, 104, 0)";
+export const GL_BUTTON_DANGER_TERTIARY_BACKGROUND_COLOR_HOVER =
+  "rgba(241, 81, 104, 0.4)";
+export const GL_BUTTON_DANGER_TERTIARY_BACKGROUND_COLOR_FOCUS =
+  "rgba(241, 81, 104, 0.4)";
+export const GL_BUTTON_DANGER_TERTIARY_BACKGROUND_COLOR_ACTIVE =
+  "rgba(241, 81, 104, 0.16)";
+export const GL_BUTTON_DANGER_TERTIARY_BORDER_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_TERTIARY_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_TERTIARY_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DANGER_TERTIARY_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DASHED_BORDER_COLOR_DEFAULT = "#8a8888";
+export const GL_BUTTON_DASHED_BORDER_COLOR_HOVER = "#8a8888";
+export const GL_BUTTON_DASHED_BORDER_COLOR_FOCUS = "#8a8888";
+export const GL_BUTTON_DASHED_BORDER_COLOR_ACTIVE = "#a5a3a3";
+export const GL_BUTTON_LINK_BORDER_RADIUS = "0.25rem";
+export const GL_BUTTON_LINK_TEXT_COLOR_DEFAULT = "#9dc8f2";
+export const GL_BUTTON_LINK_TEXT_COLOR_HOVER = "#9dc8f2";
+export const GL_BUTTON_LINK_TEXT_COLOR_FOCUS = "#9dc8f2";
+export const GL_BUTTON_LINK_TEXT_COLOR_ACTIVE = "#9dc8f2";
+export const GL_BUTTON_SELECTED_FOREGROUND_COLOR_DEFAULT = "#28272d";
+export const GL_BUTTON_SELECTED_FOREGROUND_COLOR_HOVER = "#18171d";
+export const GL_BUTTON_SELECTED_FOREGROUND_COLOR_FOCUS = "#18171d";
+export const GL_BUTTON_SELECTED_FOREGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_BUTTON_SELECTED_BACKGROUND_COLOR_DEFAULT = "#a5a3a3";
+export const GL_BUTTON_SELECTED_BACKGROUND_COLOR_HOVER = "#c1bfbe";
+export const GL_BUTTON_SELECTED_BACKGROUND_COLOR_FOCUS = "#c1bfbe";
+export const GL_BUTTON_SELECTED_BACKGROUND_COLOR_ACTIVE = "#8a8888";
+export const GL_BUTTON_SELECTED_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_SELECTED_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_SELECTED_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_SELECTED_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_DISABLED_FOREGROUND_COLOR = "#8a8888";
+export const GL_BUTTON_DISABLED_BACKGROUND_COLOR = "rgba(137, 136, 141, 0.16)";
+export const GL_BUTTON_DISABLED_BORDER_COLOR = "rgba(0, 0, 0, 0)";
+export const GL_BUTTON_COUNT_BACKGROUND_COLOR = "rgba(255, 255, 255, 0.16)";
+export const GL_CARD_BORDER_RADIUS = "0.75rem";
+export const GL_CHART_AXIS_POINTER_COLOR = "#c1bfbe";
+export const GL_CHART_AXIS_LINE_COLOR = "#4d4b4e";
+export const GL_CHART_AXIS_TEXT_COLOR = "#c1bfbe";
+export const GL_CHART_THRESHOLD_AREA_COLOR = "rgba(222, 29, 75, 0.1)";
+export const GL_CHART_THRESHOLD_LINE_COLOR = "#c52042";
+export const GL_CHART_ZOOM_FILLER_COLOR = "rgba(255, 255, 255, 0.16)";
+export const GL_CHART_ZOOM_HANDLE_COLOR = "#c1bfbe";
+export const GL_DATEPICKER_BACKGROUND_COLOR = "#28272d";
+export const GL_DATEPICKER_DATE_TEXT_COLOR_SELECTED = "#18171d";
+export const GL_DRAWER_BORDER_RADIUS = "1rem";
+export const GL_DROPDOWN_BACKGROUND_COLOR = "#28272d";
+export const GL_DROPDOWN_BORDER_COLOR = "#4d4b4e";
+export const GL_DROPDOWN_BORDER_RADIUS = "0.5rem";
+export const GL_DROPDOWN_DIVIDER_COLOR = "#3a383d";
+export const GL_DROPDOWN_OPTION_TEXT_COLOR_DEFAULT = "#ecebea";
+export const GL_DROPDOWN_OPTION_TEXT_COLOR_HOVER = "#ecebea";
+export const GL_DROPDOWN_OPTION_TEXT_COLOR_FOCUS = "#ecebea";
+export const GL_DROPDOWN_OPTION_TEXT_COLOR_ACTIVE = "#ecebea";
+export const GL_DROPDOWN_OPTION_TEXT_COLOR_DISABLED = "#747273";
+export const GL_DROPDOWN_OPTION_INDICATOR_COLOR_SELECTED_DEFAULT = "#ecebea";
+export const GL_DROPDOWN_OPTION_INDICATOR_COLOR_SELECTED_HOVER = "#f7f7f5";
+export const GL_DROPDOWN_OPTION_INDICATOR_COLOR_SELECTED_FOCUS = "#f7f7f5";
+export const GL_DROPDOWN_OPTION_INDICATOR_COLOR_SELECTED_ACTIVE = "#f7f7f5";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_UNSELECTED_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_UNSELECTED_HOVER =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_UNSELECTED_FOCUS =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_UNSELECTED_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_SELECTED_DEFAULT = "#3a383d";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_SELECTED_HOVER = "#4d4b4e";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_SELECTED_FOCUS = "#4d4b4e";
+export const GL_DROPDOWN_OPTION_BACKGROUND_COLOR_SELECTED_ACTIVE = "#28272d";
+export const GL_DROPDOWN_SEARCH_BACKGROUND_COLOR = "rgba(5, 5, 6, 0.16)";
+export const GL_FILTERED_SEARCH_TOKEN_TYPE_BACKGROUND_COLOR_DEFAULT = "#28272d";
+export const GL_FILTERED_SEARCH_TOKEN_TYPE_BACKGROUND_COLOR_HOVER = "#3a383d";
+export const GL_FILTERED_SEARCH_TOKEN_DATA_BACKGROUND_COLOR_DEFAULT = "#3a383d";
+export const GL_FILTERED_SEARCH_TOKEN_DATA_BACKGROUND_COLOR_HOVER = "#4d4b4e";
+export const GL_FILTERED_SEARCH_TOKEN_OPERATOR_BACKGROUND_COLOR_DEFAULT =
+  "#28272d";
+export const GL_FILTERED_SEARCH_TOKEN_OPERATOR_BACKGROUND_COLOR_HOVER =
+  "#3a383d";
+export const GL_ILLUSTRATION_STROKE_COLOR_DEFAULT = "#e3e3e8";
+export const GL_ILLUSTRATION_STROKE_WIDTH_DEFAULT = "1.5";
+export const GL_ILLUSTRATION_FILL_COLOR_DEFAULT = "#423f4f";
+export const GL_ILLUSTRATION_STATUS_FILL_COLOR_NEUTRAL = "#6f6796";
+export const GL_ILLUSTRATION_STATUS_FILL_COLOR_SUCCESS = "#3b8581";
+export const GL_ILLUSTRATION_STATUS_FILL_COLOR_WARNING = "#ab752f";
+export const GL_ILLUSTRATION_STATUS_FILL_COLOR_DANGER = "#aa563a";
+export const GL_ILLUSTRATION_ACCENT_STROKE_COLOR_ORANGE = "#e3865f";
+export const GL_ILLUSTRATION_ACCENT_STROKE_COLOR_TEAL = "#6baea3";
+export const GL_ILLUSTRATION_ACCENT_STROKE_COLOR_STRONG = "#aea5d6";
+export const GL_ILLUSTRATION_ACCENT_FILL_COLOR_SUBTLE = "#5c5371";
+export const GL_ILLUSTRATION_ACCENT_FILL_COLOR_STRONG = "#6f6796";
+export const GL_ILLUSTRATION_ACCENT_FILL_COLOR_ORANGE = "#aa563a";
+export const GL_ILLUSTRATION_ACCENT_FILL_COLOR_TEAL = "#3b8581";
+export const GL_ILLUSTRATION_BASE_FILL_COLOR = "#32303c";
+export const GL_ILLUSTRATION_ISOMETRIC_STROKE_COLOR_DEFAULT = "#e3e3e8";
+export const GL_ILLUSTRATION_ISOMETRIC_STROKE_WIDTH_DEFAULT = "1.5";
+export const GL_ILLUSTRATION_ISOMETRIC_GLYPH_TOP_FILL_COLOR = "#5a566c";
+export const GL_ILLUSTRATION_ISOMETRIC_GLYPH_FRONT_FILL_COLOR = "#423f4f";
+export const GL_ILLUSTRATION_ISOMETRIC_GLYPH_SIDE_FILL_COLOR = "#373441";
+export const GL_ILLUSTRATION_ISOMETRIC_GLYPH_SHADOW_FILL_COLOR = "#292730";
+export const GL_ILLUSTRATION_ISOMETRIC_OBJECT_TOP_FILL_COLOR = "#aa563a";
+export const GL_ILLUSTRATION_ISOMETRIC_OBJECT_FRONT_FILL_COLOR = "#a54623";
+export const GL_ILLUSTRATION_ISOMETRIC_OBJECT_SIDE_FILL_COLOR = "#8f4424";
+export const GL_ILLUSTRATION_ISOMETRIC_OBJECT_HIGHLIGHT_FILL_COLOR = "#423f4f";
+export const GL_ILLUSTRATION_ISOMETRIC_OBJECT_SHADOW_FILL_COLOR = "#3d2b2a";
+export const GL_ILLUSTRATION_ISOMETRIC_ACCENT_TOP_FILL_COLOR = "#6d6972";
+export const GL_ILLUSTRATION_ISOMETRIC_ACCENT_FRONT_FILL_COLOR = "#49474d";
+export const GL_ILLUSTRATION_ISOMETRIC_ACCENT_SIDE_FILL_COLOR = "#212023";
+export const GL_ILLUSTRATION_ISOMETRIC_BASE_TOP_FILL_COLOR = "#32303c";
+export const GL_ILLUSTRATION_ISOMETRIC_BASE_FRONT_FILL_COLOR = "#2b2932";
+export const GL_ILLUSTRATION_ISOMETRIC_BASE_SIDE_FILL_COLOR = "#23222b";
+export const GL_LABEL_LIGHT_TEXT_COLOR = "#18171d";
+export const GL_LABEL_LIGHT_BUTTON_BACKGROUND_COLOR_DEFAULT =
+  "rgba(0, 0, 0, 0)";
+export const GL_LABEL_LIGHT_BUTTON_BACKGROUND_COLOR_HOVER = "#18171d";
+export const GL_LABEL_LIGHT_BUTTON_ICON_COLOR_DEFAULT = "#18171d";
+export const GL_LABEL_DARK_TEXT_COLOR = "#fff";
+export const GL_LABEL_DARK_BUTTON_BACKGROUND_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_LABEL_DARK_BUTTON_BACKGROUND_COLOR_HOVER = "#fff";
+export const GL_LABEL_DARK_BUTTON_ICON_COLOR_DEFAULT = "#fff";
+export const GL_LABEL_SCOPED_TEXT_COLOR = "#fff";
+export const GL_LABEL_SCOPED_BUTTON_BACKGROUND_COLOR_HOVER = "#fff";
+export const GL_LABEL_SCOPED_BUTTON_ICON_COLOR_DEFAULT = "#fff";
+export const GL_LABEL_SCOPED_BUTTON_ICON_COLOR_HOVER = "#18171d";
+export const GL_LINK_MENTION_TEXT_COLOR_DEFAULT = "#c8e0f9";
+export const GL_LINK_MENTION_TEXT_COLOR_CURRENT = "#fada9c";
+export const GL_LINK_MENTION_BACKGROUND_COLOR_DEFAULT = "#254581";
+export const GL_LINK_MENTION_BACKGROUND_COLOR_CURRENT = "#7d2d0e";
+export const GL_MODAL_BORDER_RADIUS = "1rem";
+export const GL_NAV_ITEM_BORDER_RADIUS = "0.5rem";
+export const GL_NAV_ITEM_FONT_SIZE = "0.875rem";
+export const GL_NAV_ITEM_FONT_WEIGHT = 425;
+export const GL_NAV_ITEM_FOREGROUND_COLOR_DEFAULT = "#c1bfbe";
+export const GL_NAV_ITEM_FOREGROUND_COLOR_HOVER = "#fff";
+export const GL_NAV_ITEM_FOREGROUND_COLOR_FOCUS = "#fff";
+export const GL_NAV_ITEM_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_NAV_ITEM_BACKGROUND_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_NAV_ITEM_BACKGROUND_COLOR_HOVER = "#3a383d";
+export const GL_NAV_ITEM_BACKGROUND_COLOR_FOCUS = "#3a383d";
+export const GL_NAV_ITEM_BACKGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_NAV_ITEM_SELECTED_FONT_WEIGHT = 600;
+export const GL_NAV_ITEM_SELECTED_FOREGROUND_COLOR_DEFAULT = "#fff";
+export const GL_NAV_ITEM_SELECTED_FOREGROUND_COLOR_HOVER = "#fff";
+export const GL_NAV_ITEM_SELECTED_FOREGROUND_COLOR_FOCUS = "#fff";
+export const GL_NAV_ITEM_SELECTED_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_NAV_ITEM_SELECTED_BACKGROUND_COLOR_DEFAULT = "#3a383d";
+export const GL_NAV_ITEM_SELECTED_BACKGROUND_COLOR_HOVER = "#3a383d";
+export const GL_NAV_ITEM_SELECTED_BACKGROUND_COLOR_FOCUS = "#3a383d";
+export const GL_NAV_ITEM_SELECTED_BACKGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_NAV_ITEM_SELECTED_INDICATOR_COLOR = "#fb8017";
+export const GL_PROGRESS_BAR_INDICATOR_COLOR_DEFAULT = "#64a7e9";
+export const GL_PROGRESS_BAR_INDICATOR_COLOR_SUCCESS = "#35b597";
+export const GL_PROGRESS_BAR_INDICATOR_COLOR_WARNING = "#fb8017";
+export const GL_PROGRESS_BAR_INDICATOR_COLOR_DANGER = "#fc7988";
+export const GL_PROGRESS_BAR_TRACK_COLOR = "#4d4b4e";
+export const GL_SKELETON_LOADER_BACKGROUND_COLOR = "#3a383d";
+export const GL_SKELETON_LOADER_SHIMMER_COLOR = "#4d4b4e";
+export const GL_SPINNER_TRACK_COLOR_DEFAULT = "#646163";
+export const GL_SPINNER_TRACK_COLOR_LIGHT = "#3a383d";
+export const GL_SPINNER_SEGMENT_COLOR_DEFAULT = "#dcdbd9";
+export const GL_SPINNER_SEGMENT_COLOR_LIGHT = "#c1bfbe";
+export const GL_TABLE_ROW_BACKGROUND_COLOR_HOVER = "#1d2153";
+export const GL_TABLE_SORTING_ICON_COLOR = "#fff";
+export const GL_TAB_SELECTED_INDICATOR_COLOR_DEFAULT = "#fff";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_UNCHECKED_DEFAULT =
+  "rgba(5, 5, 6, 0.4)";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_UNCHECKED_HOVER =
+  "rgba(5, 5, 6, 0.4)";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_UNCHECKED_FOCUS =
+  "rgba(5, 5, 6, 0.4)";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_UNCHECKED_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_UNCHECKED_DISABLED =
+  "rgba(5, 5, 6, 0.4)";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_CHECKED_DEFAULT = "#ecebea";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_CHECKED_HOVER = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_CHECKED_FOCUS = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_CHECKED_ACTIVE = "#fff";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_CHECKED_DISABLED = "#747273";
+export const GL_TOGGLE_SWITCH_TRACK_COLOR_LOADING = "#28272d";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_UNCHECKED_DEFAULT = "#747273";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_UNCHECKED_HOVER = "#a5a3a3";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_UNCHECKED_FOCUS = "#a5a3a3";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_UNCHECKED_ACTIVE = "#a5a3a3";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_UNCHECKED_DISABLED = "#3a383d";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_CHECKED_DEFAULT = "#ecebea";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_CHECKED_HOVER = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_CHECKED_FOCUS = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_CHECKED_ACTIVE = "#fff";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_CHECKED_DISABLED = "#747273";
+export const GL_TOGGLE_SWITCH_TRACK_BORDER_COLOR_LOADING = "#28272d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_UNCHECKED_DEFAULT = "#ecebea";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_UNCHECKED_HOVER = "#ecebea";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_UNCHECKED_FOCUS = "#ecebea";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_UNCHECKED_ACTIVE = "#ecebea";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_UNCHECKED_DISABLED = "#747273";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_CHECKED_DEFAULT = "#18171d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_CHECKED_HOVER = "#18171d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_CHECKED_FOCUS = "#18171d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_CHECKED_ACTIVE = "#18171d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_CHECKED_DISABLED = "#18171d";
+export const GL_TOGGLE_SWITCH_BACKGROUND_COLOR_DISABLED = "#747273";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_UNCHECKED_DEFAULT = "#18171d";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_UNCHECKED_HOVER = "#18171d";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_UNCHECKED_FOCUS = "#18171d";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_UNCHECKED_ACTIVE = "#18171d";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_CHECKED_DEFAULT = "#ecebea";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_CHECKED_HOVER = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_CHECKED_FOCUS = "#f7f7f5";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_CHECKED_ACTIVE = "#fff";
+export const GL_TOGGLE_SWITCH_ICON_COLOR_DISABLED = "#28272d";
+export const GL_TOKEN_SELECTOR_TOKEN_CONTAINER_TOKEN_BACKGROUND_COLOR_FOCUS =
+  "#646163";
+export const GL_TOKEN_BORDER_RADIUS = "0.25rem";
+export const GL_TOKEN_FOREGROUND_COLOR = "#ecebea";
+export const GL_TOKEN_BACKGROUND_COLOR = "#3a383d";
+export const GL_TOOLTIP_TEXT_COLOR_SUBTLE = "#c1bfbe";
+export const DATA_VIZ_GREEN_50 = "#133a03";
+export const DATA_VIZ_GREEN_100 = "#1a4500";
+export const DATA_VIZ_GREEN_200 = "#275600";
+export const DATA_VIZ_GREEN_300 = "#366800";
+export const DATA_VIZ_GREEN_400 = "#4e7f0e";
+export const DATA_VIZ_GREEN_500 = "#619025";
+export const DATA_VIZ_GREEN_600 = "#81ac41";
+export const DATA_VIZ_GREEN_700 = "#94c25e";
+export const DATA_VIZ_GREEN_800 = "#b0d97b";
+export const DATA_VIZ_GREEN_900 = "#c6ed94";
+export const DATA_VIZ_GREEN_950 = "#ddfab7";
+export const DATA_VIZ_AQUA_50 = "#00344b";
+export const DATA_VIZ_AQUA_100 = "#004059";
+export const DATA_VIZ_AQUA_200 = "#00516c";
+export const DATA_VIZ_AQUA_300 = "#006381";
+export const DATA_VIZ_AQUA_400 = "#007b9b";
+export const DATA_VIZ_AQUA_500 = "#0090b1";
+export const DATA_VIZ_AQUA_600 = "#00acc4";
+export const DATA_VIZ_AQUA_700 = "#32c5d2";
+export const DATA_VIZ_AQUA_800 = "#5edee3";
+export const DATA_VIZ_AQUA_900 = "#93f2ef";
+export const DATA_VIZ_AQUA_950 = "#b5fefd";
+export const DATA_VIZ_BLUE_50 = "#2a2b59";
+export const DATA_VIZ_BLUE_100 = "#303470";
+export const DATA_VIZ_BLUE_200 = "#374291";
+export const DATA_VIZ_BLUE_300 = "#3f51ae";
+export const DATA_VIZ_BLUE_400 = "#4e65cd";
+export const DATA_VIZ_BLUE_500 = "#617ae2";
+export const DATA_VIZ_BLUE_600 = "#7992f5";
+export const DATA_VIZ_BLUE_700 = "#97acff";
+export const DATA_VIZ_BLUE_800 = "#b7c6ff";
+export const DATA_VIZ_BLUE_900 = "#d2dcff";
+export const DATA_VIZ_BLUE_950 = "#e9ebff";
+export const DATA_VIZ_MAGENTA_50 = "#541d31";
+export const DATA_VIZ_MAGENTA_100 = "#661e3a";
+export const DATA_VIZ_MAGENTA_200 = "#7c214f";
+export const DATA_VIZ_MAGENTA_300 = "#9a2e5d";
+export const DATA_VIZ_MAGENTA_400 = "#b93d71";
+export const DATA_VIZ_MAGENTA_500 = "#cf4d81";
+export const DATA_VIZ_MAGENTA_600 = "#e86e9a";
+export const DATA_VIZ_MAGENTA_700 = "#f88aaf";
+export const DATA_VIZ_MAGENTA_800 = "#fcacc5";
+export const DATA_VIZ_MAGENTA_900 = "#ffccdb";
+export const DATA_VIZ_MAGENTA_950 = "#ffe3eb";
+export const DATA_VIZ_ORANGE_50 = "#4b2707";
+export const DATA_VIZ_ORANGE_100 = "#5e2f05";
+export const DATA_VIZ_ORANGE_200 = "#6f3500";
+export const DATA_VIZ_ORANGE_300 = "#92430a";
+export const DATA_VIZ_ORANGE_400 = "#b14f18";
+export const DATA_VIZ_ORANGE_500 = "#c95d2e";
+export const DATA_VIZ_ORANGE_600 = "#e07e41";
+export const DATA_VIZ_ORANGE_700 = "#e99b60";
+export const DATA_VIZ_ORANGE_800 = "#eebd8c";
+export const DATA_VIZ_ORANGE_900 = "#f5d6b3";
+export const DATA_VIZ_ORANGE_950 = "#fae8d1";
+export const BLACK = "#fff";
+export const WHITE = "#28272d";
+export const BLUE_50 = "#1f3166";
+export const BLUE_100 = "#254581";
+export const BLUE_200 = "#27599f";
+export const BLUE_300 = "#2566b5";
+export const BLUE_400 = "#1f73ca";
+export const BLUE_500 = "#3f8edd";
+export const BLUE_600 = "#64a7e9";
+export const BLUE_700 = "#9dc8f2";
+export const BLUE_800 = "#c8e0f9";
+export const BLUE_900 = "#e8f2fd";
+export const BLUE_950 = "#f2f9ff";
+export const GRAY_10 = "#18171d";
+export const GRAY_50 = "#28272d";
+export const GRAY_100 = "#3a383d";
+export const GRAY_200 = "#4d4b4e";
+export const GRAY_300 = "#646163";
+export const GRAY_400 = "#747273";
+export const GRAY_500 = "#8a8888";
+export const GRAY_600 = "#a5a3a3";
+export const GRAY_700 = "#c1bfbe";
+export const GRAY_800 = "#dcdbd9";
+export const GRAY_900 = "#ecebea";
+export const GRAY_950 = "#f7f7f5";
+export const GREEN_50 = "#003c36";
+export const GREEN_100 = "#075048";
+export const GREEN_200 = "#0b645a";
+export const GREEN_300 = "#0c7265";
+export const GREEN_400 = "#0d8070";
+export const GREEN_500 = "#129c84";
+export const GREEN_600 = "#35b597";
+export const GREEN_700 = "#84d4b6";
+export const GREEN_800 = "#bee6d0";
+export const GREEN_900 = "#e6f5ea";
+export const GREEN_950 = "#f1fdf6";
+export const ORANGE_50 = "#5d220d";
+export const ORANGE_100 = "#7d2d0e";
+export const ORANGE_200 = "#9e3811";
+export const ORANGE_300 = "#b34013";
+export const ORANGE_400 = "#c74816";
+export const ORANGE_500 = "#e95f21";
+export const ORANGE_600 = "#fb8017";
+export const ORANGE_700 = "#f7b951";
+export const ORANGE_800 = "#fada9c";
+export const ORANGE_900 = "#fdf0d5";
+export const ORANGE_950 = "#fff4e1";
+export const PURPLE_50 = "#291a5c";
+export const PURPLE_100 = "#362676";
+export const PURPLE_200 = "#483698";
+export const PURPLE_300 = "#5b46b8";
+export const PURPLE_400 = "#6a54c0";
+export const PURPLE_500 = "#7862c8";
+export const PURPLE_600 = "#927cd7";
+export const PURPLE_700 = "#a997e1";
+export const PURPLE_800 = "#c9beef";
+export const PURPLE_900 = "#e1daf7";
+export const PURPLE_950 = "#f4f0fc";
+export const RED_50 = "#641925";
+export const RED_100 = "#891c2f";
+export const RED_200 = "#ac203a";
+export const RED_300 = "#c52042";
+export const RED_400 = "#de1d4b";
+export const RED_500 = "#f15168";
+export const RED_600 = "#fc7988";
+export const RED_700 = "#ffafb8";
+export const RED_800 = "#ffd3d7";
+export const RED_900 = "#feeef0";
+export const RED_950 = "#fff4f3";
+export const BRAND_CHARCOAL = "#171321";
+export const BRAND_ORANGE_01 = "#fca326";
+export const BRAND_ORANGE_02 = "#fc6d26";
+export const BRAND_ORANGE_03 = "#e24329";
+export const BRAND_PURPLE_01 = "#a989f5";
+export const BRAND_PURPLE_02 = "#7759c2";
+export const BRAND_GRAY_01 = "#d1d0d3";
+export const BRAND_GRAY_02 = "#a2a1a6";
+export const BRAND_GRAY_03 = "#74717a";
+export const BRAND_GRAY_04 = "#45424d";
+export const BRAND_GRAY_05 = "#2b2838";
+export const T_GRAY_A_16 = "rgba(5, 5, 6, 0.16)";
+export const T_GRAY_A_24 = "rgba(5, 5, 6, 0.24)";
+export const T_GRAY_A_02 = "rgba(5, 5, 6, 0.02)";
+export const T_GRAY_A_04 = "rgba(5, 5, 6, 0.04)";
+export const T_GRAY_A_06 = "rgba(5, 5, 6, 0.06)";
+export const T_GRAY_A_08 = "rgba(5, 5, 6, 0.08)";
+export const T_WHITE_A_16 = "rgba(255, 255, 255, 0.16)";
+export const T_WHITE_A_24 = "rgba(255, 255, 255, 0.24)";
+export const T_WHITE_A_36 = "rgba(255, 255, 255, 0.36)";
+export const T_WHITE_A_02 = "rgba(255, 255, 255, 0.02)";
+export const T_WHITE_A_04 = "rgba(255, 255, 255, 0.04)";
+export const T_WHITE_A_06 = "rgba(255, 255, 255, 0.06)";
+export const T_WHITE_A_08 = "rgba(255, 255, 255, 0.08)";
+export const GL_ACTION_BORDER_RADIUS = "0.5rem";
+export const GL_ACTION_DISABLED_FOREGROUND_COLOR = "#747273";
+export const GL_ACTION_DISABLED_BACKGROUND_COLOR = "#28272d";
+export const GL_ACTION_DISABLED_BORDER_COLOR = "#3a383d";
+export const GL_ACTION_SELECTED_FOREGROUND_COLOR_DEFAULT = "#18171d";
+export const GL_ACTION_SELECTED_FOREGROUND_COLOR_HOVER = "#18171d";
+export const GL_ACTION_SELECTED_FOREGROUND_COLOR_FOCUS = "#18171d";
+export const GL_ACTION_SELECTED_FOREGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_ACTION_SELECTED_BACKGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_ACTION_SELECTED_BACKGROUND_COLOR_HOVER = "#f7f7f5";
+export const GL_ACTION_SELECTED_BACKGROUND_COLOR_FOCUS = "#f7f7f5";
+export const GL_ACTION_SELECTED_BACKGROUND_COLOR_ACTIVE = "#fff";
+export const GL_ACTION_SELECTED_BACKGROUND_COLOR_DISABLED = "#747273";
+export const GL_ACTION_SELECTED_BORDER_COLOR_DEFAULT = "#ecebea";
+export const GL_ACTION_SELECTED_BORDER_COLOR_HOVER = "#f7f7f5";
+export const GL_ACTION_SELECTED_BORDER_COLOR_FOCUS = "#f7f7f5";
+export const GL_ACTION_SELECTED_BORDER_COLOR_ACTIVE = "#fff";
+export const GL_ACTION_NEUTRAL_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_ACTION_NEUTRAL_FOREGROUND_COLOR_HOVER = "#ecebea";
+export const GL_ACTION_NEUTRAL_FOREGROUND_COLOR_FOCUS = "#ecebea";
+export const GL_ACTION_NEUTRAL_FOREGROUND_COLOR_ACTIVE = "#ecebea";
+export const GL_ACTION_NEUTRAL_BACKGROUND_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_NEUTRAL_BACKGROUND_COLOR_HOVER =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_ACTION_NEUTRAL_BACKGROUND_COLOR_FOCUS =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_ACTION_NEUTRAL_BACKGROUND_COLOR_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_ACTION_NEUTRAL_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_NEUTRAL_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_NEUTRAL_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_NEUTRAL_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_CONFIRM_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_ACTION_CONFIRM_FOREGROUND_COLOR_HOVER = "#f7f7f5";
+export const GL_ACTION_CONFIRM_FOREGROUND_COLOR_FOCUS = "#f7f7f5";
+export const GL_ACTION_CONFIRM_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_ACTION_CONFIRM_BACKGROUND_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_CONFIRM_BACKGROUND_COLOR_HOVER =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_ACTION_CONFIRM_BACKGROUND_COLOR_FOCUS =
+  "rgba(255, 255, 255, 0.16)";
+export const GL_ACTION_CONFIRM_BACKGROUND_COLOR_ACTIVE =
+  "rgba(255, 255, 255, 0.08)";
+export const GL_ACTION_CONFIRM_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_CONFIRM_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_CONFIRM_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_CONFIRM_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_DANGER_FOREGROUND_COLOR_DEFAULT = "#ffafb8";
+export const GL_ACTION_DANGER_FOREGROUND_COLOR_HOVER = "#ffd3d7";
+export const GL_ACTION_DANGER_FOREGROUND_COLOR_FOCUS = "#ffd3d7";
+export const GL_ACTION_DANGER_FOREGROUND_COLOR_ACTIVE = "#ffd3d7";
+export const GL_ACTION_DANGER_BACKGROUND_COLOR_DEFAULT =
+  "rgba(241, 81, 104, 0)";
+export const GL_ACTION_DANGER_BACKGROUND_COLOR_HOVER =
+  "rgba(241, 81, 104, 0.4)";
+export const GL_ACTION_DANGER_BACKGROUND_COLOR_FOCUS =
+  "rgba(241, 81, 104, 0.4)";
+export const GL_ACTION_DANGER_BACKGROUND_COLOR_ACTIVE =
+  "rgba(241, 81, 104, 0.16)";
+export const GL_ACTION_DANGER_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_DANGER_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_DANGER_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_DANGER_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_CONFIRM_BACKGROUND_COLOR_DEFAULT = "#64a7e9";
+export const GL_ACTION_STRONG_CONFIRM_BACKGROUND_COLOR_HOVER = "#9dc8f2";
+export const GL_ACTION_STRONG_CONFIRM_BACKGROUND_COLOR_FOCUS = "#9dc8f2";
+export const GL_ACTION_STRONG_CONFIRM_BACKGROUND_COLOR_ACTIVE = "#3f8edd";
+export const GL_ACTION_STRONG_CONFIRM_FOREGROUND_COLOR_DEFAULT = "#18171d";
+export const GL_ACTION_STRONG_CONFIRM_FOREGROUND_COLOR_HOVER = "#18171d";
+export const GL_ACTION_STRONG_CONFIRM_FOREGROUND_COLOR_FOCUS = "#18171d";
+export const GL_ACTION_STRONG_CONFIRM_FOREGROUND_COLOR_ACTIVE = "#18171d";
+export const GL_ACTION_STRONG_CONFIRM_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_CONFIRM_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_CONFIRM_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_CONFIRM_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_NEUTRAL_BACKGROUND_COLOR_DEFAULT = "#4d4b4e";
+export const GL_ACTION_STRONG_NEUTRAL_BACKGROUND_COLOR_HOVER = "#646163";
+export const GL_ACTION_STRONG_NEUTRAL_BACKGROUND_COLOR_FOCUS = "#646163";
+export const GL_ACTION_STRONG_NEUTRAL_BACKGROUND_COLOR_ACTIVE = "#747273";
+export const GL_ACTION_STRONG_NEUTRAL_FOREGROUND_COLOR_DEFAULT = "#ecebea";
+export const GL_ACTION_STRONG_NEUTRAL_FOREGROUND_COLOR_HOVER = "#fff";
+export const GL_ACTION_STRONG_NEUTRAL_FOREGROUND_COLOR_FOCUS = "#fff";
+export const GL_ACTION_STRONG_NEUTRAL_FOREGROUND_COLOR_ACTIVE = "#fff";
+export const GL_ACTION_STRONG_NEUTRAL_BORDER_COLOR_DEFAULT = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_NEUTRAL_BORDER_COLOR_HOVER = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_NEUTRAL_BORDER_COLOR_FOCUS = "rgba(0, 0, 0, 0)";
+export const GL_ACTION_STRONG_NEUTRAL_BORDER_COLOR_ACTIVE = "rgba(0, 0, 0, 0)";
+export const GL_BACKGROUND_COLOR_DEFAULT = "#18171d";
+export const GL_BACKGROUND_COLOR_SUBTLE = "#28272d";
+export const GL_BACKGROUND_COLOR_STRONG = "#3a383d";
+export const GL_BACKGROUND_COLOR_DISABLED = "#28272d";
+export const GL_BACKGROUND_COLOR_OVERLAP = "#28272d";
+export const GL_BACKGROUND_COLOR_SECTION = "#3a383d";
+export const GL_BACKGROUND_COLOR_OVERLAY = "rgba(0, 0, 0, 0.64)";
+export const GL_CONTROL_BACKGROUND_COLOR_DEFAULT = "rgba(5, 5, 6, 0.4)";
+export const GL_CONTROL_BACKGROUND_COLOR_DISABLED = "rgba(255, 255, 255, 0.04)";
+export const GL_CONTROL_BACKGROUND_COLOR_CONCATENATION =
+  "rgba(255, 255, 255, 0.04)";
+export const GL_CONTROL_BACKGROUND_COLOR_READONLY = "rgba(255, 255, 255, 0.08)";
+export const GL_CONTROL_BACKGROUND_COLOR_SELECTED_DEFAULT = "#ecebea";
+export const GL_CONTROL_BACKGROUND_COLOR_SELECTED_HOVER = "#f7f7f5";
+export const GL_CONTROL_BACKGROUND_COLOR_SELECTED_FOCUS = "#f7f7f5";
+export const GL_CONTROL_BACKGROUND_COLOR_SELECTED_DISABLED = "#747273";
+export const GL_CONTROL_BORDER_COLOR_DEFAULT = "#747273";
+export const GL_CONTROL_BORDER_COLOR_HOVER = "#a5a3a3";
+export const GL_CONTROL_BORDER_COLOR_FOCUS = "#ecebea";
+export const GL_CONTROL_BORDER_COLOR_DISABLED = "#3a383d";
+export const GL_CONTROL_BORDER_COLOR_ERROR = "#fc7988";
+export const GL_CONTROL_BORDER_COLOR_SELECTED_DEFAULT = "#ecebea";
+export const GL_CONTROL_BORDER_COLOR_SELECTED_HOVER = "#f7f7f5";
+export const GL_CONTROL_BORDER_COLOR_SELECTED_FOCUS = "#f7f7f5";
+export const GL_CONTROL_BORDER_COLOR_SELECTED_DISABLED = "#747273";
+export const GL_CONTROL_BORDER_RADIUS = "0.5rem";
+export const GL_CONTROL_TEXT_COLOR_ERROR = "#fc7988";
+export const GL_CONTROL_TEXT_COLOR_VALID = "#35b597";
+export const GL_CONTROL_PLACEHOLDER_COLOR = "#8a8888";
+export const GL_CONTROL_INDICATOR_COLOR_SELECTED = "#18171d";
+export const GL_CONTROL_INDICATOR_COLOR_DISABLED = "#18171d";
+export const GL_FEEDBACK_BORDER_RADIUS = "0.5rem";
+export const GL_FEEDBACK_STRONG_BACKGROUND_COLOR = "#3a383d";
+export const GL_FEEDBACK_STRONG_BORDER_COLOR = "#a5a3a3";
+export const GL_FEEDBACK_STRONG_TEXT_COLOR = "#fff";
+export const GL_FEEDBACK_STRONG_ICON_COLOR = "#fff";
+export const GL_FEEDBACK_STRONG_LINK_COLOR = "#64a7e9";
+export const GL_FEEDBACK_NEUTRAL_BACKGROUND_COLOR = "#28272d";
+export const GL_FEEDBACK_NEUTRAL_BORDER_COLOR = "#646163";
+export const GL_FEEDBACK_NEUTRAL_TEXT_COLOR = "#c1bfbe";
+export const GL_FEEDBACK_NEUTRAL_ICON_COLOR = "#c1bfbe";
+export const GL_FEEDBACK_INFO_BACKGROUND_COLOR = "#1d2153";
+export const GL_FEEDBACK_INFO_BORDER_COLOR = "#2566b5";
+export const GL_FEEDBACK_INFO_TEXT_COLOR = "#9dc8f2";
+export const GL_FEEDBACK_INFO_ICON_COLOR = "#9dc8f2";
+export const GL_FEEDBACK_SUCCESS_BACKGROUND_COLOR = "#003c36";
+export const GL_FEEDBACK_SUCCESS_BORDER_COLOR = "#0c7265";
+export const GL_FEEDBACK_SUCCESS_TEXT_COLOR = "#84d4b6";
+export const GL_FEEDBACK_SUCCESS_ICON_COLOR = "#84d4b6";
+export const GL_FEEDBACK_WARNING_BACKGROUND_COLOR = "#5d220d";
+export const GL_FEEDBACK_WARNING_BORDER_COLOR = "#b34013";
+export const GL_FEEDBACK_WARNING_TEXT_COLOR = "#f7b951";
+export const GL_FEEDBACK_WARNING_ICON_COLOR = "#f7b951";
+export const GL_FEEDBACK_DANGER_BACKGROUND_COLOR = "#641925";
+export const GL_FEEDBACK_DANGER_BORDER_COLOR = "#fc7988";
+export const GL_FEEDBACK_DANGER_TEXT_COLOR = "#ffafb8";
+export const GL_FEEDBACK_DANGER_ICON_COLOR = "#ffafb8";
+export const GL_FEEDBACK_BRAND_BACKGROUND_COLOR = "#291a5c";
+export const GL_FEEDBACK_BRAND_BORDER_COLOR = "#6a54c0";
+export const GL_FEEDBACK_BRAND_TEXT_COLOR = "#c9beef";
+export const GL_FEEDBACK_BRAND_ICON_COLOR = "#c9beef";
+export const GL_FOCUS_RING_OUTER_COLOR = "#3f8edd";
+export const GL_FOCUS_RING_INNER_COLOR = "#18171d";
+export const GL_HIGHLIGHT_MATCH_BACKGROUND_COLOR = "#f7b951";
+export const GL_HIGHLIGHT_MATCH_TEXT_COLOR = "#18171d";
+export const GL_HIGHLIGHT_TARGET_BACKGROUND_COLOR = "#1d2153";
+export const GL_HIGHLIGHT_TARGET_BORDER_COLOR = "#27599f";
+export const GL_ICON_COLOR_DEFAULT = "#ecebea";
+export const GL_ICON_COLOR_SUBTLE = "#c1bfbe";
+export const GL_ICON_COLOR_STRONG = "#fff";
+export const GL_ICON_COLOR_DISABLED = "#8a8888";
+export const GL_ICON_COLOR_LINK = "#9dc8f2";
+export const GL_ICON_COLOR_INFO = "#9dc8f2";
+export const GL_ICON_COLOR_WARNING = "#fb8017";
+export const GL_ICON_COLOR_DANGER = "#fc7988";
+export const GL_ICON_COLOR_SUCCESS = "#35b597";
+export const GL_LETTER_SPACING_HEADING = "-0.01em";
+export const GL_STATUS_NEUTRAL_BACKGROUND_COLOR = "#3a383d";
+export const GL_STATUS_NEUTRAL_TEXT_COLOR = "#c1bfbe";
+export const GL_STATUS_NEUTRAL_ICON_COLOR = "#a5a3a3";
+export const GL_STATUS_INFO_BACKGROUND_COLOR = "#254581";
+export const GL_STATUS_INFO_TEXT_COLOR = "#9dc8f2";
+export const GL_STATUS_INFO_ICON_COLOR = "#64a7e9";
+export const GL_STATUS_SUCCESS_BACKGROUND_COLOR = "#075048";
+export const GL_STATUS_SUCCESS_TEXT_COLOR = "#84d4b6";
+export const GL_STATUS_SUCCESS_ICON_COLOR = "#35b597";
+export const GL_STATUS_WARNING_BACKGROUND_COLOR = "#7d2d0e";
+export const GL_STATUS_WARNING_TEXT_COLOR = "#f7b951";
+export const GL_STATUS_WARNING_ICON_COLOR = "#fb8017";
+export const GL_STATUS_DANGER_BACKGROUND_COLOR = "#891c2f";
+export const GL_STATUS_DANGER_TEXT_COLOR = "#ffafb8";
+export const GL_STATUS_DANGER_ICON_COLOR = "#fc7988";
+export const GL_STATUS_BRAND_BACKGROUND_COLOR = "#362676";
+export const GL_STATUS_BRAND_TEXT_COLOR = "#a997e1";
+export const GL_STATUS_BRAND_ICON_COLOR = "#7862c8";
+export const GL_TEXT_PRIMARY = "#ecebea";
+export const GL_TEXT_SECONDARY = "#c1bfbe";
+export const GL_TEXT_TERTIARY = "#8a8888";
+export const GL_TEXT_COLOR_DEFAULT = "#ecebea";
+export const GL_TEXT_COLOR_SUBTLE = "#c1bfbe";
+export const GL_TEXT_COLOR_STRONG = "#fff";
+export const GL_TEXT_COLOR_HEADING = "#fff";
+export const GL_TEXT_COLOR_LINK = "#9dc8f2";
+export const GL_TEXT_COLOR_WARNING = "#fb8017";
+export const GL_TEXT_COLOR_DANGER = "#fc7988";
+export const GL_TEXT_COLOR_SUCCESS = "#35b597";
+export const GL_TEXT_COLOR_DISABLED = "#8a8888";
+export const GL_HEADING_1_FONT_WEIGHT = 600;
+export const GL_HEADING_1_MARGIN_TOP = "0px";
+export const GL_HEADING_1_FONT_SIZE =
+  "clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem)";
+export const GL_HEADING_1_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_1_LINE_HEIGHT = 1.25;
+export const GL_HEADING_1_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_1_COLOR = "#fff";
+export const GL_HEADING_2_FONT_WEIGHT = 600;
+export const GL_HEADING_2_MARGIN_TOP = "0px";
+export const GL_HEADING_2_FONT_SIZE =
+  "clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem)";
+export const GL_HEADING_2_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_2_LINE_HEIGHT = 1.25;
+export const GL_HEADING_2_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_2_COLOR = "#fff";
+export const GL_HEADING_3_FONT_WEIGHT = 600;
+export const GL_HEADING_3_MARGIN_TOP = "0px";
+export const GL_HEADING_3_FONT_SIZE =
+  "clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem)";
+export const GL_HEADING_3_LETTER_SPACING = "inherit";
+export const GL_HEADING_3_LINE_HEIGHT = 1.25;
+export const GL_HEADING_3_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_3_COLOR = "#fff";
+export const GL_HEADING_4_FONT_WEIGHT = 600;
+export const GL_HEADING_4_MARGIN_TOP = "0px";
+export const GL_HEADING_4_FONT_SIZE = "1rem";
+export const GL_HEADING_4_LETTER_SPACING = "inherit";
+export const GL_HEADING_4_LINE_HEIGHT = 1.25;
+export const GL_HEADING_4_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_4_COLOR = "#fff";
+export const GL_HEADING_5_FONT_WEIGHT = 600;
+export const GL_HEADING_5_MARGIN_TOP = "0px";
+export const GL_HEADING_5_FONT_SIZE = "0.875rem";
+export const GL_HEADING_5_LETTER_SPACING = "inherit";
+export const GL_HEADING_5_LINE_HEIGHT = 1.25;
+export const GL_HEADING_5_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_5_COLOR = "#fff";
+export const GL_HEADING_6_FONT_WEIGHT = 600;
+export const GL_HEADING_6_MARGIN_TOP = "0px";
+export const GL_HEADING_6_FONT_SIZE = "0.8125rem";
+export const GL_HEADING_6_LETTER_SPACING = "inherit";
+export const GL_HEADING_6_LINE_HEIGHT = 1.25;
+export const GL_HEADING_6_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_6_COLOR = "#fff";
+export const GL_HEADING_SCALE_100_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_100_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_100_FONT_SIZE = "0.75rem";
+export const GL_HEADING_SCALE_100_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_100_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_100_COLOR = "#fff";
+export const GL_HEADING_SCALE_200_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_200_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_200_FONT_SIZE = "0.8125rem";
+export const GL_HEADING_SCALE_200_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_200_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_200_COLOR = "#fff";
+export const GL_HEADING_SCALE_300_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_300_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_300_FONT_SIZE = "0.875rem";
+export const GL_HEADING_SCALE_300_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_300_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_300_COLOR = "#fff";
+export const GL_HEADING_SCALE_400_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_400_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_400_FONT_SIZE = "1rem";
+export const GL_HEADING_SCALE_400_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_400_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_400_COLOR = "#fff";
+export const GL_HEADING_SCALE_500_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_500_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_500_FONT_SIZE =
+  "clamp(1.125rem, 0.9027777778rem + 0.462962963vw, 1.25rem)";
+export const GL_HEADING_SCALE_500_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_500_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_500_COLOR = "#fff";
+export const GL_HEADING_SCALE_600_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_600_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_600_FONT_SIZE =
+  "clamp(1.3125rem, 0.8680555556rem + 0.9259259259vw, 1.5625rem)";
+export const GL_HEADING_SCALE_600_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_600_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_600_COLOR = "#fff";
+export const GL_HEADING_SCALE_700_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_700_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_700_FONT_SIZE =
+  "clamp(1.5rem, 0.8333333333rem + 1.3888888889vw, 1.875rem)";
+export const GL_HEADING_SCALE_700_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_700_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_700_COLOR = "#fff";
+export const GL_HEADING_SCALE_800_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_800_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_800_FONT_SIZE =
+  "clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem)";
+export const GL_HEADING_SCALE_800_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_800_LINE_HEIGHT = 1.125;
+export const GL_HEADING_SCALE_800_COLOR = "#fff";
+export const GL_HEADING_SCALE_100_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_100_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_100_FIXED_FONT_SIZE = "0.75rem";
+export const GL_HEADING_SCALE_100_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_100_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_100_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_200_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_200_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_200_FIXED_FONT_SIZE = "0.8125rem";
+export const GL_HEADING_SCALE_200_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_200_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_200_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_300_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_300_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_300_FIXED_FONT_SIZE = "0.875rem";
+export const GL_HEADING_SCALE_300_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_300_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_300_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_400_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_400_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_400_FIXED_FONT_SIZE = "1rem";
+export const GL_HEADING_SCALE_400_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_400_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_400_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_500_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_500_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_500_FIXED_FONT_SIZE = "1.125rem";
+export const GL_HEADING_SCALE_500_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_SCALE_500_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_500_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_600_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_600_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_600_FIXED_FONT_SIZE = "1.3125rem";
+export const GL_HEADING_SCALE_600_FIXED_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_600_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_600_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_700_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_700_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_700_FIXED_FONT_SIZE = "1.5rem";
+export const GL_HEADING_SCALE_700_FIXED_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_700_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_SCALE_700_FIXED_COLOR = "#fff";
+export const GL_HEADING_SCALE_800_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_SCALE_800_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_SCALE_800_FIXED_FONT_SIZE = "1.75rem";
+export const GL_HEADING_SCALE_800_FIXED_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_SCALE_800_FIXED_LINE_HEIGHT = 1.125;
+export const GL_HEADING_SCALE_800_FIXED_COLOR = "#fff";
+export const GL_HEADING_DISPLAY_FONT_WEIGHT = 600;
+export const GL_HEADING_DISPLAY_MARGIN_TOP = "0px";
+export const GL_HEADING_DISPLAY_FONT_SIZE =
+  "clamp(1.75rem, 0.8611111111rem + 1.8518518519vw, 2.25rem)";
+export const GL_HEADING_DISPLAY_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_DISPLAY_LINE_HEIGHT = 1.125;
+export const GL_HEADING_DISPLAY_MARGIN_BOTTOM = "1.5rem";
+export const GL_HEADING_DISPLAY_COLOR = "#fff";
+export const GL_HEADING_1_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_1_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_1_FIXED_FONT_SIZE = "1.5rem";
+export const GL_HEADING_1_FIXED_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_1_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_1_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_1_FIXED_COLOR = "#fff";
+export const GL_HEADING_2_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_2_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_2_FIXED_FONT_SIZE = "1.3125rem";
+export const GL_HEADING_2_FIXED_LETTER_SPACING = "-0.01em";
+export const GL_HEADING_2_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_2_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_2_FIXED_COLOR = "#fff";
+export const GL_HEADING_3_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_3_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_3_FIXED_FONT_SIZE = "1.125rem";
+export const GL_HEADING_3_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_3_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_3_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_3_FIXED_COLOR = "#fff";
+export const GL_HEADING_4_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_4_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_4_FIXED_FONT_SIZE = "1rem";
+export const GL_HEADING_4_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_4_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_4_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_4_FIXED_COLOR = "#fff";
+export const GL_HEADING_5_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_5_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_5_FIXED_FONT_SIZE = "0.875rem";
+export const GL_HEADING_5_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_5_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_5_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_5_FIXED_COLOR = "#fff";
+export const GL_HEADING_6_FIXED_FONT_WEIGHT = 600;
+export const GL_HEADING_6_FIXED_MARGIN_TOP = "0px";
+export const GL_HEADING_6_FIXED_FONT_SIZE = "0.8125rem";
+export const GL_HEADING_6_FIXED_LETTER_SPACING = "inherit";
+export const GL_HEADING_6_FIXED_LINE_HEIGHT = 1.25;
+export const GL_HEADING_6_FIXED_MARGIN_BOTTOM = "1rem";
+export const GL_HEADING_6_FIXED_COLOR = "#fff";

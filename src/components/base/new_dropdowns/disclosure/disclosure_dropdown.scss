@@ -1,0 +1,18 @@
+.gl-disclosure-dropdown {
+  &.gl-new-dropdown {
+    .gl-new-dropdown-inner {
+      max-height: none;
+    }
+
+    .gl-new-dropdown-item-content {
+      &:disabled,
+      &[disabled],
+      &.disabled {
+        color: var(--gl-dropdown-option-text-color-disabled);
+        cursor: not-allowed;
+        background: none;
+        text-decoration: none;
+      }
+    }
+  }
+}

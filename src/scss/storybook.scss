@@ -1,0 +1,41 @@
+@import "tokens";
+
+@import "functions";
+@import "variables";
+
+@import "../vendor/bootstrap/scss/functions";
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/mixins";
+
+@import "mixins";
+
+@import "bootstrap";
+@import "bootstrap_vue";
+
+@import "fonts";
+
+@import "body";
+@import "typography";
+@import "components";
+
+// Themes
+@import "themes";
+
+/**
+ * Custom padding for docs pages. This improves the integration in Pajamas pages.
+ */
+.sbdocs-wrapper {
+  padding-top: $gl-spacing-scale-2 !important;
+  padding-bottom: 0 !important;
+}
+
+.bootstrap-vue-docs {
+  @import "../vendor/bootstrap-vue/docs/assets/css/docs.min";
+  @import "../vendor/bootstrap-vue/docs/assets/scss/styles";
+}
+
+// This imports the tailwind.css file.
+// Note that adding `.css` here would break the inline import.
+// These utilities are imported last, because that's
+// what we do in KhulnaSoft as well.
+@import "tailwind";

@@ -1,0 +1,23 @@
+.gl-truncate-component {
+  display: inline-flex;
+  max-width: 100%;
+}
+
+.gl-truncate-start,
+.gl-truncate-end {
+  flex: 0 1 auto;
+  min-width: 0;
+  white-space: nowrap;
+  overflow-x: clip;
+  overflow-y: visible;
+}
+
+.gl-truncate-start {
+  direction: rtl;
+  text-align: left;
+  text-overflow: "";
+}
+
+.gl-truncate-end {
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,60 @@
+.gl-pagination {
+  @apply gl-text-base;
+  @apply gl-text-nowrap;
+
+  ul {
+    border-radius: var(--gl-action-border-radius);
+    @apply gl-flex;
+    @apply gl-m-0;
+    @apply gl-pl-0;
+    @apply gl-list-none;
+  }
+
+  a {
+    color: var(--gl-action-neutral-foreground-color-default);
+  }
+}
+
+.gl-pagination-item {
+  border-radius: var(--gl-action-border-radius);
+  transition:
+    color $gl-transition-duration-medium $gl-easing-out-cubic,
+    background-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    border-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    box-shadow $gl-transition-duration-medium $gl-easing-out-cubic;
+  @apply gl-flex;
+  @apply gl-justify-center;
+  @apply gl-p-3;
+  @apply gl-leading-normal;
+  @apply gl-no-underline;
+  @apply gl-min-w-7;
+  @apply gl-text-center;
+  @apply gl-border-1;
+  @apply gl-border-solid;
+  @apply gl-action-neutral-colors;
+  @include gl-prefers-reduced-motion-transition;
+
+  &:hover {
+    @apply gl-no-underline;
+  }
+
+  &:focus-visible,
+  &:active:focus-visible {
+    @apply gl-no-underline;
+    @apply gl-focus;
+  }
+
+  &:active {
+    @apply gl-no-underline;
+  }
+
+  &:not(.disabled).active {
+    @include gl-action-selected-colors;
+  }
+}
+
+.gl-pagination .disabled .gl-pagination-item {
+  @apply gl-border-transparent;
+  @apply gl-bg-transparent;
+  color: var(--gl-action-disabled-foreground-color);
+}

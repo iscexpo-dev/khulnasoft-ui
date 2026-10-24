@@ -1,0 +1,11 @@
+.gl-filtered-search-suggestion {
+  @apply gl-p-0;
+}
+
+.gl-filtered-search-suggestion-active {
+  background-color: var(--gl-dropdown-option-background-color-selected-default);
+  @apply gl-no-underline;
+  color: var(--gl-dropdown-option-text-color-default);
+  @apply gl-outline-none;
+  @include gl-focus($inset: true);
+}

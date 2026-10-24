@@ -1,0 +1,135 @@
+$gl-loader-dots-size-sm: 0.375rem;
+$gl-loader-dots-size-md: 0.5rem;
+$gl-loader-dots-size-lg: 0.75rem;
+$gl-loader-dots-size-xl: 1rem;
+
+@mixin gl-tmp-spinner-size($size, $border-width) {
+  width: $size;
+  height: $size;
+  border-width: $border-width;
+  transform-origin: 50% 50% calc((#{$size} / 2) + #{$border-width});
+}
+
+@mixin gl-tmp-dots-color($color) {
+  &::before,
+  > span,
+  &::after {
+    background-color: $color;
+  }
+}
+
+@mixin gl-tmp-dots-size($size) {
+  &::before,
+  > span,
+  &::after {
+    width: $size;
+    height: $size;
+    margin-right: calc(#{$size} / 2);
+  }
+}
+
+.gl-spinner-container {
+  @apply gl-leading-0;
+  @apply gl-text-center;
+}
+
+.gl-spinner {
+  position: relative;
+  @apply gl-inline-flex;
+  @apply gl-rounded-full;
+  @apply gl-border-solid;
+  @apply gl-mx-auto;
+  @apply gl-my-0;
+  @apply gl-text-base;
+  @apply gl-animate-spin;
+
+  // default size
+  @include gl-tmp-spinner-size($gl-spacing-scale-5, $gl-border-size-2);
+
+  &.gl-spinner-md {
+    @include gl-tmp-spinner-size($gl-spacing-scale-6, $gl-border-size-3);
+  }
+
+  &.gl-spinner-lg {
+    @include gl-tmp-spinner-size($gl-spacing-scale-7, $gl-border-size-3);
+  }
+
+  &.gl-spinner-xl {
+    @include gl-tmp-spinner-size($gl-spacing-scale-11, $gl-border-size-4);
+  }
+
+  &.gl-spinner-dark {
+    // This is the default variant we use on normal (light) backgrounds.
+    // This variant changes its colors automatically for dark mode.
+    border-color: var(--gl-spinner-track-color-default);
+    border-top-color: var(--gl-spinner-segment-color-default);
+  }
+
+  &.gl-spinner-light {
+    // This is the variant we use on backgrounds that are dark even in light mode.
+    // This variant doesn't change its colors for dark mode.
+    border-color: var(--gl-spinner-track-color-light);
+    border-top-color: var(--gl-spinner-segment-color-light);
+  }
+}
+
+.gl-dots-loader {
+  @apply gl-leading-0;
+  @apply gl-text-center;
+}
+
+.gl-dots-loader {
+  &::before,
+  > span,
+  &::after {
+    content: "";
+
+    display: inline-block;
+    border-radius: 100%;
+    animation: gl-dots-loader-animation 1400ms ease-in-out infinite;
+    animation-fill-mode: both;
+  }
+
+  &::before {
+    animation-delay: -0.3s;
+  }
+
+  > span {
+    animation-delay: -0.15s;
+  }
+
+  &::after {
+    margin-right: 0 !important;
+  }
+
+  // default size
+  @include gl-tmp-dots-size($gl-loader-dots-size-sm);
+
+  &.gl-dots-loader {
+    @include gl-tmp-dots-color(var(--gl-icon-color-subtle));
+  }
+
+  &.gl-dots-loader-md {
+    @include gl-tmp-dots-size($gl-loader-dots-size-md);
+  }
+
+  &.gl-dots-loader-lg {
+    @include gl-tmp-dots-size($gl-loader-dots-size-lg);
+  }
+
+  &.gl-dots-loader-xl {
+    @include gl-tmp-dots-size($gl-loader-dots-size-xl);
+  }
+}
+
+@keyframes gl-dots-loader-animation {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}

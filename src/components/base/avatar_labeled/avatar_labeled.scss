@@ -1,0 +1,30 @@
+.gl-avatar-labeled {
+  @apply gl-inline-flex;
+
+  &-labels {
+    @apply gl-ml-3;
+    @apply gl-flex;
+    @apply gl-flex-col;
+    @apply gl-justify-center;
+    @apply gl-text-base;
+    @apply gl-leading-normal;
+    @apply gl-text-strong;
+  }
+
+  &-labels.inline-labels {
+    @apply gl-flex-row;
+    @apply gl-items-center;
+    @apply gl-gap-2;
+  }
+
+  &-label {
+    @apply gl-font-bold;
+    @apply gl-p-1;
+    @apply gl-text-strong;
+  }
+
+  &-sublabel {
+    @apply gl-text-subtle;
+    overflow-wrap: anywhere;
+  }
+}

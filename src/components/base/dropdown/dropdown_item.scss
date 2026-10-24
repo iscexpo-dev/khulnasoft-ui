@@ -1,0 +1,102 @@
+@mixin gl-tmp-dropdown-item-style {
+  @apply gl-items-center;
+  @apply gl-bg-transparent;
+  @apply gl-border-0;
+  @apply gl-flex;
+  @apply gl-text-base;
+  @apply gl-font-normal;
+  @apply gl-leading-normal;
+  @apply gl-px-5;
+  @apply gl-py-0;
+  position: relative;
+  @apply gl-rounded-none;
+  @apply gl-shadow-none;
+  color: var(--gl-dropdown-option-text-color-default);
+  @apply gl-text-left;
+  @apply gl-w-full;
+  @apply gl-whitespace-normal;
+}
+
+.gl-dropdown-item {
+  .dropdown-item {
+    @include gl-tmp-dropdown-item-style;
+    @apply gl-cursor-pointer;
+
+    .gl-avatar {
+      @apply gl-shrink-0;
+      @apply gl-mr-3;
+    }
+
+    .gl-dropdown-item-check-icon {
+      @apply gl-shrink-0;
+      @apply gl-mr-3;
+      color: var(--gl-dropdown-option-indicator-color-selected-default);
+    }
+
+    .gl-dropdown-item-icon {
+      @apply gl-shrink-0;
+      @apply gl-mr-3;
+    }
+
+    .gl-dropdown-item-text-primary {
+      @apply gl-m-0;
+    }
+
+    .gl-dropdown-item-text-secondary {
+      @apply gl-m-0;
+      @apply gl-text-subtle;
+    }
+
+    .gl-dropdown-item-text-wrapper {
+      @apply gl-min-w-0;
+      @apply gl-grow;
+      @apply gl-mr-3;
+      @apply gl-py-3;
+    }
+
+    // make sure the text color is not overridden
+    &.text-danger {
+      @apply gl-text-danger;
+    }
+
+    &.disable-hover {
+      @apply gl-no-underline;
+    }
+
+    &:disabled {
+      @apply gl-text-disabled;
+
+      .gl-new-dropdown-item-check-icon {
+        @apply gl-text-inherit;
+      }
+
+      .gl-new-dropdown-item-text-secondary {
+        @apply gl-text-inherit;
+      }
+
+      .gl-avatar {
+        @apply gl-opacity-7;
+      }
+    }
+
+    &:not(.disable-hover):hover,
+    &:active,
+    &:focus-visible,
+    &.is-focused {
+      background-color: var(--gl-dropdown-option-background-color-unselected-hover);
+      @apply gl-no-underline;
+      color: var(--gl-dropdown-option-text-color-default);
+
+      // make sure the text color is not overridden
+      &.text-danger {
+        @apply gl-text-danger;
+      }
+    }
+
+    &:active,
+    &:focus-visible,
+    &:focus-visible:active {
+      @include gl-focus($inset: true);
+    }
+  }
+}

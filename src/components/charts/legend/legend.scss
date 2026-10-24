@@ -1,0 +1,122 @@
+// shorter height by half a line, so table body is cut off,
+// suggesting there's more to scroll
+$legend-body-h: $gl-spacing-scale-13 - $gl-spacing-scale-4;
+
+.gl-legend {
+  position: relative;
+}
+
+// series rows are native buttons, so reset the browser's default button styles
+.gl-legend-inline-series,
+.gl-legend-tabular-row {
+  font: inherit;
+  @apply gl-border-0;
+  @apply gl-bg-transparent;
+  @apply gl-p-0;
+  @apply gl-text-left;
+}
+
+.gl-chart-h-auto {
+  .gl-legend-inline {
+    // match the height of gl-legend-tabular (header + body)
+    max-height: $gl-line-height-24 + $legend-body-h;
+    @apply gl-overflow-auto;
+  }
+}
+
+.gl-legend-tabular.gl-legend-b-fade,
+.gl-chart-h-auto .gl-legend-inline.gl-legend-b-fade {
+  &::after {
+    background-image: linear-gradient(
+      to bottom,
+      $transparent-rgba,
+      var(--gl-background-color-default)
+    );
+    bottom: 0;
+    content: "";
+    @apply gl-block;
+    @apply gl-h-4;
+    position: absolute;
+    @apply gl-w-full;
+  }
+}
+
+.gl-legend-inline {
+  @apply gl-flex;
+  @apply gl-flex-wrap;
+  @apply gl-shrink-0;
+
+  .gl-legend-inline-series {
+    @apply gl-flex;
+    @apply gl-shrink-0;
+    @apply gl-justify-between;
+    @apply gl-items-center;
+    @apply gl-pr-5;
+
+    @apply gl-rounded-default;
+
+    &:hover {
+      @apply gl-cursor-pointer;
+      @apply gl-underline;
+    }
+
+    &:focus-visible {
+      @include gl-focus($inset: true);
+    }
+
+    .gl-legend-inline-series-label {
+      @apply gl-mr-3;
+    }
+  }
+}
+
+.gl-legend-tabular {
+  .gl-legend-tabular-header {
+    @apply gl-flex;
+    @apply gl-justify-end;
+  }
+
+  .gl-legend-tabular-header-cell,
+  .gl-legend-tabular-details-cell {
+    @apply gl-whitespace-nowrap;
+    @apply gl-overflow-hidden;
+    @apply gl-text-ellipsis;
+    @apply gl-text-right;
+    @apply gl-w-1/8;
+  }
+
+  .gl-legend-tabular-header-cell {
+    @apply gl-font-bold;
+    @apply gl-leading-24;
+    @apply gl-px-3;
+  }
+
+  .gl-legend-tabular-body {
+    height: $legend-body-h;
+    @apply gl-overflow-y-auto;
+  }
+
+  .gl-legend-tabular-row {
+    @apply gl-flex;
+    @apply gl-w-full;
+
+    &:nth-child(odd) {
+      @apply gl-bg-strong;
+    }
+
+    &:focus-visible {
+      @include gl-focus($inset: true);
+    }
+  }
+
+  .gl-legend-tabular-title-cell,
+  .gl-legend-tabular-details-cell {
+    @apply gl-leading-24;
+    @apply gl-px-3;
+  }
+
+  .gl-legend-tabular-title-cell {
+    @apply gl-overflow-hidden;
+    @apply gl-w-1/2;
+  }
+}
