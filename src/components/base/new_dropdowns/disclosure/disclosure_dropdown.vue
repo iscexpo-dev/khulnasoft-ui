@@ -1,6 +1,6 @@
 <script>
-import { clamp, uniqueId } from 'lodash-es';
-import { stopEvent, filterVisible, logWarning } from '../../../../utils/utils';
+import { clamp, uniqueId } from "lodash-es";
+import { stopEvent, filterVisible, logWarning } from "../../../../utils/utils";
 import {
   GL_DROPDOWN_SHOWN,
   GL_DROPDOWN_HIDDEN,
@@ -15,22 +15,29 @@ import {
   GL_DROPDOWN_CONTENTS_CLASS,
   POSITION_ABSOLUTE,
   POSITION_FIXED,
-} from '../constants';
+} from "../constants";
 import {
   buttonCategoryOptions,
   buttonSizeOptions,
   dropdownPlacements,
   dropdownVariantOptions,
-} from '../../../../utils/constants';
-import GlBaseDropdown from '../base_dropdown/base_dropdown.vue';
-import GlDisclosureDropdownItem, { ITEM_CLASS } from './disclosure_dropdown_item.vue';
-import GlDisclosureDropdownGroup from './disclosure_dropdown_group.vue';
-import { itemsValidator, isItem, hasOnlyListItems, doSomeItemsHaveIcon } from './utils';
+} from "../../../../utils/constants";
+import GlBaseDropdown from "../base_dropdown/base_dropdown.vue";
+import GlDisclosureDropdownItem, {
+  ITEM_CLASS,
+} from "./disclosure_dropdown_item.vue";
+import GlDisclosureDropdownGroup from "./disclosure_dropdown_group.vue";
+import {
+  itemsValidator,
+  isItem,
+  hasOnlyListItems,
+  doSomeItemsHaveIcon,
+} from "./utils";
 
 export const ITEM_SELECTOR = `.${ITEM_CLASS}`;
 
 export default {
-  name: 'GlDisclosureDropdown',
+  name: "GlDisclosureDropdown",
   events: {
     GL_DROPDOWN_SHOWN,
     GL_DROPDOWN_HIDDEN,
@@ -58,7 +65,7 @@ export default {
     toggleText: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * Toggle text to be read by screen readers only
@@ -92,7 +99,7 @@ export default {
     size: {
       type: String,
       required: false,
-      default: 'medium',
+      default: "medium",
       validator: (value) => value in buttonSizeOptions,
     },
     /**
@@ -101,7 +108,7 @@ export default {
     icon: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * Set to "true" to disable the dropdown
@@ -127,7 +134,7 @@ export default {
     toggleId: {
       type: String,
       required: false,
-      default: () => uniqueId('dropdown-toggle-btn-'),
+      default: () => uniqueId("dropdown-toggle-btn-"),
     },
     /**
      * Additional CSS classes to customize toggle appearance
@@ -151,7 +158,7 @@ export default {
     placement: {
       type: String,
       required: false,
-      default: 'bottom-start',
+      default: "bottom-start",
       validator: (value) => Object.keys(dropdownPlacements).includes(value),
     },
     /**
@@ -226,7 +233,8 @@ export default {
       type: String,
       required: false,
       default: POSITION_ABSOLUTE,
-      validator: (strategy) => [POSITION_ABSOLUTE, POSITION_FIXED].includes(strategy),
+      validator: (strategy) =>
+        [POSITION_ABSOLUTE, POSITION_FIXED].includes(strategy),
     },
     /**
      * Opens dropdown on render
@@ -239,7 +247,7 @@ export default {
   },
   data() {
     return {
-      disclosureId: uniqueId('disclosure-'),
+      disclosureId: uniqueId("disclosure-"),
       nextFocusedItemIndex: null,
     };
   },
@@ -249,9 +257,9 @@ export default {
         this.items?.length ||
         hasOnlyListItems(this.$scopedSlots.default || this.$slots.default)
       ) {
-        return 'ul';
+        return "ul";
       }
-      return 'div';
+      return "div";
     },
     hasCustomToggle() {
       return Boolean(this.$scopedSlots.toggle);
@@ -263,12 +271,12 @@ export default {
   mounted() {
     if (this.toggleAriaLabel && this.toggleAriaLabelledBy) {
       logWarning(
-        'Do not provide both `toggleAriaLabel` and `toggleAriaLabelledBy`. ' +
-          'When both are present, `toggleAriaLabelledBy` takes precedence and `toggleAriaLabel` is ignored. ' +
-          'See https://design.khulnasoft.com/components/dropdown-disclosure/#accessibility',
+        "Do not provide both `toggleAriaLabel` and `toggleAriaLabelledBy`. " +
+          "When both are present, `toggleAriaLabelledBy` takes precedence and `toggleAriaLabel` is ignored. " +
+          "See https://design.khulnasoft.com/components/dropdown-disclosure/#accessibility",
         {
-          name: 'GlDisclosureDropdown',
-        },
+          name: "GlDisclosureDropdown",
+        }
       );
     }
     if (this.startOpened) {
@@ -357,7 +365,7 @@ export default {
       this.$refs.baseDropdown.focusToggle();
     },
     handleAction(action) {
-      // See https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/4376 for
+      // See https://github.com/khulnasoft/khulnasoft-ui/pull/4376 for
       // detailed explanation why we need requestAnimationFrame
       window.requestAnimationFrame(() => {
         /**
@@ -365,7 +373,7 @@ export default {
          *
          * @event action
          */
-        this.$emit('action', action);
+        this.$emit("action", action);
       });
     },
     handleAutoClose(e) {
