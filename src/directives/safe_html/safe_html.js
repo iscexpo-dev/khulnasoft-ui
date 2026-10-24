@@ -1,12 +1,12 @@
-import DOMPurify from 'dompurify';
-import { forbiddenDataAttrs, forbiddenTags } from './constants';
+import DOMPurify from "dompurify";
+import { forbiddenDataAttrs, forbiddenTags } from "./constants";
 
 const { sanitize } = DOMPurify;
 
 // Mitigate against future dompurify mXSS bypasses by
 // avoiding additional serialize/parse round trip.
-// See https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/1782
-// and https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/2127
+// See https://github.com/khulnasoft/khulnasoft-ui/pull/1782
+// and https://github.com/khulnasoft/khulnasoft-ui/pull/2127
 // for more details.
 const DEFAULT_CONFIG = {
   RETURN_DOM_FRAGMENT: true,
@@ -19,13 +19,13 @@ const transform = (el, binding) => {
   if (binding.oldValue !== binding.value) {
     const config = { ...DEFAULT_CONFIG, ...(binding.arg ?? {}) };
 
-    el.textContent = '';
+    el.textContent = "";
     el.appendChild(sanitize(binding.value, config));
   }
 };
 
 const clear = (el) => {
-  el.textContent = '';
+  el.textContent = "";
 };
 
 export const SafeHtmlDirective = {
