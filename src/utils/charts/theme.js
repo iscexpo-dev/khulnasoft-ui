@@ -60,19 +60,19 @@ import {
   GL_COLOR_DATA_ORANGE_950,
   GL_COLOR_DATA_ORANGE_900,
   GL_FONT_FAMILY_REGULAR,
-} from '../../tokens/build/js/tokens';
+} from "../../tokens/build/js/tokens";
 import {
   scrollHandleSvgPath,
   marqueeSelectionSvgPath,
   redoSvgPath,
   clearAllSvgPath,
   downloadSvgPath,
-} from '../svgs/svg_paths';
-import { defaultFontSize } from './config';
+} from "../svgs/svg_paths";
+import { defaultFontSize } from "./config";
 
-const GL_BORDER_RADIUS_BASE = '0.25rem';
+const GL_BORDER_RADIUS_BASE = "0.25rem";
 
-export const themeName = 'khulnasoft';
+export const themeName = "khulnasoft";
 
 /**
  * Sequential scales step away from the surface so that higher values gain contrast against it:
@@ -104,8 +104,14 @@ export const heatmapHuesDark = [
  *
  * https://design.khulnasoft.com/data-visualization/color#visual-separators
  */
-export const heatmapSurface = { plate: GL_COLOR_NEUTRAL_100, separator: GL_COLOR_NEUTRAL_0 };
-export const heatmapSurfaceDark = { plate: GL_COLOR_NEUTRAL_800, separator: GL_COLOR_NEUTRAL_950 };
+export const heatmapSurface = {
+  plate: GL_COLOR_NEUTRAL_100,
+  separator: GL_COLOR_NEUTRAL_0,
+};
+export const heatmapSurfaceDark = {
+  plate: GL_COLOR_NEUTRAL_800,
+  separator: GL_COLOR_NEUTRAL_950,
+};
 
 export const gaugeSafeHues = [GL_COLOR_DATA_BLUE_500, GL_COLOR_DATA_BLUE_900];
 export const gaugeWarningHue = GL_COLOR_DATA_ORANGE_500;
@@ -184,7 +190,8 @@ export const colorPaletteDark = [
   GL_COLOR_DATA_MAGENTA_50,
 ];
 
-export const colorFromDarkPalette = (index) => colorPaletteDark[index % colorPaletteDark.length];
+export const colorFromDarkPalette = (index) =>
+  colorPaletteDark[index % colorPaletteDark.length];
 
 // ECharts lays out text by assigning a CSS font shorthand to a canvas context and calling
 // `measureText`, even under the SVG renderer. Canvas does not substitute CSS custom properties,
@@ -193,8 +200,8 @@ export const colorFromDarkPalette = (index) => colorPaletteDark[index % colorPal
 // `var(--default-regular-font, 'KhulnaSoft Sans')` consumer override, whose own fallback is the
 // 'KhulnaSoft Sans' that follows it.
 export const defaultFontFamily = GL_FONT_FAMILY_REGULAR.filter(
-  (family) => !family.startsWith('var('),
-).join(', ');
+  (family) => !family.startsWith("var(")
+).join(", ");
 
 /**
  * Chart font sizes are concrete pixel numbers rather than the rem-based font.size tokens they
@@ -210,7 +217,7 @@ const axes = {
   axisLabel: {
     margin: 8,
     show: true,
-    color: 'var(--gl-chart-axis-text-color)',
+    color: "var(--gl-chart-axis-text-color)",
     hideOverlap: true,
     fontSize: defaultFontSize,
   },
@@ -219,8 +226,8 @@ const axes = {
   },
   axisPointer: {
     lineStyle: {
-      type: 'solid',
-      color: 'var(--gl-chart-axis-pointer-color)',
+      type: "solid",
+      color: "var(--gl-chart-axis-pointer-color)",
     },
     label: {
       show: false,
@@ -230,17 +237,17 @@ const axes = {
     show: true,
     alignWithLabel: true,
     lineStyle: {
-      color: 'var(--gl-chart-axis-line-color)',
+      color: "var(--gl-chart-axis-line-color)",
     },
   },
   nameGap: 30,
   nameTextStyle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     fontSize: defaultFontSize,
   },
   splitLine: {
     lineStyle: {
-      color: ['var(--gl-chart-axis-line-color)'],
+      color: ["var(--gl-chart-axis-line-color)"],
     },
   },
   splitArea: {
@@ -250,13 +257,13 @@ const axes = {
 
 const isLineChartWithoutArea = (options) =>
   Array.isArray(options?.series) &&
-  options.series.some((series) => series.type === 'line' && !series.areaStyle);
+  options.series.some((series) => series.type === "line" && !series.areaStyle);
 
 export const createTheme = (options = {}) => ({
   color: colorPaletteDefault,
-  backgroundColor: 'transparent',
+  backgroundColor: "transparent",
   textStyle: {
-    color: 'var(--gl-text-color-default)',
+    color: "var(--gl-text-color-default)",
     fontFamily: defaultFontFamily,
     fontSize: defaultFontSize,
   },
@@ -268,92 +275,92 @@ export const createTheme = (options = {}) => ({
   gauge: {
     axisLabel: {
       fontSize: 14, // font.size.300, 0.875rem, the default body size
-      color: 'var(--gl-chart-axis-text-color)',
+      color: "var(--gl-chart-axis-text-color)",
     },
     detail: {
       fontSize: 30,
-      fontWeight: 'bold',
-      color: 'var(--gl-text-color-default)',
+      fontWeight: "bold",
+      color: "var(--gl-text-color-default)",
     },
   },
   markLine: {
     silent: true,
-    symbol: 'none',
+    symbol: "none",
     label: {
       show: false,
     },
     lineStyle: {
-      color: 'var(--gl-chart-threshold-line-color)',
+      color: "var(--gl-chart-threshold-line-color)",
       width: 1,
-      type: 'dashed',
+      type: "dashed",
     },
   },
   markArea: {
     silent: true,
     itemStyle: {
-      color: 'var(--gl-chart-threshold-area-color)',
+      color: "var(--gl-chart-threshold-area-color)",
     },
   },
   dataZoom: {
-    borderColor: 'transparent',
-    filterMode: 'none',
+    borderColor: "transparent",
+    filterMode: "none",
     brushSelect: false,
     dataBackground: {
       lineStyle: {
         width: 2,
-        color: 'var(--gl-chart-axis-line-color)',
+        color: "var(--gl-chart-axis-line-color)",
         opacity: 1,
       },
       // render unfilled zoom-graph if the series is a line chart without area styles
-      // more details: https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/2364#note_666637306
+      // more details: https://github.com/khulnasoft/khulnasoft-ui/pull/2364#note_666637306
       areaStyle: isLineChartWithoutArea(options)
-        ? {} // Use empty object instead of null, see https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/2185#note_707711029 for more context
+        ? {} // Use empty object instead of null, see https://github.com/khulnasoft/khulnasoft-ui/pull/2185#note_707711029 for more context
         : {
-            color: 'var(--gl-background-color-strong)',
+            color: "var(--gl-background-color-strong)",
             opacity: 1,
           },
     },
-    fillerColor: 'var(--gl-chart-zoom-filler-color)',
+    fillerColor: "var(--gl-chart-zoom-filler-color)",
     handleIcon: scrollHandleSvgPath,
     emphasis: {
       handleStyle: {
-        color: 'var(--gl-chart-zoom-handle-color)',
+        color: "var(--gl-chart-zoom-handle-color)",
       },
     },
     handleStyle: {
-      borderColor: 'transparent',
-      color: 'var(--gl-chart-zoom-handle-color)',
+      borderColor: "transparent",
+      color: "var(--gl-chart-zoom-handle-color)",
     },
-    handleSize: '50%',
+    handleSize: "50%",
     labelFormatter: () => null,
     textStyle: {
-      color: 'var(--gl-chart-axis-text-color)',
+      color: "var(--gl-chart-axis-text-color)",
     },
   },
   toolbox: {
-    top: '-5',
-    left: 'center',
+    top: "-5",
+    left: "center",
     itemSize: 14,
     emphasis: {
       iconStyle: {
         borderWidth: 0,
-        color: 'var(--gl-icon-color-default)',
-        textFill: 'var(--gl-feedback-strong-text-color)',
-        textBackgroundColor: 'var(--gl-feedback-strong-background-color)',
+        color: "var(--gl-icon-color-default)",
+        textFill: "var(--gl-feedback-strong-text-color)",
+        textBackgroundColor: "var(--gl-feedback-strong-background-color)",
         textBorderRadius: GL_BORDER_RADIUS_BASE,
         textPadding: [8, 12],
       },
     },
     iconStyle: {
-      color: 'var(--gl-icon-color-default)',
+      color: "var(--gl-icon-color-default)",
       borderWidth: 0,
     },
     itemGap: 8,
     feature: {
       dataZoom: {
         title: {
-          zoom: 'Click to zoom in on a portion of the graph',
-          back: 'Remove selection',
+          zoom: "Click to zoom in on a portion of the graph",
+          back: "Remove selection",
         },
         icon: {
           zoom: marqueeSelectionSvgPath,
@@ -361,12 +368,12 @@ export const createTheme = (options = {}) => ({
         },
       },
       restore: {
-        title: 'Remove all selections and return chart to default state',
+        title: "Remove all selections and return chart to default state",
         icon: clearAllSvgPath,
       },
       saveAsImage: {
-        title: 'Save chart as an image',
-        name: 'graph',
+        title: "Save chart as an image",
+        name: "graph",
         icon: downloadSvgPath,
       },
     },
@@ -396,8 +403,8 @@ export const createTheme = (options = {}) => ({
         width: 2,
       },
     },
-    symbolSize: '6',
-    symbol: 'circle',
+    symbolSize: "6",
+    symbol: "circle",
     showSymbol: false,
     smooth: false,
   },
