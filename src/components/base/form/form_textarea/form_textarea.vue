@@ -1,12 +1,12 @@
 <script>
-import { uniqueId, isBoolean, toInteger, toString } from 'lodash-es';
-import { toFloat } from '../../../../utils/number_utils';
-import { isVisible, stopEvent } from '../../../../utils/utils';
-import GlFormCharacterCount from '../form_character_count/form_character_count.vue';
-import { GlVisibleDirective } from './visible';
+import { uniqueId, isBoolean, toInteger, toString } from "lodash-es";
+import { toFloat } from "../../../../utils/number_utils";
+import { isVisible, stopEvent } from "../../../../utils/utils";
+import GlFormCharacterCount from "../form_character_count/form_character_count.vue";
+import { GlVisibleDirective } from "./visible";
 
 export default {
-  name: 'GlFormTextarea',
+  name: "GlFormTextarea",
   components: {
     GlFormCharacterCount,
   },
@@ -15,8 +15,8 @@ export default {
   },
   inheritAttrs: false,
   model: {
-    prop: 'value',
-    event: 'input',
+    prop: "value",
+    event: "input",
   },
   props: {
     /**
@@ -25,7 +25,7 @@ export default {
     value: {
       type: String,
       required: false,
-      default: '',
+      default: "",
     },
     /**
      * When true, prevents the textarea from being resized by the user (hides the resize handle).
@@ -195,7 +195,7 @@ export default {
       vModelValue: this.value,
       localId: null,
       heightInPx: null,
-      characterCountTextId: uniqueId('form-textarea-character-count-'),
+      characterCountTextId: uniqueId("form-textarea-character-count-"),
     };
   },
   computed: {
@@ -206,16 +206,20 @@ export default {
       return isBoolean(this.state) ? this.state : null;
     },
     stateClass() {
-      if (this.computedState === true) return 'is-valid';
-      if (this.computedState === false) return 'is-invalid';
+      if (this.computedState === true) return "is-valid";
+      if (this.computedState === false) return "is-invalid";
       return null;
     },
     computedAriaInvalid() {
       const { ariaInvalid } = this;
-      if (ariaInvalid === true || ariaInvalid === 'true' || ariaInvalid === '') {
-        return 'true';
+      if (
+        ariaInvalid === true ||
+        ariaInvalid === "true" ||
+        ariaInvalid === ""
+      ) {
+        return "true";
       }
-      return this.computedState === false ? 'true' : ariaInvalid;
+      return this.computedState === false ? "true" : ariaInvalid;
     },
     sizeClass() {
       return this.size ? `form-control-${this.size}` : null;
@@ -224,7 +228,7 @@ export default {
       return Math.max(toInteger(this.debounce), 0);
     },
     hasFormatter() {
-      return typeof this.formatter === 'function';
+      return typeof this.formatter === "function";
     },
     computedMinRows() {
       // Ensure rows is at least 2 and positive (2 is the native textarea value)
@@ -238,13 +242,15 @@ export default {
     computedRows() {
       // This is used to set the attribute 'rows' on the textarea
       // If auto-height is enabled, then we return `null` as we use CSS to control height
-      return this.computedMinRows === this.computedMaxRows ? this.computedMinRows : null;
+      return this.computedMinRows === this.computedMaxRows
+        ? this.computedMinRows
+        : null;
     },
     computedStyle() {
       const styles = {
         // Setting `noResize` to true will disable the ability for the user to
         // manually resize the textarea. We also disable when in auto height mode
-        resize: !this.computedRows || this.noResize ? 'none' : null,
+        resize: !this.computedRows || this.noResize ? "none" : null,
       };
       if (!this.computedRows) {
         // Conditionally set the computed CSS height when auto rows/height is enabled
@@ -252,7 +258,7 @@ export default {
         styles.height = this.heightInPx;
         // We always add a vertical scrollbar to the textarea when auto-height is
         // enabled so that the computed height calculation returns a stable value
-        styles.overflowY = 'scroll';
+        styles.overflowY = "scroll";
       }
       return styles;
     },
@@ -270,15 +276,15 @@ export default {
         autocomplete: this.autocomplete || null,
         readonly,
         rows: this.computedRows,
-        'aria-required': required ? 'true' : null,
-        'aria-invalid': this.computedAriaInvalid,
+        "aria-required": required ? "true" : null,
+        "aria-invalid": this.computedAriaInvalid,
       };
     },
     computedClass() {
       return [
-        'gl-form-input',
-        'gl-form-textarea',
-        'form-control',
+        "gl-form-input",
+        "gl-form-textarea",
+        "form-control",
         this.textareaClasses,
         this.sizeClass,
         this.stateClass,
@@ -293,7 +299,7 @@ export default {
       };
     },
     keypressEvent() {
-      return this.submitOnEnter ? 'keyup' : null;
+      return this.submitOnEnter ? "keyup" : null;
     },
     showCharacterCount() {
       return this.characterCountLimit !== null;
@@ -318,7 +324,7 @@ export default {
   async mounted() {
     this.handleAutofocus();
     await this.$nextTick();
-    this.localId = uniqueId('gl-form-textarea-');
+    this.localId = uniqueId("gl-form-textarea-");
   },
   beforeDestroy() {
     this.clearDebounce();
@@ -358,7 +364,7 @@ export default {
            *
            * @event input
            */
-          this.$emit('input', value);
+          this.$emit("input", value);
         } else if (this.hasFormatter) {
           const { input } = this.$refs;
           if (input && value !== input.value) {
@@ -384,11 +390,11 @@ export default {
       this.updateValue(formattedValue);
       /**
        * The `input` and `update` events are swapped
-       * see https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/1628.
+       * see https://github.com/khulnasoft/khulnasoft-ui/pull/1628
        *
        * @event update
        */
-      this.$emit('update', formattedValue);
+      this.$emit("update", formattedValue);
     },
     onChange(event) {
       const { value } = event.target;
@@ -403,11 +409,11 @@ export default {
        * Change event triggered by user interaction.
        * Emitted after any formatting (not including 'trim' or 'number' props)
        * and after the v-model is updated. The `input` and `update` events are swapped
-       * see https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/1628.
+       * see https://github.com/khulnasoft/khulnasoft-ui/pull/1628
        *
        * @event change
        */
-      this.$emit('change', formattedValue);
+      this.$emit("change", formattedValue);
     },
     onBlur(event) {
       const { value } = event.target;
@@ -421,7 +427,7 @@ export default {
        *
        * @event blur
        */
-      this.$emit('blur', event);
+      this.$emit("blur", event);
     },
     async handleAutofocus() {
       await this.$nextTick();
@@ -438,7 +444,7 @@ export default {
          *
          * @event submit
          */
-        this.$emit('submit');
+        this.$emit("submit");
       }
     },
     async setHeight() {
@@ -461,19 +467,24 @@ export default {
       const computedStyle = getComputedStyle(el);
       const lineHeight = toFloat(computedStyle.lineHeight, 1);
       const border =
-        toFloat(computedStyle.borderTopWidth, 0) + toFloat(computedStyle.borderBottomWidth, 0);
+        toFloat(computedStyle.borderTopWidth, 0) +
+        toFloat(computedStyle.borderBottomWidth, 0);
       const padding =
-        toFloat(computedStyle.paddingTop, 0) + toFloat(computedStyle.paddingBottom, 0);
+        toFloat(computedStyle.paddingTop, 0) +
+        toFloat(computedStyle.paddingBottom, 0);
       const offset = border + padding;
       const minHeight = lineHeight * this.computedMinRows + offset;
 
       const oldHeight = el.style.height || computedStyle.height;
-      el.style.height = 'auto';
+      el.style.height = "auto";
       const { scrollHeight } = el;
       el.style.height = oldHeight;
 
       const contentRows = Math.max((scrollHeight - padding) / lineHeight, 2);
-      const rows = Math.min(Math.max(contentRows, this.computedMinRows), this.computedMaxRows);
+      const rows = Math.min(
+        Math.max(contentRows, this.computedMinRows),
+        this.computedMaxRows
+      );
       const height = Math.max(Math.ceil(rows * lineHeight + offset), minHeight);
 
       return `${height}px`;
