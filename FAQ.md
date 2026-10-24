@@ -27,8 +27,8 @@ planned features or are not correctly styled yet. In the Pajamas website, a bann
 on top of the component examples indicates that:
 
 > This component does not yet conform to the correct styling defined in our Design
-System. Refer to the Design System documentation when referencing visuals for this
-component.
+> System. Refer to the Design System documentation when referencing visuals for this
+> component.
 
 For example, at the time of writing, this type of warning can be observed for
 [all form components](https://design.khulnasoft.com/components/forms). It, however,
@@ -51,7 +51,7 @@ which is forbidden by our global assertion in [Jest's setup](tests/jest_setup.js
 test pass, make sure you reset `console.error()`'s mock at then of your test:
 
 ```js
-it('should log an error', () => {
+it("should log an error", () => {
   // test you component
 
   global.console.error.mockReset();
@@ -65,7 +65,7 @@ Set the `STORYBOOK_HOST` and `STORYBOOK_PORT` environment variables.
 ## Does KhulnaSoft UI have a changelog/version history?
 
 Yes! Changelogs can be found in the [releases
-page](https://github.com/khulnasoft/khulnasoft-ui/-/releases) or in the
+page](https://github.com/khulnasoft/khulnasoft-ui/releases) or in the
 [CHANGELOG.md](./CHANGELOG.md) file.
 
 ## I've added some files to KhulnaSoft UI but they aren't published in the npm package, why is that?
