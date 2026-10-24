@@ -69,14 +69,14 @@ tasks have finished running, start the manual `ui:create_integration_merge_reque
 will create a merge request in the KhulnaSoft project using the package built by the `ui:build_package`
 job.
 
-![Create integration merge request CI job location](../images/create_integration_merge_request.png 'Create integration merge request CI job location')
+![Create integration merge request CI job location](../images/create_integration_merge_request.png "Create integration merge request CI job location")
 
 After the `ui:create_integration_merge_request` CI job is complete, it will try to automatically
 add the integration merge request URL to the **Integrations** section of your KhulnaSoft UI merge
 request description. If that fails, check the job log for a link to the created KhulnaSoft merge
 request. This merge request will help you test your KhulnaSoft UI changes and fix any test failures.
 
-![Integration merge request link location](../images/create_integration_merge_request_job_log.png 'Integration merge request link location')
+![Integration merge request link location](../images/create_integration_merge_request_job_log.png "Integration merge request link location")
 
 The KhulnaSoft integration merge request will do a few things for you:
 
@@ -94,7 +94,7 @@ package is published to the npm registry. Once your KhulnaSoft UI MR merges, clo
 1. A new version of `@khulnasoft/ui` will be released when your changes are merged.
 1. Renovate will open a merge request to update to the latest version of
    `@khulnasoft/ui`, and it will be assigned to you. If in doubt, check the
-   [dependency dashboard](https://github.com/khulnasoft/khulnasoft/-/issues/365044)
+   [dependency dashboard](https://github.com/khulnasoft/khulnasoft/issues/365044)
    for any existing `@khulnasoft/ui` MRs.
 1. Cherry-pick your fixes from your integration MR, if any, into the Renovate update MR.
 1. Get the Renovate MR reviewed and merged.
