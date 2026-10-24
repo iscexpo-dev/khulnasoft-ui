@@ -21,8 +21,8 @@
 
   &::before {
     background-color: $border-color;
-    transition:
-      background-color $gl-transition-duration-medium $gl-easing-out-cubic,
+    transition: background-color $gl-transition-duration-medium
+        $gl-easing-out-cubic,
       border-color $gl-transition-duration-medium $gl-easing-out-cubic;
   }
 
@@ -76,11 +76,11 @@
   @apply gl-text-base;
 
   @apply gl-py-0;
-  border: $gl-border-size-1 solid var(--gl-button-default-primary-border-color-default);
+  border: $gl-border-size-1 solid
+    var(--gl-button-default-primary-border-color-default);
   min-height: $gl-button-medium-size;
   min-width: $gl-button-medium-size;
-  transition:
-    color $gl-transition-duration-medium $gl-easing-out-cubic,
+  transition: color $gl-transition-duration-medium $gl-easing-out-cubic,
     background-color $gl-transition-duration-medium $gl-easing-out-cubic,
     border-color $gl-transition-duration-medium $gl-easing-out-cubic,
     box-shadow $gl-transition-duration-medium $gl-easing-out-cubic,
@@ -140,16 +140,20 @@
   &.btn-default-secondary {
     @include gl-button-theme(
       $color: var(--gl-button-default-primary-foreground-color-default),
-      $background-color: var(--gl-button-default-primary-background-color-default),
+      $background-color:
+        var(--gl-button-default-primary-background-color-default),
       $border-color: var(--gl-button-default-primary-border-color-default),
       $hover-color: var(--gl-button-default-primary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-default-primary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-default-primary-background-color-hover),
       $hover-border-color: var(--gl-button-default-primary-border-color-hover),
       $focus-color: var(--gl-button-default-primary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-default-primary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-default-primary-background-color-focus),
       $focus-border-color: var(--gl-button-default-primary-border-color-focus),
       $active-color: var(--gl-button-default-primary-foreground-color-active),
-      $active-background-color: var(--gl-button-default-primary-background-color-active),
+      $active-background-color:
+        var(--gl-button-default-primary-background-color-active),
       $active-border-color: var(--gl-button-default-primary-border-color-active)
     );
 
@@ -168,13 +172,15 @@
 
       border-width: $gl-border-size-1;
       border-color: var(--gl-button-selected-border-color-default);
-      box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-button-selected-border-color-default);
+      box-shadow: inset 0 0 0 $gl-border-size-1
+        var(--gl-button-selected-border-color-default);
 
       &:hover {
         color: var(--gl-button-selected-foreground-color-hover);
         background-color: var(--gl-button-selected-background-color-hover);
         border-color: var(--gl-button-selected-border-color-hover);
-        box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-button-selected-border-color-hover);
+        box-shadow: inset 0 0 0 $gl-border-size-1
+          var(--gl-button-selected-border-color-hover);
       }
 
       &:hover::before,
@@ -198,7 +204,8 @@
       &.active {
         color: var(--gl-button-selected-foreground-color-active);
         background-color: var(--gl-button-selected-background-color-active);
-        box-shadow: inset 0 0 0 $gl-border-size-1 var(--gl-button-selected-border-color-active);
+        box-shadow: inset 0 0 0 $gl-border-size-1
+          var(--gl-button-selected-border-color-active);
         border-color: var(--gl-button-selected-border-color-active);
       }
 
@@ -220,33 +227,42 @@
   &.btn-default-tertiary {
     @include gl-button-theme(
       $color: var(--gl-button-default-tertiary-foreground-color-default),
-      $background-color: var(--gl-button-default-tertiary-background-color-default),
+      $background-color:
+        var(--gl-button-default-tertiary-background-color-default),
       $border-color: var(--gl-button-default-tertiary-border-color-default),
       $hover-color: var(--gl-button-default-tertiary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-default-tertiary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-default-tertiary-background-color-hover),
       $hover-border-color: var(--gl-button-default-tertiary-border-color-hover),
       $focus-color: var(--gl-button-default-tertiary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-default-tertiary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-default-tertiary-background-color-focus),
       $focus-border-color: var(--gl-button-default-tertiary-border-color-focus),
       $active-color: var(--gl-button-default-tertiary-foreground-color-active),
-      $active-background-color: var(--gl-button-default-tertiary-background-color-active),
-      $active-border-color: var(--gl-button-default-tertiary-border-color-active)
+      $active-background-color:
+        var(--gl-button-default-tertiary-background-color-active),
+      $active-border-color:
+        var(--gl-button-default-tertiary-border-color-active)
     );
   }
 
   &.btn-confirm {
     @include gl-button-theme(
       $color: var(--gl-button-confirm-primary-foreground-color-default),
-      $background-color: var(--gl-button-confirm-primary-background-color-default),
+      $background-color:
+        var(--gl-button-confirm-primary-background-color-default),
       $border-color: var(--gl-button-confirm-primary-border-color-default),
       $hover-color: var(--gl-button-confirm-primary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-confirm-primary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-confirm-primary-background-color-hover),
       $hover-border-color: var(--gl-button-confirm-primary-border-color-hover),
       $focus-color: var(--gl-button-confirm-primary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-confirm-primary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-confirm-primary-background-color-focus),
       $focus-border-color: var(--gl-button-confirm-primary-border-color-focus),
       $active-color: var(--gl-button-confirm-primary-foreground-color-active),
-      $active-background-color: var(--gl-button-confirm-primary-background-color-active),
+      $active-background-color:
+        var(--gl-button-confirm-primary-background-color-active),
       $active-border-color: var(--gl-button-confirm-primary-border-color-active)
     );
   }
@@ -254,50 +270,64 @@
   &.btn-confirm-secondary {
     @include gl-button-theme(
       $color: var(--gl-button-confirm-secondary-foreground-color-default),
-      $background-color: var(--gl-button-confirm-secondary-background-color-default),
+      $background-color:
+        var(--gl-button-confirm-secondary-background-color-default),
       $border-color: var(--gl-button-confirm-secondary-border-color-default),
       $hover-color: var(--gl-button-confirm-secondary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-confirm-secondary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-confirm-secondary-background-color-hover),
       $hover-border-color: var(--gl-button-confirm-secondary-border-color-hover),
       $focus-color: var(--gl-button-confirm-secondary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-confirm-secondary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-confirm-secondary-background-color-focus),
       $focus-border-color: var(--gl-button-confirm-secondary-border-color-focus),
       $active-color: var(--gl-button-confirm-secondary-foreground-color-active),
-      $active-background-color: var(--gl-button-confirm-secondary-background-color-active),
-      $active-border-color: var(--gl-button-confirm-secondary-border-color-active)
+      $active-background-color:
+        var(--gl-button-confirm-secondary-background-color-active),
+      $active-border-color:
+        var(--gl-button-confirm-secondary-border-color-active)
     );
   }
 
   &.btn-confirm-tertiary {
     @include gl-button-theme(
       $color: var(--gl-button-confirm-tertiary-foreground-color-default),
-      $background-color: var(--gl-button-confirm-tertiary-background-color-default),
+      $background-color:
+        var(--gl-button-confirm-tertiary-background-color-default),
       $border-color: var(--gl-button-confirm-tertiary-border-color-default),
       $hover-color: var(--gl-button-confirm-tertiary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-confirm-tertiary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-confirm-tertiary-background-color-hover),
       $hover-border-color: var(--gl-button-confirm-tertiary-border-color-hover),
       $focus-color: var(--gl-button-confirm-tertiary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-confirm-tertiary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-confirm-tertiary-background-color-focus),
       $focus-border-color: var(--gl-button-confirm-tertiary-border-color-focus),
       $active-color: var(--gl-button-confirm-tertiary-foreground-color-active),
-      $active-background-color: var(--gl-button-confirm-tertiary-background-color-active),
-      $active-border-color: var(--gl-button-confirm-tertiary-border-color-active)
+      $active-background-color:
+        var(--gl-button-confirm-tertiary-background-color-active),
+      $active-border-color:
+        var(--gl-button-confirm-tertiary-border-color-active)
     );
   }
 
   &.btn-danger {
     @include gl-button-theme(
       $color: var(--gl-button-danger-primary-foreground-color-default),
-      $background-color: var(--gl-button-danger-primary-background-color-default),
+      $background-color:
+        var(--gl-button-danger-primary-background-color-default),
       $border-color: var(--gl-button-danger-primary-border-color-default),
       $hover-color: var(--gl-button-danger-primary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-danger-primary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-danger-primary-background-color-hover),
       $hover-border-color: var(--gl-button-danger-primary-border-color-hover),
       $focus-color: var(--gl-button-danger-primary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-danger-primary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-danger-primary-background-color-focus),
       $focus-border-color: var(--gl-button-danger-primary-border-color-focus),
       $active-color: var(--gl-button-danger-primary-foreground-color-active),
-      $active-background-color: var(--gl-button-danger-primary-background-color-active),
+      $active-background-color:
+        var(--gl-button-danger-primary-background-color-active),
       $active-border-color: var(--gl-button-danger-primary-border-color-active)
     );
   }
@@ -305,33 +335,42 @@
   &.btn-danger-secondary {
     @include gl-button-theme(
       $color: var(--gl-button-danger-secondary-foreground-color-default),
-      $background-color: var(--gl-button-danger-secondary-background-color-default),
+      $background-color:
+        var(--gl-button-danger-secondary-background-color-default),
       $border-color: var(--gl-button-danger-secondary-border-color-default),
       $hover-color: var(--gl-button-danger-secondary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-danger-secondary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-danger-secondary-background-color-hover),
       $hover-border-color: var(--gl-button-danger-secondary-border-color-hover),
       $focus-color: var(--gl-button-danger-secondary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-danger-secondary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-danger-secondary-background-color-focus),
       $focus-border-color: var(--gl-button-danger-secondary-border-color-focus),
       $active-color: var(--gl-button-danger-secondary-foreground-color-active),
-      $active-background-color: var(--gl-button-danger-secondary-background-color-active),
-      $active-border-color: var(--gl-button-danger-secondary-border-color-active)
+      $active-background-color:
+        var(--gl-button-danger-secondary-background-color-active),
+      $active-border-color:
+        var(--gl-button-danger-secondary-border-color-active)
     );
   }
 
   &.btn-danger-tertiary {
     @include gl-button-theme(
       $color: var(--gl-button-danger-tertiary-foreground-color-default),
-      $background-color: var(--gl-button-danger-tertiary-background-color-default),
+      $background-color:
+        var(--gl-button-danger-tertiary-background-color-default),
       $border-color: var(--gl-button-danger-tertiary-border-color-default),
       $hover-color: var(--gl-button-danger-tertiary-foreground-color-hover),
-      $hover-background-color: var(--gl-button-danger-tertiary-background-color-hover),
+      $hover-background-color:
+        var(--gl-button-danger-tertiary-background-color-hover),
       $hover-border-color: var(--gl-button-danger-tertiary-border-color-hover),
       $focus-color: var(--gl-button-danger-tertiary-foreground-color-focus),
-      $focus-background-color: var(--gl-button-danger-tertiary-background-color-focus),
+      $focus-background-color:
+        var(--gl-button-danger-tertiary-background-color-focus),
       $focus-border-color: var(--gl-button-danger-tertiary-border-color-focus),
       $active-color: var(--gl-button-danger-tertiary-foreground-color-active),
-      $active-background-color: var(--gl-button-danger-tertiary-background-color-active),
+      $active-background-color:
+        var(--gl-button-danger-tertiary-background-color-active),
       $active-border-color: var(--gl-button-danger-tertiary-border-color-active)
     );
   }
@@ -483,7 +522,7 @@
 // fixes sr-only elements positioning issue
 // when positioned inside a drawer the visually hidden element might stick to the very bottom of the drawer
 // extending the drawer size and introducing scrolling
-// context: https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/4866
+// context: https://github.com/khulnasoft/khulnasoft-ui/pull/4866
 .gl-button-text:has(.gl-sr-only) {
   position: relative;
 }
