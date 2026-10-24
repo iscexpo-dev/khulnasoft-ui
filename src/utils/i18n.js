@@ -1,5 +1,5 @@
-import { escape } from 'lodash-es';
-import { i18n } from '../config';
+import { escape } from "lodash-es";
+import { i18n } from "../config";
 
 const defaultPluralHandler = (n, singleValue, pluralValue) => {
   const value = n === 1 ? singleValue : pluralValue;
@@ -24,7 +24,7 @@ export const translatePlural = (key, singularValue, pluralValue) => {
 
 /**
  * Very limited implementation of sprintf supporting only named parameters.
- * Copied from the KhulnaSoft repo: https://github.com/khulnasoft/khulnasoft/-/blob/0dff8b02accb3dccbf6cd31236834c37013aad59/app/assets/javascripts/locale/sprintf.js.
+ * Copied from the KhulnaSoft repo: https://github.com/khulnasoft/khulnasoft/blob/0dff8b02accb3dccbf6cd31236834c37013aad59/app/assets/javascripts/locale/sprintf.js
  * @param {string} input - (translated) text with parameters (e.g. '%{num_users} users use us')
  * @param {Object.<string, string|number>} [parameters] - object mapping parameter names to values (e.g. { num_users: 5 })
  * @param {boolean} [escapeParameters=true] - whether parameter values should be escaped (see https://lodash.com/docs/4.17.15#escape)
@@ -35,17 +35,22 @@ export const translatePlural = (key, singularValue, pluralValue) => {
 export function sprintf(input, parameters, escapeParameters = true) {
   let output = input;
 
-  output = output.replace(/%+/g, '%');
+  output = output.replace(/%+/g, "%");
 
   if (parameters) {
     const mappedParameters = new Map(Object.entries(parameters));
 
     mappedParameters.forEach((key, parameterName) => {
       const parameterValue = mappedParameters.get(parameterName);
-      const escapedParameterValue = escapeParameters ? escape(parameterValue) : parameterValue;
+      const escapedParameterValue = escapeParameters
+        ? escape(parameterValue)
+        : parameterValue;
       // Pass the param value as a function to ignore special replacement patterns like $` and $'.
       // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace#syntax
-      output = output.replace(new RegExp(`%{${parameterName}}`, 'g'), () => escapedParameterValue);
+      output = output.replace(
+        new RegExp(`%{${parameterName}}`, "g"),
+        () => escapedParameterValue
+      );
     });
   }
 
