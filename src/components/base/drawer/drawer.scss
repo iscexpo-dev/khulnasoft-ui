@@ -116,7 +116,7 @@ $gl-drawer-scrim-gradient: linear-gradient(
   @apply gl-grow;
   // prevent safari bug where box shadow is visible
   // above the drawer when hovering interactive elements
-  // see https://github.com/khulnasoft/khulnasoft/-/issues/366558
+  // see https://github.com/khulnasoft/khulnasoft/issues/366558
   background-color: inherit;
 }
 
