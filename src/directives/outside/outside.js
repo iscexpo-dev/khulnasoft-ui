@@ -2,8 +2,8 @@
  * Map<HTMLElement, { callback: Function, eventTypes: Array<string> }>
  */
 const callbacks = new Map();
-const click = 'click';
-const focusin = 'focusin';
+const click = "click";
+const focusin = "focusin";
 const supportedEventTypes = [click, focusin];
 const defaultEventType = click;
 
@@ -22,8 +22,11 @@ const globalListener = (event) => {
     // Safari doesn't focus <button> on click; focus moves to <body>, firing a focusin outside the
     // dropdown before the button's own click handler runs. Fall back to the mousedown target only
     // while the mouse is still down, so a later focusin (e.g. Tab) isn't judged by a stale target.
-    const usesMousedownFallback = event.type === click || (event.type === focusin && isMouseDown);
-    const originalEvent = usesMousedownFallback ? lastMousedown || event : event;
+    const usesMousedownFallback =
+      event.type === click || (event.type === focusin && isMouseDown);
+    const originalEvent = usesMousedownFallback
+      ? lastMousedown || event
+      : event;
     if (
       // Ignore events that aren't targeted outside the element
       element.contains(originalEvent.target) ||
@@ -36,7 +39,7 @@ const globalListener = (event) => {
     try {
       callback(event);
     } catch (e) {
-      if (process.env.NODE_ENV !== 'production') {
+      if (process.env.NODE_ENV !== "production") {
         // eslint-disable-next-line no-console
         console.error(e);
       }
@@ -64,8 +67,8 @@ const onMouseup = () => {
   isMouseDown = false;
 };
 
-const mousedown = 'mousedown';
-const mouseup = 'mouseup';
+const mousedown = "mousedown";
+const mouseup = "mouseup";
 
 const startListening = (eventTypes) => {
   // Listening to mouse events ensures that a text selection doesn't trigger the
@@ -79,9 +82,9 @@ const startListening = (eventTypes) => {
 
   eventTypes.forEach((eventType) => {
     if (!activeEventTypes.has(eventType)) {
-      // Added { capture: true } to all event types to prevent the behavior discussed in https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/1686#note_412545027
+      // Added { capture: true } to all event types to prevent the behavior discussed in https://github.com/khulnasoft/khulnasoft-ui/pull/1686#note_412545027
       // Ensures the event listener handles the event in the capturing phase, avoiding issues encountered previously.
-      // Cannot be tested with Jest or Cypress, but can be tested with Playwright in the future: https://github.com/khulnasoft/khulnasoft-ui/-/merge_requests/4272#note_1947425384
+      // Cannot be tested with Jest or Cypress, but can be tested with Playwright in the future: https://github.com/khulnasoft/khulnasoft-ui/pull/4272#note_1947425384
       document.addEventListener(eventType, globalListener, { capture: true });
       activeEventTypes.add(eventType);
     }
@@ -94,8 +97,14 @@ const startListening = (eventTypes) => {
 const stopListening = (eventTypesToUnbind) => {
   eventTypesToUnbind.forEach((eventType) => {
     if (activeEventTypes.has(eventType)) {
-      if ([...callbacks.values()].every(({ eventTypes }) => !eventTypes.includes(eventType))) {
-        document.removeEventListener(eventType, globalListener, { capture: true });
+      if (
+        [...callbacks.values()].every(
+          ({ eventTypes }) => !eventTypes.includes(eventType)
+        )
+      ) {
+        document.removeEventListener(eventType, globalListener, {
+          capture: true,
+        });
         activeEventTypes.delete(eventType);
       }
     }
@@ -111,26 +120,28 @@ const stopListening = (eventTypesToUnbind) => {
 function parseBinding({ arg, value, modifiers }) {
   const modifiersList = Object.keys(modifiers);
 
-  if (process.env.NODE_ENV !== 'production') {
-    if (typeof value !== 'function') {
-      throw new Error(`[GlOutsideDirective] Value must be a function; got ${typeof value}!`);
+  if (process.env.NODE_ENV !== "production") {
+    if (typeof value !== "function") {
+      throw new Error(
+        `[GlOutsideDirective] Value must be a function; got ${typeof value}!`
+      );
     }
 
-    if (typeof arg !== 'undefined') {
+    if (typeof arg !== "undefined") {
       throw new Error(
-        `[GlOutsideDirective] Arguments are not supported. Consider using modifiers instead.`,
+        `[GlOutsideDirective] Arguments are not supported. Consider using modifiers instead.`
       );
     }
 
     const unsupportedModifiers = modifiersList.filter(
-      (modifier) => !supportedEventTypes.includes(modifier),
+      (modifier) => !supportedEventTypes.includes(modifier)
     );
 
     if (unsupportedModifiers.length > 0) {
       throw new Error(
-        `[GlOutsideDirective] Cannot bind ${unsupportedModifiers.join(', ')} events; supported event types are: ${supportedEventTypes.join(
-          ', ',
-        )}`,
+        `[GlOutsideDirective] Cannot bind ${unsupportedModifiers.join(
+          ", "
+        )} events; supported event types are: ${supportedEventTypes.join(", ")}`
       );
     }
   }
