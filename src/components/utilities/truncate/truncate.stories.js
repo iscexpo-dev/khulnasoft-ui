@@ -1,6 +1,6 @@
-import { propDefaultFactory } from '../../../utils/stories_utils';
-import GlTruncate from './truncate.vue';
-import { POSITION } from './constants';
+import { propDefaultFactory } from "../../../utils/stories_utils";
+import GlTruncate from "./truncate.vue";
+import { POSITION } from "./constants";
 
 const template = `
   <gl-truncate
@@ -13,9 +13,9 @@ const template = `
 const propDefault = propDefaultFactory(GlTruncate);
 
 const generateProps = ({
-  text = 'src/thisIs/AVeryLongFilePath/that/needs/to/be/smartly/truncated/from/the/middle/so/we/dont/lose/important/information/here.vue',
-  position = propDefault('position'),
-  withTooltip = propDefault('withTooltip'),
+  text = "src/thisIs/AVeryLongFilePath/that/needs/to/be/smartly/truncated/from/the/middle/so/we/dont/lose/important/information/here.vue",
+  position = propDefault("position"),
+  withTooltip = propDefault("withTooltip"),
 } = {}) => ({
   text,
   position,
@@ -42,7 +42,7 @@ PositionStart.args = generateProps({ position: POSITION.START });
 export const PositionMiddle = makeStory();
 PositionMiddle.args = generateProps({ position: POSITION.MIDDLE });
 
-// This is a regression test against https://github.com/khulnasoft/khulnasoft/-/issues/515533.
+// This is a regression test against https://github.com/khulnasoft/khulnasoft/issues/515533
 // Correct rendering in both cases should be "Gap here" (single space).
 // Incorrect rendering would be anything else, like "Gaphere" (no space) or
 // "Gap  here" (double space).
@@ -69,29 +69,29 @@ WhitespacePreservation.parameters = {
 };
 
 export default {
-  title: 'utilities/truncate',
+  title: "utilities/truncate",
   component: GlTruncate,
   parameters: {
     viewport: {
-      defaultViewport: 'breakpointSmall',
+      defaultViewport: "breakpointSmall",
     },
     docs: {
       description: {
         component:
-          'See [Pajamas Design System documentation](https://design.khulnasoft.com/components/utility-truncate) for usage and implementation details.',
+          "See [Pajamas Design System documentation](https://design.khulnasoft.com/components/utility-truncate) for usage and implementation details.",
       },
     },
   },
   argTypes: {
     text: {
-      control: 'text',
+      control: "text",
     },
     position: {
       options: Object.values(POSITION),
-      control: 'select',
+      control: "select",
     },
     withTooltip: {
-      control: 'boolean',
+      control: "boolean",
     },
   },
 };
